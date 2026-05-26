@@ -5,9 +5,9 @@
 !               need to be in parentheses within the IF THEN statements
 ! 2/18 Further refinements to work correctly with negative arguments.
 !      Modernize the use of longitude coordinates and line colors, styles.
-!
+
 ! Description: Overlay a colored box outline given the corner coordinates
-!
+
 ! usage:  GO box xlo xhi ylo yhi [line_style]
 !         Argument 5 may be a pen number, a defined color name, or a combination
 !         of color with line style, such as red/thick. If a combination is used, 
