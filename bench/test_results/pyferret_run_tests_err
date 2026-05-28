@@ -790,16 +790,6 @@ Replacing definition of axis XAX2
            *** NOTE: (fyi) units are not subject to auto-conversion: BLAHS
 Replacing definition of axis XAX2
 *** Running ferret script: bn_pattern.jnl
-           *** NOTE: the use of "SET MODE METAFILE" is deprecated;
-           *** NOTE: instead use "FRAME /FILE=... /FORMAT=..."
- **ERROR: invalid command: PATTERN style is not available in PyFerret
-shade/pal=black/lev=(10,30,5,-3)/line/key/pattern=4patterns/nolabel sst
-Executed by script: *** GO bn_pattern.jnl ***
-           *** NOTE: the use of "SET MODE METAFILE" is deprecated;
-           *** NOTE: instead use "FRAME /FILE=... /FORMAT=..."
- **ERROR: invalid command: PATTERN style is not available in PyFerret
-CONTOUR/FILL/lev=(25,27,1)/over/nolab/pal=black/pat=angled_grid/nolabel airt[l=@ave]
-Executed by script: *** GO bn_pattern.jnl ***
 *** Running ferret script: bn_polygon.jnl
            *** NOTE: the use of "SET MODE METAFILE" is deprecated;
            *** NOTE: instead use "FRAME /FILE=... /FORMAT=..."
@@ -2200,10 +2190,10 @@ Replacing definition of axis TIME
              this_is_not_a_file.nc
 SET DAT/FORM=CDF this_is_not_a_file.nc
 Executed by script: *** GO bn_cdf_errmsg.jnl ***
- **Internet Data error
+ **netCDF error
              NetCDF: file not found (OPeNDAP/netCDF Error code -90)
-             Data set: http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/COADS/coads_nothing.cdf
-SET DAT/FORM=CDF "http://ferret.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/COADS/coads_nothing.cdf"
+             Data set: https://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/COADS/coads_nothing.cdf
+SET DAT/FORM=CDF "https://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/COADS/coads_nothing.cdf"
 Executed by script: *** GO bn_cdf_errmsg.jnl ***
 Error:curl error: Couldn't resolve host name
 curl error details: 
@@ -2924,7 +2914,6 @@ ooooooooooooooooooooooooooooooooooooooooooo
            *** NOTE: /UNIT=MONTHS is ambiguous ... using 1/12 of 365.2425 days
            *** NOTE: the use of "SET MODE METAFILE" is deprecated;
            *** NOTE: instead use "FRAME /FILE=... /FORMAT=..."
-           *** NOTE: New # of line colors will take effect on next new window: SET WIN/NEW then define pen colors
            *** NOTE: the use of "SET MODE METAFILE" is deprecated;
            *** NOTE: instead use "FRAME /FILE=... /FORMAT=..."
            *** NOTE: New number of line colors will take effect on next new window: SET WIN/NEW or SET WIN/CLEAR
@@ -3572,7 +3561,6 @@ Replacing definition of axis FAX4DAY
 *** Running ferret script: bn_aggregate_e.jnl
            *** NOTE: Variable "AIRT" excluded from aggregate: Not found in all member datasets
            *** NOTE: Variable "AIRT" excluded from aggregate: Not found in all member datasets
-           *** NOTE: /FILES is deprecated.  Use /MEMBERS
  **ERROR: unknown data set: dset 3
 DEFINE DATA/AGGREGAT/E windy = 1,2,3
 Executed by script: *** GO bn_aggregate_e.jnl ***
@@ -3591,7 +3579,6 @@ Executed by script: *** GO bn_aggregate_e.jnl ***
            *** NOTE: Variable "AIRT" excluded from aggregate: Not found in all member datasets
            *** NOTE: Variable "AIRT" excluded from aggregate: Not found in all member datasets
            *** NOTE: Variable "AIRT" excluded from aggregate: Not found in all member datasets
-           *** NOTE: /FILES is deprecated.  Use /MEMBERS
            *** NOTE: Dataset used in aggregation.  Canceling aggregation, fourfiles
            *** NOTE: Dataset used in aggregation.  Canceling aggregation, some
            *** NOTE: Dataset used in aggregation.  Canceling aggregation, more
@@ -3803,7 +3790,6 @@ ooooooooooooooooooooooooooooooooooooooooooo
  LISTing to file a.nc
 *** Running ferret script: bn_descriptor_mc.jnl
 *** Running ferret script: bn_plot_color_only.jnl
-           *** NOTE: New # of line colors will take effect on next new window: SET WIN/NEW then define pen colors
            *** NOTE: New number of line colors will take effect on next new window: SET WIN/NEW or SET WIN/CLEAR
  **ERROR: command syntax: COLOR
           /COLOR must have an argument for PLOT/OVERLAY
@@ -3969,60 +3955,10 @@ Executed by script: *** GO bn_set_axis_name.jnl ***
 set axis/name=.fr x_in_meters
 Executed by script: *** GO bn_set_axis_name.jnl ***
 *** Running ferret script: bn_let_remote.jnl
-           *** NOTE: netCDF bounds variable definition error
-           *** NOTE: Bounds definition "time_bnds" points to no existing axis
-           *** NOTE: Ignoring BOUNDS attribute
-           *** NOTE: netCDF bounds variable definition error
-           *** NOTE: Bounds definition "depth_bnds" points to no existing axis
-           *** NOTE: Ignoring BOUNDS attribute
-           *** NOTE: netCDF bounds variable definition error
-           *** NOTE: Bounds definition "lat_bnds" points to no existing axis
-           *** NOTE: Ignoring BOUNDS attribute
-           *** NOTE: netCDF bounds variable definition error
-           *** NOTE: Bounds definition "lon_bnds" points to no existing axis
-           *** NOTE: Ignoring BOUNDS attribute
-           *** NOTE: dataset does not accept REMOTE variable definitions
-           *** NOTE: dataset does not accept REMOTE variable definitions
-           *** NOTE: dataset does not accept REMOTE variable definitions
-           *** NOTE: dataset does not accept REMOTE variable definitions
-           *** NOTE: netCDF bounds variable definition error
-           *** NOTE: Bounds definition "time_bnds" points to no existing axis
-           *** NOTE: Ignoring BOUNDS attribute
-           *** NOTE: netCDF bounds variable definition error
-           *** NOTE: Bounds definition "depth_bnds" points to no existing axis
-           *** NOTE: Ignoring BOUNDS attribute
-           *** NOTE: netCDF bounds variable definition error
-           *** NOTE: Bounds definition "lat_bnds" points to no existing axis
-           *** NOTE: Ignoring BOUNDS attribute
-           *** NOTE: netCDF bounds variable definition error
-           *** NOTE: Bounds definition "lon_bnds" points to no existing axis
-           *** NOTE: Ignoring BOUNDS attribute
-           *** NOTE: dataset does not accept REMOTE variable definitions
-           *** NOTE: dataset does not accept REMOTE variable definitions
-           *** NOTE: dataset does not accept REMOTE variable definitions
-           *** NOTE: dataset does not accept REMOTE variable definitions
-           *** NOTE: dataset does not accept REMOTE variable definitions
-           *** NOTE: dataset does not accept REMOTE variable definitions
-           *** NOTE: netCDF bounds variable definition error
-           *** NOTE: Bounds definition "time_bnds" points to no existing axis
-           *** NOTE: Ignoring BOUNDS attribute
-           *** NOTE: netCDF bounds variable definition error
-           *** NOTE: Bounds definition "depth_bnds" points to no existing axis
-           *** NOTE: Ignoring BOUNDS attribute
-           *** NOTE: netCDF bounds variable definition error
-           *** NOTE: Bounds definition "lat_bnds" points to no existing axis
-           *** NOTE: Ignoring BOUNDS attribute
-           *** NOTE: netCDF bounds variable definition error
-           *** NOTE: Bounds definition "lon_bnds" points to no existing axis
-           *** NOTE: Ignoring BOUNDS attribute
- **ERROR: command syntax: /REMOTE variable expression may not contain [d=
-DEFINE VARIABLE/DATA=1/remote rvar = t00an1[d=1,z=1:100@ave]
+oc_open: server error retrieving url: code=500 message="java.io.IOException: Cant read /usr/local/src/nvods/tomcat/content/las/conf/server/data/COADS-climatology/data_coads_climatology.jnl: not a valid CDM file." **ERROR: command syntax: unpaired quotation marks, grave accent or brackets
+MESSAGE/CONTINUE The FTDS url's for bn_let_remote.jnl do not work.  Has the data server for the NVODS server changed or is the server down?
+Command file, command group, or REPEAT execution aborted
 Executed by script: *** GO bn_let_remote.jnl ***
- **ERROR: command syntax: /REMOTE variable definition must also specify /D=
-DEFINE VARIABLE/remote rvar = t00an1[d=1,z=1:100@ave]
-Executed by script: *** GO bn_let_remote.jnl ***
-           *** NOTE: dataset does not accept REMOTE variable definitions
-           *** NOTE: dataset does not accept REMOTE variable definitions
 *** Running ferret script: bn691_bug_fixes.jnl
  PERMANENT data cleared from memory
  TEMPORARY data cleared from memory
@@ -4689,8 +4625,6 @@ Replacing definition of axis TDAY_TVAR
  LISTing to file tmp/tagg_single_6.nc
            *** NOTE: Not deleted: TDAY
            *** NOTE: Axis is in use by grid (G###)
-           *** NOTE: /FILES is deprecated.  Use /MEMBERS
-           *** NOTE: /FILES is deprecated.  Use /MEMBERS
  **ERROR: invalid command: given aggregation dataset name already in use: myagg2
 define data/agg/t myagg2 = tmp/tagg_reg_1.nc, tmp/tagg_reg_2.nc, tmp/tagg_reg_2.nc
 Executed by script: *** GO bn_aggregate_t.jnl ***
@@ -4700,11 +4634,10 @@ define data/agg/t myaggbad = tmp/tagg_no_exist.nc, tmp/tagg_reg_2.nc
 Executed by script: *** GO bn_aggregate_t.jnl ***
  **TMAP ERR: non-existent or not on line
              tmp/tagg_no_exist.nc
+ **ERROR: Error building tseries aggregation
 define data/agg/t myaggbad = tmp/tagg_reg_1.nc, tmp/tagg_no_exist.nc
 Executed by script: *** GO bn_aggregate_t.jnl ***
- **ERROR: improper grid or axis definition: first file of aggregation has no time axis tmp/tagg_reg_no_T.nc
-DEFINE DATA/AGGREGAT/T myTindepagg = tmp/tagg_reg_no_T.nc
-Executed by script: *** GO bn_aggregate_t.jnl ***
+           *** NOTE: First file has no time dependence. Assigning files in order to an abstract L axis
  **ERROR: improper grid or axis definition: time axis is not monotonic at L=1 of file tmp/tagg_reg_3.nc
 define data/agg/t myagg3 = tmp/tagg_reg_1.nc, tmp/tagg_reg_2_overlarge.nc,tmp/tagg_reg_3.nc
 Executed by script: *** GO bn_aggregate_t.jnl ***
@@ -4712,14 +4645,11 @@ Executed by script: *** GO bn_aggregate_t.jnl ***
              Searched $FER_DESCR and $FER_DATA for 1(.nc ,.cdf,.des). For a Timeseries aggregation, specify the NetCDF file/path names or OPeNDAP dataset names.
 define data/agg/t myagg2num = 1,2
 Executed by script: *** GO bn_aggregate_t.jnl ***
-           *** NOTE: /FILES is deprecated.  Use /MEMBERS
-           *** NOTE: /FILES is deprecated.  Use /MEMBERS
-           *** NOTE: /FILES is deprecated.  Use /MEMBERS
  **TMAP ERR: Unknown variable code
              in file tmp/tagg_disjoint_T0varying_4_wrong.nc time axis variable is missing: TDAY_TVAR
+ **ERROR: Error building tseries aggregation
 define data/agg/t myagg5_bad = tmp/tagg_disjoint_T0varying_1.nc, tmp/tagg_disjoint_T0varying_2.nc,tmp/tagg_disjoint_T0varying_3.nc, tmp/tagg_disjoint_T0varying_4_wrong.nc,tmp/tagg_disjoint_T0varying_5.nc
 Executed by script: *** GO bn_aggregate_t.jnl ***
-           *** NOTE: /FILES is deprecated.  Use /MEMBERS
  **ERROR: unknown command: garbage
 garbage command syntax
 Executed by script: *** GO tmp/bad_agg.agg ***
@@ -5336,10 +5266,8 @@ Executed by script: *** GO bn_delim_datetime.jnl ***
  LISTing to file tmp/f03_e2_tu1.nc
  LISTing to file tmp/f03_e2_tu2.nc
  LISTing to file tmp/f03_e2_tu3.nc
-           *** NOTE: /FILES is deprecated.  Use /MEMBERS
            *** NOTE: Skipping variable REALIZATION from set 1, already in the Union dataset.
            *** NOTE: Skipping variable REALIZATION from set 8, already in the Union dataset.
-           *** NOTE: /FILES is deprecated.  Use /MEMBERS
 *** Running ferret script: bn_ez_noupcase.jnl
  LISTing to file abc.dat
  LISTing to file a.nc
@@ -7021,9 +6949,6 @@ Executed by script: *** GO bn_dsg_plotalong.jnl ***
  **ERROR: invalid command: PLOT/ALONG=T : Point data can only be plotted along XY
 plot/along=t sst
 Executed by script: *** GO bn_dsg_plotalong.jnl ***
-*** Running ferret script: bn_dsg_return_coord.jnl
- **TMAP ERR: non-existent or not on line
-             bn_dsg_return_coord.jnl (.jnl)
 *** Running ferret script: bn764_bug_fixes.jnl
  PERMANENT data cleared from memory
  TEMPORARY data cleared from memory
@@ -7055,9 +6980,118 @@ ooooooooooooooooooooooooooooooooooooooooooo
  TEMPORARY data cleared from memory
 ooooooooooooooooooooooooooooooooooooooooooo
 Replacing definition of axis TAX
+ PERMANENT data cleared from memory
+ TEMPORARY data cleared from memory
+ooooooooooooooooooooooooooooooooooooooooooo
+ PERMANENT data cleared from memory
+ TEMPORARY data cleared from memory
+ooooooooooooooooooooooooooooooooooooooooooo
+ PERMANENT data cleared from memory
+ TEMPORARY data cleared from memory
+ooooooooooooooooooooooooooooooooooooooooooo
+Replacing definition of axis TAXIS
+ PERMANENT data cleared from memory
+ TEMPORARY data cleared from memory
+ooooooooooooooooooooooooooooooooooooooooooo
+ **ERROR: invalid command: overlay with no existing plot
+          "plot/vs/over  xs, ys"
+plot/vs/over  xs, ys
+Executed by script: *** GO bn_plot_vs_over_no_existing.jnl ***
 *** Running ferret script: bn_scat2grid_bin_fcns.jnl
            *** NOTE: Units on axis "AX003" are not recognized: na
            *** NOTE: They will not be convertible:
+*** Running ferret script: bn_label_atsign.jnl
+           *** NOTE: Non-Hershey fonts: ignoring Hershey pen or font codes
+*** Running ferret script: bn_plot_vs_over_no_existing.jnl
+ **ERROR: invalid command: overlay with no existing plot
+          "plot/vs/over  xs, ys"
+plot/vs/over  xs, ys
+Executed by script: *** GO bn_plot_vs_over_no_existing.jnl ***
+*** Running ferret script: bn_dsg_point_noz.jnl
+*** Running ferret script: bn_tseries_no_timesteps.jnl
+ LISTing to file sstdat1.nc
+ LISTing to file sstdat2.nc
+ LISTing to file sstdat3.nc
+ LISTing to file seadat_time.nc
+           *** NOTE: First file has no time dependence. Assigning files in order to axis TDAY
+           *** NOTE: First file has no time dependence. Assigning files in order to an abstract L axis
+           *** NOTE: First file has no time dependence. Assigning files in order to an abstract L axis
+ **netCDF error
+             NetCDF: Index exceeds dimension bound (OPeNDAP/netCDF Error code -40)
+             Data set: four
+list/i=4/j=5 sst - ftemp
+Executed by script: *** GO bn_tseries_no_timesteps.jnl ***
+Replacing definition of axis TDAY
+           *** NOTE: First file has no time dependence. Assigning files in order to axis TDAY
+           *** NOTE: First file has no time dependence. Assigning files in order to axis TDAY
+Replacing definition of axis TDAY
+           *** NOTE: First file has no time dependence. Assigning files in order to axis TDAY
+ **ERROR: error defining aggregate dataset: Given time axis not long enough for the aggregation
+DEFINE DATA/AGGREGAT/T/taxis=tday days = file_list
+Executed by script: *** GO bn_tseries_no_timesteps.jnl ***
+*** Running ferret script: bn_aggregate_renamevar.jnl
+ **TMAP ERR: non-existent or not on line
+             bn_aggregate_renamevar.jnl (.jnl)
+*** Running ferret script: bn_agg_e_renamevar.jnl
+           *** NOTE: Variable "AIRT" excluded from aggregate: Not found in all member datasets
+           *** NOTE: Variable "AIRT" excluded from aggregate: Not found in all member datasets
+           *** NOTE: Variable "AIRT" excluded from aggregate: Not found in all member datasets
+ LISTing to file file2.nc
+           *** NOTE: Variable "SPEH" excluded from aggregate: Not found in all member datasets
+ **ERROR: unknown defining grid: GXY=UWND[D=1]
+set var/name=uu uwnd
+Executed by script: *** GO bn_agg_e_renamevar.jnl ***
+ **ERROR: invalid command: Variable definition overwritten when SET VAR/NAME in aggregation dataset
+set var/name=uu uwnd
+Executed by script: *** GO bn_agg_e_renamevar.jnl ***
+*** Running ferret script: bn_agg_f_renamevar.jnl
+           *** NOTE: Variable "FCST_2" excluded from aggregate: Not found in all member datasets
+           *** NOTE: Variable "FCST_2" excluded from aggregate: Not found in all member datasets
+           *** NOTE: Variable "FCST_2" excluded from aggregate: Not found in all member datasets
+           *** NOTE: Dataset used in aggregation.  Canceling aggregation, bn_agg_f_renamevar.jnl
+           *** NOTE: Dataset used in aggregation.  Canceling aggregation, my_fmrc
+ **ERROR: variable unknown or not in data set: FCST
+set var/name=fubb_2 fcst_2
+Executed by script: *** GO bn_agg_f_renamevar.jnl ***
+ **ERROR: invalid command: Variable definition overwritten when SET VAR/NAME in aggregation dataset
+set var/name=fubb_2 fcst_2
+Executed by script: *** GO bn_agg_f_renamevar.jnl ***
+*** Running ferret script: bn_agg_t_renamevar.jnl
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+ **netCDF error
+             NetCDF: Variable not found (OPeNDAP/netCDF Error code -49)
+             Data set: myagg4
+list tagg
+Executed by script: *** GO bn_agg_t_renamevar.jnl ***
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+ **ERROR: variable unknown or not in data set: MYVAR
+list myvar
+Executed by script: *** GO bn_agg_t_renamevar.jnl ***
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+           *** NOTE: (Warning) SET VARIABLE/NAME in TSERIES aggregation: Reading data will fail if irregularly spaced time axis
+*** Running ferret script: bn_agg_tef_renamevar.jnl
+ **ERROR: invalid command: Cannot SET VARIABLE/NAME in multi-level  aggregation of aggregations
+set var/name=fubb fcst
+Executed by script: *** GO bn_agg_tef_renamevar.jnl ***
+*** Running ferret script: bn_agg_u_renamevar.jnl
+ LISTing to file tmp/uagg_1.nc
+ LISTing to file tmp/uagg_2.nc
+ LISTing to file tmp/uagg_3.nc
+ LISTing to file tmp/uagg_4.nc
+ LISTing to file tmp/uagg_1_t1.nc
+ LISTing to file tmp/uagg_1_t2.nc
+ LISTing to file tmp/uagg_1_t3.nc
 *** Running ferret script: bn_py_graticules.jnl
  Using every   2th vector in the X direction
            *** NOTE: /UNIT=MONTHS is ambiguous ... using 1/12 of 365.2425 days
