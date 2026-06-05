@@ -1,0 +1,2187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/ferret-documentation.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/ferret-faqs.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/downloads.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret-support.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/index.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/version-763-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/users-guide.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/full-index/index.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/commands-reference.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/introduction/introduction.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/data-set-basics/data-set-basics.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/variables-xpressions/variables-xpressions.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/Grids-Regions/Grids-Regions.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/animations-gif-images/animations-gif-images.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/customizing-plots.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/handling-string-data-symbols/handling-string-data-symbols.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/working-with-special-data-sets/working-with-special-data-sets.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/computing-environment/computing-environment.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/converting-to-netcdf/converting-to-netcdf.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/writing-external-functions/writing-external-functions.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/glossary/glossary.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/appendix-a-external-functions.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-b-pplus-guide/appendix-b-pplus-guide.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/appendix-c-ferret-specific-pplus-enhancements.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/all-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/ferret-tutorials.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ferret-tutorial-script.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/dsg-files-discrete-sampling-geometries-demo.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ferret-sorting-demo.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/how-to-use-ferret-external-functions-for-computing-ffts.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ferret-eof-demo.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ferret-objective-analysis.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ferret-palette-demo.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ferret-map-projections-demo.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ferret-polygon-vector-demo.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ferret-graticules-demo.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ferret-polytube-demo.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ferret-polymark-demo.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ferret-constant-array-demo.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ferret-land_detail-demo.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/coads-tour.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/levitus-tour.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/how-to-use-ferret-and-opendap-to-access-and-analyze-remote-data-1.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ferret-binary-read-demo.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/what-is-pyferret.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/why-use-pyferret.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/example-sessions-ferret.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/pyferret-quick-start-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/example-sessions-python.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/graphics.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/ferret-functionality.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/python-functions.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/pyferret-python-objects.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/pyefs.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/fortranefs.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/data-dictionaries.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/opendap/opendap-usage-in-ferret.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/test_opendap.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/external-functions.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/coards-netcdf-conventions.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/sites/default/files/atoms/files/ferret_users_guide_v602.pdf</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/getting-valid-eps-files-from-fprint.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/cmyk-format-for-postscript-files.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/controlling-the-size-of-gif-output.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/making-mpeg-animations.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/removing-the-logo-from-your-plots.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/colored-labels.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/colored-symbols.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/ascii-characters-in-labels.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/changing-to-another-font-from-ascii-font.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/locating-labels-on-a-time-axis-plot.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/labeling-dates-along-a-trackline.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/setting-plot-background-color.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/laying-out-multiple-plots.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/black-and-white-graphics.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/colors-and-patterns.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/ferret-color-palettes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/color-palettes-to-convey-information-to-color-impaired-viewers-and-on-different-output-devices.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/palettes-for-out-of-bounds-data.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/modifying-the-shade-key.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/working-with-the-legend-on-a-line-plot.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/custom-legends-line-plots.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/changing-line-thickness-in-postscript-files.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/2d-log-plots.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/split-z-axis-plots.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/plots-with-error-bars.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/vector-size.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/overlaying-on-a-time-axis-plot.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/overlaying-a-time-series-on-a-2d-plot.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/how-can-i-draw-a-second-vertical-axis-on-a-contour-plot.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/model-outputs-with-equal-length-months.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/detailed-coastlines-and-borders.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/available-high-resolution-topography-and-bathymetry-data-sets.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/fill-between-two-curves.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/contouring-to-outline-a-mask.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/outlining-a-mask-on-map-projection-plots.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/continuous-colorbar.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/using-a-graphics-program-to-add-text-and-elements-to-postscript-output.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/taylor-diagrams.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/map-projections-curvilinear-coordinates-version.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/map-projection-aspect-ratios.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/map-projections-in-viewports.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/curvilinear-data-in-map-projections.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/plot-vs-with-map-projections.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/cell-edges-for-3-argument-shade-plots.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/polar-stereographic-plots.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/plotting-subsets-of-data-on-a-curvilinear-grid.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/how-can-i-show-the-grid-on-my-map-projection-plots</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/x-windows-requirements-and-use.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/averaging-integrating-over-irregular-regions.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/best-filters.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/correlations-and-variances.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/least-squares-regression.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/creating-seasonal-masks.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/how-do-i-calculate-climatologies-and-climatological-anomalies.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/creating-a-daily-climatology.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/averaging-to-regrid-a-time-series.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/regridding-a-time-series-with-ave.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/specifying-region-for-grid-changing-functions.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/finding-the-location-of-last-isotherm.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/how-can-i-show-the-value-of-my-variable-at-its-deepest-depth.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/averages-integrals-on-the-sphere.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/calling-scat2grid-functions-dsg-data.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/finding-opendap-datasets.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/outputting-netcdf.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/nan-missing-value-flags.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/reversed-coordinates.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/using-data-that-spans-multiple-files.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/reserved-keywords.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/determining-if-a-dataset-exists.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/depth-axis-to-density-axis.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/reading-ascii-data-representing-a-grid.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/setting-a-missing-value.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/using-sigma-and-curvilinear-model-coordinates.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/working-with-scattered-collections-of-time-series-or-profiles.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/values-associated-with-pixels.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/sampling-along-a-cruise-track.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/creating-a-time-axis-from-time-variables.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/how-can-i-work-with-argo-float-profile-data.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/using_shapefiles_pyferret.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/batch-mode-usage.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/troubleshooting-the-frame-command.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/speeding-up-large-calculations.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/running-ferret-without-x-windows.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/limit-on-storage-for-coordinates.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/namelist-read-error.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/journal-file-conditionals-based-on-arguments.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/ferret_users-email-list.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/controlling-ferret-jnl-files.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/how-do-i-interpret-the-output-of-set-mode-diagnostic.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/version-76-release-notes</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/working-with-special-data-sets/DSG_datasets</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/PLOT</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/introduction/OVERVIEW.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/introduction/GETTING-STARTED.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/introduction/COMMON-COMMANDS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/introduction/COMMAND-SYNTAX.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/introduction/GO-FILES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/introduction/SAMPLE-DATA-SETS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/introduction/UNIX-TOOLS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/introduction/HELP.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/data-set-basics/OVERVIEW.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/data-set-basics/NETCDF-DATA.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/data-set-basics/TMAP-FORMATTED-DATA.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/data-set-basics/BINARY-DATA.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/data-set-basics/ASCII-DATA.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/data-set-basics/TRICKS-TO-READING-BINARY-AND-ASCII-FILES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/data-set-basics/ACCESS-TO-REMOTE-DATA-SETS-WITH-DODS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/variables-xpressions/VARIABLES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/variables-xpressions/XPRESSIONS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/variables-xpressions/DEFINING-NEW-VARIABLES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/variables-xpressions/DEBUGGING-COMPLEX-HIERARCHIES-OF-XPRESSIONS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/Grids-Regions/OVERVIEW.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/Grids-Regions/GRIDS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/Grids-Regions/REGIONS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/Grids-Regions/FERRET-PROGRAM-LIMITS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/animations-gif-images/OVERVIEW.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/animations-gif-images/CREATING-AN-HDF-MOVIE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/animations-gif-images/DISPLAYING-AN-HDF-MOVIE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/animations-gif-images/ADVANCED-MOVIE-MAKING.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/animations-gif-images/CREATING-GIF-IMAGES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/OVERVIEW.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/GRAPHICAL-OUTPUT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/AXES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/LABELS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/COLOR.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/FONTS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/PLOT-LAYOUT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/CONTOURING.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/SPECIAL-SYMBOLS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/MAP-PROJECTIONS-AND-CURVILINEAR-COORDINATES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/handling-string-data-symbols/STRING-VARIABLES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/handling-string-data-symbols/STRING-FUNCTIONS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/handling-string-data-symbols/SYMBOL-COMMANDS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/handling-string-data-symbols/AUTOMATICALLY-GENERATED-SYMBOLS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/handling-string-data-symbols/ORDER-OF-STRING-SUBSTITUTIONS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/handling-string-data-symbols/CUSTOMIZING-THE-POSITION-AND-STYLE-OF-PLOT-LABELS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/handling-string-data-symbols/USING-SYMBOLS-IN-COMMAND-FILES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/handling-string-data-symbols/PLOT-STRING-EDITING-TOOLS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/handling-string-data-symbols/SYMBOL-EDITING.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/handling-string-data-symbols/SPECIAL-SYMBOLS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/working-with-special-data-sets/WHAT-IS-NON-GRIDDED-DATA.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/working-with-special-data-sets/POINT-DATA.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/working-with-special-data-sets/VERTICAL-PROFILES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/working-with-special-data-sets/COLLECTIONS-OF-TIME-SERIES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/working-with-special-data-sets/COLLECTIONS-OF-2-DIMENSIONAL-GRIDS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/working-with-special-data-sets/LAGRANGIAN-DATA.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/working-with-special-data-sets/SIGMA-COORDINATE-DATA.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/working-with-special-data-sets/CURVILINEAR-COORDINATE-DATA.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/working-with-special-data-sets/POLYGONAL-DATA.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/computing-environment/SETTING-UP-TO-RUN-FERRET.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/computing-environment/FILES-AND-ENVIRONMENT-VARIABLES-USED-BY-FERRET.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/computing-environment/MEMORY-USE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/computing-environment/HARD-COPY-AND-METAFILE-TRANSLATION.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/computing-environment/OUTPUT-FILE-NAMING.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/computing-environment/INPUT-FILE-NAMING.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/converting-to-netcdf/OVERVIEW.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/converting-to-netcdf/SIMPLE-CONVERSIONS-USING-FERRET.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/converting-to-netcdf/WRITING-A-CONVERSION-PROGRAM.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/converting-to-netcdf/CREATING-A-MULTI-FILE-NETCDF-DATA-SET.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/writing-external-functions/OVERVIEW.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/writing-external-functions/GETTING-STARTED.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/writing-external-functions/QUICK-START-EXAMPLE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/writing-external-functions/ANATOMY-OF-AN-EXTERNAL-FUNCTION.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/writing-external-functions/NOTES-AND-SUGGESTIONS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/writing-external-functions/UTILITY-FUNCTIONS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-b-pplus-guide/INTRODUCTION.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-b-pplus-guide/GETTING-STARTED.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-b-pplus-guide/COMMAND-FORMAT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-b-pplus-guide/COMMAND-SYNOPSIS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-b-pplus-guide/BEGINNERS-GUIDE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-b-pplus-guide/ROUTING-PLOT-FILES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-b-pplus-guide/PPLUS-COMMAND-FILES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-b-pplus-guide/PLOT5-PPLUS-DIFFERENCES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-b-pplus-guide/COMMAND-DESCRIPTION.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/PLOTPLUS-HISTORY-EVOLUTION.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/GKS-LINE-BUNDLES.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/HARD-COPY.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/DEFINE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/SET.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/SHOW.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/ALIAS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/CANCEL.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/FILE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/FILL.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/VECTOR.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/LET.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/PAUSE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/PLOT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/SAVE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/SAY.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/UNALIAS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/USE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/FRAME.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/annotate.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/LIST.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/expndi_by_z.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/expndi_by_t.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/scat2grid_bin_xy.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/detailed-coastlines-and-borders</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/PALETTE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/PATTERN.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/CONTOUR.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/POLYGON.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/SHADE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/SPAWN.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/COMPRESSI.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/COMPRESSI-BY.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/TCAT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/XCAT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/YCAT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/ZCAT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/ecat.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/fcat.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/CONVOLVEI.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/working-with-special-data-sets/DSG_datasets.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/studenttcutoff-function.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/CURV-TO-RECT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/CURV-TO-RECT-MAP.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/RECT-TO-CURV.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/STATISTICS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/DATE1900.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/DAYS1900TOYMDHMS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/REPEAT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/lon_lat_time_string</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/tax_datestring.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/ELEMENT-INDEX.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/ELEMENT-INDEX-STRING.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/ELSE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/ELIF.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/ENDIF.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/EOF-SPACE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/EOF-STAT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/EOF-TFUNC.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/EXIT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/expndi_by.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/expndi_by_m_counts.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/expndi_by_z_counts-and-expndi_id_by_z_counts.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/expnd_by_len.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/expndi_id_by_z_counts.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/FINDHI.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/FINDLO.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/fc_isubset.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/FFT-IM.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/FFT-RE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/FFT-INVERSE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/fill_xy.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/IF.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/GO.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/ferret-fonts/list-of-ferret-fonts.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/USER.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/scatgrid_nbin_xyt.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/scat2grid_nobs_xy.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/HELP.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/IS-ELEMENT-OF.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/LABEL.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/LSL-LOWPASS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/AXES</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/PLOT-LAYOUT</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/introduction/GO-FILES</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/computing-environment/HARD-COPY-AND-METAFILE-TRANSLATION</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/LOAD.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/lon_lat_time_string.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/MESSAGE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/MINUTES24.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/WHERE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/NCO.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/NCO_ATTR.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/WI.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/PPLUS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/pt_in_poly.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/QUIT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/sampleimulti-and-j-k-l-m-n.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/samplexy_curv_avg.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/samplexy_curv_nrst.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/samplexyt.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/samplexyz.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/samplexyzt.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/samplexz.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/sampleyz.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/separate.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/QUERY.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/handling-string-data-symbols/USE-WITH-EMBEDDED-EXPRESSIONS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/computing-environment/OUTPUT-FILE-NAMING</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/variables-xpressions/XPRESSIONS</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/ferret-functionality</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/BIN_INDEX_WT</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/DOT</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/LANCZOS.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/sampleimulti-and-j-k-l-m-n</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/TRANSPOSE.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/ZAXREPLACE-AVG.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/ZAXREPLACE-BIN.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/version-76-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/version-75-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-743-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-742-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-7-4-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-7-3-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-7-2-release-notes</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-7-1-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-7-0-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-96-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-95-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-93-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-9-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-85-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-842-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-8-4-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-8-2-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-8-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-72-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-7-1-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-7-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-6-7-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-6-5-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-6-4-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/v-6-6-2-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/v6-6-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/v6-5-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/v6-4-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/v6-3-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/v6-2-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/v6-1-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/v6-08-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-5-6-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-4-9-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/grid-indices-in-ferret.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/known-issues.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/pyferret-quick-start-notes</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/SET</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/pyferret/requirements.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/labeling-dates-along-a-trackline</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/DEFINE</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/PALETTE</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/customizing-plots/COLOR</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/colors-and-patterns</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/black-and-white-graphics</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/color-palettes-to-convey-information-to-color-impaired-viewers-and-on-different-output-devices</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/palettes-for-out-of-bounds-data</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/fill-between-two-curves</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-5-6-release-notes</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/ferret-color-palettes</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/change_widths</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/contouring-to-outline-a-mask</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/demos/ccbar_demo.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/ccbar.jnl</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/commands-reference/FRAME</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/map-projections-in-viewports</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/plot-vs-with-map-projections</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/cell-edges-for-3-argument-shade-plots</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/regridding-a-time-series-with-ave</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/changing-line-thickness-in-postscript-files</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/working-with-the-legend-on-a-line-plot</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/how-do-i-calculate-climatologies-and-climatological-anomalies</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/sites/default/files/atoms/files/Using_Forecast_Model_Run_Collections_in_Ferret.pdf</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/how-can-i-show-the-grid-on-my-map-projection-plots.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/using-multi-file-netcdf-descriptors-under-linux.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/ferret-fonts/list-of-ferret-character-fonts.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/sites/default/files/atoms/files/PyFerret_exploring_ensembles.pdf</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/sites/default/files/atoms/files/PyFerret_ensembles_of_FMRCs.pdf</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/controlling-the-size-of-gif-output</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/locating-labels-on-a-time-axis-plot</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/overlaying-a-time-series-on-a-2d-plot</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/2d-log-plots</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/correlations-and-variances</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/faq/calling-scat2grid-functions-dsg-data</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/users-guide/appendix-a-external-functions/DOT.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://acmanke.github.io/PyFerret.Community/documentation/release-notes/version-6-6-1-release-notes.html</loc>
+  <lastmod>2025-07-13T00:08:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
