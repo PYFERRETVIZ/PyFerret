@@ -1,0 +1,55 @@
+cancel mode verify
+
+! Finding links in the index which do not point to any anchor
+! In each directory, create filename.index_entries.list as follows:
+
+!  set flist = `ls`
+!  foreach fname ( $flist)
+!     $fname ../full-index/index.html > $fname.index_entries.list
+!      end
+
+! The dataset *.index_entries.list must be edited to remove <b> before <a html,
+! to put <a html at the start of each line, and to change the quote and space after 
+! the anchor to a > or to change the "> after anchors to just >
+
+
+! Argument 1 is the name directory/
+! Argument 2 is the name of the html file, name.html
+! Open the dataset.  directory/name.html.index_entries.list
+! The result is a file with just the anchors: directory/name.html.
+
+
+define symbol infile = ($1)/($2)
+define symbol links_list = ($infile).index_entries.list
+define symbol anchors_file = ($infile).anchors
+
+columns/type=text/delim="~" "($links_list)"
+show data
+
+let hashes = strindex(v1, "#")
+
+if `hashes[i=@max] eq 0` then
+  say no anchors found
+  exit/script
+endif
+
+! File listing the names of html files in the directory that have anchor
+! references in full_index/index.html
+say/append/outfile="($1).anchor_refs.list" ($2)
+
+let hashmask = if hashes gt 0 then 1  
+let hash_to_use = if hashes eq 0 then 1 else hashes+1  
+
+let ends = strindex(v1,">")
+let ends_to_use = if ends gt 0 then ends-hashes-1 else hash_to_use+1 
+
+let anchors = if hashmask then substring(v1, hash_to_use, ends_to_use)
+list/format=(a)/norow/nohead anchors
+
+list/format=(a)/norow/nohead/clobber/file="($anchors_file)" anchors
+
+! Now look at the shell script grep-c.sc  which uses grep -c to find the number
+! of instances of the anchor in the html files.
+
+sp cat ($1).anchor_refs.list
+say ($1).anchor_refs.list

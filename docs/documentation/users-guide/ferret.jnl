@@ -1,0 +1,8 @@
+ ! NOAA/PMEL TMAP
+ ! PyFerret v7.65 (debug)
+ ! Linux 4.4.0-22621-Microsoft - 02/20/24
+ !  9-Mar-24 20:02     
+
+set mode verify
+go edit_html.jnl customizing-plots  MAP-PROJECTIONS-AND-CURVILINEAR-COORDINATES.html
+q
