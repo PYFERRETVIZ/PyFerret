@@ -1,35 +1,16 @@
 # PyFerret
-The PyFerret program and Python module from NOAA/PMEL.  
-See [https://ferret.pmel.noaa.gov/Ferret/](https://ferret.pmel.noaa.gov/Ferret/)
-for more information about Ferret and PyFerret.
+The PyFerret program and Python module developed at NOAA/PMEL.  (See [https://ferret.pmel.noaa.gov/Ferret/](https://ferret.pmel.noaa.gov/Ferret/)
 
-This repository is regularly synchronized with PyFerret repository at PMEL
-(the pyferret branch of the ferret project in the subversion repository at
-PMEL) using git-svn.
+The PYFERRETVIZ githb site begins in May 2026 with a copy of the PMEL code, documentation and the V7.6.3 release. 
 
 #### Legal Disclaimer
-*This repository is a software product and is not official communication
+*This repository is a software product and is not under the auspices of 
 of the National Oceanic and Atmospheric Administration (NOAA), or the
-United States Department of Commerce (DOC). All NOAA GitHub project
-code is provided on an 'as is' basis and the user assumes responsibility
-for its use. Any claims against the DOC or DOC bureaus stemming from
-the use of this GitHub project will be governed by all applicable Federal
-law. Any reference to specific commercial products, processes, or services
-by service mark, trademark, manufacturer, or otherwise, does not constitute
-or imply their endorsement, recommendation, or favoring by the DOC.
-The DOC seal and logo, or the seal and logo of a DOC bureau, shall not
-be used in any manner to imply endorsement of any commercial product
-or activity by the DOC or the United States Government.*
+United States Department of Commerce (DOC). *
 
 ## Ferret/PyFerret Documentation
 
-For more information on using PyFerret, see the Ferret and PyFerret documentation under
-[https://ferret.pmel.noaa.gov/Ferret/](https://ferret.pmel.noaa.gov/Ferret/)
-
-Information about the Ferret email users group, and archives of past discussions
-from the group (which should be searched prior to sending a question to the email
-users group) can be found at
-[https://ferret.pmel.noaa.gov/Ferret/email-users-group/](https://ferret.pmel.noaa.gov/Ferret/email-users-group/)
+For more information on using PyFerret, see the PyFerret documentation at https://pyferretviz.github.io/PyFerret/
 
 ## Jupyter / iPython notebook
 
@@ -143,8 +124,7 @@ You may also wish to install the `netcdf` and `nco` packages to provide some use
 programs for working with NetCDF files (such as `ncdump` and `ncattted` which are used
 in the benchmark tests).
 
-If you do not have the Ferret/PyFerret standard datasets, they can be obtained from the
-[https://github.com/NOAA-PMEL/FerretDatasets/](https://github.com/NOAA-PMEL/FerretDatasets/) GitHub repo.
+If you do not have the Ferret/PyFerret standard datasets, they can be obtained from the https://github.com/PYFERRETVIZ/FerretDatasets GitHub repo.
 The contents can be put extracted/cloned to whatever location desired.
 
 Extract the PyFerret tar.gz file in the desired location.
@@ -226,7 +206,7 @@ plus history and version control of the source code) to your local system.
 The git comands to clone the PyFerret repository look something like the following
 (the local copy of the repository will be put into `$HOME/git/PyFerret`):
 ```shell
-git clone https://github.com/NOAA-PMEL/PyFerret.git $HOME/git/PyFerret
+git clone https://github.com/PYFERRETVIZ/PyFerret
 cd $HOME/git/PyFerret
 ```
 Working with a cloned repository allows you to quickly and easily update
@@ -301,8 +281,8 @@ example `site_specific.mk` file given above.
 
 #### Standard Ferret/PyFerret datasets
 
-If you do not have the standard Ferret/PyFerret datasets, they can be downloaded from
-[https://github.com/NOAA-PMEL/FerretDatasets/](https://github.com/NOAA-PMEL/FerretDatasets/)
+If you do not have the standard Ferret/PyFerret datasets, they can be downloaded from 
+https://github.com/PYFERRETVIZ/FerretDatasets
 either as a zip file download or as a git cloned repository (similar to obtaining the
 PyFerret source).
 If you already have a copy of these datasets on your system, these datasets can be
