@@ -248,15 +248,17 @@ xmlns:schema="http://schema.org/">
 <pre>
 yes? go fland 20 white basemap solid x=232:241 y=44:50
 yes? go land_detail black overlay 8 9 blue lightbluen</pre><p><img class="image-inline" src="../../sites/default/files/images/documentation/tutorial_images/land_detail_1.png" /></p>
-<p>Now show a color plot with national boundaries and rivers. Access the detailed topography/bathymetry data from Smith and Sandwell via OPeNDAP.</p>
+<p>Now show a color plot with national boundaries and rivers. Access the detailed topography/bathymetry data from Smith and Sandwell via OPeNDAP. A current opendap source for Smith and Sandwell data is not found so demonstrate this with etopo5  </p>
 <pre>
-yes? use "https://data.pmel.noaa.gov/pmel/thredds/dodsC/data/PMEL/smith_sandwell_topo_v8_2.nc"
+yes? ! use "my_smith_sandwell_topo_v8_2.nc"
+yes? ! use etopo5.nc"
 yes? fill/lev=(-5000,-1000,500)(-1000,0,50)/pal=topo/x=0:24/y=30:46 rose
 yes? go land_detail black overlay red " " blue blue
 </pre><p><img class="image-inline" src="../../sites/default/files/images/documentation/tutorial_images/land_detail_2.png" /></p>
 <p>Now show a plot with international marine boundaries marked</p>
 <pre>
-yes? use etopo20yes? fill/x=80:220/y=-50:20/pal=land_sea/lev=(-9000,9000,500) rose
+yes? use etopo20
+yes? fill/x=80:220/y=-50:20/pal=land_sea/lev=(-9000,9000,500) rose
 </pre><p><img class="image-inline" src="../../sites/default/files/images/documentation/tutorial_images/land_detail_3.png" /></p>
 <p> </p>
 </div>
