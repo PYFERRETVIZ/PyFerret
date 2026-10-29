@@ -8,7 +8,6 @@
 ## =========================
 # DIR_PREFIX = $(HOME)/build/pyferret_dev
 DIR_PREFIX = $(HOME)/git/PyFerret
-# DIR_PREFIX = $(HOME)/svn/pyferret
 
 ## =========================
 ## Installation directory for built PyFerret.
@@ -53,6 +52,7 @@ FC = $(shell which gfortran)
 PYTHON_EXE = python3.6
 # PYTHON_EXE = python3.7
 # PYTHON_EXE = python3.8
+PYTHON_EXE = python
 
 ## =========================
 ## Full path to the python include files directory.
