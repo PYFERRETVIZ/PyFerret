@@ -1,0 +1,79 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Wrong time axes, and strange interaction with viewports -->
+<!--X-From-R13: Ayvivre [negv <byvivre.znegvNyfpr.vcfy.se> -->
+<!--X-Date: Wed, 20 Dec 2017 02:17:30 &#45;0800 -->
+<!--X-Message-Id: 9F9DE1F0&#45;E95B&#45;4BC3&#45;A8EA&#45;039BD31A7DE8@lsce.ipsl.fr -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Derived: png392nOwoNdL.png -->
+<!--X-Derived: pngAT1Cv0HF48.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Wrong time axes, and strange interaction with viewports</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00703.html">Thread Prev</a>][<a href="msg00715.html">Thread Next</a>][<A HREF="threads2017.html#00712">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Wrong time axes, and strange interaction with viewports</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Wrong time axes, and strange interaction with viewports</strong></li>
+<li><strong>From</strong>: <strong>Olivier Marti &lt;<a href="mailto:olivier.marti@DOMAIN.HIDDEN">olivier.marti@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 20 Dec 2017 11:17:14 +0100</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td style=""><div class="">Hi everybody</div><div class=""><br class=""></div><div class="">The following has been tested on Ferret 7.1 on Mac OSX 10.12, Ferret 6.9.3 on RedHat&nbsp;2.6.32 and PyFerret 7.1 on RedHat 2.6.32</div><div class=""><br class=""></div><div class="">Several questions :</div><div class=""><br class=""></div><div class="">- Why PLOT and SHADE do not show the same time axes ?</div><div class="">- Why is there a empty part on the right of the PLOT ?</div><div class="">- Why is there a empty part on the left on the SHADE ?</div><div class="">- Why the SHADE is cropped on the right part ?</div><div class="">- Why this behavior is depending on the viewport definition ?</div><div class=""><br class=""></div><div class="">But the real question is : can I find a workaround to have matching time axes between SHADE and PLOT ?</div><div class=""><br class=""></div><div class="">Thank you for any kind of help !</div><div class=""><br class=""></div><div class="">Olivier</div><div class=""><br class=""></div><div class=""><br class=""></div><div class=""><div class=""><font face="Courier" class="">USE "<a rel="nofollow" href="https://vesg.ipsl.upmc.fr/thredds/dodsC/work_thredds/p86mart/FERRET_DEBUG/PL01_1ts_thetao_point.nc" class="">https://vesg.ipsl.upmc.fr/thredds/dodsC/work_thredds/p86mart/FERRET_DEBUG/PL01_1ts_thetao_point.nc</a>"</font></div><div class=""><font face="Courier" class=""><br class=""></font></div><div class=""><font face="Courier" class="">CANCEL WINDOW/ALL</font></div><div class=""><font face="Courier" class=""><br class=""></font></div><div class=""><font face="Courier" class="">SET WINDOW 1</font></div><div class=""><font face="Courier" class="">DEFINE VIEWPORT/X=0.0,0.5/Y=0.5,1.0 v1</font></div><div class=""><font face="Courier" class="">DEFINE VIEWPORT/X=0.0,0.5/Y=0.0,0.5 v2</font></div><div class=""><font face="Courier" class=""><br class=""></font></div><div class=""><font face="Courier" class="">SET VIEW v1 ; PLOT/K=1:20/LINE thetao[K=1], thetao[K=@MIN]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+<div style="color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;" class=""><div style="color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;" class=""><span class="Apple-style-span" style="border-collapse: separate; font-family: 'Lucida Grande'; font-variant-ligatures: normal; font-variant-east-asian: normal; font-variant-position: normal; line-height: normal; border-spacing: 0px;"><div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;" class=""><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Lucida Grande'; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; border-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-stroke-width: 0px;"><div style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;" class=""><span class="Apple-style-span" style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Lucida Grande'; font-variant-ligatures: normal; font-variant-caps: normal; font-variant-east-asian: normal; font-variant-position: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; border-spacing: 0px; -webkit-text-deco                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+</div>
+<br class=""></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00715" href="msg00715.html">Re: [ferret_users] Wrong time axes, and strange interaction with viewports</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00703.html">[ferret_users] whitespace within command-line arguments</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00715.html">Re: [ferret_users] Wrong time axes, and strange interaction with viewports</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00703.html">Thread Prev</a>][<a href="msg00715.html">Thread Next</a>][<A HREF="threads2017.html#00712">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

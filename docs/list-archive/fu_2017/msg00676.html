@@ -1,0 +1,110 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] memory strategies for handling large computational requests -->
+<!--X-From-R13: Bngevpx Pebpxznaa <cngevpx.oebpxznaaNyfpr.vcfy.se> -->
+<!--X-Date: Wed, 22 Nov 2017 02:57:20 &#45;0800 -->
+<!--X-Message-Id: 400769719.1005202.1511348224834.JavaMail.zimbra@lsce.ipsl.fr -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] memory strategies for handling large computational requests</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00674.html">Thread Prev</a>][<a href="msg00677.html">Thread Next</a>][<A HREF="threads2017.html#00676">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] memory strategies for handling large computational requests</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] memory strategies for handling large computational requests</strong></li>
+<li><strong>From</strong>: <strong>Patrick Brockmann &lt;<a href="mailto:patrick.brockmann@DOMAIN.HIDDEN">patrick.brockmann@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 22 Nov 2017 11:57:04 +0100 (CET)</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>Thread-index: UF1BJ8gnuibMcxi/LZfazRGXCNVAbw==</li>
+<li>Thread-topic: memory strategies for handling large computational requests</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #000000"><div data-marker="__QUOTED_TEXT__"><div style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #000000"><div><div style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #000000"><div><div style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #000000"><div>Hi ferreters,<br>
+</div><br>
+<div>I would like to plot time series with quite huge file (8.3G) from a variable XYZT (144x143x13x8280).<br>
+</div><div>I have worked with last 7.2 ferret release and tried different increases of memory without success.</div><div>I always get&nbsp; **ERROR: request exceeds memory setting<br>
+<br>
+</div><div>Next step would be as suggested from doc (../../documentation/users-guide/computing-environment/MEMORY-USE.html)<br>
+</div><div>to break up my request into fragments. <br>
+</div><div>Is it the best solution in my case ?<br>
+</div><br>
+<div>My ressource is available from<br>
+</div><div>https://vesg.ipsl.upmc.fr/thredds/catalog/IPSLFS/brocksce/tmp/catalog.html?dataset=DatasetScanIPSLFS/brocksce/tmp/CM6012.1-pi-ttop-02_23200101_30091231_1M_transpir.nc<br>
+</div><br>
+<div>Typical code lines are:<br>
+</div><br>
+<div>yes? use CM6012.1-pi-ttop-02_23200101_30091231_1M_transpir.nc<br>
+</div><div>yes? let var=TRANSPIR[k=@sum, x=@ave, y=@ave]<br>
+yes? plot var[l=@sbx:120]<br>
+<br>
+</div><div>! the following pass because I have limites time range (1:1200)<br>
+</div><div>yes? plot var[l=1:1200@sbx:120]<br>
+</div><br>
+<br>
+<div>Any help welcome.<br>
+</div><div>Regards<br>
+</div><div>Patrick<br>
+</div><br>
+<div>--<br>
+Data Analysis and Visualization Engineer<br>
+LSCE/IPSL, CEA-CNRS-UVSQ laboratory<br>
+LSCE - Climate and Environment Sciences Laboratory<br>
+IPSL - Institut Pierre Simon Laplace<br>
+--</div></div></div></div></div></div><br>
+</div></div>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00684" href="msg00684.html">Re: [ferret_users] memory strategies for handling large computational requests</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+<li><strong><a name="00677" href="msg00677.html">[ferret_users] RE: memory strategies for handling large computational requests</a></strong>
+<ul><li><em>From:</em> Kaduk, Jorg D. (Dr.)</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00674.html">[ferret_users] Nested loops and variable filename output</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00677.html">[ferret_users] RE: memory strategies for handling large computational requests</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00674.html">Thread Prev</a>][<a href="msg00677.html">Thread Next</a>][<A HREF="threads2017.html#00676">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

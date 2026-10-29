@@ -1,0 +1,180 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] How can I define the regular data attached here? -->
+<!--X-From-R13: Dhff Tvrqyre <ehffryy.svrqyreNpfveb.nh> -->
+<!--X-Date: Thu, 19 Oct 2017 00:28:39 &#45;0700 -->
+<!--X-Message-Id: a8cb37f0&#45;bd96&#45;cba9&#45;c7b4&#45;3056aed7a39a@csiro.au -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAFYXeb&#45;HQti3oL&#45;q4ZMutqXRBJZbWXJqOcdRDnVdxdqo5b2P2g@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] How can I define the regular data attached here?</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00653.html">Thread Prev</a>][<a href="msg00655.html">Thread Next</a>][<A HREF="threads2017.html#00654">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] How can I define the regular data attached here?</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] How can I define the regular data attached here?</strong></li>
+<li><strong>From</strong>: <strong>Russ Fiedler &lt;<a href="mailto:russell.fiedler@DOMAIN.HIDDEN">russell.fiedler@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 19 Oct 2017 18:28:23 +1100</li>
+<li>In-reply-to: &lt;<a href="msg00653.html">CAFYXeb-HQti3oL-q4ZMutqXRBJZbWXJqOcdRDnVdxdqo5b2P2g@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00653.html">CAFYXeb-HQti3oL-q4ZMutqXRBJZbWXJqOcdRDnVdxdqo5b2P2g@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Thunderbird/52.4.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<div class="moz-cite-prefix"><br>
+ 
+Hi,<br>
+ 
+<br>
+ 
+Check out the function FILLL_XY<br>
+ 
+<br>
+ 
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/appendix-a-external-functions/fill_xy.html">../../documentation/users-guide/appendix-a-external-functions/fill_xy</a><br>
+ 
+<br>
+ 
+Something like<br>
+ 
+<br>
+ 
+let mask = ignore0(ifv msla then 0 else 1) ! Make a mask with 1
+wherever original is missing<br>
+ 
+let msla_filled=fill_xy(msla,mask,10)<br>
+ 
+<br>
+ 
+should do the trick.<br>
+ 
+<br>
+ 
+<br>
+ 
+On 19/10/17 17:48, Karnan C wrote:<br>
+ 
+</div>
+<blockquote type="cite"
+cite="">
+ 
+<div dir="ltr">Dear Ferreters,
+<div><br>
+ 
+</div>
+<div>I have downloaded a spatial data set (sea level) which is
+regular. How can I define the data set in ferret to fill
+spatially? The text file 'MSLA.txt" attached here.</div>
+<div><br>
+ 
+</div>
+<div>Thanks,</div>
+<div>Regards<br clear="all">
+<div><br>
+ 
+</div>
+-- <br>
+ 
+<div class="m_2585605955073356667gmail_signature"
+data-smartmail="gmail_signature">
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">C. Karnan, CSIR - SRF<br>
+ 
+Ph. D Research Scholar<br>
+ 
+<div>National Institute of Oceanography (CSIR)</div>
+<div>Regional Centre,<span
+style="font-family:Arial">Dr Salim Ali Road</span></div>
+<div><span style="font-family:Arial">Kochi - 682
+018.</span></div>
+<div>
+<div>
+<div>
+<div>India.<br>
+ 
+</div>
+<div>Mobile No. +91 9633032345; +91
+9941811608</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<p><br>
+ 
+</p>
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00655" href="msg00655.html">Re: [ferret_users] How can I define the regular data attached here?</a></strong>
+<ul><li><em>From:</em> Karnan C</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00653" href="msg00653.html">[ferret_users] How can I define the regular data attached here?</a></strong>
+<ul><li><em>From:</em> Karnan C</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00653.html">[ferret_users] How can I define the regular data attached here?</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00655.html">Re: [ferret_users] How can I define the regular data attached here?</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00653.html">Thread Prev</a>][<a href="msg00655.html">Thread Next</a>][<A HREF="threads2017.html#00654">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

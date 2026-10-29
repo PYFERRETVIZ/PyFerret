@@ -1,0 +1,262 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] zero values to NaN -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Wed, 16 Aug 2017 10:32:48 &#45;0700 -->
+<!--X-Message-Id: 65496304&#45;e79b&#45;bc00&#45;648a&#45;2b2d02b71835@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAGRd1&#45;+hnYjuSWraQhwjX=CSLKy2DyADLinyToSAdvoAU0s=Mw@mail.gmail.com -->
+<!--X-Reference: f32b1daf&#45;26a1&#45;7162&#45;4c5a&#45;b47f48583011@csiro.au -->
+<!--X-Reference: CAO8FmMKe7jCqB_Ew06XhLGn7wDkPZDxEdcsbMLvZ9gbvotuxrQ@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] zero values to NaN</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00590.html">Thread Prev</a>][<a href="msg00596.html">Thread Next</a>][<A HREF="threads2017.html#00594">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] zero values to NaN</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] zero values to NaN</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 16 Aug 2017 10:32:46 -0700</li>
+<li>In-reply-to: &lt;<a href="msg00590.html">CAO8FmMKe7jCqB_Ew06XhLGn7wDkPZDxEdcsbMLvZ9gbvotuxrQ@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAGRd1-+hnYjuSWraQhwjX=CSLKy2DyADLinyToSAdvoAU0s=Mw@mail.gmail.com&gt; &lt;<a href="msg00588.html">f32b1daf-26a1-7162-4c5a-b47f48583011@csiro.au</a>&gt; &lt;<a href="msg00590.html">CAO8FmMKe7jCqB_Ew06XhLGn7wDkPZDxEdcsbMLvZ9gbvotuxrQ@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.2.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hi,</p>
+<p>Ferret does not treat values of -999 as NaN. Instead it stores
+the missing flag, whatever is indicated in the dataset, and
+handles those values in calculations as missing data - whether
+that is skipping that data in calculations, or counting valid data
+values, or whatever the _expression_ requires.<br>
+ 
+</p>
+<p>Because many files written with other software use NaN for
+missing values, Ferret will read netCDF files that use NaN, but
+when writing netCDF data, it doesn't write NaN as the missing
+flag.</p>
+<br>
+ 
+Ansley<br>
+ 
+<br>
+ 
+<div class="moz-cite-prefix">On 8/16/2017 1:20 AM, Abhisek
+Chatterjee wrote:<br>
+ 
+</div>
+<blockquote type="cite"
+cite="">
+<div dir="ltr">Dear Atul,
+<div><br>
+ 
+</div>
+<div>Another way of specifying any value (say -999 ) as nan is</div>
+<div><br>
+ 
+</div>
+<div>set var/bad=-999 uval</div>
+<div><br>
+ 
+</div>
+<div>Then all -999 values will be treated as NaN.</div>
+<div><br>
+ 
+</div>
+<div>Regards,</div>
+<div>Abhisek</div>
+<div class="gmail_extra"><br clear="all">
+<div>
+<div class="gmail_signature"
+data-smartmail="gmail_signature">
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr"><br>
+ 
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="gmail_quote">On Wed, Aug 16, 2017 at 12:55 PM,
+Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow"
+href="mailto:russell.fiedler@xxxxxxxx"
+moz-do-not-send="true">russell.fiedler@xxxxxxxx</a>&gt;</span>
+wrote:<br>
+ 
+<blockquote class="gmail_quote" style="margin:0 0 0
+.8ex;border-left:1px #ccc solid;padding-left:1ex"><br>
+ 
+Hi,<br>
+ 
+<br>
+ 
+Rather than using "NaN" it's is preferable to use
+"missing" values. What you want is the IGNORE0() function<br>
+ 
+<br>
+ 
+let uvels=IGNORE0(uvel)<br>
+ 
+<br>
+ 
+This sets all zero to missing.<br>
+ 
+<br>
+ 
+In general if you want to mask out a value but keep the
+rest.<br>
+ 
+<br>
+ 
+let val_if_not_equal_to_foo = if val ne foo then val<br>
+ 
+<br>
+ 
+<br>
+ 
+<a rel="nofollow"
+href="../../documentation/users-guide/variables-xpressions/VARIABLES.html#_VPID_75"
+rel="noreferrer" moz-do-not-send="true">../../documentation/users-guide/variables-xpressions/VARIABLES#_VPID_75</a><br>
+ 
+<br>
+ 
+<br>
+ 
+<a rel="nofollow"
+href="../../documentation/users-guide/commands-reference/IF.html"
+rel="noreferrer" moz-do-not-send="true">../../documentation/users-guide/commands-reference/IF</a><span
+class="HOEnZb"><font color="#888888"><br>
+ 
+<br>
+ 
+<br>
+ 
+Russ</font></span>
+<div class="HOEnZb">
+<div class="h5"><br>
+ 
+<br>
+ 
+<br>
+ 
+On 16/08/17 16:54, Atul Srivastava wrote:<br>
+ 
+<blockquote class="gmail_quote" style="margin:0 0 0
+.8ex;border-left:1px #ccc solid;padding-left:1ex">
+Dear ferret users I am new in ferret please tell me
+how I can set zero values in the data sets to NaN
+values. Regarding this I am using this command but
+it does not work properly.<br>
+ 
+<br>
+ 
+<br>
+ 
+let uvels=uvel[x=40E:110E,y=20S:30N,z=1:500]<br>
+ 
+<br>
+ 
+let nan = "NaN"<br>
+ 
+<br>
+ 
+let uvelsn=IF uvels eq 0 THEN nan<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+</blockquote>
+<br>
+ 
+<br>
+ 
+</div>
+</div>
+</blockquote>
+</div>
+<br>
+ 
+</div>
+</div>
+</blockquote>
+<br>
+ 
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00596" href="msg00596.html">Re: [ferret_users] zero values to NaN</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00587" href="msg00587.html">[ferret_users] zero values to NaN</a></strong>
+<ul><li><em>From:</em> Atul Srivastava</li></ul></li>
+<li><strong><a name="00588" href="msg00588.html">Re: [ferret_users] zero values to NaN</a></strong>
+<ul><li><em>From:</em> Russ Fiedler</li></ul></li>
+<li><strong><a name="00590" href="msg00590.html">Re: [ferret_users] zero values to NaN</a></strong>
+<ul><li><em>From:</em> Abhisek Chatterjee</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00590.html">Re: [ferret_users] zero values to NaN</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00596.html">Re: [ferret_users] zero values to NaN</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00590.html">Thread Prev</a>][<a href="msg00596.html">Thread Next</a>][<A HREF="threads2017.html#00594">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

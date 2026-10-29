@@ -1,0 +1,168 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Monthly climatologies repeated along long time axis -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Tue, 11 Jul 2017 10:58:53 &#45;0700 -->
+<!--X-Message-Id: 1e1f52e1&#45;5b89&#45;1654&#45;0b97&#45;02f848910669@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CAPnt&#45;U+acON922v&#45;bB=gCSWe=0+1WwQzztgc6TfFbn4MC6kY7Q@mail.gmail.com -->
+<!--X-Reference: 8ADA0F8B&#45;08C9&#45;4724&#45;8061&#45;1764D4B6C6D5@noaa.gov -->
+<!--X-Reference: CAPnt&#45;U+U=oVKjuULqD2EeCubc+FQ_cXvKDW7+6xSxLNWMhP8GQ@mail.gmail.com -->
+<!--X-Reference: 6C77BED9&#45;F10C&#45;4CFD&#45;9B6A&#45;01099877ED1C@noaa.gov -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Monthly climatologies repeated along long time axis</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00487.html">Thread Prev</a>][<a href="msg00490.html">Thread Next</a>][<A HREF="threads2017.html#00489">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Monthly climatologies repeated along long time axis</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Monthly climatologies repeated along long time axis</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 11 Jul 2017 10:58:50 -0700</li>
+<li>In-reply-to: &lt;<a href="msg00487.html">6C77BED9-F10C-4CFD-9B6A-01099877ED1C@noaa.gov</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAPnt-U+acON922v-bB=gCSWe=0+1WwQzztgc6TfFbn4MC6kY7Q@mail.gmail.com&gt; &lt;<a href="msg00484.html">8ADA0F8B-08C9-4724-8061-1764D4B6C6D5@noaa.gov</a>&gt; &lt;CAPnt-U+U=oVKjuULqD2EeCubc+FQ_cXvKDW7+6xSxLNWMhP8GQ@mail.gmail.com&gt; &lt;<a href="msg00487.html">6C77BED9-F10C-4CFD-9B6A-01099877ED1C@noaa.gov</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.2.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Hi Paul,
+ 
+</pre><tt>To expand on what Billy is saying here, results from modulo regridding 
+</tt><tt>will be affected by how the 'grid cells' of the monthly time axes are 
+</tt><tt>defined.  In an extreme example, If your 20-year monthly data has time 
+</tt><tt>coordinates that are for instance, at the start of each month,
+</tt><pre style="margin: 0em;">
+ 
+yes? list/l=1:6/nohead uwnd[x=180,y=0]
+01-JAN-1982 / 1: -2.738
+01-FEB-1982 / 2: -2.331
+01-MAR-1982 / 3: -3.251
+01-APR-1982 / 4: -3.124
+01-MAY-1982 / 5: -1.818
+01-JUN-1982 / 6: -2.007
+ 
+</pre><tt>and the climatology has its months defined with the coordinates centered 
+</tt><tt>mid-month, then the regridding of one time axis to the other might not 
+</tt><tt>be what you expect.  The regridding is done by a linear interpolation, 
+</tt><tt>so the &quot;uwnd&quot; data above would have an interpolated value between Jan 
+</tt><tt>1st and Feb 1st being used to compute the value at mid-January for instance.
+</tt><pre style="margin: 0em;">
+ 
+Ansley
+ 
+ 
+On 7/10/2017 9:31 AM, William Kessler wrote:
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+The only thing I would add would be to overplot the pieces to make sure everything is right. Especially ACL and ACLMOD. The modulo operation can reduce the amplitude of the annual cycle if, for example, ACL values are on the first of the month (as in some data sets, e.g. ERA-Interim) but month_reg is centered on the middle of the month. month_reg is linearly interpolating between values which can reduce peaks.
+ 
+Similarly, you might get slightly different values from month_reg vs month_irreg for values on the first of the month. It is possible to define an analog for month_irreg with values on the first day of each month in that case. I could dig up an example.
+ 
+Whenever I regrid as here, I always make a few test plots of the intermediate steps to check. This is so easy to do in Ferret, and is one reason to do the calculation in explicit steps as in my example.
+ 
+Billy
+ 
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+On Jul 10, 2017, at 9:16 AM, Paul Goddard &lt;pgoddard@xxxxxxxxxxxxxxxxx&gt; wrote:
+ 
+Perfect, thanks Billy
+ 
+Best,
+Paul
+ 
+On Sun, Jul 9, 2017 at 6:22 PM, William S. Kessler &lt;william.s.kessler@xxxxxxxx&gt; wrote:
+If A is your 20-year time series and ACL is your 12-month climatology:
+ 
+First, put the climatology on a modulo time axis:
+ 
+let ACLMOD = ACL[gt=month_reg@mod]
+ 
+Extend it to the time axis of A:
+ 
+let ACLRG = ACLMOD[gt=A]
+ 
+let ADM = A - ACLRG  ! anomalies
+ 
+Sent from my phone .... Please excuse my brevity .... and my typing.
+ 
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+On Jul 9, 2017, at 4:06 PM, Paul Goddard &lt;pgoddard@xxxxxxxxxxxxxxxxx&gt; wrote:
+ 
+Hi all,
+ 
+It is likely that an answer is already on the ferret users archive, if so, just refer me to that page, but I could not find what I was looking for.
+ 
+I have a monthly climatology, so 12 time steps.  I would like to subtract the climatology off a 20 year monthly data set (of 240 time steps) to end with an anomaly with 240 time steps. How can I regrid the 12 climatologies to a 240 time step axis with the 12 months of the climatology just repeated 20 times.
+ 
+Thanks in advance,
+Paul
+</pre></blockquote></blockquote><pre style="margin: 0em;">
+ 
+</pre></blockquote><pre style="margin: 0em;">
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00490" href="msg00490.html">Re: [ferret_users] Monthly climatologies repeated along long time axis</a></strong>
+<ul><li><em>From:</em> Paul Goddard</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00483" href="msg00483.html">[ferret_users] Monthly climatologies repeated along long time axis</a></strong>
+<ul><li><em>From:</em> Paul Goddard</li></ul></li>
+<li><strong><a name="00484" href="msg00484.html">Re: [ferret_users] Monthly climatologies repeated along long time axis</a></strong>
+<ul><li><em>From:</em> William S. Kessler</li></ul></li>
+<li><strong><a name="00485" href="msg00485.html">Re: [ferret_users] Monthly climatologies repeated along long time axis</a></strong>
+<ul><li><em>From:</em> Paul Goddard</li></ul></li>
+<li><strong><a name="00487" href="msg00487.html">Re: [ferret_users] Monthly climatologies repeated along long time axis</a></strong>
+<ul><li><em>From:</em> William Kessler</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00487.html">Re: [ferret_users] Monthly climatologies repeated along long time axis</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00490.html">Re: [ferret_users] Monthly climatologies repeated along long time axis</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00487.html">Thread Prev</a>][<a href="msg00490.html">Thread Next</a>][<A HREF="threads2017.html#00489">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

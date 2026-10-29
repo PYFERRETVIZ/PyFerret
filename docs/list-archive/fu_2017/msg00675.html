@@ -1,0 +1,108 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] multiple slabs, definition of the one&#45;point axis, and precision. -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Tue, 21 Nov 2017 18:41:56 &#45;0800 -->
+<!--X-Message-Id: CAEwQpaKX2HnJgVbyfMhqUtDTc9YJ_kP3p55ZQhR_gLAn4W8sjw@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAEwQpaK70a3PBWeZ4JB9cpGJ8X1jDspVHUgj3yhBtvZ36Nk=7A@mail.gmail.com -->
+<!--X-Reference: 35585d7d&#45;5389&#45;4c88&#45;f34b&#45;7bff28ea8d6c@noaa.gov -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] multiple slabs, definition of the one-point axis, and precision.</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00673.html">Thread Prev</a>][<a href="msg00682.html">Thread Next</a>][<A HREF="threads2017.html#00675">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] multiple slabs, definition of the one-point axis, and precision.</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] multiple slabs, definition of the one-point axis, and precision.</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 22 Nov 2017 11:41:49 +0900</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00673.html">35585d7d-5389-4c88-f34b-7bff28ea8d6c@noaa.gov</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAEwQpaK70a3PBWeZ4JB9cpGJ8X1jDspVHUgj3yhBtvZ36Nk=7A@mail.gmail.com&gt; &lt;<a href="msg00673.html">35585d7d-5389-4c88-f34b-7bff28ea8d6c@noaa.gov</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Hi Ansley,<br>
+<div class="gmail_extra"><br>
+<div class="gmail_quote">Thanks for your answer! but, my point was different.<br>
+<blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+ 
+ 
+ 
+<div bgcolor="#FFFFFF">
+<p>DEFINE AXIS/Z/UNITS=meters/DEPTH  zaxis = {0,10,20,50,100}<br>
+</p><pre>DEF GRID/Z=zaxis uv_grid
+ 
+let zz = z[gz=zaxis]
+ 
+let zval = zz[k=1]
+DEF AXIS/Z=`zval`:`zval`:1 zaxis1</pre></div></blockquote><div>My point was that this (the above line) can be problematic. How many digits do we need for `zval` ?</div><div><br>
+</div><div>The following line</div><div><span style="white-space:pre-wrap"><br>
+</span></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><span style="white-space:pre-wrap">LET/TITLE=&quot;My U data&quot; u1 = u[G=uv_grid]</span></blockquote><div></div><div>will give an undefined layer if the sole gridpoint of zaxis1 doesn&#39;t match any of the z-coordinate values of uv_grid . Interpolation doesn&#39;t happen because zaxis1 has only one gridpoint.</div><div><br>
+</div><div>The workaround I found was to use G=uv_grid@NRST .</div><div><br>
+</div><div>The example in the user&#39;s guide works because the z-coordinate values are whole numbers.</div><div><br>
+</div><div>So I thought it would be useful if we can directly get the internal value of a variable without first producing a text representation of it by the backquote `_expression_`.</div><div><br>
+</div><div>Cheers,</div><div><br>
+</div><div>Ryo</div></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00682" href="msg00682.html">Re: [ferret_users] multiple slabs, definition of the one-point axis, and precision.</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00672" href="msg00672.html">[ferret_users] multiple slabs, definition of the one-point axis, and precision.</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00673" href="msg00673.html">Re: [ferret_users] multiple slabs, definition of the one-point axis, and precision.</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00673.html">Re: [ferret_users] multiple slabs, definition of the one-point axis, and precision.</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00682.html">Re: [ferret_users] multiple slabs, definition of the one-point axis, and precision.</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00673.html">Thread Prev</a>][<a href="msg00682.html">Thread Next</a>][<A HREF="threads2017.html#00675">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

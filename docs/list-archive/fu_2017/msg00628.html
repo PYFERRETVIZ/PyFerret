@@ -1,0 +1,81 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Temp transect -->
+<!--X-From-R13: "'fnenfnev206Nlnubb.pbz' ivn _AOD B[SZ Treerg Gfref" <sreerg_hfrefNabnn.tbi> -->
+<!--X-Date: Wed, 13 Sep 2017 10:02:02 &#45;0700 -->
+<!--X-Message-Id: 1370580447.1279976.1505322104349@mail.yahoo.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 1370580447.1279976.1505322104349.ref@mail.yahoo.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Temp transect</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00626.html">Thread Prev</a>][<a href="msg00629.html">Thread Next</a>][<A HREF="threads2017.html#00628">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Temp transect</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Ferret_users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Temp transect</strong></li>
+<li><strong>From</strong>: <strong>&quot;'<a href="mailto:sarasari206@DOMAIN.HIDDEN">sarasari206@xxxxxxxxx</a>' via _OAR PMEL Ferret Users&quot; &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 13 Sep 2017 17:01:44 +0000 (UTC)</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;1370580447.1279976.1505322104349.ref@mail.yahoo.com&gt;</li>
+<li>Reply-to: &quot;<a href="mailto:sarasari206@DOMAIN.HIDDEN">sarasari206@xxxxxxxxx</a>&quot; &lt;<a href="mailto:sarasari206@DOMAIN.HIDDEN">sarasari206@xxxxxxxxx</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+Hi,<div id="yMail_cursorElementTracker_1505321790352">I'm trying to plot a temp transects.&nbsp;</div><div id="yMail_cursorElementTracker_1505321928511">I use:</div><div id="yMail_cursorElementTracker_1505321943474"><div id="yMail_cursorElementTracker_1505321943474">&#x645;&#x633;&#x62A;&#x627;&#x646;&#x647;:</div><div id="yMail_cursorElementTracker_1505321943474">transform zigma level to depth to plot vertical profiles:</div><div id="yMail_cursorElementTracker_1505321943474">(depth vs distanse)</div><div id="yMail_cursorElementTracker_1505321943474"><br>
+</div><div id="yMail_cursorElementTracker_1505321943474">let bb=dep+0*temp[l=1]</div><div id="yMail_cursorElementTracker_1505321943474">&nbsp;show grid bb</div><div id="yMail_cursorElementTracker_1505321943474">&nbsp;let zz=(z-1)*(bb)</div><div id="yMail_cursorElementTracker_1505321943474">&nbsp;stat zz</div><div id="yMail_cursorElementTracker_1505321943474">&nbsp;plot/i=12/j=40 zz</div><div id="yMail_cursorElementTracker_1505321943474">&nbsp;def axis/z=0:-100:1/dep z100</div><div id="yMail_cursorElementTracker_1505321943474">&nbsp;let znew=z[gz=z100]</div><div id="yMail_cursorElementTracker_1505321943474">&nbsp;let tempdepth=zaxreplace(temp,zz,znew)</div><div id="yMail_cursorElementTracker_1505321943474">fill/l=10/x=855/vlimits=0:-100:5/lev=(20,26,0.5) tempdepth</div><div id="yMail_cursorElementTracker_1505321943474">list/x=550/y=350/z=0:60/l=1:19 temp</div><div id="yMail_cursorElementTracker_1505321943474">plot/x=550/y=400/l=10/line/color=1/vlimits=0:-100:5 tempdepth</div><div id="yMail_cursorElementTracker_1505321943474">&nbsp;fill/l=.../j=.../vlimits=min depth:-max depth:interval&nbsp; (repeat arbitrary name)</div><div id="yMail_cursorElementTracker_1505321946530">fill or contor/l=.../i=.../vlimits=0:-50 depth:interval&nbsp; (repeat arbitrary name)</div><div id="yMail_cursorElementTracker_1505321954496"><br>
+</div><div id="yMail_cursorElementTracker_1505321954693"><br>
+</div><div id="yMail_cursorElementTracker_1505321954874">The problem is that the program is ok with the first "let" command, but complains about the rests...it shows:</div><div id="yMail_cursorElementTracker_1505322015863">ERROE:command syntax: let</div><div id="yMail_cursorElementTracker_1505322042798">Anyone knows why I get this error?</div><div id="yMail_cursorElementTracker_1505322074182">Thanks,</div><div id="yMail_cursorElementTracker_1505322078997">Sara</div><br>
+<div id="ymail_android_signature"><a rel="nofollow" href="https://overview.mail.yahoo.com/mobile/?..src="">Sent from Yahoo Mail on Android</a></div></div>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00629" href="msg00629.html">Re: [ferret_users] Temp transect</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00626.html">[ferret_users] Fw: problem in REshape</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00629.html">Re: [ferret_users] Temp transect</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00626.html">Thread Prev</a>][<a href="msg00629.html">Thread Next</a>][<A HREF="threads2017.html#00628">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

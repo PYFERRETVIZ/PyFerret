@@ -1,0 +1,252 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] SAVE precision of var from binary data? -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Thu, 6 Jul 2017 11:11:40 &#45;0700 -->
+<!--X-Message-Id: 0ee7ab13&#45;60bd&#45;547a&#45;ed44&#45;025cca26bd5a@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAEwQpaJVbAeDozChhF_poCvDrXt3kLvGfedVBDr8N7Psh_jv&#45;g@mail.gmail.com -->
+<!--X-Reference: 0887a488&#45;8c20&#45;3bc9&#45;a194&#45;5258fcdb15bb@noaa.gov -->
+<!--X-Reference: CAEwQpaJirAVqLJULkSoEDESXhGHyqpsU3RJ56vX6j5ipudmmGQ@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] SAVE precision of var from binary data?</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00479.html">Thread Prev</a>][<a href="msg00478.html">Thread Next</a>][<A HREF="threads2017.html#00481">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] SAVE precision of var from binary data?</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] SAVE precision of var from binary data?</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 6 Jul 2017 11:11:36 -0700</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00479.html">CAEwQpaJirAVqLJULkSoEDESXhGHyqpsU3RJ56vX6j5ipudmmGQ@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00472.html">CAEwQpaJVbAeDozChhF_poCvDrXt3kLvGfedVBDr8N7Psh_jv-g@mail.gmail.com</a>&gt; &lt;<a href="msg00473.html">0887a488-8c20-3bc9-a194-5258fcdb15bb@noaa.gov</a>&gt; &lt;<a href="msg00479.html">CAEwQpaJirAVqLJULkSoEDESXhGHyqpsU3RJ56vX6j5ipudmmGQ@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.2.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hi,</p>
+<p>Ok, yes. You're right. When writing netCDF files, Ferret
+defaults to whatever is the input-type when writing data read from
+NetCDF files. For stream data and data from ascii files, the
+default type for netCDF writes has been set to single-precision
+float. For user-defined variables, the default is double
+precision.<br>
+ 
+</p>
+<p>In the next release the default for binary and ascii data will
+also be double-precision.</p>
+<p>-Ansley<br>
+ 
+</p>
+<br>
+ 
+<div class="moz-cite-prefix">On 7/5/2017 9:59 PM, Ryo Furue wrote:<br>
+ 
+</div>
+<blockquote type="cite"
+cite="">
+<div dir="ltr">Hi Ansley,<br>
+ 
+<div class="gmail_extra"><br>
+ 
+<div class="gmail_quote">
+<blockquote class="gmail_quote" style="margin:0px 0px 0px
+0.8ex;border-left:1px solid
+rgb(204,204,204);padding-left:1ex">
+<div bgcolor="#FFFFFF">
+<p>The /OUTTYPE option is available for any netCDF
+write, regardless of the source of the data.</p>
+</div>
+</blockquote>
+<div>Yes! But, what I was talking about is what happens
+when OUTTYPE is not specified.</div>
+<div><br>
+ 
+</div>
+<div>If it's not specified, "SAVE/file=<a rel="nofollow"
+href="http://data.nc" moz-do-not-send="true">data.nc</a>
+var" will write the variable in SINGLE precision, even
+though it's from a double-precision binary file --- which
+is inconsistent, because everywhere else precision
+defaults to double.</div>
+<div><br>
+ 
+</div>
+<div>So, my guess is that there is somewhere in the Ferret
+code that defaults to single precision for netCDF write.</div>
+<div><br>
+ 
+</div>
+<blockquote class="gmail_quote" style="margin:0px 0px 0px
+0.8ex;border-left:1px solid
+rgb(204,204,204);padding-left:1ex">
+<div bgcolor="#FFFFFF">
+<p>To apply that setting to all files written in the
+session. (Often people use SET LIST/OUTTYPE=float or
+even /OUTTYPE=int, to save disk space when their data
+does not need double precision output.) The default
+type for writing netCDF files is the input data type;
+does your data have more than 6-7 digits? Are the
+data correct within Ferret when it reads from your
+binary file?<br>
+ 
+</p>
+</div>
+</blockquote>
+<div>The original binary data is in double precision and
+when imported into Ferret, they have correct values. You
+can actually run the sample script I attached at the end
+of my last message, which</div>
+<div><br>
+ 
+</div>
+<div>1) saves Levitus temperature in a double-precision
+netCDF,</div>
+<div>2) extracts the binary data from the netCDF file,</div>
+<div>3) reads the binary data using the
+file/format=STREAM/type=r8 command, and</div>
+<div>4) writes the variable in a new netCDF file, without
+specifying any OUTTYPE.</div>
+<div><br>
+ 
+</div>
+<div>You can verify the variable from step (3) is correct in
+Ferret (except the bad value is not specified) and you can
+verify the netCDF file created at step (4) includes the
+variable in single precision, using ncdump -h .</div>
+<div><br>
+ 
+</div>
+<div>Okay, I've improved my sample script so that it
+specifies the correct BAD value. You can now easily see
+that the variable is correctly imported at step (3).</div>
+<div><br>
+ 
+</div>
+<div><tt>&gt; set list/outtype=double</tt><br
+style="font-size:12.8px">
+</div>
+<div><tt><br>
+ 
+</tt></div>
+<div><tt><font face="arial, helvetica, sans-serif">That is a
+good idea, but I trust you can override it at each
+SAVE/OUTTYPE command or SET VAR/OUTTYPE= command,
+right?</font></tt></div>
+<div><tt><font face="arial, helvetica, sans-serif"><br>
+ 
+</font></tt></div>
+<div><tt><font face="arial, helvetica, sans-serif">Yes, I
+suppose that 'set list/outtype=double' should be the
+default initial state of Ferret until the user
+overrides it with her/his own set list/outtype
+command.</font></tt></div>
+<div><br>
+ 
+</div>
+<div>Cheers,</div>
+<div><br>
+ 
+</div>
+<div>Ryo</div>
+<div>---------------------------------------</div>
+<div>
+<div style="font-size:12.8px">set data levitus_climatology</div>
+<div style="font-size:12.8px">save/clobber/file=<a rel="nofollow"
+href="http://tmp.nc/outtype=double"
+moz-do-not-send="true">tmp.nc/outtype=double</a>temp[k=1,l=1]</div>
+<div style="font-size:12.8px">cancel data/all</div>
+<div style="font-size:12.8px">SPAWN ncks -O -C -b tmp.bin
+-v TEMP<a rel="nofollow" href="http://tmp.nc/"
+moz-do-not-send="true">tmp.nc</a>-o<a rel="nofollow"
+href="http://tmp2.nc/"
+moz-do-not-send="true">tmp2.nc</a></div>
+<div>
+<div style="font-size:12.8px">define axis/x=0:359:1 xax</div>
+<div style="font-size:12.8px">define axis/y=-89.5:89.5:1
+yax</div>
+<div style="font-size:12.8px">define grid/x=xax/y=yax
+mygrid</div>
+<div style="font-size:12.8px">file/form=STREAM/var=temp/type=r8/grid=mygrid
+tmp.bin</div>
+<div><span style="font-size:12.8px">set
+var/bad=-10000000000 temp</span></div>
+<div><span style="font-size:12.8px">save/clobber/file=</span><a rel="nofollow"
+href="http://tmp-new.nc/"
+style="font-size:12.8px" moz-do-not-send="true">tmp-new.nc</a><span
+style="font-size:12.8px">temp</span></div>
+</div>
+</div>
+<div><span style="font-size:12.8px"><br>
+ 
+</span></div>
+</div>
+</div>
+</div>
+</blockquote>
+<br>
+ 
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00472" href="msg00472.html">[ferret_users] SAVE precision of var from binary data?</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00473" href="msg00473.html">Re: [ferret_users] SAVE precision of var from binary data?</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+<li><strong><a name="00479" href="msg00479.html">Re: [ferret_users] SAVE precision of var from binary data?</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00479.html">Re: [ferret_users] SAVE precision of var from binary data?</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00478.html">[ferret_users] regarding changing the pen color used for legend</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00479.html">Thread Prev</a>][<a href="msg00478.html">Thread Next</a>][<A HREF="threads2017.html#00481">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

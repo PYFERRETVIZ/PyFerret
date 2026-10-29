@@ -1,0 +1,124 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] time axis font size is not changing -->
+<!--X-From-R13: Ivyyvnz Yrffyre <jvyyvnz.f.xrffyreNabnn.tbi> -->
+<!--X-Date: Thu, 8 Jun 2017 08:02:09 &#45;0700 -->
+<!--X-Message-Id: 41E1FB59&#45;927A&#45;42B4&#45;A18E&#45;3EDB56B074F6@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CAFXLzPhgG8sZJqspbgOQMtSoR&#45;rGQh6YcQ+Pu7P&#45;7VgM50QY0w@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] time axis font size is not changing</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00412.html">Thread Prev</a>][<a href="msg00414.html">Thread Next</a>][<A HREF="threads2017.html#00413">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] time axis font size is not changing</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] time axis font size is not changing</strong></li>
+<li><strong>From</strong>: <strong>William Kessler &lt;<a href="mailto:william.s.kessler@DOMAIN.HIDDEN">william.s.kessler@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 8 Jun 2017 08:02:06 -0700</li>
+<li>Cc: Ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00412.html">CAFXLzPhgG8sZJqspbgOQMtSoR-rGQh6YcQ+Pu7P-7VgM50QY0w@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>List-unsubscribe: &lt;<a href="mailto:googlegroups-manage+809428289204+unsubscribe@googlegroups.com">mailto:googlegroups-manage+809428289204+unsubscribe@googlegroups.com</a>&gt;, &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/subscribe">https://groups.google.com/a/noaa.gov/group/ferret_users/subscribe</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00412.html">CAFXLzPhgG8sZJqspbgOQMtSoR-rGQh6YcQ+Pu7P-7VgM50QY0w@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>Time axes have separate PPL commands:
+ 
+txlint,low,high		time axis lab intervals (e.g., 0,1=yr only; 1,0=mon only; 3,1=every 3 mon+yr)
+txnmtc,icode		icode=-1 for large tics at year breaks
+txtype,type,style	type=days,mon,yr(def); style=hr,hrday/day,daymon/mon1,mon3,monyr
+txlabp,n			-1 for below plot, 0 for no label, or +1 for above plot
+txlsze,ht			if multiple labels (month/yr) these are scaled to ht
+ 
+See more details on these in the PPL guide:
+ 
+<a  rel="nofollow" href="../../documentation/users-guide/appendix-b-pplus-guide/COMMAND-DESCRIPTION.html">../../documentation/users-guide/appendix-b-pplus-guide/COMMAND-DESCRIPTION</a>
+ 
+Billy K
+ 
+&gt; On Jun 8, 2017, at 5:35 AM, saurabh rathore &lt;rohitsrb2020@xxxxxxxxx&gt; wrote:
+&gt; 
+&gt; Dear ferreters 
+&gt; I am issuing command for increasing the font on the time axis. but it is not changing.
+&gt; 
+&gt; plot/thick/axes/set/nolab/nokey/vlimits=-6:6:1/col=1 total1
+&gt; ppl axlsze .17,.17
+&gt; ppl plot
+&gt; 
+&gt; but it is changing the font size on the vertical axis, but it is not changing the font size on the horizontal axis. I am using pyferret 7.1 final release on ubuntu 16.04 LTS. 
+&gt; 
+&gt; this problem is appearing in every time series plot where horizontal axis font is small but the vertical axis font is changing. 
+&gt; 
+&gt; Need help to rectify it. It seems the axlsze command not working for the time series.
+&gt; 
+&gt; regards, saurabh 
+&gt; 
+&gt; -- 
+&gt; 
+&gt; 
+&gt; REGARDS
+&gt; 
+&gt; Saurabh Rathore
+&gt; Research Scholar (PhD.)
+&gt; Centre For Oceans, Rivers, Atmosphere &amp; Land Science Technology
+&gt; Indian Institute Of Technology, Kharagpur
+&gt; contact :- 91- 8345984434
+&gt; &lt;test.png&gt;
+ 
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00412" href="msg00412.html">[ferret_users] time axis font size is not changing</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00412.html">[ferret_users] time axis font size is not changing</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00414.html">Re: [ferret_users] time axis font size is not changing</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00412.html">Thread Prev</a>][<a href="msg00414.html">Thread Next</a>][<A HREF="threads2017.html#00413">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

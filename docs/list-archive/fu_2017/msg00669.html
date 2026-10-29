@@ -1,0 +1,282 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] regridding of time axis -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Mon, 20 Nov 2017 12:03:24 &#45;0800 -->
+<!--X-Message-Id: 18774b27&#45;3806&#45;0a7e&#45;0bda&#45;b86db4deb3a3@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAHmb75Hrd+U03N+FKDLZnb1A5W_X0SfsrCT&#45;=Z247+uoQpTVJg@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] regridding of time axis</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00667.html">Thread Prev</a>][<a href="msg00671.html">Thread Next</a>][<A HREF="threads2017.html#00669">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] regridding of time axis</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] regridding of time axis</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 20 Nov 2017 12:03:21 -0800</li>
+<li>In-reply-to: &lt;CAHmb75Hrd+U03N+FKDLZnb1A5W_X0SfsrCT-=Z247+uoQpTVJg@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAHmb75Hrd+U03N+FKDLZnb1A5W_X0SfsrCT-=Z247+uoQpTVJg@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.4.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hi Steffie,</p>
+This would be similar to what is described here for creating a
+yearly time series; using either @AVE or another regridding
+transformation<br>
+ 
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../faq/averaging-to-regrid-a-time-series.html"">../../faq/averaging-to-regrid-a-time-series</a><br>
+ 
+<br>
+ 
+Except that you will want to define a seasonal axis instead of a
+yearly one. You can base one axis on the definition of an existing
+axis, taking every nth point, so starting with a monthly axis is an
+easy way to do this. If your incoming data already has a
+well-defined time axis, you can base it on that. Here's how that
+looks, using the dataset monthly_navy_winds that comes with the
+Ferret distribution:<br>
+ 
+<br>
+ 
+<tt>yes? use monthly_navy_winds</tt><tt><br>
+ 
+</tt><tt>yes? show grid uwnd</tt><tt><br>
+ 
+</tt><tt> GRID GDN1</tt><tt><br>
+ 
+</tt><tt>name axis # pts start
+end subset</tt><tt><br>
+ 
+</tt><tt>FNOCX LONGITUDE 144mr 20E
+17.5E(377.5) full</tt><tt><br>
+ 
+</tt><tt>FNOCY LATITUDE 73 r 90S
+90N full</tt><tt><br>
+ 
+</tt><tt>normal Z</tt><tt><br>
+ 
+</tt><tt>TIME TIME 132 r 16-JAN-1982 20:00
+17-DEC-1992 03:30 full</tt><tt><br>
+ 
+</tt><tt><br>
+ 
+</tt><tt>! Use the coordinate values of the time axis from the file
+to define a new time axis</tt><tt><br>
+ 
+</tt><tt>yes? let tt = t[gt=uwnd]</tt><tt><br>
+ 
+</tt><tt>yes? define
+axis/t/t0="`uwnd,return=t0`"/units="`uwnd,return=tunits`" time4 =
+tt[L=2:144:3]</tt><tt><br>
+ 
+</tt><tt>!-&gt; define axis/t/t0="14-JAN-1980
+14:00:00"/units="hour" time4 = tt[L=2:144:3]</tt><tt><br>
+ 
+</tt><tt><br>
+ 
+! The original data:<br>
+ 
+</tt><tt>yes? list/t=1-jan-1982:1-jan-1983/x=180/y=0 uwnd</tt><tt><br>
+ 
+</tt><tt> VARIABLE : ZONAL WIND (M/S)</tt><tt><br>
+ 
+</tt><tt> FILENAME : monthly_navy_winds.cdf</tt><tt><br>
+ 
+</tt><tt> FILEPATH :
+/home/users/tmap/ferret/linux/fer_dsets/data/</tt><tt><br>
+ 
+</tt><tt> SUBSET : 12 points (TIME)</tt><tt><br>
+ 
+</tt><tt> LONGITUDE: 180E</tt><tt><br>
+ 
+</tt><tt> LATITUDE : 0</tt><tt><br>
+ 
+</tt><tt> 180E </tt><tt><br>
+ 
+</tt><tt> 65</tt><tt><br>
+ 
+</tt><tt>16-JAN-1982 / 1: -2.738</tt><tt><br>
+ 
+</tt><tt>16-FEB-1982 / 2: -2.331</tt><tt><br>
+ 
+</tt><tt>18-MAR-1982 / 3: -3.251</tt><tt><br>
+ 
+</tt><tt>18-APR-1982 / 4: -3.124</tt><tt><br>
+ 
+</tt><tt>18-MAY-1982 / 5: -1.818</tt><tt><br>
+ 
+</tt><tt>18-JUN-1982 / 6: -2.007</tt><tt><br>
+ 
+</tt><tt>18-JUL-1982 / 7: -0.367</tt><tt><br>
+ 
+</tt><tt>17-AUG-1982 / 8: -0.900</tt><tt><br>
+ 
+</tt><tt>17-SEP-1982 / 9: 3.223</tt><tt><br>
+ 
+</tt><tt>17-OCT-1982 / 10: 2.167</tt><tt><br>
+ 
+</tt><tt>17-NOV-1982 / 11: 2.875</tt><tt><br>
+ 
+</tt><tt>17-DEC-1982 / 12: -0.007</tt><tt><br>
+ 
+<br>
+ 
+! The data on the seasonal axis:<br>
+ 
+</tt><tt>yes? list/t=1-jan-1982:1-jan-1983/x=180/y=0
+uwnd[gt=time4@ave]</tt><tt><br>
+ 
+</tt><tt> VARIABLE : ZONAL WIND (M/S)</tt><tt><br>
+ 
+</tt><tt> regrid: 2192 hour on T@AVE</tt><tt><br>
+ 
+</tt><tt> FILENAME : monthly_navy_winds.cdf</tt><tt><br>
+ 
+</tt><tt> FILEPATH :
+/home/users/tmap/ferret/linux/fer_dsets/data/</tt><tt><br>
+ 
+</tt><tt> SUBSET : 4 points (TIME)</tt><tt><br>
+ 
+</tt><tt> LONGITUDE: 180E</tt><tt><br>
+ 
+</tt><tt> LATITUDE : 0</tt><tt><br>
+ 
+</tt><tt> 180E </tt><tt><br>
+ 
+</tt><tt> 65</tt><tt><br>
+ 
+</tt><tt>16-FEB-1982 / 1: -2.773</tt><tt><br>
+ 
+</tt><tt>18-MAY-1982 / 2: -2.316</tt><tt><br>
+ 
+</tt><tt>17-AUG-1982 / 3: 0.652</tt><tt><br>
+ 
+</tt><tt>17-NOV-1982 / 4: 1.678</tt><br>
+ 
+<br>
+ 
+<br>
+ 
+If you are reading data from a text file, then you'd first define
+the monthly time axis (See DEFINE AXIS) and a grid for the data, and
+set up to read the data <b><a rel="nofollow" moz-do-not-send="true"
+href="../../documentation/users-guide/data-set-basics/ASCII-DATA.html#_VPINDEXENTRY_213">as
+described here</a></b>, and then define the seasonal axis as
+above.<br>
+ 
+<br>
+ 
+-Ansley<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<div class="moz-cite-prefix">On 11/19/2017 10:25 PM, Steffie Tom
+wrote:<br>
+ 
+</div>
+<blockquote type="cite"
+cite="">
+<div dir="ltr">
+<div>hii</div>
+<div><br>
+ 
+</div>
+<div>
+<p style="margin:0px 0px 11px"><font size="3" face="Calibri"
+color="#000000">We have data from 1979-2015, which
+consists of various
+parameters like temperature etc. we need to create
+seasonal data i.e. say for
+summer jan-feb-march for all years i.e. separately for
+1979, then jan-feb-march
+for 1980 etc. i.e in one file we want 111 months.</font></p>
+<p style="margin:0px 0px 11px"><font size="3" face="Calibri"
+color="#000000">First of all how to achieve this ?</font></p>
+<p style="margin:0px 0px 11px"><font size="3" face="Calibri"
+color="#000000">After that how to achieve the seasonal
+average of the same data above ?</font></p>
+<p style="margin:0px 0px 11px"><font size="3" face="Calibri"
+color="#b00000"><br>
+ 
+</font></p>
+<p style="margin:0px 0px 11px"><font size="3" face="Calibri"
+color="#007600">thanks</font></p>
+<p style="margin:0px 0px 11px"><br>
+ 
+</p>
+</div>
+</div>
+</blockquote>
+<br>
+ 
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00671" href="msg00671.html">Re: [ferret_users] regridding of time axis</a></strong>
+<ul><li><em>From:</em> Russ Fiedler</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00667" href="msg00667.html">[ferret_users] regridding of time axis</a></strong>
+<ul><li><em>From:</em> Steffie Tom</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00667.html">[ferret_users] regridding of time axis</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00671.html">Re: [ferret_users] regridding of time axis</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00667.html">Thread Prev</a>][<a href="msg00671.html">Thread Next</a>][<A HREF="threads2017.html#00669">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

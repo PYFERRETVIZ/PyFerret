@@ -1,0 +1,129 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] sp ps2pdf ($ofname).pdf -->
+<!--X-From-R13: Ubcny [baqny <tbcnyzbaqny18Ntznvy.pbz> -->
+<!--X-Date: Tue, 6 Jun 2017 20:38:35 &#45;0700 -->
+<!--X-Message-Id: CAHD8rBF3MbitxtHRjk+Cn0WD+gT+dUROFUcQaM5RgTzaux5=YQ@mail.gmail.com -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Derived: binwtz2jrysvL.bin -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] sp ps2pdf ($ofname).pdf</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00388.html">Thread Prev</a>][<a href="msg00404.html">Thread Next</a>][<A HREF="threads2017.html#00395">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] sp ps2pdf ($ofname).pdf</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] sp ps2pdf ($ofname).pdf</strong></li>
+<li><strong>From</strong>: <strong>Gopal Mondal &lt;<a href="mailto:gopalmondal18@DOMAIN.HIDDEN">gopalmondal18@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 7 Jun 2017 09:08:33 +0530</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>List-unsubscribe: &lt;<a href="mailto:googlegroups-manage+809428289204+unsubscribe@googlegroups.com">mailto:googlegroups-manage+809428289204+unsubscribe@googlegroups.com</a>&gt;, &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/subscribe">https://groups.google.com/a/noaa.gov/group/ferret_users/subscribe</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div><div><div><div>hey all ferreter<br>
+</div> I am getting problem in ferret in two way:<br>
+</div>1. fill or shade figure is not coming, only line plot is coming. that is why in gif mode fill or shade figure are to save by frame command.<br>
+</div>2. In olrgraphline.jnl file 1st two line and last 3 line when used following error is showing. otherwise frame command are to use to save the figure. please help<br>
+</div>due to problem 1 I can not see the figure moderation after using and command. please help.... I have attached the .jnl file and error is in bellow:<br>
+go olrgraphline.jnl <br>
+define symbol ofname=olraila<br>
+set mode metafile:($ofname).ps<br>
+!-&gt; set mode metafile:<a rel="nofollow" href="http://olraila.ps">olraila.ps</a><br>
+*** NOTE: in GIF mode: ignoring SET MODE METAFILE<br>
+go multi_view 3, 2, 0.25, 0.2, 0.04, 0.20, 0.15, 0.045, v<br>
+use <a rel="nofollow" href="http://olr.day.mean.nc">olr.day.mean.nc</a><br>
+*** NOTE: Axis coordinates are decreasing-ordered. Reversing ordering for axis lat<br>
+set view v11 ; ppl axlabp 0,-1 ;ppl axlsze,0.12,0.12<br>
+plot/nolab/nokey/x=88.23/y=22.8/t=1-jan-2008:31-dec-2008 olr<br>
+ppl ylab OLR(W/m^2)<br>
+ppl plot<br>
+set view v12 ; ppl axlabp 0, 0 ;ppl axlsze,0.12,0.12<br>
+plot/nolab/nokey/x=88.23/y=22.8/t=1-jan-2009:31-dec-2009 olr<br>
+set view v21 ; ppl axlabp 0, -1 ;ppl axlsze,0.12,0.12<br>
+plot/nolab/nokey/x=88.23/y=22.8/t=1-jan-2010:31-dec-2010 olr<br>
+ppl ylab OLR(W/m^2)<br>
+ppl plot<br>
+set view v22 ; ppl axlabp 0, 0; ppl axlsze,0.12,0.12<br>
+plot/nolab/nokey/x=88.23/y=22.8/t=1-jan-2011:31-dec-2011 olr<br>
+set view v31 ; ppl axlabp -1, -1; ppl axlsze,0.12,0.12<br>
+plot/nolab/nokey/x=88.23/y=22.8/t=1-jan-2012:31-dec-2012 olr<br>
+ppl ylab OLR(W/m^2)<br>
+ppl plot<br>
+set view v32 ; ppl axlabp -1, 0 ;ppl axlsze,0.12,0.12<br>
+plot/nolab/nokey/x=88.23/y=22.8/t=1-jan-2013:31-dec-2013 olr<br>
+frame/file=olrgraphline.gif<br>
+cancle mode metafile<br>
+sp ps2pdf ($ofname).pdf<br>
+!-&gt; sp ps2pdf olraila.pdf<br>
+Error: /undefinedfilename in (olraila.pdf)<br>
+Operand stack:<br>
+<br>
+Execution stack:<br>
+%interp_exit .runexec2 --nostringval-- --nostringval-- --nostringval-- 2 %stopped_push --nostringval-- --nostringval-- --nostringval-- false 1 %stopped_push<br>
+Dictionary stack:<br>
+--dict:1198/1684(ro)(G)-- --dict:0/20(G)-- --dict:78/200(L)--<br>
+Current allocation mode is local<br>
+Last OS error: No such file or directory<br>
+GPL Ghostscript 9.18: Unrecoverable error, exit code 1<br>
+sp rm -f ($ofname).ps<br>
+!-&gt; sp rm -f <a rel="nofollow" href="http://olraila.ps">olraila.ps</a><br>
+<br>
+</div>
+<p><strong>Attachment:
+<a href="binwtz2jrysvL.bin" ><tt>olrgraphline.jnl</tt></a></strong><br>
+ 
+<em>Description:</em> Binary data</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00404" href="msg00404.html">Re: [ferret_users] sp ps2pdf ($ofname).pdf</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00388.html">[ferret_users] Set memory command not working</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00404.html">Re: [ferret_users] sp ps2pdf ($ofname).pdf</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00388.html">Thread Prev</a>][<a href="msg00404.html">Thread Next</a>][<A HREF="threads2017.html#00395">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

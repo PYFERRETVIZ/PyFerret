@@ -1,0 +1,141 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] how to mirror a plot -->
+<!--X-From-R13: "'Enen Enev' ivn _AOD B[SZ Treerg Gfref" <sreerg_hfrefNabnn.tbi> -->
+<!--X-Date: Sat, 16 Sep 2017 13:37:17 &#45;0700 -->
+<!--X-Message-Id: 1153801392.869394.1505594225250@mail.yahoo.com -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 1795775425.346708.1505498597271.ref@mail.yahoo.com -->
+<!--X-Reference: 1795775425.346708.1505498597271@mail.yahoo.com -->
+<!--X-Reference: 9325b4a4&#45;3800&#45;c863&#45;7886&#45;b755d616c3b0@noaa.gov -->
+<!--X-Derived: pngJwmVlzdXkQ.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] how to mirror a plot</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00633.html">Thread Prev</a>][<a href="msg00631.html">Thread Next</a>][<A HREF="threads2017.html#00634">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] how to mirror a plot</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] how to mirror a plot</strong></li>
+<li><strong>From</strong>: <strong>&quot;'Sara Sari' via _OAR PMEL Ferret Users&quot; &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Sat, 16 Sep 2017 20:37:05 +0000 (UTC)</li>
+<li>In-reply-to: &lt;<a href="msg00633.html">9325b4a4-3800-c863-7886-b755d616c3b0@noaa.gov</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;1795775425.346708.1505498597271.ref@mail.yahoo.com&gt; &lt;<a href="msg00630.html">1795775425.346708.1505498597271@mail.yahoo.com</a>&gt; &lt;<a href="msg00633.html">9325b4a4-3800-c863-7886-b755d616c3b0@noaa.gov</a>&gt;</li>
+<li>Reply-to: Sara Sari &lt;<a href="mailto:sarasari206@DOMAIN.HIDDEN">sarasari206@xxxxxxxxx</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div>
+<p>Hi</p>
+<p>You can use /HLIMITS to set the start and end points on the
+horizontal axis (and /VLIMITS for the vertical axis. )</p>
+Something like this should work - using the correct values for your
+data of course.<br clear="none">
+<br clear="none">
+<tt> vector/hlimits=180000:0 u_vel, v_vel</tt><br clear="none">
+<br clear="none">
+Your data is on a grid defined in &quot;meters&quot;. <br clear="none">
+<br clear="none">
+<br clear="none">
+I&#39;d like to go into a little more detail, for data on
+longitude/latitude grids often used in Ferret. To be really careful,
+and get this to work consistently, it&#39;s best to specify the data
+range using the &quot;variable context&quot;, to select the exact range of
+data to use, and then use /HLIMITS to say what the drawing limits
+should be. Try this:<br clear="none">
+<blockquote><tt>use etopo60</tt><br clear="none">
+<tt>shade/lev=c/pal=topo_blue_brown/hlim=360:150
+rose[x=150:360,y=0:90]</tt><br clear="none">
+<br clear="none">
+<tt>go land</tt><br clear="none">
+</blockquote>
+Overlays like &quot;go land&quot; or &quot;go fland&quot; work as long as the
+coordinate-axis units are ones understood by Ferret and are
+compatible with the datasets used in the overlays, because Ferret
+gets the context from the drawing of the underlying plot.<br clear="none">
+<br clear="none">
+Here is a discussion of setting contexts:
+<a rel="nofollow" rel="nofollow" shape="rect" class="yiv8797077290moz-txt-link-freetext" href="../../documentation/users-guide/introduction/GETTING-STARTED.html#_VPINDEXENTRY_4">../../documentation/users-guide/introduction/GETTING-STARTED#_VPINDEXENTRY_4</a><br clear="none">
+<br clear="none">
+<br clear="none">
+<br clear="none">
+<div class="yiv8797077290yqt8726578450" id="yiv8797077290yqt49593"><div class="yiv8797077290moz-cite-prefix">On 9/15/2017 11:03 AM, &#39;Sara Sari&#39; via
+_OAR PMEL Ferret Users wrote:<br clear="none">
+</div>
+<blockquote type="cite">
+<div style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:13px;">
+<div>Hi,</div>
+<div>I searched the ferret forum but I couldn&#39;t find a code that
+turns the plot in fig 11111 to the plot in (Aug...). I mean
+just rotation and ignore other details. it seems that the
+second plot is the mirror plot of the first one. could you
+please give me a code for rotation so that I can get the
+second one?</div>
+<div>Thank you,</div>
+<div>Sara<br clear="none">
+</div>
+</div>
+</blockquote></div>
+<br clear="none">
+</div></div></div>
+</div>
+</div></div><p><strong>Attachment:
+<a href="pngJwmVlzdXkQ.png" ><tt>2.png</tt></a></strong><br>
+ 
+<em>Description:</em> PNG image</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00630" href="msg00630.html">[ferret_users] how to mirror a plot</a></strong>
+<ul><li><em>From:</em> 'Sara Sari' via _OAR PMEL Ferret Users</li></ul></li>
+<li><strong><a name="00633" href="msg00633.html">Re: [ferret_users] how to mirror a plot</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00633.html">Re: [ferret_users] how to mirror a plot</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00631.html">[ferret_users] Dollar sign</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00633.html">Thread Prev</a>][<a href="msg00631.html">Thread Next</a>][<A HREF="threads2017.html#00634">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

@@ -1,0 +1,298 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] TXT file error -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Thu, 16 Nov 2017 09:32:08 &#45;0800 -->
+<!--X-Message-Id: 141b8488&#45;a8da&#45;93c5&#45;962d&#45;b16aebe93b4c@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAHD8rBG5Nz3uqQfX=OdCehf62w_boaaEfjbmEkXQb6jMGA2dUQ@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] TXT file error</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00662.html">Thread Prev</a>][<a href="msg00664.html">Thread Next</a>][<A HREF="threads2017.html#00663">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] TXT file error</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] TXT file error</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 16 Nov 2017 09:32:05 -0800</li>
+<li>In-reply-to: &lt;CAHD8rBG5Nz3uqQfX=OdCehf62w_boaaEfjbmEkXQb6jMGA2dUQ@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAHD8rBG5Nz3uqQfX=OdCehf62w_boaaEfjbmEkXQb6jMGA2dUQ@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.4.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hi,</p>
+<p>The file has "...." for missing data. The commands for reading
+text data do not automatically handle missing data. Ferret reads
+all of the data for each column and analyzes the text. If a
+column has any text which can't be interpreted as numeric values,
+it is marked as being of type string. I would suggest you edit
+the file and replace "...." with a fixed numerical value, perhaps
+a large negative value such as -99999. Then after opening the
+file with the columns command, assign that value as the
+missing-value flag, for the numeric columns:<br>
+ 
+</p>
+<blockquote><tt>yes? columns/delimiter=" " edited_file.txt</tt><br>
+ 
+<tt>yes? list/i=1:6 v1,v2,v3,v4,v5,v6,v7,v8,v9</tt><br>
+ 
+<tt> DATA SET: ./</tt><tt><tt>edited_file</tt>.txt</tt><br>
+ 
+<tt> X: 0.5 to 6.5</tt><br>
+ 
+<tt>Column 1: V1</tt><br>
+ 
+<tt>Column 2: V2</tt><br>
+ 
+<tt>Column 3: V3</tt><br>
+ 
+<tt>Column 4: V4</tt><br>
+ 
+<tt>Column 5: V5</tt><br>
+ 
+<tt>Column 6: V6</tt><br>
+ 
+<tt>Column 7: V7</tt><br>
+ 
+<tt>Column 8: V8</tt><br>
+ 
+<tt>Column 9: V9</tt><br>
+ 
+<tt> V1 V2 V3 V4 V5 V6 V7
+V8 V9</tt><br>
+ 
+<tt>1 / 1: "I" "/" "*:" -99999. -99999. -99999. 202297.
+1.000 202297.</tt><br>
+ 
+<tt>2 / 2: "I" "/" "*:" -99999. -99999. 1428230. 280305.
+3.000 1045588.</tt><br>
+ 
+<tt>3 / 3: "I" "/" "*:" 136578. -99999. -99999. -99999.
+4.000 136578.</tt><br>
+ 
+<tt>4 / 4: "I" "/" "*:" 402575. -99999. -99999. 974506.
+5.000 516961.</tt><br>
+ 
+<tt>5 / 5: "I" "/" "*:" -99999. -99999. -99999. -99999.
+0.000 -99999.</tt><br>
+ 
+<tt>6 / 6: "I" "/" "*:" -99999. 1380901. -99999. -99999.
+3.000 1380901.</tt><br>
+ 
+<br>
+ 
+<tt>yes? set var/bad=-99999 v4</tt><br>
+ 
+<tt>yes? list/i=1:6 v4,v5,v6,v7,v8,v9<br>
+ 
+DATA SET: ./</tt><tt><tt><tt>edited_file</tt></tt>.txt<br>
+ 
+X: 0.5 to 6.5<br>
+ 
+Column 1: V4<br>
+ 
+Column 2: V5<br>
+ 
+Column 3: V6<br>
+ 
+Column 4: V7<br>
+ 
+Column 5: V8<br>
+ 
+Column 6: V9<br>
+ 
+V4 V5 V6 V7 V8 V9<br>
+ 
+1 / 1: .... -99999. -99999. 202297. 1.000 202297.<br>
+ 
+2 / 2: .... -99999. 1428230. 280305. 3.000 1045588.<br>
+ 
+3 / 3: 136578. -99999. -99999. -99999. 4.000 136578.<br>
+ 
+4 / 4: 402575. -99999. -99999. 974506. 5.000 516961.<br>
+ 
+5 / 5: .... -99999. -99999. -99999. 0.000 -99999.<br>
+ 
+6 / 6: .... 1380901. -99999. -99999. 3.000 1380901.<br>
+ 
+<br>
+ 
+yes? plot v4<br>
+ 
+</tt><tt></tt><br>
+ 
+</blockquote>
+and likewise set the flag for v5 through v9. You can also give the
+variables meaningful names, units and titles with more qualifiers on
+the SET VARIABLE/ command.<br>
+ 
+<br>
+ 
+Ansley<br>
+ 
+<br>
+ 
+<div class="moz-cite-prefix">On 11/16/2017 3:05 AM, Gopal Mondal
+wrote:<br>
+ 
+</div>
+<blockquote type="cite"
+cite="">
+<div dir="ltr">
+<div>
+<div>
+<div>Dear all ferret_users<br>
+ 
+</div>
+I am using ferret v7.1 and facing
+the problem given bellow:<br>
+ 
+columns/delimiter=" " <a rel="nofollow" class="moz-txt-link-abbreviated" href="mailto:2015earkdaymask@xxxxxx">2015earkdaymask@xxxxxx</a><br>
+ 
+yes? sh da<br>
+ 
+currently SET data sets:<br>
+ 
+1&gt; ./2015earkdaymask@xxxxxx (default)<br>
+ 
+name title I
+J K L M N<br>
+ 
+V1 V1 1:365
+... ... ... ... ...<br>
+ 
+V2 V2 1:365
+... ... ... ... ...<br>
+ 
+V3 V3 1:365
+... ... ... ... ...<br>
+ 
+V4 V4 1:365
+... ... ... ... ...<br>
+ 
+V5 V5 1:365
+... ... ... ... ...<br>
+ 
+V6 V6 1:365
+... ... ... ... ...<br>
+ 
+V7 V7 1:365
+... ... ... ... ...<br>
+ 
+V8 V8 1:365
+... ... ... ... ...<br>
+ 
+V9 V9 1:365
+... ... ... ... ...<br>
+ 
+V10 V10 1:365
+... ... ... ... ...<br>
+ 
+(all values missing)<br>
+ 
+<br>
+ 
+yes? list/i=1:10 v9<br>
+ 
+VARIABLE : V9<br>
+ 
+FILENAME : <a rel="nofollow" class="moz-txt-link-abbreviated" href="mailto:2015earkdaymask@xxxxxx">2015earkdaymask@xxxxxx</a><br>
+ 
+SUBSET : 10 points (X)<br>
+ 
+1 / 1:"202297." <br>
+ 
+2 / 2:"1045588."<br>
+ 
+3 / 3:"136578." <br>
+ 
+4 / 4:"516961." <br>
+ 
+5 / 5:"...." <br>
+ 
+6 / 6:"1380901."<br>
+ 
+7 / 7:"1753288."<br>
+ 
+8 / 8:"438989." <br>
+ 
+9 / 9:"3051724."<br>
+ 
+10 / 10:"92545." <br>
+ 
+<br>
+ 
+</div>
+why the values are comming in between " ". I can"t understand.
+I can't plot the values. please help. Thanks in advance<br>
+ 
+<br>
+ 
+</div>
+Gopal <br>
+ 
+</div>
+</blockquote>
+<br>
+ 
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00662" href="msg00662.html">[ferret_users] TXT file error</a></strong>
+<ul><li><em>From:</em> Gopal Mondal</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00662.html">[ferret_users] TXT file error</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00664.html">[ferret_users] improper grid or axis definition: inappropriate orientation for Z axis</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00662.html">Thread Prev</a>][<a href="msg00664.html">Thread Next</a>][<A HREF="threads2017.html#00663">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

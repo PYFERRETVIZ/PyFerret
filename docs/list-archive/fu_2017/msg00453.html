@@ -1,0 +1,126 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] get ppl defaults -->
+<!--X-From-R13: [nepb ina Vhygra <[nepb.VhygraNhvo.ab> -->
+<!--X-Date: Tue, 20 Jun 2017 12:22:18 &#45;0700 -->
+<!--X-Message-Id: 20170620212214.6a181629@graviton.instanton -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20170620144056.67d7aef7@gfi3101569.klientdrift.uib.no -->
+<!--X-Reference: f3557e29&#45;fd7a&#45;5171&#45;5b2b&#45;d7910218afb8@noaa.gov -->
+<!--X-Reference: 5E7C0BBA&#45;05A8&#45;43E9&#45;BD64&#45;351497D121FC@noaa.gov -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] get ppl defaults</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00452.html">Thread Prev</a>][<a href="msg00455.html">Thread Next</a>][<A HREF="threads2017.html#00453">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] get ppl defaults</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] get ppl defaults</strong></li>
+<li><strong>From</strong>: <strong>Marco van Hulten &lt;<a href="mailto:Marco.Hulten@DOMAIN.HIDDEN">Marco.Hulten@xxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 20 Jun 2017 21:22:14 +0200</li>
+<li>In-reply-to: &lt;<a href="msg00452.html">5E7C0BBA-05A8-43E9-BD64-351497D121FC@noaa.gov</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Organization: University of Bergen</li>
+<li>References: &lt;<a href="msg00449.html">20170620144056.67d7aef7@gfi3101569.klientdrift.uib.no</a>&gt;	&lt;<a href="msg00451.html">f3557e29-fd7a-5171-5b2b-d7910218afb8@noaa.gov</a>&gt;	&lt;<a href="msg00452.html">5E7C0BBA-05A8-43E9-BD64-351497D121FC@noaa.gov</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>Op Tue, 20 Jun 2017 11:11:07 -0700 schreef William Kessler:
+&gt; I think 
+&gt; 
+&gt; PPL LISTSYM
+&gt; 
+&gt; gives all the variables PPLUS knows about. 
+&gt; 
+&gt; It's a long list and not especially transparent (and only gives
+&gt; information after a plot is made), but might be useful. It will not
+&gt; do quite what you want because successive plots of different
+&gt; sizes/shapes will have different values of label numbers, axis
+&gt; lengths, etc (those will be numbered successively, so it could be
+&gt; useful for the first plot in a new Ferret session).
+&gt; 
+&gt; But in general, as Ansley says it's better to specify the label
+&gt; height directly (LABSET for axis labels, LABEL for handmade ones).
+&gt; Then there's no ambiguity.
+ 
+ 
+Great, that's a useful command to check some things.  I presume you
+cannot directly change these variables, or you are not supposed to?
+ 
+But to my issue.  The variable returned by
+ 
+PPL LIST LABSET
+ 
+are not in the PPL LISTSYM output.  I rather get some unconveniently
+formatted output.  Can I save that in some way to a variable?
+ 
+I just want a jnl script to read the default font sizes, apply a
+scaling factor on them in LABSET, and plot them thus.  In the end,
+there are just a couple of values \in {0.16, 0.12, 0.10} inch, so I
+could hard code them in my scripts: they are after all default values.
+But I thought there may be a more elegant way to do it.
+ 
+- Marco
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00455" href="msg00455.html">Re: [ferret_users] get ppl defaults</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00449" href="msg00449.html">[ferret_users] get ppl defaults</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+<li><strong><a name="00451" href="msg00451.html">Re: [ferret_users] get ppl defaults</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+<li><strong><a name="00452" href="msg00452.html">Re: [ferret_users] get ppl defaults</a></strong>
+<ul><li><em>From:</em> William Kessler</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00452.html">Re: [ferret_users] get ppl defaults</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00455.html">Re: [ferret_users] get ppl defaults</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00452.html">Thread Prev</a>][<a href="msg00455.html">Thread Next</a>][<A HREF="threads2017.html#00453">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

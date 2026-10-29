@@ -1,0 +1,133 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Spatial regridding -->
+<!--X-From-R13: Yney Ezvgu &#45; @AOO Ossvyvngr <xney.fzvguNabnn.tbi> -->
+<!--X-Date: Tue, 18 Jul 2017 08:16:23 &#45;0700 -->
+<!--X-Message-Id: CAELLC7XG=ud8QyoGRpAdk2wuA7D0xpgJ9emRyXrbWKWygWpnXA@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CA+8NVT1EYPWAgjBQjjFGpP&#45;Q=SEjRk&#45;VouWippiis37GzwJLYw@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Spatial regridding</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00498.html">Thread Prev</a>][<a href="msg00501.html">Thread Next</a>][<A HREF="threads2017.html#00499">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Spatial regridding</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Spatial regridding</strong></li>
+<li><strong>From</strong>: <strong>Karl Smith - NOAA Affiliate &lt;<a href="mailto:karl.smith@DOMAIN.HIDDEN">karl.smith@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 18 Jul 2017 08:16:19 -0700</li>
+<li>In-reply-to: &lt;CA+8NVT1EYPWAgjBQjjFGpP-Q=SEjRk-VouWippiis37GzwJLYw@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CA+8NVT1EYPWAgjBQjjFGpP-Q=SEjRk-VouWippiis37GzwJLYw@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">I suspect the variable definition is overshadowing the variable of the same name in the new dataset. After saving cg to <a rel="nofollow" href="http://c96.nc">c96.nc</a>, cancel the variable cg (&quot;cancel var cg&quot;), then open (&quot;use&quot;) the <a rel="nofollow" href="http://c96.nc">c96.nc</a> dataset.<div><br>
+</div><div>Karl</div></div><div class="gmail_extra"><br>
+<div class="gmail_quote">On Tue, Jul 18, 2017 at 6:23 AM, Stephy Ann Libera <span dir="ltr">&lt;<a rel="nofollow" href="mailto:stephyann.libera23@xxxxxxxxx">stephyann.libera23@xxxxxxxxx</a>&gt;</span> wrote:<br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div><div>Hello Sir<br>
+</div>I am trying to regrid data of different resolutions to one single type,<br>
+</div>from the code I got, I was trying it and encounters error. The terminal script is attached. What changes should I make?<br>
+<br>
+yes? use <a rel="nofollow" href="http://chl96_12.nc">chl96_12.nc</a><br>
+*** NOTE: Axis coordinates are decreasing-ordered. Reversing ordering for axis lat<br>
+*** NOTE: Ignored modulo length exceeding axis length: lon<br>
+*** NOTE: Internal err: unknown data type<br>
+yes? sh da<br>
+currently SET data sets:<br>
+1&gt; ./<a rel="nofollow" href="http://chl96_12.nc">chl96_12.nc</a> (default)<br>
+name title I J K L M N<br>
+CHLOR_A Chlorophyll Concentration, OCI 1:4320 1:2160 ... ... ... ...<br>
+PALETTE 1:256 1:3 ... ... ... ...<br>
+<br>
+yes? sh grid chlor_a<br>
+GRID GJT1<br>
+name axis # pts start end subset<br>
+LON LONGITUDE 4320 r 179.96W(-179.96) 179.96E(179.96) full<br>
+LAT LATITUDE 2160 r 89.958S 89.958N full<br>
+normal Z<br>
+normal T<br>
+normal E<br>
+normal F<br>
+<br>
+yes? fill chlor_a<br>
+yes? def axis/x=-180:180:0.25/units=degrees lon<br>
+Replacing definition of axis LON<br>
+*** NOTE: grid GJT1 used by data set chl96_12<br>
+*** NOTE: Redefinition may alter apparent contents of data set<br>
+yes? def axis/y=-70:-50:0.25/units=degrees lat<br>
+Replacing definition of axis LAT<br>
+*** NOTE: grid GJT1 used by data set chl96_12<br>
+*** NOTE: Redefinition may alter apparent contents of data set<br>
+yes? def grid/x=lon/y=lat chl1<br>
+yes? let cg=chlor_a[g=chl1@ave]<br>
+yes? save/file=<a rel="nofollow" href="http://c96.nc/clobber">c96.nc/clobber</a> cg<br>
+LISTing to file <a rel="nofollow" href="http://c96.nc">c96.nc</a><br>
+yes? use <a rel="nofollow" href="http://c96.nc">c96.nc</a><br>
+yes? fill cg<br>
+**ERROR: variable unknown or not in data set: CHLOR_A[G=CHL1@AVE]<br>
+<br>
+</div>
+</blockquote></div><br>
+<br clear="all"><div><br>
+</div>-- <br>
+<div class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr">Karl M. Smith, Ph.D.<br>
+JISAO Univ. Wash. and PMEL NOAA<br>
+&quot;The contents of this message are mine personally and do<br>
+not necessarily reflect any position of the Government<br>
+or the National Oceanic and Atmospheric Administration.&quot;<br>
+</div></div>
+</div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00498" href="msg00498.html">[ferret_users] Spatial regridding</a></strong>
+<ul><li><em>From:</em> Stephy Ann Libera</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00498.html">[ferret_users] Spatial regridding</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00501.html">[ferret_users] library problem pyferret install</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00498.html">Thread Prev</a>][<a href="msg00501.html">Thread Next</a>][<A HREF="threads2017.html#00499">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

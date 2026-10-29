@@ -1,0 +1,235 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] sp ps2pdf ($ofname).pdf -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Wed, 7 Jun 2017 09:48:28 &#45;0700 -->
+<!--X-Message-Id: 365bc484&#45;3625&#45;11c6&#45;a479&#45;0486f1681aae@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAHD8rBF3MbitxtHRjk+Cn0WD+gT+dUROFUcQaM5RgTzaux5=YQ@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] sp ps2pdf ($ofname).pdf</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00395.html">Thread Prev</a>][<a href="msg00397.html">Thread Next</a>][<A HREF="threads2017.html#00404">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] sp ps2pdf ($ofname).pdf</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] sp ps2pdf ($ofname).pdf</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 7 Jun 2017 09:48:25 -0700</li>
+<li>In-reply-to: &lt;CAHD8rBF3MbitxtHRjk+Cn0WD+gT+dUROFUcQaM5RgTzaux5=YQ@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>List-unsubscribe: &lt;<a href="mailto:googlegroups-manage+809428289204+unsubscribe@googlegroups.com">mailto:googlegroups-manage+809428289204+unsubscribe@googlegroups.com</a>&gt;, &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/subscribe">https://groups.google.com/a/noaa.gov/group/ferret_users/subscribe</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAHD8rBF3MbitxtHRjk+Cn0WD+gT+dUROFUcQaM5RgTzaux5=YQ@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.1.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hi,</p>
+<p>If you start Ferret with</p>
+<p> &gt; ferret -gif</p>
+<p>then you can't write a metafile. The -gif mode writes all of the
+graphics output directly to a gif file. The correct way to start
+Ferret for running without a terminal window, and create
+postscript files would be</p>
+<p> &gt; ferret -batch</p>
+<p>In fact you can directly write a postscript file, with no need
+for a metafile, by naming the file on startup. See the
+documentation here:</p>
+<p><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/introduction/GETTING-STARTED.html#_VPINDEXENTRY_20">../../documentation/users-guide/introduction/GETTING-STARTED#_VPINDEXENTRY_20</a><br>
+ 
+</p>
+Finally , the best figures are drawn by PyFerret. Please consider
+installing PyFerret if possible.<br>
+ 
+<br>
+ 
+Ansley<br>
+ 
+<br>
+ 
+<div class="moz-cite-prefix">On 6/6/2017 8:38 PM, Gopal Mondal
+wrote:<br>
+ 
+</div>
+<blockquote type="cite"
+cite="">
+<div dir="ltr">
+<div>
+<div>
+<div>
+<div>hey all ferreter<br>
+ 
+</div>
+I am getting problem in ferret in two
+way:<br>
+ 
+</div>
+1. fill or shade figure is not coming, only line plot is
+coming. that is why in gif mode fill or shade figure are to
+save by frame command.<br>
+ 
+</div>
+2. In olrgraphline.jnl file 1st two line and last 3 line when
+used following error is showing. otherwise frame command are
+to use to save the figure. please help<br>
+ 
+</div>
+due to problem 1 I can not see the figure moderation after
+using and command. please help.... I have attached the .jnl file
+and error is in bellow:<br>
+ 
+go olrgraphline.jnl <br>
+ 
+define symbol ofname=olraila<br>
+ 
+set mode metafile:($ofname).ps<br>
+ 
+!-&gt; set mode metafile:<a rel="nofollow" href="http://olraila.ps"
+moz-do-not-send="true">olraila.ps</a><br>
+ 
+*** NOTE: in GIF mode: ignoring SET MODE METAFILE<br>
+ 
+go multi_view 3, 2, 0.25, 0.2, 0.04, 0.20, 0.15, 0.045, v<br>
+ 
+use <a rel="nofollow" href="http://olr.day.mean.nc" moz-do-not-send="true">olr.day.mean.nc</a><br>
+ 
+*** NOTE: Axis coordinates are decreasing-ordered.
+Reversing ordering for axis lat<br>
+ 
+set view v11 ; ppl axlabp 0,-1 ;ppl axlsze,0.12,0.12<br>
+ 
+plot/nolab/nokey/x=88.23/y=22.8/t=1-jan-2008:31-dec-2008 olr<br>
+ 
+ppl ylab OLR(W/m^2)<br>
+ 
+ppl plot<br>
+ 
+set view v12 ; ppl axlabp 0, 0 ;ppl axlsze,0.12,0.12<br>
+ 
+plot/nolab/nokey/x=88.23/y=22.8/t=1-jan-2009:31-dec-2009 olr<br>
+ 
+set view v21 ; ppl axlabp 0, -1 ;ppl axlsze,0.12,0.12<br>
+ 
+plot/nolab/nokey/x=88.23/y=22.8/t=1-jan-2010:31-dec-2010 olr<br>
+ 
+ppl ylab OLR(W/m^2)<br>
+ 
+ppl plot<br>
+ 
+set view v22 ; ppl axlabp 0, 0; ppl axlsze,0.12,0.12<br>
+ 
+plot/nolab/nokey/x=88.23/y=22.8/t=1-jan-2011:31-dec-2011 olr<br>
+ 
+set view v31 ; ppl axlabp -1, -1; ppl axlsze,0.12,0.12<br>
+ 
+plot/nolab/nokey/x=88.23/y=22.8/t=1-jan-2012:31-dec-2012 olr<br>
+ 
+ppl ylab OLR(W/m^2)<br>
+ 
+ppl plot<br>
+ 
+set view v32 ; ppl axlabp -1, 0 ;ppl axlsze,0.12,0.12<br>
+ 
+plot/nolab/nokey/x=88.23/y=22.8/t=1-jan-2013:31-dec-2013 olr<br>
+ 
+frame/file=olrgraphline.gif<br>
+ 
+cancle mode metafile<br>
+ 
+sp ps2pdf ($ofname).pdf<br>
+ 
+!-&gt; sp ps2pdf olraila.pdf<br>
+ 
+Error: /undefinedfilename in (olraila.pdf)<br>
+ 
+Operand stack:<br>
+ 
+<br>
+ 
+Execution stack:<br>
+ 
+%interp_exit .runexec2 --nostringval--
+--nostringval-- --nostringval-- 2 %stopped_push
+--nostringval-- --nostringval-- --nostringval-- false
+1 %stopped_push<br>
+ 
+Dictionary stack:<br>
+ 
+--dict:1198/1684(ro)(G)-- --dict:0/20(G)--
+--dict:78/200(L)--<br>
+ 
+Current allocation mode is local<br>
+ 
+Last OS error: No such file or directory<br>
+ 
+GPL Ghostscript 9.18: Unrecoverable error, exit code 1<br>
+ 
+sp rm -f ($ofname).ps<br>
+ 
+!-&gt; sp rm -f <a rel="nofollow" href="http://olraila.ps"
+moz-do-not-send="true">olraila.ps</a><br>
+ 
+<br>
+ 
+</div>
+</blockquote>
+<br>
+ 
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00395" href="msg00395.html">[ferret_users] sp ps2pdf ($ofname).pdf</a></strong>
+<ul><li><em>From:</em> Gopal Mondal</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00395.html">[ferret_users] sp ps2pdf ($ofname).pdf</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00397.html">[ferret_users] Strange behavior between STRRINDEX and low case variable names</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00395.html">Thread Prev</a>][<a href="msg00397.html">Thread Next</a>][<A HREF="threads2017.html#00404">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

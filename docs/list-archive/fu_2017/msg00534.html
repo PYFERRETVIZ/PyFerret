@@ -1,0 +1,85 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Calculate OHC time series of water column -->
+<!--X-From-R13: "'Oouvfrx Qunggrewrr' ivn _AOD B[SZ Treerg Gfref" <sreerg_hfrefNabnn.tbi> -->
+<!--X-Date: Thu, 27 Jul 2017 04:58:45 &#45;0700 -->
+<!--X-Message-Id: 136850722.726440.1501156481028@mail.yahoo.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 136850722.726440.1501156481028.ref@mail.yahoo.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Calculate OHC time series of water column</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00529.html">Thread Prev</a>][<a href="msg00535.html">Thread Next</a>][<A HREF="threads2017.html#00534">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Calculate OHC time series of water column</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Ferret Users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Calculate OHC time series of water column</strong></li>
+<li><strong>From</strong>: <strong>&quot;'Abhisek Chatterjee' via _OAR PMEL Ferret Users&quot; &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 27 Jul 2017 11:54:41 +0000 (UTC)</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;136850722.726440.1501156481028.ref@mail.yahoo.com&gt;</li>
+<li>Reply-to: Abhisek Chatterjee &lt;<a href="mailto:abhi.iitkgp@DOMAIN.HIDDEN">abhi.iitkgp@xxxxxxxxxxx</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div style="color:#000; background-color:#fff; font-family:Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;font-size:13px"><div id="yui_3_16_0_ym19_1_1501155665380_5285">Hi,</div><div id="yui_3_16_0_ym19_1_1501155665380_5285"><br>
+</div><div id="yui_3_16_0_ym19_1_1501155665380_5285" dir="ltr">I am trying to calculate time series of OHC(t) of the entire water column from monthly mean temperature (z,t) simulated by the model. I calculated OHC from temperature by the following formula:</div><div id="yui_3_16_0_ym19_1_1501155665380_5285" dir="ltr"><br>
+</div><div dir="ltr" id="yui_3_16_0_ym19_1_1501155665380_5460">let cp= 3850 ! J/kg C</div><div dir="ltr" id="yui_3_16_0_ym19_1_1501155665380_5461">let rho=rho_un(temp,salt,z[gz=temp])</div><div dir="ltr" id="yui_3_16_0_ym19_1_1501155665380_5462">let ohc=rho*cp*temp<br>
+</div><div dir="ltr" id="yui_3_16_0_ym19_1_1501155665380_5462">let ohc_intz= ohc[z=@din]</div><div id="yui_3_16_0_ym19_1_1501155665380_5285"><br>
+</div><div id="yui_3_16_0_ym19_1_1501155665380_5285">But, I think the derived OHC represents a snapshot of a particular month and not the total heat content of a month. Thus, my derived series likely represent only a series of snapshots OHC and not the total OHC.</div><div id="yui_3_16_0_ym19_1_1501155665380_5285"><br>
+</div><div id="yui_3_16_0_ym19_1_1501155665380_5285" dir="ltr">It will be a great help if someone can help me to create monthly integrated time series of OHC from monthly mean temperature?&nbsp;</div><div id="yui_3_16_0_ym19_1_1501155665380_5285" dir="ltr"><br>
+</div><div id="yui_3_16_0_ym19_1_1501155665380_5285" dir="ltr">Thanks in advance,</div><div id="yui_3_16_0_ym19_1_1501155665380_5285" dir="ltr"><br>
+</div><div id="yui_3_16_0_ym19_1_1501155665380_5285" dir="ltr">Regards,</div><div id="yui_3_16_0_ym19_1_1501155665380_5285" dir="ltr">Abhisek</div><div id="yui_3_16_0_ym19_1_1501155665380_5285"><br>
+</div></div>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00535" href="msg00535.html">Re: [ferret_users] Calculate OHC time series of water column</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00529.html">[ferret_users] inserting time axis for the data provided with no time axis information and in separate monthly file for each month</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00535.html">Re: [ferret_users] Calculate OHC time series of water column</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00529.html">Thread Prev</a>][<a href="msg00535.html">Thread Next</a>][<A HREF="threads2017.html#00534">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

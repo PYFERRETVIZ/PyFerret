@@ -1,0 +1,183 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Significant digits on shade key -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Tue, 29 Aug 2017 09:50:52 &#45;0700 -->
+<!--X-Message-Id: db01c72e&#45;c594&#45;c47f&#45;7c16&#45;a3dee3a2b1ea@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAAqEdpGkPsKxuDFx=5idiZJjw6oO_yYpjGyCQt_+DG8gSkZwzg@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Significant digits on shade key</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00617.html">Thread Prev</a>][<a href="msg00619.html">Thread Next</a>][<A HREF="threads2017.html#00618">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Significant digits on shade key</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Significant digits on shade key</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 29 Aug 2017 09:50:49 -0700</li>
+<li>In-reply-to: &lt;CAAqEdpGkPsKxuDFx=5idiZJjw6oO_yYpjGyCQt_+DG8gSkZwzg@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAAqEdpGkPsKxuDFx=5idiZJjw6oO_yYpjGyCQt_+DG8gSkZwzg@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.3.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hi Jerome,</p>
+<p>The change was an effort to use a more consistent format for the
+numbers on the colorbar key and to line them up more consistently.
+bit as we see, it isn't really doing that either. I agree that the
+new formatting isn't particularly better than the old. <br>
+ 
+</p>
+<p> You might look at,<br>
+ 
+</p>
+<div><tt> ppl shakey 1,1,,,-2</tt></div>
+<p>for a more consistent result, with 2 decimal places after the
+decimal point. There is not any syntax available to get back to
+the previous key format, but I've added this to our list of items
+to look into.<br>
+ 
+</p>
+<div><font size="2">-Ansley<br>
+ 
+<br>
+ 
+<br>
+ 
+</font></div>
+<div class="moz-cite-prefix">On 8/28/2017 1:40 PM, Jerome Fiechter
+wrote:<br>
+ 
+</div>
+<blockquote type="cite"
+cite="">
+<div dir="ltr">
+<div>
+<div>
+<div><font size="2">Hi,<br>
+ 
+<br>
+ 
+</font></div>
+<font size="2">In previous versions of Ferret, the command:<br>
+ 
+<br>
+ 
+</font></div>
+<font size="2">shade/leve=(0)(.1)(.16)(.25)(.4)(.63)(1)(1.6)(2.5)(4)(6.3)(10)(16)<br>
+ 
+<br>
+ 
+</font></div>
+<div><font size="2">would by default result in a key displayed
+with 2 significant digits (see attached figure
+LogScale_Old.png).<br>
+ 
+<br>
+ 
+</font></div>
+<div><font size="2">In the latest version of Ferret, it seems
+that the default for the key is now 2 decimal places (see
+attached figure Log_Scale_New.png).<br>
+ 
+<br>
+ 
+</font></div>
+<div><font size="2">I tried changing the klab_dig value using
+ppl shakey command:<br>
+ 
+<br>
+ 
+</font></div>
+<div><font size="2">ppl shakey 1,1,,,2<br>
+ 
+</font></div>
+<div><font size="2"><br>
+ 
+but was unsuccessful in recreating the old key labeling with
+2 significant digit.<br>
+ 
+</font></div>
+<div><font size="2"><br>
+ 
+</font></div>
+<div><font size="2">Any suggestions on how to recover the old
+key format would be greatly appreciated.<br>
+ 
+<br>
+ 
+</font></div>
+<div><font size="2">Thank you in advance!<br>
+ 
+<br>
+ 
+</font></div>
+<div><font size="2">Jerome<br>
+ 
+<br>
+ 
+</font></div>
+</div>
+</blockquote>
+<br>
+ 
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00617" href="msg00617.html">[ferret_users] Significant digits on shade key</a></strong>
+<ul><li><em>From:</em> Jerome Fiechter</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00617.html">[ferret_users] Significant digits on shade key</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00619.html">[ferret_users] running sum with restart after a missing value</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00617.html">Thread Prev</a>][<a href="msg00619.html">Thread Next</a>][<A HREF="threads2017.html#00618">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

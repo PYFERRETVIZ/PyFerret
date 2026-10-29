@@ -1,0 +1,110 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] go margins: factor 2 too large -->
+<!--X-From-R13: [nepb ina Vhygra <[nepb.VhygraNhvo.ab> -->
+<!--X-Date: Tue, 20 Jun 2017 12:51:03 &#45;0700 -->
+<!--X-Message-Id: 20170620215059.7f870510@graviton.instanton -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] go margins: factor 2 too large</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00449.html">Thread Prev</a>][<a href="msg00456.html">Thread Next</a>][<A HREF="threads2017.html#00454">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] go margins: factor 2 too large</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] go margins: factor 2 too large</strong></li>
+<li><strong>From</strong>: <strong>Marco van Hulten &lt;<a href="mailto:Marco.Hulten@DOMAIN.HIDDEN">Marco.Hulten@xxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 20 Jun 2017 21:50:59 +0200</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Organization: University of Bergen</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>Hello!
+ 
+When I try to set margins of one tic size (of a viewport), they appear
+to be inconsistent with the TICS size:
+ 
+set window/aspect=.6
+ppl list tics
+SMALL XTIC= 1.250E-01   LARGE XTIC= 2.500E-01
+SMALL YTIC= 1.250E-01   LARGE YTIC= 2.500E-01
+X AXIS TICS OUTSIDE   Y AXIS TICS OUTSIDE
+use levitus_climatology
+set view left
+shade/set_up/nokey temp[k=1]
+ppl axnmtc,1,1
+go margins 0,0,0.25,0.25
+ppl shade
+set view right
+ppl shade
+shade/set_up/nokey temp[k=1]
+ppl axnmtc,1,1
+go margins 0,0,0.25,0.25
+ppl shade
+ 
+In the resulting plots there are both small and large tics.  The large
+tics should be connecting, but it seems that the margin is a factor of
+two too large, or that the actual LARGE {X,Y}TIC sizes are 0.125
+instead of 0.25.
+ 
+When I use the value of 0.125 for the left and right margins, the large
+tics are nicely connecting (and the small tics are not).
+When I set all margins to zero, the plots are tight to each other, as
+expected.
+ 
+- Marco
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00456" href="msg00456.html">Re: [ferret_users] go margins: factor 2 too large</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00449.html">[ferret_users] get ppl defaults</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00456.html">Re: [ferret_users] go margins: factor 2 too large</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00449.html">Thread Prev</a>][<a href="msg00456.html">Thread Next</a>][<A HREF="threads2017.html#00454">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

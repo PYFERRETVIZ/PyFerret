@@ -1,0 +1,387 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] having trouble with ppl plot -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Wed, 14 Jun 2017 10:23:07 &#45;0700 -->
+<!--X-Message-Id: 71b9ba98&#45;4135&#45;7ed7&#45;e97b&#45;437ad35829a7@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAO7ifOesxfp1dMQvMQSfyUok&#45;&#45;c2izvNBEhtUZu6QHGKN6yBDQ@mail.gmail.com -->
+<!--X-Reference: fafd6812&#45;fdcc&#45;0b3a&#45;0ae5&#45;a0e2cf51e5a9@noaa.gov -->
+<!--X-Reference: CAO7ifOdEJ5Ab0v8OZnGeixWMH9Gk9BPKu3jcaGmHtxS=WqUsYw@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] having trouble with ppl plot</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00434.html">Thread Prev</a>][<a href="msg00427.html">Thread Next</a>][<A HREF="threads2017.html#00436">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] having trouble with ppl plot</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] having trouble with ppl plot</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 14 Jun 2017 10:23:04 -0700</li>
+<li>In-reply-to: &lt;CAO7ifOdEJ5Ab0v8OZnGeixWMH9Gk9BPKu3jcaGmHtxS=WqUsYw@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00424.html">CAO7ifOesxfp1dMQvMQSfyUok--c2izvNBEhtUZu6QHGKN6yBDQ@mail.gmail.com</a>&gt; &lt;<a href="msg00428.html">fafd6812-fdcc-0b3a-0ae5-a0e2cf51e5a9@noaa.gov</a>&gt; &lt;CAO7ifOdEJ5Ab0v8OZnGeixWMH9Gk9BPKu3jcaGmHtxS=WqUsYw@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.1.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hi,</p>
+Ah, I didn't see the full problem before. GO LEGEND needs to know
+the characteristics of the line numbers it's using, so in the
+sequence that I suggested, the "go legend 2" does not have a line 2
+defined, so it cannot draw that.<br>
+ 
+<br>
+ 
+Try this script , where we draw all the lines together and make the
+key, then go back and draw the thicker lines.<br>
+ 
+<br>
+ 
+<tt>plot/set/thick=1/nolab/l=1/x=140:190
+airt[y=0],airt[y=-50],airt[y=-40],airt[y=-30],\</tt><tt><br>
+ 
+</tt><tt>airt[y=-20],airt[y=-10],
+airt[y=10],airt[y=20],airt[y=30],airt[y=40],airt[y=50],
+airt[y=-50:50@ave]</tt><tt><br>
+ 
+</tt><tt> go legend 1 "Equator" lr</tt><tt><br>
+ 
+</tt><tt> go legend 2 "Lat -50" lr</tt><tt><br>
+ 
+</tt><tt> go legend 3 "Lat -40" lr</tt><tt><br>
+ 
+</tt><tt> go legend 4 "Lat -30" lr</tt><tt><br>
+ 
+</tt><tt> go legend 5 "Lat -20" lr</tt><tt><br>
+ 
+</tt><tt> go legend 6 "Lat -10" lr</tt><tt><br>
+ 
+</tt><tt> go legend 7 "Lat 10" lr</tt><tt><br>
+ 
+</tt><tt> go legend 8 "Lat 20" lr</tt><tt><br>
+ 
+</tt><tt> go legend 9 "Lat 30" lr </tt><tt><br>
+ 
+</tt><tt> go legend 10 "Lat 40" lr</tt><tt><br>
+ 
+</tt><tt> go legend 11 "Lat 50" lr</tt><tt><br>
+ 
+</tt><tt> go legend 12 "Average" lr</tt><tt><br>
+ 
+</tt><tt>ppl plot</tt><tt><br>
+ 
+</tt><tt><br>
+ 
+</tt><tt>! Overlay thick lines for the first and last the curves.
+Use PLOT/O</tt><tt><br>
+ 
+</tt><tt><br>
+ 
+</tt><tt>plot/set/thick=3/color=black/nolab/l=1/x=140:190 airt[y=0]</tt><tt><br>
+ 
+</tt><tt> go legend 1 "Equator" lr</tt><tt><br>
+ 
+</tt><tt>ppl plot/over</tt><tt><br>
+ 
+</tt><tt><br>
+ 
+</tt><tt>plot/set/thick=3/over/line=12/nolab/l=1/x=140:190
+airt[y=-50:50@ave]</tt><tt><br>
+ 
+</tt><tt>go legend 12 "Average" lr</tt><tt><br>
+ 
+</tt><tt>ppl plot/over</tt><br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<div class="moz-cite-prefix">On 6/13/2017 10:05 PM, Arijeet Dutta
+wrote:<br>
+ 
+</div>
+<blockquote type="cite"
+cite="">
+<div dir="ltr">
+<div>
+<div>
+<div>
+<div>HI <br>
+ 
+</div>
+I tried as you said<br>
+ 
+<br>
+ 
+plot/thick=3/set/nolab/vlim=-30:60:5
+adcp_clim[z=40:100@ave]<br>
+ 
+go legend 1 "ADCP" ul<br>
+ 
+go legend 2 "ORAS4" ul<br>
+ 
+go legend 3 "ORAP5" ul<br>
+ 
+go legend 4 "GODAOP" ul<br>
+ 
+go legend 5 "GODASP1" ul<br>
+ 
+go legend 6 "SODA2" ul<br>
+ 
+go legend 7 "SODA3" ul<br>
+ 
+go legend 8 "GFDL" ul<br>
+ 
+go legend 9 "K7" ul<br>
+ 
+go legend 10 "DASK" ul<br>
+ 
+go legend 11 "ENSEMBLE" ul<br>
+ 
+ppl plot<br>
+ 
+<br>
+ 
+plot/thick=1/over/nolab/vlim=-30:60:5
+oras4_clim[z=40:100@ave]<br>
+ 
+plot/thick=1/over/nolab/vlim=-30:60:5
+orap5_clim[z=40:100@ave]<br>
+ 
+plot/thick=1/over/nolab/vlim=-30:60:5
+godasop_clim[z=40:100@ave]<br>
+ 
+plot/thick=1/over/nolab/vlim=-30:60:5
+godasp1_clim[z=40:100@ave]<br>
+ 
+plot/thick=1/over/nolab/vlim=-30:60:5
+soda2_clim[z=40:100@ave]<br>
+ 
+plot/thick=1/over/nolab/vlim=-30:60:5
+soda3_clim[z=40:100@ave]<br>
+ 
+plot/thick=1/over/nolab/vlim=-30:60:5
+gfdl_clim[z=40:100@ave]<br>
+ 
+plot/thick=1/over/nolab/vlim=-30:60:5
+k7_clim[z=40:100@ave]<br>
+ 
+plot/thick=1/over/nolab/vlim=-30:60:5
+dask_clim[z=40:100@ave]<br>
+ 
+plot/thick=3/over/nolab/vlim=-30:60:5
+ensemble_clim[z=40:100@ave]<br>
+ 
+<br>
+ 
+</div>
+Still getting same problem with the legends, please see the
+attached figure<br>
+ 
+<br>
+ 
+</div>
+regards<br>
+ 
+</div>
+Arijeet<br>
+ 
+</div>
+<div class="gmail_extra"><br>
+ 
+<div class="gmail_quote">On Tue, Jun 13, 2017 at 10:35 PM,
+Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow"
+href="mailto:ansley.b.manke@xxxxxxxx"
+moz-do-not-send="true">ansley.b.manke@xxxxxxxx</a>&gt;</span>
+wrote:<br>
+ 
+<blockquote class="gmail_quote" style="margin:0 0 0
+.8ex;border-left:1px #ccc solid;padding-left:1ex">Hi<br>
+ 
+<br>
+ 
+PPL PLOT always comes after a PLOT/SET_UP command. So you
+would do it this way,<br>
+ 
+<br>
+ 
+plot/set var1<br>
+ 
+go legend ...<br>
+ 
+go legend ...<br>
+ 
+go legend ...<br>
+ 
+ppl plot<br>
+ 
+<br>
+ 
+plot/nolab/over var2<br>
+ 
+plot/nolab/over var3<br>
+ 
+plot/nolab/over var4
+<div class="HOEnZb">
+<div class="h5"><br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+On 6/13/2017 8:51 AM, Arijeet Dutta wrote:<br>
+ 
+<blockquote class="gmail_quote" style="margin:0 0 0
+.8ex;border-left:1px #ccc solid;padding-left:1ex">
+Hi all<br>
+ 
+I am trying to plot depth averaged climatology (which
+I have already calculated, not shown here) with the
+following<br>
+ 
+<br>
+ 
+<br>
+ 
+plot/thick=3/nolab/over oras4_clim[z=40:100@ave]<br>
+ 
+plot/nolab/over orap5_clim[z=40:100@ave]<br>
+ 
+plot/nolab/over godasop_clim[z=40:100@ave]<br>
+ 
+plot/nolab/over godasp1_clim[z=40:100@ave]<br>
+ 
+plot/nolab/over soda2_clim[z=40:100@ave]<br>
+ 
+plot/nolab/over soda3_clim[z=40:100@ave]<br>
+ 
+plot/nolab/over gfdl_clim[z=40:100@ave]<br>
+ 
+plot/nolab/over k7_clim[z=40:100@ave]<br>
+ 
+plot/nolab/over dask_clim[z=40:100@ave]<br>
+ 
+plot/thick=3/nolab/over
+ensemble_clim[z=40:100@ave]<br>
+ 
+<br>
+ 
+<br>
+ 
+go legend 1 "ORAS4" lr<br>
+ 
+go legend 2 "ORAP5" lr<br>
+ 
+go legend 3 "GODAOP" lr<br>
+ 
+go legend 4 "GODASP1" lr<br>
+ 
+go legend 5 "SODA2" lr<br>
+ 
+go legend 6 "SODA3" lr<br>
+ 
+go legend 7 "GFDL" lr<br>
+ 
+go legend 8 "K7" lr<br>
+ 
+go legend 9 "DASK" lr<br>
+ 
+go legend 10 "ENSEMBLE" lr<br>
+ 
+ppl plot<br>
+ 
+<br>
+ 
+I want to make ORAS4 and ENSEMBLE thicker<br>
+ 
+and what I am getting is the attached figure, which is
+the plot for only the ensemble<br>
+ 
+Please let me know the mistake<br>
+ 
+<br>
+ 
+Greetings<br>
+ 
+Arijeet<br>
+ 
+</blockquote>
+<br>
+ 
+</div>
+</div>
+</blockquote>
+</div>
+<br>
+ 
+</div>
+</blockquote>
+<br>
+ 
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00424" href="msg00424.html">[ferret_users] having trouble with ppl plot</a></strong>
+<ul><li><em>From:</em> Arijeet Dutta</li></ul></li>
+<li><strong><a name="00428" href="msg00428.html">Re: [ferret_users] having trouble with ppl plot</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+<li><strong><a name="00434" href="msg00434.html">Re: [ferret_users] having trouble with ppl plot</a></strong>
+<ul><li><em>From:</em> Arijeet Dutta</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00434.html">Re: [ferret_users] having trouble with ppl plot</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00427.html">[ferret_users] pager</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00434.html">Thread Prev</a>][<a href="msg00427.html">Thread Next</a>][<A HREF="threads2017.html#00436">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>
