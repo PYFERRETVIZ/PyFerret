@@ -1,0 +1,151 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] how to calculate precipitation centroid -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Tue, 12 Nov 2019 09:36:54 &#45;0800 -->
+<!--X-Message-Id: 0422c9f2&#45;0715&#45;737d&#45;e723&#45;b14f3c9f4877@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAKE4FWoHcsdVvJeZ8Ei1vFR_vHQzhu3kcZQkVTiAprfGV&#45;9_&#45;g@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] how to calculate precipitation centroid</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00408.html">Thread Prev</a>][<a href="msg00410.html">Thread Next</a>][<A HREF="threads2019.html#00409">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] how to calculate precipitation centroid</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] how to calculate precipitation centroid</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 12 Nov 2019 09:36:50 -0800</li>
+<li>In-reply-to: &lt;<a href="msg00408.html">CAKE4FWoHcsdVvJeZ8Ei1vFR_vHQzhu3kcZQkVTiAprfGV-9_-g@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00408.html">CAKE4FWoHcsdVvJeZ8Ei1vFR_vHQzhu3kcZQkVTiAprfGV-9_-g@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 Thunderbird/68.2.2</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+ 
+ 
+ 
+<p>Hi Xiaoyu,</p>
+<p>To refer to the coordinate values, use Y instead of J. Y will be
+the latitudes, and J the simple indices along the axis. For
+example:</p>
+<blockquote>
+<p><tt>yes? use etopo60</tt><tt><br>
+</tt><tt><br>
+yes? list/y=-5:5 j[gy=rose], y[gy=rose]<br>
+ DATA SET:
+/home/users/tmap/ferret/linux/fer_dsets/data/etopo60.cdf<br>
+ LATITUDE: 5S to 5N<br>
+Column 1: J is J (axis ETOPO60Y)<br>
+Column 2: Y is Y (axis ETOPO60Y)<br>
+ J Y<br>
+4.5S / 86: 86.00 -4.500<br>
+3.5S / 87: 87.00 -3.500<br>
+2.5S / 88: 88.00 -2.500<br>
+1.5S / 89: 89.00 -1.500<br>
+0.5S / 90: 90.00 -0.500<br>
+0.5N / 91: 91.00 0.500<br>
+1.5N / 92: 92.00 1.500<br>
+2.5N / 93: 93.00 2.500<br>
+3.5N / 94: 94.00 3.500<br>
+4.5N / 95: 95.00 4.500<br>
+</tt><br>
+</p>
+</blockquote>
+<p>These are called "<a rel="nofollow" moz-do-not-send="true"
+href="../../documentation/users-guide/variables-xpressions/VARIABLES.html#_VPINDEXENTRY_255">pseudo-variables</a>"
+in the documentation, if you need more information.</p>
+<p>-Ansley<br>
+</p>
+<p><br>
+</p>
+<div class="moz-cite-prefix">On 11/8/2019 11:21 AM, Xiaoyu Bai
+wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+<div dir="ltr">Dear ferreters,
+<div><br>
+</div>
+<div>I am calculating precipitation centroid which contains a
+term "Latitude*zonal mean Precipitation" and then use @DIN to
+sum them up. I plan to calculate it by defining a new variable
+like let Latitude=j[GY=zonal precipitation] but I found the
+Latitude came out from this syntax is point instead of
+latitude.Since I am using multiple model simulations,
+defining the Latitude manually would be inefficient.</div>
+<div><br>
+</div>
+<div>So I am wondering how to use the variable's latitude column
+to define a new variable. Or how can I transform the latitude
+value into numeric form. </div>
+<div><br>
+</div>
+<div>Cheers,<br clear="all">
+<div><br>
+</div>
+-- <br>
+<div dir="ltr" class="gmail_signature"
+data-smartmail="gmail_signature">
+<div dir="ltr">Xiaoyu</div>
+</div>
+</div>
+</div>
+</blockquote>
+ 
+ 
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00408" href="msg00408.html">[ferret_users] how to calculate precipitation centroid</a></strong>
+<ul><li><em>From:</em> Xiaoyu Bai</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00408.html">[ferret_users] how to calculate precipitation centroid</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00410.html">[ferret_users] regarding sigma coordinates on depth axis</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00408.html">Thread Prev</a>][<a href="msg00410.html">Thread Next</a>][<A HREF="threads2019.html#00409">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

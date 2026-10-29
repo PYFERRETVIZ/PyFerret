@@ -1,0 +1,91 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] CSV file with commas in string fields -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Sat, 5 Sep 2020 07:10:09 &#45;0700 -->
+<!--X-Message-Id: CAEwQpa+z74Fs3rZRsm1WD20Xye4aYbwD&#45;FFyw7eRPGYb&#45;Lj2Gw@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 20200904163322.26dadd19@gfi063209.klientdrift.uib.no -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] CSV file with commas in string fields</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00819.html">Thread Prev</a>][<a href="msg00823.html">Thread Next</a>][<A HREF="threads2019.html#00822">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] CSV file with commas in string fields</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Marco van Hulten &lt;<a href="mailto:Marco.Hulten@DOMAIN.HIDDEN">Marco.Hulten@xxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] CSV file with commas in string fields</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Sat, 5 Sep 2020 23:09:52 +0900</li>
+<li>Cc: ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00819.html">20200904163322.26dadd19@gfi063209.klientdrift.uib.no</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00819.html">20200904163322.26dadd19@gfi063209.klientdrift.uib.no</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Hi Marco,</div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Fri, Sep 4, 2020 at 11:35 PM Marco van Hulten &lt;<a rel="nofollow" href="mailto:Marco.Hulten@xxxxxx">Marco.Hulten@xxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><br>
+&quot;st1&quot;,2,3<br>
+&quot;st1,2&quot;,2,3<br>
+st2,2,3<br>
+<br>[ . . . ]<br>
+Two options are (1) using a different field separator (e.g. the tab<br>
+character) and (2) remove/replace the commas, but I prefer to avoid<br>
+reformatting of the CSV data.<br></blockquote><div><br></div><div>I assume that you&#xA0;need&#xA0;only the numbers and that you&#xA0;don&#39;t need to load the strings into&#xA0;Ferret.</div><div><br></div><div>Then, my suggestion would be (although probably it&#39;s not what you are looking for) to use a scripting language like Ruby and Python to extract numbers from the CSV file.</div><div><br></div><div>Parsing a CSV file isn&#39;t a trivial task.&#xA0; You&#39;d be better off if you rely on a well-tested library.</div><div><br></div><div>Just to demonstrate how easy to handle CSV files in Ruby:</div><div><br></div><div><font face="monospace">require &#39;csv&#39;</font></div><div><font face="monospace">headers, *row = CSV.read(&quot;mydata.csv&quot;)<br></font></div><div><font face="monospace"># -&gt; then row[0] is the first data row</font></div><div><font face="monospace"># and row[0][0] is the first data item of the first data row.</font></div><div><br></div><div>I&#39;m sure it&#39;s as easy in Python.</div><div><br></div><div>Ryo</div><div><br></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00823" href="msg00823.html">Re: [ferret_users] CSV file with commas in string fields</a></strong>
+<ul><li><em>From:</em> Olivier Marti</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00819" href="msg00819.html">[ferret_users] CSV file with commas in string fields</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00819.html">[ferret_users] CSV file with commas in string fields</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00823.html">Re: [ferret_users] CSV file with commas in string fields</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00819.html">Thread Prev</a>][<a href="msg00823.html">Thread Next</a>][<A HREF="threads2019.html#00822">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

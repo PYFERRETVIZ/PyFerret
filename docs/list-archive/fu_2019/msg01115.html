@@ -1,0 +1,152 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] error message NetCDF: One or more variable sizes violate format constraints (OPeNDAP/netCDF Error code &#45;62) -->
+<!--X-From-R13: Oafyrl [naxr <n.p.znaxrNtznvy.pbz> -->
+<!--X-Date: Wed, 23 Mar 2022 15:16:01 &#45;0700 -->
+<!--X-Message-Id: d74ddd9e&#45;543b&#45;b185&#45;22f6&#45;60a4182e15de@gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] error message NetCDF: One or more variable sizes violate format constraints (OPeNDAP/netCDF Error code -62)</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01106.html">Thread Prev</a>][<a href="msg01116.html">Thread Next</a>][<A HREF="threads2019.html#01115">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] error message NetCDF: One or more variable sizes violate format constraints (OPeNDAP/netCDF Error code -62)</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] error message NetCDF: One or more variable sizes violate format constraints (OPeNDAP/netCDF Error code -62)</strong></li>
+<li><strong>From</strong>: <strong>Ansley Manke &lt;<a href="mailto:a.c.manke@DOMAIN.HIDDEN">a.c.manke@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 23 Mar 2022 15:15:53 -0700</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Thunderbird/91.7.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+ 
+ 
+ 
+<p>Hi all,</p>
+<p>Here's an error message that I didn't recognize, and which may
+come up for people working with large datasets. I thought I'd
+write here, so the information is here in the Users List archive.</p>
+<p>Somebody asked me about seeing this error message, when trying to
+write to a file:<br>
+</p>
+<div class=""><font face="Courier New, Courier, monospace"><br>
+</font></div>
+<div class=""><font size="4"><font face="Courier New, Courier,
+monospace">N</font></font><font face="Courier New, Courier,
+monospace">etCDF: One or more variable sizes violate format
+constraints (OPeNDAP/netCDF Error code -62)</font></div>
+<div class=""><font face="Courier New, Courier, monospace">could
+not change CDF mode</font><font face="Courier New, Courier,
+monospace"><br>
+</font></div>
+<div class=""><font face="Courier New, Courier, monospace">list/format=cdf/file="data/Hi_freq_data/xx_20hz_data.nc.nc"/append
+variable_38<br>
+</font></div>
+<div class=""><font face="Courier New, Courier, monospace">Command
+file, command group, or REPEAT execution aborted</font></div>
+<div class=""><br>
+</div>
+<div class="">The dataset being written is high-frequncy data, with
+a lot of large variables being added to the file. What is
+happening, is that the file becomes too large for the default
+netcdf-3 type data file. Now, the modern netCDF library has
+large-file support, as described here:
+<a rel="nofollow" class="moz-txt-link-freetext" href="https://docs.unidata.ucar.edu/netcdf-c/current/faq.html#Large-File-Support">https://docs.unidata.ucar.edu/netcdf-c/current/faq.html#Large-File-Support</a></div>
+<div class=""><br>
+</div>
+<div class="">PyFerret is linked with a version of netCDF which
+supports large files. We have the option to write files with
+netcdf-4 formatting, and also the 64-bit offset format mentioned
+on that page. Because many linux systems come with only older
+netCDF-3 libraries, the PyFerret developers decided to write
+netCDF files using netcdf-3 formatting by default. That way
+things like the ncdump and ncgen utilities on people's systems
+will be able to work with the files. But PyFerret also has command
+qualifiers available to request netCDF-4 formatted files or 64-bit
+offset formatted files. In addition to large-file support,
+netCDF-4 offers some other options. The syntax for all of this is
+described here:<br>
+</div>
+<div class=""><br>
+</div>
+<div class=""><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/data-set-basics/NETCDF-DATA.html#_VPINDEXENTRY_netcdf4">../../documentation/users-guide/data-set-basics/NETCDF-DATA.html#_VPINDEXENTRY_netcdf4</a></div>
+<div class=""><br>
+</div>
+<div class="">A solution for the question above was to use
+SAVE/NCFORMAT=netcdf4</div>
+<div class=""><br>
+</div>
+<div class="">(Another good solution would be to use Union
+Aggregation, writing each variable to its own file and then
+aggregating them in the PyFerret session into a virtual dataset.
+See "Aggretation" in the documentation for how to do that.)</div>
+<div class=""><br>
+</div>
+<div class="">Cheers!</div>
+<div class=""><br>
+</div>
+<div class="">Ansley Manke</div>
+<div class=""><br>
+</div>
+<div class=""><br class="">
+The contents of this message aremine personally. I am not
+affiliated with the National Oceanicand Atmospheric
+Administration.
+<div><br class="">
+</div>
+<br class="Apple-interchange-newline">
+<br class="Apple-interchange-newline">
+</div>
+<div class=""><br>
+</div>
+ 
+ 
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01106.html">[ferret_users] Pyferret installation error</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01116.html">[ferret_users] PyFerret crash when opening windows (Mac OS 10.16)</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01106.html">Thread Prev</a>][<a href="msg01116.html">Thread Next</a>][<A HREF="threads2019.html#01115">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

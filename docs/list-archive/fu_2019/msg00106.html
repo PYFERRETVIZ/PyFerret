@@ -1,0 +1,83 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] polygon to mask country -->
+<!--X-From-R13: @vpbynf Terlpurg <avpbynf.serlpurgNtznvy.pbz> -->
+<!--X-Date: Mon, 25 Mar 2019 04:18:22 &#45;0700 -->
+<!--X-Message-Id: CAPTKT0e&#45;3hgt_JaQ1+27DM1jXfhU&#45;sTr9GQX8Cn6=PKPpVA+wg@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CABKKfvVRDXATRc_19TVipwHKKd+j9WzjC=3JgpjKTVDNk5g9bA@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] polygon to mask country</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00069.html">Thread Prev</a>][<a href="msg00107.html">Thread Next</a>][<A HREF="threads2019.html#00106">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] polygon to mask country</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret_users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] polygon to mask country</strong></li>
+<li><strong>From</strong>: <strong>Nicolas Freychet &lt;<a href="mailto:nicolas.freychet@DOMAIN.HIDDEN">nicolas.freychet@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 25 Mar 2019 11:18:03 +0000</li>
+<li>In-reply-to: &lt;CABKKfvVRDXATRc_19TVipwHKKd+j9WzjC=3JgpjKTVDNk5g9bA@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CABKKfvVRDXATRc_19TVipwHKKd+j9WzjC=3JgpjKTVDNk5g9bA@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div>Dear Ferret users,</div><div><br></div><div>I&#39;m trying to create a mask for a country, following this discussion: <a rel="nofollow" href="../fu_2012/msg00019.html">../fu_2012/msg00019.html</a></div><div><br></div><div>I managed to have a netcdf file with all lon/lat coordinate to define a polygon of the country as in the discussion, but now I am not sure how to apply it to mask my data. <br></div><div>The pt_in_poly function (<a rel="nofollow" href="../../documentation/users-guide/appendix-a-external-functions/pt_in_poly.html">../../documentation/users-guide/appendix-a-external-functions/pt_in_poly</a>) requires to define a table of xp/yp. I tried to do something like: <br></div><div><br></div><div>let xp=LON[d=7,i=1:735178] <br></div><div>let yp=LAT[d=7,i=1:735178]</div><div>let mask = if pt_in_poly(Tmax[d=1,l=1],xp,yp) gt 0 then 1</div><div><br></div><div>But it doesn&#39;t seem to work. I think it&#39;s the way I define xp/yp that is wrong, but I don&#39;t know how to make a table {} from a coordinate. Any idea?</div><div><br></div><div>Cheers,</div><div>Nico</div><div><br></div></div></div></div></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00107" href="msg00107.html">Re: [ferret_users] polygon to mask country</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00067" href="msg00067.html">[ferret_users] mp_stereographic_south</a></strong>
+<ul><li><em>From:</em> Muyin Wang - NOAA Affiliate</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00069.html">Re: [ferret_users] mp_stereographic_south</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00107.html">Re: [ferret_users] polygon to mask country</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00069.html">Thread Prev</a>][<a href="msg00107.html">Thread Next</a>][<A HREF="threads2019.html#00106">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

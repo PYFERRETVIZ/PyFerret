@@ -1,0 +1,120 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] how to map date strings from a csv file onto a ferret time axis -->
+<!--X-From-R13: Ivyyvnz Yrffyre <jvyyvnz.f.xrffyreNabnn.tbi> -->
+<!--X-Date: Mon, 31 Jan 2022 14:09:59 &#45;0800 -->
+<!--X-Message-Id: 3297DFA1&#45;4095&#45;41E3&#45;AA95&#45;BBD8DC542092@noaa.gov -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: CAEsMs0RhnnK8GV4gH7pexES106YDm=Sn+f0FVH4AzKjGNz=92Q@mail.gmail.com -->
+<!--X-Derived: binq7hC_770Lg.bin -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] how to map date strings from a csv file onto a ferret time axis</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01078.html">Thread Prev</a>][<a href="msg01080.html">Thread Next</a>][<A HREF="threads2019.html#01079">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] how to map date strings from a csv file onto a ferret time axis</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;Albert;J. Hermann&quot; &lt;<a href="mailto:albert.j.hermann@DOMAIN.HIDDEN">albert.j.hermann@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] how to map date strings from a csv file onto a ferret time axis</strong></li>
+<li><strong>From</strong>: <strong>William Kessler &lt;<a href="mailto:william.s.kessler@DOMAIN.HIDDEN">william.s.kessler@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 31 Jan 2022 14:09:56 -0800</li>
+<li>Cc: Ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;CAEsMs0RhnnK8GV4gH7pexES106YDm=Sn+f0FVH4AzKjGNz=92Q@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAEsMs0RhnnK8GV4gH7pexES106YDm=Sn+f0FVH4AzKjGNz=92Q@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>CSV is a pain!
+ 
+I have done this kind of thing once, using a unix shell script to sort and extract each variable, writing each variable into (separate) files that Ferret can read. Yes, a pain!!!
+ 
+I've attached the shell script as an example. If there aren't too many values, and if they are more or less regular in the csv file, it might be possible to do this kind of thing in a text editor.
+ 
+Billy
+ 
+ 
+&gt; On Jan 31, 2022, at 1:44 PM, Albert Hermann - NOAA Affiliate &lt;albert.j.hermann@xxxxxxxx&gt; wrote:
+&gt; 
+&gt; Hi,
+&gt; Does anyone know how to easily map dates like the ones shown below (contained as a variable in a csv file) onto a time axis in ferret? The file contains one date string and temperature value (plus other variables) per line. So far I have not found any ferret function that can interpret these strings - does one exist? Thanks.
+&gt; -Al Hermann
+&gt; 
+&gt; 
+&gt; yes? list/i=1:10 time
+&gt;              VARIABLE : TIME
+&gt;              FILENAME : 2021_SpringDeployed_BS_BioPUFFS_POPS0001_bottomdata.csv
+&gt;              SUBSET   : 10 points (X)
+&gt;  1    /  1:&quot;2021-05-13T00:10:00Z&quot;
+&gt;  2    /  2:&quot;2021-05-13T01:10:00Z&quot;
+&gt;  3    /  3:&quot;2021-05-13T02:10:00Z&quot;
+&gt;  4    /  4:&quot;2021-05-13T03:10:00Z&quot;
+&gt;  5    /  5:&quot;2021-05-13T04:10:00Z&quot;
+&gt;  6    /  6:&quot;2021-05-13T05:10:00Z&quot;
+&gt;  7    /  7:&quot;2021-05-13T06:10:00Z&quot;
+&gt;  8    /  8:&quot;2021-05-13T07:10:00Z&quot;
+&gt;  9    /  9:&quot;2021-05-13T08:10:00Z&quot;
+&gt;  10   / 10:&quot;2021-05-13T09:10:00Z&quot;
+&gt; 
+&gt; -- 
+&gt; albert.j.hermann@xxxxxxxx
+&gt; Pacific Marine Environmental Laboratory
+&gt; 7600 Sand Point Way NE
+&gt; Seattle WA 98115
+&gt; 206-526-6495
+ 
+</pre><p><strong>Attachment:
+<a href="binq7hC_770Lg.bin" ><tt>convert_ADCP_csv_files_to_readable</tt></a></strong><br>
+<em>Description:</em> Binary data</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="01078" href="msg01078.html">[ferret_users] how to map date strings from a csv file onto a ferret time axis</a></strong>
+<ul><li><em>From:</em> Albert Hermann - NOAA Affiliate</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01078.html">[ferret_users] how to map date strings from a csv file onto a ferret time axis</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01080.html">Re: [ferret_users] how to map date strings from a csv file onto a ferret time axis</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01078.html">Thread Prev</a>][<a href="msg01080.html">Thread Next</a>][<A HREF="threads2019.html#01079">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

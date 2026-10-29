@@ -1,0 +1,85 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Announcing the official release of PyFerret and Ferret version 7.4 for Linux and OSX -->
+<!--X-From-R13: Yney Ezvgu &#45; @AOO Ossvyvngr <xney.fzvguNabnn.tbi> -->
+<!--X-Date: Fri, 20 Apr 2018 09:37:19 &#45;0700 -->
+<!--X-Message-Id: CAELLC7UGWaeTyeYOh94DONHYBVg8bQqZWbM=50eviL8oLBtkCQ@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 7bd4040d&#45;52ca&#45;d90e&#45;3b87&#45;d133eb6ebbda@noaa.gov -->
+<!--X-Reference: 47687DDA&#45;1E00&#45;47ED&#45;B346&#45;383847973529@lsce.ipsl.fr -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Announcing the official release of PyFerret and Ferret version 7.4 for Linux and OSX</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00137.html">Thread Prev</a>][<a href="msg00129.html">Thread Next</a>][<A HREF="threads2018.html#00138">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Announcing the official release of PyFerret and Ferret version 7.4 for Linux and OSX</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&quot; &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Announcing the official release of PyFerret and Ferret version 7.4 for Linux and OSX</strong></li>
+<li><strong>From</strong>: <strong>Karl Smith - NOAA Affiliate &lt;<a href="mailto:karl.smith@DOMAIN.HIDDEN">karl.smith@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Fri, 20 Apr 2018 09:37:15 -0700</li>
+<li>In-reply-to: &lt;<a href="msg00137.html">47687DDA-1E00-47ED-B346-383847973529@lsce.ipsl.fr</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00126.html">7bd4040d-52ca-d90e-3b87-d133eb6ebbda@noaa.gov</a>&gt; &lt;<a href="msg00137.html">47687DDA-1E00-47ED-B346-383847973529@lsce.ipsl.fr</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Regarding the conda build:&#xA0;<div>PyFerret will use whichever PNG library is used by conda in building the package.&#xA0; The PNG library is linked in with -lpng (without any version number), so it uses whichever PNG library is provided.&#xA0; The unusual (and annoying) addition of the version number to the base name is something the creators of the PNG library do.&#xA0; (The libpng.dylib internally calls itself libpng16.16.dylib, so then the system wants a libpng16.*.dylib library instead of a libpng.*.dylib library; similarly with .so libraries on Linux systems.)<div><br></div><div>Regarding displayed windows in PyFerret on Mac OS X:&#xA0;</div></div><div>This release of PyFerret on OS X High Sierra will allow one displayed window (a system error message is printed when that window is displayed, but it works).&#xA0; If you try opening another window, or cancel the one window and try reopening it, the program will freeze/crash.&#xA0; It works fine with multiple no-display window.</div><div><br></div><div>PyFerret on OS X El Capitan works fine with multiple displayed (or no-display) windows.&#xA0;</div><div><br></div><div>Ferret on OS X High Sierra or El Capitan works fine with multiple displayed (or no-display) windows.</div><div><br></div><div>Karl</div><div><br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Fri, Apr 20, 2018 at 12:41 AM, Olivier Marti <span dir="ltr">&lt;<a rel="nofollow" href="mailto:olivier.marti@xxxxxxxxxxxx">olivier.marti@xxxxxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div style="word-wrap:break-word"><br><div><blockquote type="cite"><span class=""><div>Le 18 avr. 2018 &#xE0; 20:14, Ansley C. Manke &lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt; a &#xE9;crit :</div><br class="m_9117366111472494069Apple-interchange-newline"></span><span class=""><div><font style="font-family:ArialMT;fo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+<div style="color:rgb(0,0,0);letter-spacing:normal;text-align:start;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;word-wrap:break-word"><div style="color:rgb(0,0,0);letter-spacing:normal;text-align:start;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;word-wrap:break-word"><span class="m_9117366111472494069Apple-style-span" style="border-collapse:separate;color:rgb(0,0,0);font-family:&#39;Lucida Grande&#39;;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;border-spacing:0px"><div style="word-wrap:break-word"><span class="m_9117366111472494069Apple-style-span" style="border-collapse:separate;color:rgb(0,0,0);font-family:&#39;Lucida Grande&#39;;font-style:normal;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;border-spacing:0px"><div style="word-wrap:break-word"><span class="m_9117366111472494069Apple-style-span" style="border-collapse:separate;color:rgb(0,0,0);font-family:&#39;Lucida Grande&#39;;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-weight:normal;letter-spacing:normal;line-height:normal;text-align:-webkit-auto;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;border-spacing:0px"><div style="word-wrap:break-word"><span class="m_9117366111472494069Apple-style-span" style="border-collapse:separate;color:rgb(0,0,0);font-variant-ligatures:normal;font-variant-caps:normal;font-variant-east-asian:normal;letter-spacing:normal;line-height:normal;text-indent:0px;text-transform:none;white-space:normal;word-spacing:0px;border-spacing:0px"><div style="word-wrap:break-word"><span class="m_9117366111472494069A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+</div>
+<br></span></div></blockquote></div><br><br clear="all"><div><br></div>-- <br><div class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr">Karl M. Smith, Ph.D.<br>JISAO Univ. Wash. and PMEL NOAA<br>&quot;The contents of this message are mine personally and do<br>not necessarily reflect any position of the Government<br>or the National Oceanic and Atmospheric Administration.&quot;<br></div></div>
+</div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00126" href="msg00126.html">[ferret_users] Announcing the official release of PyFerret and Ferret version 7.4 for Linux and OSX</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+<li><strong><a name="00137" href="msg00137.html">Re: [ferret_users] Announcing the official release of PyFerret and Ferret version 7.4 for Linux and OSX</a></strong>
+<ul><li><em>From:</em> Olivier Marti</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00137.html">Re: [ferret_users] Announcing the official release of PyFerret and Ferret version 7.4 for Linux and OSX</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00129.html">[ferret_users] Maximum Covariance Analysis</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00137.html">Thread Prev</a>][<a href="msg00129.html">Thread Next</a>][<A HREF="threads2018.html#00138">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

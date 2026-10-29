@@ -1,0 +1,75 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] grid compressed after subtract area average -->
+<!--X-From-R13: Jvnblh Pnv <konv1Nhapp.rqh> -->
+<!--X-Date: Tue, 3 Dec 2019 16:39:28 &#45;0800 -->
+<!--X-Message-Id: CAKE4FWqfMgfa7AgHq6+xS+c&#45;9FgykzC9EDgJLY=JgmgohpQhAA@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] grid compressed after subtract area average</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00449.html">Thread Prev</a>][<a href="msg00453.html">Thread Next</a>][<A HREF="threads2019.html#00452">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] grid compressed after subtract area average</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] grid compressed after subtract area average</strong></li>
+<li><strong>From</strong>: <strong>Xiaoyu Bai &lt;<a href="mailto:xbai1@DOMAIN.HIDDEN">xbai1@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 3 Dec 2019 19:38:34 -0500</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Dear ferreters,<div><br></div><div>I noticed that when I subtract area average from a variable, it will make the variable&#39;s Lat and Lon become&#xA0;compressed instead of full. For example:</div><div><br></div><div>use levi_climatology</div><div>let test=TEMP-TEMP[X=@AVE,Y=@AVE]<br></div><div>sh grid TEMP,test<br>&#xA0; &#xA0; GRID GMS1<br>&#xA0;name &#xA0; &#xA0; &#xA0; axis &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;# pts &#xA0; start &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;end &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; subset<br>&#xA0;XAXLEVITR LONGITUDE &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;360mr &#xA0; 20.5E &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;19.5E(379.5) &#xA0; &#xA0; &#xA0; &#xA0;full<br>&#xA0;YAXLEVITR LATITUDE &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 180 r &#xA0; 89.5S &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;89.5N &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; full<br>&#xA0;ZAXLEVITR DEPTH (m) &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 20 i- &#xA0;0 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;5000 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;full<br>&#xA0;normal &#xA0; &#xA0;T<br>&#xA0; &#xA0; GRID GMS1<br>&#xA0;name &#xA0; &#xA0; &#xA0; axis &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;# pts &#xA0; start &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;end &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; subset<br>&#xA0;XAXLEVITR LONGITUDE &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;360mr &#xA0; 20.5E &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;19.5E(379.5) &#xA0; &#xA0; &#xA0; &#xA0;compressed<br>&#xA0;YAXLEVITR LATITUDE &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 180 r &#xA0; 89.5S &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;89.5N &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; compressed<br>&#xA0;ZAXLEVITR DEPTH (m) &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 20 i- &#xA0;0 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;5000 &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00453" href="msg00453.html">Re: [ferret_users] grid compressed after subtract area average</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00449.html">[ferret_users] Strange behaviour of ANNOTATE with non ascii fonts</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00453.html">Re: [ferret_users] grid compressed after subtract area average</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00449.html">Thread Prev</a>][<a href="msg00453.html">Thread Next</a>][<A HREF="threads2019.html#00452">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

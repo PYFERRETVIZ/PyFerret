@@ -1,0 +1,149 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] printing filename and line number at error -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Tue, 28 Jan 2020 09:17:50 &#45;0800 -->
+<!--X-Message-Id: 88e9ffce&#45;8354&#45;18b0&#45;6293&#45;358668f42710@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20200127153619.0a19cf13@gfi063209.klientdrift.uib.no -->
+<!--X-Reference: CAEwQpaKMGfsm8L9atbnFA83o7kuq5ADe=vykH7PTf68D4g_VrA@mail.gmail.com -->
+<!--X-Reference: 20200128100921.0314b5f3@gfi063209.klientdrift.uib.no -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] printing filename and line number at error</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00504.html">Thread Prev</a>][<a href="msg00507.html">Thread Next</a>][<A HREF="threads2019.html#00506">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] printing filename and line number at error</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] printing filename and line number at error</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 28 Jan 2020 09:17:46 -0800</li>
+<li>In-reply-to: &lt;<a href="msg00504.html">20200128100921.0314b5f3@gfi063209.klientdrift.uib.no</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00502.html">20200127153619.0a19cf13@gfi063209.klientdrift.uib.no</a>&gt; &lt;CAEwQpaKMGfsm8L9atbnFA83o7kuq5ADe=vykH7PTf68D4g_VrA@mail.gmail.com&gt; &lt;<a href="msg00504.html">20200128100921.0314b5f3@gfi063209.klientdrift.uib.no</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 Thunderbird/68.3.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Hi Marco
+ 
+</pre><tt>I like the idea of including the name of the script in error messages. 
+</tt><tt>I would make use of that. I'm not sure whether also including the 
+</tt><tt>line-number would be easy to implement but we'll have a look at these ideas.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>Meanwhile a further tool is available for debugging. Starting with 
+</tt><tt>Ferret v6.9, redirect the output to a log file using SET REDIRECT. Then 
+</tt><tt>that log output includes lines that list entry and exit from scripts, 
+</tt><tt>and the Unix tool FshowGO makes a listing of the go-script calls. This 
+</tt><tt>is discussed here:
+</tt><pre style="margin: 0em;">
+ 
+<a  rel="nofollow" href="../../documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_SET_REDIRECT">../../documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_SET_REDIRECT</a>
+<a  rel="nofollow" href="../../documentation/users-guide/introduction/UNIX-TOOLS.html#_FshowGO">../../documentation/users-guide/introduction/UNIX-TOOLS#_FshowGO</a>
+ 
+</pre><tt>And one more thing: if your set of calls includes scripts that may 
+</tt><tt>turn off mode verify, but you want to see the commands they run, start 
+</tt><tt>the session with
+</tt><pre style="margin: 0em;">
+ 
+SET MODE VERIFY:always
+ 
+which causes any CANCEL MODE VERIFY commands to be ignored.
+ 
+-Ansley
+ 
+ 
+On 1/28/2020 1:09 AM, Marco van Hulten wrote:
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+Ryo&#x2014;
+ 
+On 28 Jan 11:46 Ryo Furue wrote:
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+On Mon, Jan 27, 2020 at 11:39 PM Marco van Hulten &lt;Marco.Hulten@xxxxxx&gt;
+wrote:
+ 
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+When Ferret returns an error, is it possible to print the filename and
+linenumber of the GO script?
+[ . . . ]
+This is especially useful in my case where I am using jnl scripts that
+call other jnl scripts and so on.
+</pre><tt>  
+</tt></blockquote><pre style="margin: 0em;">
+I would certainly appreciate such a feature.  But, with &quot;set mode verify&quot;,
+you can usually track down where the error is.
+</pre></blockquote><pre style="margin: 0em;">
+Yes, that's true enough.  I now initialise a variable &quot;verbosity&quot; and
+then use this line at the start of my scripts:
+ 
+\if `verbosity lt 2` then cancel mode verify else set mode verify
+ 
+and cancel at the end of the script.  That way VERIFY is disabled when
+back at the prompt.
+ 
+&#x2014;Marco
+ 
+</pre></blockquote>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00507" href="msg00507.html">Re: [ferret_users] printing filename and line number at error</a></strong>
+<ul><li><em>From:</em> Andrew Wittenberg - NOAA Federal</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00502" href="msg00502.html">[ferret_users] printing filename and line number at error</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+<li><strong><a name="00503" href="msg00503.html">Re: [ferret_users] printing filename and line number at error</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00504" href="msg00504.html">Re: [ferret_users] printing filename and line number at error</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00504.html">Re: [ferret_users] printing filename and line number at error</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00507.html">Re: [ferret_users] printing filename and line number at error</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00504.html">Thread Prev</a>][<a href="msg00507.html">Thread Next</a>][<A HREF="threads2019.html#00506">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

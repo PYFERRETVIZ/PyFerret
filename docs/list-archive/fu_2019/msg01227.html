@@ -1,0 +1,355 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] opendap access and error "Invalid character found in the request target" -->
+<!--X-From-R13: Oafyrl [naxr <n.p.znaxrNtznvy.pbz> -->
+<!--X-Date: Wed, 25 Jan 2023 18:33:09 &#45;0800 -->
+<!--X-Message-Id: 44c0946d&#45;62eb&#45;2635&#45;09da&#45;964d6511423e@gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 1657078375.6932357.1674651739708.JavaMail.zimbra@lsce.ipsl.fr -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] opendap access and error &quot;Invalid character found in the request target&quot;</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01226.html">Thread Prev</a>][<a href="msg01228.html">Thread Next</a>][<A HREF="threads2019.html#01227">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] opendap access and error &quot;Invalid character found in the request target&quot;</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] opendap access and error &quot;Invalid character found in the request target&quot;</strong></li>
+<li><strong>From</strong>: <strong>Ansley Manke &lt;<a href="mailto:a.c.manke@DOMAIN.HIDDEN">a.c.manke@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 25 Jan 2023 18:32:58 -0800</li>
+<li>In-reply-to: &lt;<a href="msg01225.html">1657078375.6932357.1674651739708.JavaMail.zimbra@lsce.ipsl.fr</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg01225.html">1657078375.6932357.1674651739708.JavaMail.zimbra@lsce.ipsl.fr</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Thunderbird/102.6.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+ 
+ 
+ 
+<p>Hi Patrick,</p>
+<p>I do not know, but one possibility is that Ferret v7.6.0 is
+linked with a different version of the netCDF libraries than the
+pyferret that you are running.&#xA0; PyFerret and Ferret use the same
+calls for initializing and reading opendap datasets, so the issue
+is not with which program you are using but it could be the
+version.</p>
+<p>To see the netCDF version from the ferret or pyferret command
+line,<br>
+</p>
+<p>&#xA0;&#xA0; yes? show symbol netcdf_version<br>
+<br>
+</p>
+<div class="moz-cite-prefix">On 1/25/2023 5:02 AM, Patrick Brockmann
+wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+<div style="font-family: arial, helvetica, sans-serif; font-size:
+12pt; color: #000000">
+<div>Hi,</div>
+<div><br data-mce-bogus="1">
+</div>
+<div>I have encountered a strange error when I have opened a
+remote ressource from my thredds server.</div>
+<div>A simple list of a element throws an error that comes from
+the thredds server.&#xA0;</div>
+<div>It appears only with ferret and not pyferret (I found
+quicker ferret for displaying).</div>
+<div><br data-mce-bogus="1">
+</div>
+<div>I have made some investigation from the mailing list and
+have found this thread</div>
+<div><a rel="nofollow"
+href="../fu_2011/msg00723.html"
+moz-do-not-send="true" class="moz-txt-link-freetext">../fu_2011/msg00723.html</a><br
+data-mce-bogus="1">
+</div>
+<div>Not clear on what to do.</div>
+<div><br>
+</div>
+<div>Tested with ferret 7.6.0</div>
+<div><br data-mce-bogus="1">
+</div>
+<div><span style="font-family: monospace;"
+data-mce-style="font-family: monospace;"><span style="color:
+#000000; background-color: #ffffff;"
+data-mce-style="color: #000000; background-color:
+#ffffff;">yes? use
+<a rel="nofollow" class="moz-txt-link-freetext" href="https://thredds-su.ipsl.fr/thredds/dodsC/ipsl_thredds/brocksce/tmp/ORCHIDEEv3_S2_cVegpft_corrected.nc">https://thredds-su.ipsl.fr/thredds/dodsC/ipsl_thredds/brocksce/tmp/ORCHIDEEv3_S2_cVegpft_corrected.nc</a></span><br>
+</span></div>
+<div><span style="font-family: monospace;"
+data-mce-style="font-family: monospace;"><span style="color:
+#000000; background-color: #ffffff;"
+data-mce-style="color: #000000; background-color:
+#ffffff;">yes? show data</span><br>
+</span></div>
+<div><span style="font-family: monospace;"
+data-mce-style="font-family: monospace;"><span style="color:
+#000000; background-color: #ffffff;"
+data-mce-style="color: #000000; background-color:
+#ffffff;">yes? list CVEGPFT[i=1,j=1,k=1,l=1]</span><br>
+</span></div>
+<div><span style="font-family: monospace;"
+data-mce-style="font-family: monospace;"><span style="color:
+#000000; background-color: #ffffff;"
+data-mce-style="color: #000000; background-color:
+#ffffff;"><br data-mce-bogus="1">
+</span></span></div>
+<div>
+<h1 style="color: white; background-color: #525d76; font-size:
+22px; font-family: Tahoma, Arial, sans-serif; font-style:
+normal; font-variant-ligatures: normal; font-variant-caps:
+normal; letter-spacing: normal; orphans: 2; text-align:
+start; text-indent: 0px; text-transform: none; white-space:
+normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial;" data-mce-style="color:
+white; background-color: #525d76; font-size: 22px;
+font-family: Tahoma, Arial, sans-serif; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+letter-spacing: normal; orphans: 2; text-align: start;
+text-indent: 0px; text-transform: none; white-space: normal;
+widows: 2; word-spacing: 0px; -webkit-text-stroke-width:
+0px; text-decoration-thickness: initial;
+text-decoration-style: initial; text-decoration-color:
+initial;">HTTP Status 400 &#x2013; Bad Request</h1>
+<hr class="line" style="height: 1px; background-color:
+#525d76; border: none; color: #000000; font-family: Tahoma,
+Arial, sans-serif; font-size: medium; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-weight: 400; letter-spacing: normal; orphans: 2;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial;" data-mce-style="height:
+1px; background-color: #525d76; border: none; color:
+#000000; font-family: Tahoma, Arial, sans-serif; font-size:
+medium; font-style: normal; font-variant-ligatures: normal;
+font-variant-caps: normal; font-weight: 400; letter-spacing:
+normal; orphans: 2; text-align: start; text-indent: 0px;
+text-transform: none; white-space: normal; widows: 2;
+word-spacing: 0px; -webkit-text-stroke-width: 0px;
+text-decoration-thickness: initial; text-decoration-style:
+initial; text-decoration-color: initial;">
+<p style="font-size: 12px; color: rgb(0, 0, 0); font-family:
+Tahoma, Arial, sans-serif; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-weight: 400; letter-spacing: normal; orphans: 2;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial; margin: 0px;"
+data-mce-style="font-size: 12px; color: #000000;
+font-family: Tahoma, Arial, sans-serif; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-weight: 400; letter-spacing: normal; orphans: 2;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial; margin: 0px;"><b
+style="color: white; background-color: #525d76;"
+data-mce-style="color: white; background-color: #525d76;">Type</b><span>&#xA0;</span>Exception
+Report</p>
+<p style="font-size: 12px; color: rgb(0, 0, 0); font-family:
+Tahoma, Arial, sans-serif; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-weight: 400; letter-spacing: normal; orphans: 2;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial; margin: 0px;"
+data-mce-style="font-size: 12px; color: #000000;
+font-family: Tahoma, Arial, sans-serif; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-weight: 400; letter-spacing: normal; orphans: 2;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial; margin: 0px;"><b
+style="color: white; background-color: #525d76;"
+data-mce-style="color: white; background-color: #525d76;">Message</b><span>&#xA0;</span>Invalid
+character found in the request target
+[/thredds/dodsC/ipsl_thredds/brocksce/tmp/ORCHIDEEv3_S2_cVegpft_corrected.nc.dods?cVegpft.cVegpft[0][0][0:359][0:719]
+]. The valid characters are defined in RFC 7230 and RFC 3986</p>
+<p style="font-size: 12px; color: rgb(0, 0, 0); font-family:
+Tahoma, Arial, sans-serif; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-weight: 400; letter-spacing: normal; orphans: 2;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial; margin: 0px;"
+data-mce-style="font-size: 12px; color: #000000;
+font-family: Tahoma, Arial, sans-serif; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-weight: 400; letter-spacing: normal; orphans: 2;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial; margin: 0px;"><b
+style="color: white; background-color: #525d76;"
+data-mce-style="color: white; background-color: #525d76;">Description</b><span>&#xA0;</span>The
+server cannot or will not process the request due to
+something that is perceived to be a client error (e.g.,
+malformed request syntax, invalid request message framing,
+or deceptive request routing).</p>
+<p style="font-size: 12px; color: rgb(0, 0, 0); font-family:
+Tahoma, Arial, sans-serif; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-weight: 400; letter-spacing: normal; orphans: 2;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial; margin: 0px;"
+data-mce-style="font-size: 12px; color: #000000;
+font-family: Tahoma, Arial, sans-serif; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-weight: 400; letter-spacing: normal; orphans: 2;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial; margin: 0px;"><b
+style="color: white; background-color: #525d76;"
+data-mce-style="color: white; background-color: #525d76;">Exception</b></p>
+<pre style="color: #000000; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" data-mce-style="color: #000000; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">java.lang.IllegalArgumentException: Invalid character found in the request target [/thredds/dodsC/ipsl_thredds/brocksce/tmp/ORCHIDEEv3_S2_cVegpft_corrected.nc.dods?cVegpft.cVegpft[0][0][0:359][0:719] ]. The valid characters are defined in RFC 7230 and RFC 3986 org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:509) org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:511) org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:831) org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1650) org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) java.base/java.lang.Thread.run(Thread.java:829)</pre>
+<p style="font-size: 12px; color: rgb(0, 0, 0); font-family:
+Tahoma, Arial, sans-serif; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-weight: 400; letter-spacing: normal; orphans: 2;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial; margin: 0px;"
+data-mce-style="font-size: 12px; color: #000000;
+font-family: Tahoma, Arial, sans-serif; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-weight: 400; letter-spacing: normal; orphans: 2;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial; margin: 0px;"><b
+style="color: white; background-color: #525d76;"
+data-mce-style="color: white; background-color: #525d76;">Note</b><span>&#xA0;</span>The
+full stack trace of the root cause is available in the
+server logs.</p>
+<hr class="line" style="height: 1px; background-color:
+#525d76; border: none; color: #000000; font-family: Tahoma,
+Arial, sans-serif; font-size: medium; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-weight: 400; letter-spacing: normal; orphans: 2;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial;" data-mce-style="height:
+1px; background-color: #525d76; border: none; color:
+#000000; font-family: Tahoma, Arial, sans-serif; font-size:
+medium; font-style: normal; font-variant-ligatures: normal;
+font-variant-caps: normal; font-weight: 400; letter-spacing:
+normal; orphans: 2; text-align: start; text-indent: 0px;
+text-transform: none; white-space: normal; widows: 2;
+word-spacing: 0px; -webkit-text-stroke-width: 0px;
+text-decoration-thickness: initial; text-decoration-style:
+initial; text-decoration-color: initial;">
+<h3 style="color: white; background-color: #525d76; font-size:
+14px; font-family: Tahoma, Arial, sans-serif; font-style:
+normal; font-variant-ligatures: normal; font-variant-caps:
+normal; letter-spacing: normal; orphans: 2; text-align:
+start; text-indent: 0px; text-transform: none; white-space:
+normal; widows: 2; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; text-decoration-thickness:
+initial; text-decoration-style: initial;
+text-decoration-color: initial;" data-mce-style="color:
+white; background-color: #525d76; font-size: 14px;
+font-family: Tahoma, Arial, sans-serif; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+letter-spacing: normal; orphans: 2; text-align: start;
+text-indent: 0px; text-transform: none; white-space: normal;
+widows: 2; word-spacing: 0px; -webkit-text-stroke-width:
+0px; text-decoration-thickness: initial;
+text-decoration-style: initial; text-decoration-color:
+initial;">Apache Tomcat/8.5.72</h3>
+</div>
+<div><br data-mce-bogus="1">
+</div>
+<div>Any idea ?</div>
+<div>Regards</div>
+<div>Patrick</div>
+<div><br data-mce-bogus="1">
+</div>
+<div data-marker="__SIG_PRE__">--<br>
+Data Analytics and Visualization Engineer / Project Manager<br>
+LSCE/IPSL, CEA-CNRS-UVSQ laboratory<br>
+LSCE - Climate and Environment Sciences Laboratory<br>
+IPSL - Institut Pierre Simon Laplace<br>
+--</div>
+</div>
+</blockquote>
+ 
+ 
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="01225" href="msg01225.html">[ferret_users] opendap access and error &quot;Invalid character found in the request target&quot;</a></strong>
+<ul><li><em>From:</em> Patrick Brockmann</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01226.html">Re: [ferret_users] opendap access and error &quot;Invalid character found in the request target&quot;</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01228.html">[ferret_users] [ferret users] error in external function while computing EOF</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01226.html">Thread Prev</a>][<a href="msg01228.html">Thread Next</a>][<A HREF="threads2019.html#01227">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

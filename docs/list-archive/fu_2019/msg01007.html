@@ -1,0 +1,79 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Error while merging files using append -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Wed, 22 Sep 2021 22:34:32 &#45;0700 -->
+<!--X-Message-Id: CAEwQpaKymeUyK0gBfQDq7NcR9xM0NDPXm8e7sW1scOWDMQm=yg@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAPYcFvOFYfJx60xrdZfg3c5e=NW_WHc6&#45;oW68zdaMK02JRwXmQ@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Error while merging files using append</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01002.html">Thread Prev</a>][<a href="msg01003.html">Thread Next</a>][<A HREF="threads2019.html#01007">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Error while merging files using append</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Swetha sivakumar &lt;<a href="mailto:swetha.s2060@DOMAIN.HIDDEN">swetha.s2060@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Error while merging files using append</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 23 Sep 2021 14:34:13 +0900</li>
+<li>Cc: ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;CAPYcFvOFYfJx60xrdZfg3c5e=NW_WHc6-oW68zdaMK02JRwXmQ@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAPYcFvOFYfJx60xrdZfg3c5e=NW_WHc6-oW68zdaMK02JRwXmQ@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Dear Swetha,</div><div><br></div><div class="gmail_quote"><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div>I have 16 nc files stored at 16 different directories. I want to merge them all together into a single nc file. Below is code and error faced</div><div><br></div><div>use &quot;/file/2001/u/<a rel="nofollow" href="http://d_2001.nc">d_2001.nc</a>&quot;<br>.</div><div>.</div><div>.</div><div>use &quot;/file/2016/u/<a rel="nofollow" href="http://d_2016.nc">d_2016.nc</a>&quot;<br></div><div><br></div><div>save/append/file=<a rel="nofollow" href="http://check.nc">check.nc</a> U[d=1]</div><div><div>save/append/file=<a rel="nofollow" href="http://check.nc">check.nc</a> U[d=2]</div></div></div></blockquote><div><br></div><div>There is a better way:</div><div><br></div><div><a rel="nofollow" href="../../faq/using-data-that-spans-multiple-files.html">../../faq/using-data-that-spans-multiple-files</a><br></div><div><br></div><div>Namely,</div><div><br></div><div>let file_list = SPAWN(&quot;ls /file/20*/d_20*.nc&quot;)<br></div><div>TSERIES all_times = file_list<br></div><div>save/file=<a rel="nofollow" href="http://check.nc">check.nc</a> U</div><div><br></div><div>But perhaps you&#39;ll have the same problem:</div><div><br></div><div>&#xA0;</div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div><div><br></div><div>**TMAP ERR: error in line definition<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;disordered output coordinate value: &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;25 &#xA0;Axis: TIME<br>LIST/FORMAT=CDF/append/file=<a rel="nofollow" href="http://check.nc">check.nc</a> U[d=2]<br>Command file, command group, or REPEAT execution aborted<br>Executed by script: *** GO mergefiles_u.jnl ***</div><div><br></div><div>All 16 files have same x and                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="01002" href="msg01002.html">[ferret_users] Error while merging files using append</a></strong>
+<ul><li><em>From:</em> Swetha sivakumar</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01002.html">[ferret_users] Error while merging files using append</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01003.html">[ferret_users] Frame only save upper left portion of an image</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01002.html">Thread Prev</a>][<a href="msg01003.html">Thread Next</a>][<A HREF="threads2019.html#01007">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

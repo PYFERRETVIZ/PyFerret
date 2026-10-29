@@ -1,0 +1,220 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] creating an array from anomaly data -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Wed, 23 Oct 2019 14:48:21 &#45;0700 -->
+<!--X-Message-Id: 6407ff66&#45;969a&#45;dff9&#45;0f07&#45;509997bdfb63@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: C0B57599C4D76B43BCC98F3CE4CEADC60182B3C1A1@h&#45;mem3 -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] creating an array from anomaly data</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00400.html">Thread Prev</a>][<a href="msg00402.html">Thread Next</a>][<A HREF="threads2019.html#00401">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] creating an array from anomaly data</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] creating an array from anomaly data</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 23 Oct 2019 14:48:17 -0700</li>
+<li>In-reply-to: &lt;C0B57599C4D76B43BCC98F3CE4CEADC60182B3C1A1@h-mem3&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;C0B57599C4D76B43BCC98F3CE4CEADC60182B3C1A1@h-mem3&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 Thunderbird/68.1.2</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+ 
+ 
+ 
+<p>Hi Randye,</p>
+<p>There's some documentation about "masking", here</p>
+<p><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPID_181">../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#_VPID_181</a></p>
+<p><br>
+</p>
+<p>You'll open up your mask file, and the timeseries-data file, and
+then make sure the mask and the data are on the same time axis
+with a regridding operation -- and multiply the model-data
+variable by one of the masks. Something like this, if the model
+data has a variable called "uvar". The result will be the masked
+variable on the whole grid of uvar, <br>
+</p>
+<p><br>
+</p>
+<p><tt>yes? use mask-var.nc</tt></p>
+<p><tt>yes? use model_data_1.nc</tt></p>
+<p><tt><br>
+</tt></p>
+<p><tt>yes? let/like=uvar masked_uvar = var1[d=1] *
+uvar[d=2,gt=var1[d=1]]</tt></p>
+<p><tt><br>
+</tt></p>
+<p><tt>! See a time-series of the masked variable at some point</tt><tt>
+in uvar's grid.<br>
+</tt></p>
+<p><tt>yes? plot</tt><tt>/symbol</tt><tt>/x=300/y=40/y=0
+masked_uvar</tt></p>
+<p><tt><br>
+</tt></p>
+<p><tt></tt><tt><br>
+</tt></p>
+<p>Note I've regridded the model data to the time axis of the mask ,
+but you could do it the other way around, mask var1 to the grid of
+uvar.</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<div class="moz-cite-prefix">On 10/23/2019 7:53 AM, Randye l Rutberg
+wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+ 
+<div style="direction: ltr;font-family: Tahoma;color:
+#000000;font-size: 10pt;">Ferret Users,
+<div><br>
+</div>
+<div>Last week I posted a question seeking a method for having
+Ferret return the year that a temperature anomaly occurs if
+given a threshold. The response I received was very helpful
+and allowed me to do this. </div>
+<div><br>
+</div>
+<div>I basically followed these commands:</div>
+<div><br>
+</div>
+<div>
+<div class="gmail_default">To your query, it is the way that I
+use to do.</div>
+<div class="gmail_default"><br>
+</div>
+<div class="gmail_default">use<a rel="nofollow" href="http://data.nc"  rel="noopener noreferrer"
+moz-do-not-send="true">data.nc</a> ! load the data !</div>
+<div class="gmail_default"><br>
+</div>
+<div class="gmail_default">! generate the mask of the variable
+(var) in the data set, to your queryI hope it is the time
+series you are talking about e.g. ENSO index time series !</div>
+<div class="gmail_default"><br>
+</div>
+<div class="gmail_default">let var1 = if var ge 1 then var 
+!! this is the value which is greater than or equal to 1</div>
+<div class="gmail_default">let var2 = if var le -1 then var 
+!! this is the value which is less than or equal to -1</div>
+<div class="gmail_default"><br>
+</div>
+<div class="gmail_default">list var1, var2    !! this will
+show you the magnitude with dates !!<br>
+</div>
+<div class="gmail_default"><br>
+</div>
+<div class="gmail_default">save/file=<a rel="nofollow"
+href="http://mask-var.nc" rel="noopener
+noreferrer" moz-do-not-send="true">mask-var.nc</a>var1,
+var2 !! in case if you want to save them !!</div>
+<div class="gmail_default"><br>
+</div>
+<div class="gmail_default">exit</div>
+<div class="gmail_default"><br>
+</div>
+<div class="gmail_default">***********************************************</div>
+<div class="gmail_default"><br>
+</div>
+<div class="gmail_default">Now, I am stuck on the next step.
+I would like to use the dates generated for the anomolous
+and non-anomalous years to look at other model outputs. In
+other words, I want to compare various model outputs during
+years with and without temperature anomalies. However, I do
+not know how to proceed to accomplish this.</div>
+<div class="gmail_default"><br>
+</div>
+<div class="gmail_default">Thank you in advance for your help.</div>
+<div class="gmail_default"><br>
+</div>
+<div class="gmail_default">Randye<br>
+</div>
+<div class="gmail_default"><br>
+</div>
+<div class="gmail_default"><br>
+</div>
+<div class="gmail_default"><br>
+</div>
+<div class="gmail_default"><br>
+</div>
+<div>
+<div style="color:rgb(0,0,0); letter-spacing:normal;
+orphans:auto; text-align:start; text-indent:0px;
+text-transform:none; white-space:normal; widows:auto;
+word-spacing:0px; word-wrap:break-word">
+Dr. Randye Rutberg<br>
+Assistant Professor<br>
+Department of Geography<br>
+Hunter College of the City University ofNew York<br>
+<br>
+Office: 1047 Hunter North<br>
+Phone: 212 772 5326<br>
+Fax:   212 772 5268<br>
+Email:  <a rel="nofollow" class="moz-txt-link-abbreviated" href="mailto:rrutberg@xxxxxxxxxxxxxxx">rrutberg@xxxxxxxxxxxxxxx</a><br>
+Snail mail: 695 Park Ave<br>
+         New York, NY 10021</div>
+</div>
+<br>
+</div>
+</div>
+</blockquote>
+ 
+ 
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00400" href="msg00400.html">[ferret_users] creating an array from anomaly data</a></strong>
+<ul><li><em>From:</em> Randye l Rutberg</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00400.html">[ferret_users] creating an array from anomaly data</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00402.html">[ferret_users] A sugestion for Faddpath and pyferret.addpath</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00400.html">Thread Prev</a>][<a href="msg00402.html">Thread Next</a>][<A HREF="threads2019.html#00401">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

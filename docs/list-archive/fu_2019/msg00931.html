@@ -1,0 +1,95 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] [Doubt in script of regressxy function] -->
+<!--X-From-R13: fnhenou enguber <ebuvgfeo2020Ntznvy.pbz> -->
+<!--X-Date: Thu, 8 Apr 2021 00:37:29 &#45;0700 -->
+<!--X-Message-Id: CAFXLzPjw=dwJ6mQ=HSxabn98LMuoMb5X657q+Yt=vpwnydFz&#45;w@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAKBNTAZ7&#45;sWv+aPE9ekL78Nm9&#45;Y=KS_OsRPQDExuCtjK=tvfYA@mail.gmail.com -->
+<!--X-Reference: CAFXLzPjkoO=deiwsY+tVcW2Wunb9Ke5Oo3g_X&#45;=zUSV6m6cqdA@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] [Doubt in script of regressxy function]</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00930.html">Thread Prev</a>][<a href="msg00927.html">Thread Next</a>][<A HREF="threads2019.html#00931">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] [Doubt in script of regressxy function]</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>RUKSANA SALIM &lt;<a href="mailto:ruksanasalim8197@DOMAIN.HIDDEN">ruksanasalim8197@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] [Doubt in script of regressxy function]</strong></li>
+<li><strong>From</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 8 Apr 2021 09:37:12 +0200</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;CAFXLzPjkoO=deiwsY+tVcW2Wunb9Ke5Oo3g_X-=zUSV6m6cqdA@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAKBNTAZ7-sWv+aPE9ekL78Nm9-Y=KS_OsRPQDExuCtjK=tvfYA@mail.gmail.com&gt; &lt;CAFXLzPjkoO=deiwsY+tVcW2Wunb9Ke5Oo3g_X-=zUSV6m6cqdA@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div class="gmail_default" style="color:#000000">Hi My bad for point (2)</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">(2) then you have to arrange this 4-d array in to 1-d array using xsequence or ysequence or tsequence etc. So this sequence function will convert your n-d variable to 1-d variable. Apply it to both fields.<br></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Thu, Apr 8, 2021 at 9:35 AM saurabh rathore &lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx">rohitsrb2020@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)"><div class="gmail_default">Hi Ruksana</div><div class="gmail_default">G&#39;day</div><div class="gmail_default"><br></div><div class="gmail_default">I think there is some other way.</div><div class="gmail_default"><br></div><div class="gmail_default">I am assuming you are having 4-d variable (lat, lon, time depth)</div><div class="gmail_default"><br></div><div class="gmail_default">(1) I think for pattern correlation you have to select equal size boxes for the variable e.g. box1 (of 10 lat grids * 10 lon grids * 12 time steps and 12 depth levels) and same size of box2.</div><div class="gmail_default">(2) then you have to arrange this 4-d array in to 1-d array using sequence or sequence or sequence etc. So this sequence function will convert your n-d variable to 1-d variable. Apply it to both fields.</div><div class="gmail_default">(3) then you will have two 1-d variables of size (10*10*12*12 = 14400 e.g.) that you can use for regression or/and correlation</div><div class="gmail_default"><br></div><div class="gmail_default">I hope I am clear, if I sound confusing let&#xA0;me know. Otherwise, you can also try the NCL-Ncar function (<a rel="nofollow" href="https://www.ncl.ucar.edu/Document/Functions/Contri                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+say ... Instructions:<br>say Use the LET command to define new variables<br>say Define the variable P as your independent (X) variable<br>say Define the variable Q as your dependent (Y) variable<br>say Results will be variables &quot;SLOPE&quot;, &quot;INTERCEP&quot; and &quot;RSQUARE&quot;<br>
+say QHAT will be the regression estimate<br>say Note: If &quot;Y&quot; is your independent variable then<br>say ... &quot;SET GRID Q&quot; after defining Q.<br>say ...<br><br>let pq = p*q<br>let pqmask = pq-pq ! 0 or &quot;missing&quot; so all variables share the same missing<br>
+let pmasked = p + pqmask<br>let qmasked = q + pqmask<br>let pp = pmasked*pmasked<br>let qq = qmasked*qmasked<br><br>let pxave = pmasked[x=@ave]<br>let qxave = qmasked[x=@ave]<br>let pave = pxave[y=@ave]<br>let qave = qxave[y=@ave]<br>
+let pqxave = pq[x=@ave]<br>let ppxave = pp[x=@ave]<br>let qqxave = qq[x=@ave]<br>let pqave = pqxave[y=@ave]<br>let ppave = ppxave[y=@ave]<br>let qqave = qqxave[y=@ave]<br>let pvar = ppave - pave*pave<br>let qvar = qqave - qave*qave<br>
+let pqvar = pqave - pave*qave<br><br>let slope = pqvar / pvar<br>let intercep = qave - slope*pave<br>let qhat = slope*p + intercep<br>let rsquare = (pqvar*pqvar) / (pvar*qvar)<br>let corr = pqvar/(pvar*qvar)^0.5<br><br>SET MODE/LAST VERIFY<br>
+<br><br><br><br></div>regressxy_new.jnl :<br><br>\CANCEL MODE VERIFY<br>! Description: define FERRET variables for regression along the X and Y axis<br><br>say ... Linear Regression In the XY Plane<br>say ... Instructions:<br>
+say Use the LET command to define new variables<br>say Define the variable P as your independent (X) variable<br>say Define the variable Q as your dependent (Y) variable<br>say Results will be variables &quot;SLOPE&quot;, &quot;INTERCEP&quot; and &quot;RSQUARE&quot;<br>
+say QHAT will be the regression estimate<br>say Note: If &quot;Y&quot; is your independent variable then<br>say ... &quot;SET GRID Q&quot; after defining Q.<br>say ...<br><br>let pq = p*q<br>let pqmask = pq-pq ! 0 or &quot;missing&quot; so all variables share the same missing<br>
+let pmasked = p + pqmask<br>let qmasked = q + pqmask<br>let pp = pmasked*pmasked<br>let qq = qmasked*qmasked<br><br>let pave = pmasked[x=@ave,y=@ave]<br>let qave = qmasked[x=@ave,y=@ave]<br>let pqave = pq[x=@ave,y=@ave]<br>
+let ppave = pp[x=@ave,y=@ave]<br>let qqave = qq[x=@ave,y=@ave]<br>let pvar = ppave - pave*pave<br>let qvar = qqave - qave*qave<br>let pqvar = pqave - pave*qave<br><br>let slope = pqvar / pvar<br>let intercep = qave - slope*pave<br>
+let qhat = slope*p + intercep<br>let rsquare = (pqvar*pqvar) / (pvar*qvar)<br>let corr = pqvar/(pvar*qvar)^0.5<br><br>SET MODE/LAST VERIFY</div><br>-- <br><div dir="ltr"><div dir="ltr"><div><font face="arial narrow,sans-serif">With regards,</font></div><div><b><font face="arial narrow,sans-serif">Ruksana Salim,</font></b></div><div><font face="arial narrow,sans-serif">SC19M070,</font></div><div><font face="arial narrow,sans-serif">M.Tech in Earth System Science,</font></div><div><font face="arial narrow,sans-serif">Indian Institute Of Space Science And Technology,</font></div><div style="text-align:left"><font face="arial narrow,sans-serif">Trivandrum, Kerala, India - 695547.</font></div><font face="arial narrow,sans-serif"><div><br></div></font></div></div></div>
+</blockquote></div><br clear="all"><div><br></div>-- <br><div dir="ltr"><div dir="ltr"><div><div dir="ltr"><div><font color="#0000ff" size="4"><b><br></b></font></div><div><font color="#0000ff" size="4"><b><br></b></font></div><font color="#0000ff" size="4" face="times new roman, serif"><b>REGARDS</b></font><div><font color="#0000ff" size="4" face="times new roman, serif"><b><br></b></font><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Saurabh Rathore</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Research Scholar (PhD.)</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Centre For Oceans, Rivers, Atmosphere &amp; Land Science Technology</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Indian Institute Of Technology, Kharagpur</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>contact :- 91- 8345984434</b></font></div></div></div></div></div></div>
+</blockquote></div><br clear="all"><div><br></div>-- <br><div dir="ltr" class="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><font color="#0000ff" size="4"><b><br></b></font></div><div><font color="#0000ff" size="4"><b><br></b></font></div><font color="#0000ff" size="4" face="times new roman, serif"><b>REGARDS</b></font><div><font color="#0000ff" size="4" face="times new roman, serif"><b><br></b></font><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Saurabh Rathore</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Research Scholar (PhD.)</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Centre For Oceans, Rivers, Atmosphere &amp; Land Science Technology</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Indian Institute Of Technology, Kharagpur</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>contact :- 91- 8345984434</b></font></div></div></div></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00925" href="msg00925.html">[ferret_users] [Doubt in script of regressxy function]</a></strong>
+<ul><li><em>From:</em> RUKSANA SALIM</li></ul></li>
+<li><strong><a name="00930" href="msg00930.html">Re: [ferret_users] [Doubt in script of regressxy function]</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00930.html">Re: [ferret_users] [Doubt in script of regressxy function]</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00927.html">[ferret_users] How to add symbol on a map when lat and lon are known</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00930.html">Thread Prev</a>][<a href="msg00927.html">Thread Next</a>][<A HREF="threads2019.html#00931">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

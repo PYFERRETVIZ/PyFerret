@@ -1,0 +1,75 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] seconds in date&#45;time -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Tue, 16 May 2023 01:59:51 &#45;0700 -->
+<!--X-Message-Id: CAEwQpaK7vMiWg&#45;Kf34WFziRc9J9pAXBO7+Xm9_1xntn5Pe7TtQ@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] seconds in date-time</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01261.html">Thread Prev</a>][<a href="msg01263.html">Thread Next</a>][<A HREF="threads2019.html#01262">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] seconds in date-time</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] seconds in date-time</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 16 May 2023 17:59:26 +0900</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Dear Ferreters,<div><br></div><div>I was wondering how the seconds are handled in the date-time specification?</div><div><br></div><div>In the example below, I get from LIST</div><div><br></div><blockquote style="margin:0 0 0 40px;border:none;padding:0px"><div><font face="monospace">TIME &#xA0; &#xA0; : 04-AUG-2015 <font color="#ff0000">03:06</font> to 18-AUG-2015 <font color="#ff0000">00:26</font></font></div></blockquote><div><br></div><div>as the averaging period whereas I specify <font face="monospace">&quot;2015-08-04T<font color="#ff0000">03:06:40</font>&quot;:&quot;2015-08-18T<font color="#ff0000">00:26:40</font>&quot;@AVE</font> .&#xA0; Is this just a display issue? Or are the seconds actually ignored?</div><div><br></div><div>It&#39;s not that the seconds matter in my particular calculation at hand. I&#39;d just like to know.</div><div><br></div><div>I&#39;m working with colleagues who just use seconds for their time axis and when I mechanically converted their time range to a date-time range, I got these date-times.</div><div><br></div><div>Regards,</div><div><br></div><div>Ryo</div><div>-----</div><div>set data <a rel="nofollow" href="http://tmp.nc">tmp.nc</a> ! !&lt;-- I can send this small file on request.<br><br>let t1 = &quot;2015-08-04T03:06:40&quot;<br>let t2 = &quot;2015-08-18T00:26:40&quot;<br><br>let slpmean = slp[t=&quot;`t1`&quot;:&quot;`t2`&quot;@AVE]<br>list slpmean<br></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="01263" href="msg01263.html">Re: [ferret_users] seconds in date-time</a></strong>
+<ul><li><em>From:</em> Ansley Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01261.html">[ferret_users] macOS font names</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01263.html">Re: [ferret_users] seconds in date-time</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01261.html">Thread Prev</a>][<a href="msg01263.html">Thread Next</a>][<A HREF="threads2019.html#01262">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

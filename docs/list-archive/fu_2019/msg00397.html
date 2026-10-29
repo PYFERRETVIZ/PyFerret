@@ -1,0 +1,248 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] time axis starting with December -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Wed, 16 Oct 2019 15:04:56 &#45;0700 -->
+<!--X-Message-Id: 63037109&#45;644e&#45;23a4&#45;6a90&#45;f90003df9169@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAG0pxU_x0hfRVg=kge+Mar3qRsoAOdM4b9gx1gAokhcns&#45;BB1A@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] time axis starting with December</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00375.html">Thread Prev</a>][<a href="msg00376.html">Thread Next</a>][<A HREF="threads2019.html#00397">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] time axis starting with December</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] time axis starting with December</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 16 Oct 2019 15:04:51 -0700</li>
+<li>In-reply-to: &lt;CAG0pxU_x0hfRVg=kge+Mar3qRsoAOdM4b9gx1gAokhcns-BB1A@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAG0pxU_x0hfRVg=kge+Mar3qRsoAOdM4b9gx1gAokhcns-BB1A@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 Thunderbird/68.1.2</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+ 
+ 
+ 
+<p>Hi Pratik,</p>
+<p>Ferret always has a set of monthly and seasonal time axes
+defined, but in addition there are some specialized
+modulo-calendar time axes defined in these datasets. See</p>
+<p><a rel="nofollow"
+href="../../documentation/users-guide/Grids-Regions/GRIDS.html#Chapter4-Modulo_regridding">../../documentation/users-guide/Grids-Regions/GRIDS#Chapter4-Modulo_regridding</a></p>
+<p>The datasets are,<br>
+</p>
+<p><strong style="margin: 0px; padding: 0px; border: 0px; outline:
+0px; vertical-align: baseline; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-variant-numeric: inherit; font-variant-east-asian: inherit;
+font-weight: bold; font-stretch: inherit; font-size: 13px;
+line-height: inherit; font-family: Verdana, Helvetica, Arial,
+sans-serif; color: rgb(0, 0, 0); letter-spacing: normal;
+orphans: 2; text-align: -webkit-left; text-indent: 0px;
+text-transform: none; white-space: normal; widows: 2;
+word-spacing: 0px; -webkit-text-stroke-width: 0px;
+background-color: rgb(255, 255, 255); text-decoration-style:
+initial; text-decoration-color: initial;">clim_axes_gregorian.nc,
+clim_axes_julian.nc, clim_axes_noleap.nc</strong></p>
+<div class="moz-cite-prefix">These define monthly climatologies, as
+well as seasonal climatologies centered on different months. So
+for the default Gregorian calendar, use clim_axes_gregorian.nc.</div>
+<div class="moz-cite-prefix"><br>
+</div>
+<div class="moz-cite-prefix"><br>
+</div>
+<div class="moz-cite-prefix"><tt><br>
+</tt></div>
+<div class="moz-cite-prefix"><tt>yes? use clim_axes_gregorian</tt><tt><br>
+</tt><tt> *** NOTE: regarding
+/home/users/tmap/ferret/linux/fer_dsets/data/clim_axes_gregorian.nc
+...</tt><tt><br>
+</tt><tt> *** NOTE: GREGORIAN climatological axes
+defined</tt></div>
+<div class="moz-cite-prefix"><tt><br>
+</tt></div>
+<div class="moz-cite-prefix"><tt>yes? ! Clean up by canceling this
+dataset. Axis definitions persist even when a dataset is closed.</tt><tt><br>
+</tt></div>
+<div class="moz-cite-prefix"><tt>yes? cancel data </tt><tt>clim_axes_gregorian
+</tt><tt><br>
+</tt></div>
+<div class="moz-cite-prefix"><tt><br>
+</tt></div>
+<div class="moz-cite-prefix"><tt>yes? ! Show all the defined axes.
+The clim_axes_gregorian defines the _GRG ones</tt><tt><br>
+</tt><tt>yes? show axis/all</tt><tt><br>
+</tt><tt>name axis # pts
+start end</tt><tt><br>
+</tt><tt>MONTH_IRREG TIME 12mi 16-JAN
+12:00 15-DEC 17:49</tt><tt><br>
+</tt><tt>MONTH_REG TIME 12mr 16-JAN
+06:00 16-DEC 01:20</tt><tt><br>
+</tt><tt>SEASONAL_REG TIME 4mr 15-FEB
+15:43 15-NOV 14:05</tt><tt><br>
+</tt><tt>MONTH_GREGORIAN TIME 12mi 16-JAN
+12:00 15-DEC 17:49</tt><tt><br>
+</tt><tt>MONTH_NOLEAP TIME 12mi 16-JAN
+12:00 16-DEC 12:00</tt><tt><br>
+</tt><tt>MONTH_360_DAY TIME 12mr 16-JAN
+00:00 16-DEC 00:00</tt><tt><br>
+</tt><tt>MONTH_ALL_LEAP TIME 12mi 16-JAN
+12:00 16-DEC 12:00</tt><tt><br>
+</tt><tt>MONTH_JULIAN TIME 12mi 16-JAN
+12:00 15-DEC 18:00</tt><tt><br>
+</tt><tt>ABSTRACT 99999999 r
+1 1.E+08</tt><tt><br>
+</tt><tt>EZ 20480 r
+1 20480</tt><tt><br>
+</tt><tt>MON_IRREG_GRG TIME 12mi 16-JAN
+12:00 16-DEC 17:49</tt><tt><br>
+</tt><tt>JFM_IRREG_GRG TIME 4mi 15-FEB
+02:54 16-NOV 05:49</tt><tt><br>
+</tt><tt>DJF_IRREG_GRG TIME 4mi 15-JAN
+08:43 16-OCT 23:38</tt><tt><br>
+</tt><tt>NDJ_IRREG_GRG TIME 4mi 17-DEC
+05:49 16-SEP 11:38</tt><tt><br>
+</tt><tt>MON_REG_GRG TIME 12mr 16-JAN
+05:14 17-DEC 00:34</tt><tt><br>
+</tt><tt>JFM_REG_GRG TIME 4mr 15-FEB
+15:43 16-NOV 14:05</tt><tt><br>
+</tt><tt>DJF_REG_GRG TIME 4mr 16-JAN
+11:03 17-OCT 09:25</tt><tt><br>
+</tt><tt>NDJ_REG_GRG TIME 4mr 17-DEC
+00:34 16-SEP 22:56</tt></div>
+<div class="moz-cite-prefix"><tt><br>
+</tt></div>
+<div class="moz-cite-prefix"><tt>yes? let monthave =
+temp[gt=djf_irreg_grg]</tt><tt><br>
+</tt><tt>yes? list monthave</tt><tt><br>
+</tt><tt> VARIABLE : TEMP[GT=DJF_IRREG_GRG]</tt><tt><br>
+</tt><tt> FILENAME : coads_climatology.cdf</tt><tt><br>
+</tt><tt> FILEPATH :
+/home/users/tmap/ferret/linux/fer_dsets/data/</tt><tt><br>
+</tt><tt> SUBSET : 4 points (TIME)</tt><tt><br>
+</tt><tt> LONGITUDE: 99E</tt><tt><br>
+</tt><tt> LATITUDE : 1S</tt><tt><br>
+</tt><tt> 99E </tt><tt><br>
+</tt><tt> 40</tt><tt><br>
+</tt><tt>15-JAN / 1: 28.56</tt><tt><br>
+</tt><tt>16-APR / 2: 29.06</tt><tt><br>
+</tt><tt>17-JUL / 3: 28.90</tt><tt><br>
+</tt><tt>16-OCT / 4: 28.48</tt><br>
+<br>
+</div>
+<div class="moz-cite-prefix"><br>
+</div>
+<div class="moz-cite-prefix"><br>
+</div>
+<div class="moz-cite-prefix">On 10/6/2019 10:12 PM, Pratik wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+<div dir="ltr"><font face="arial, sans-serif"><span
+style="color:rgb(0,0,0)">Dear All</span></font>
+<div><font face="arial, sans-serif"><span
+style="color:rgb(0,0,0)"><br>
+</span><span style="color:rgb(0,0,0)">I'm plotting seasonal</span>average
+SST. Here I have picked</font>traditional<font face="arial,
+sans-serif">seasons as DJF, MAM, JJA, SON.</font>
+<div><span
+style="font-variant-ligatures:no-common-ligatures;color:rgb(0,0,0)"><font
+face="times new roman, serif"><br>
+</font></span></div>
+<div>
+<pre style="white-space:pre-wrap;overflow:auto;padding:0px;background-color:rgb(222,231,236);margin-top:0px;margin-bottom:20px;border:1px solid rgb(140,172,187);outline:0px;vertical-align:baseline;font-variant-numeric:inherit;font-variant-east-asian:inherit;font-stretch:inherit;line-height:inherit"><div style="color:rgb(34,34,34);white-space:normal"><div style="">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures" class="gmail-s1">!seasonal average<span class="gmail-Apple-converted-space"></span></span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures" class="gmail-s1">
+</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures" class="gmail-s1">use coads_climatology</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures" class="gmail-s1">
+</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">let temp = SST[x=100,y=0]</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">
+</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">let monthav = temp[l=@sbx:3]</span>
+</p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">
+</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">let season = monthav[l=1:10:3]</span>
+</p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">
+</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">!4 seasonsDJF, MAM, JJA, SON</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">
+</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">plot/col=0 temp</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">
+</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">plot/step/ov season</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">
+</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">go bar_chart3 poly/over season season</span></p><p style="margin:0px;font-variant-numeric:normal;font-variant-east-asian:normal;font-stretch:normal;line-height:normal;font-family:Menlo;color:rgb(0,0,0)" class="gmail-p1"><span style="font-variant-ligatures:no-common-ligatures">
+</span></p></div></div></pre>
+</div>
+<font face="arial, sans-serif"><span style="color:rgb(0,0,0)">But
+here I'm missing values over</span>December.<span
+style="color:rgb(0,0,0)"><b>I would like to define a time
+axis starting with December</b></span><b>(Not with
+January</b>).<span style="color:rgb(0,0,0)">I tried r</span><span
+style="color:rgb(0,0,0)">egridding in time axis, But I
+couldn't get it.<br>
+</span></font><br>
+Best Regards<br>
+Pratik</div>
+</div>
+</blockquote>
+ 
+ 
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00375" href="msg00375.html">[ferret_users] time axis starting with December</a></strong>
+<ul><li><em>From:</em> Pratik</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00375.html">[ferret_users] time axis starting with December</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00376.html">[ferret_users] how to modify the label color with the use of set text command</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00375.html">Thread Prev</a>][<a href="msg00376.html">Thread Next</a>][<A HREF="threads2019.html#00397">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

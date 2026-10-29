@@ -1,0 +1,84 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Edges and @AVG -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Sun, 23 Feb 2020 02:08:30 &#45;0800 -->
+<!--X-Message-Id: CAEwQpa+SgCVR19G5bx2KXzNOKOKV52N7068YiTcU&#45;rbEHrDQTA@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAP06G6Qt&#45;GLxUqLY0AA+aHEEVq_3wTKhB6cLC3yFeMVtUjOVcg@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Edges and @AVG</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00540.html">Thread Prev</a>][<a href="msg00542.html">Thread Next</a>][<A HREF="threads2019.html#00541">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Edges and @AVG</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Alexander Audet &lt;<a href="mailto:alexander.c.audet@DOMAIN.HIDDEN">alexander.c.audet@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Edges and @AVG</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Sun, 23 Feb 2020 19:08:13 +0900</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00540.html">CAP06G6Qt-GLxUqLY0AA+aHEEVq_3wTKhB6cLC3yFeMVtUjOVcg@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00540.html">CAP06G6Qt-GLxUqLY0AA+aHEEVq_3wTKhB6cLC3yFeMVtUjOVcg@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Hi Alexander,</div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Fri, Feb 21, 2020 at 4:59 AM Alexander Audet &lt;<a rel="nofollow" href="mailto:alexander.c.audet@xxxxxxxxx">alexander.c.audet@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; I have noticed a difference when I (1) average seasonal data by creating a climatological axis with 3 month-long cells then @AVG regridding, verses (2) when I separate each month into its own variable and then average them together using expressions. It appears that the latter method is doing what I expect,</div></div></div></div></blockquote><div><br></div><div>But, the length of the month varies and therefore (1) should&#xA0;be the correct average: For example,</div><div><br></div></div><blockquote style="margin:0 0 0 40px;border:none;padding:0px"><div class="gmail_quote"><div>JFM = (31J + 28F&#xA0;+ 31M) / (31&#xA0;+ 28&#xA0;+ 31),</div></div></blockquote><div class="gmail_quote"><div><br></div><div>where J, F, M are the monthly means of Jan, Feb, and March, respectively.&#xA0; The&#xA0;@AVG averaging takes the monthly variable lengths into account.&#xA0; This principle applies to other axes with uneven grid-spacing, too.</div><div><br></div><div>Hope this helps,</div><div>Ryo</div><div><br></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00542" href="msg00542.html">Re: [ferret_users] Edges and @AVG</a></strong>
+<ul><li><em>From:</em> Alexander Audet</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00540" href="msg00540.html">[ferret_users] Edges and @AVG</a></strong>
+<ul><li><em>From:</em> Alexander Audet</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00540.html">[ferret_users] Edges and @AVG</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00542.html">Re: [ferret_users] Edges and @AVG</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00540.html">Thread Prev</a>][<a href="msg00542.html">Thread Next</a>][<A HREF="threads2019.html#00541">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

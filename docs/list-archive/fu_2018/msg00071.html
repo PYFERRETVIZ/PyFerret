@@ -1,0 +1,154 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Fill nan values with gray -->
+<!--X-From-R13: [negva Epuzvqg <znegva.fpuzvqgNvb&#45;jnearzhraqr.qr> -->
+<!--X-Date: Thu, 22 Mar 2018 03:29:48 &#45;0700 -->
+<!--X-Message-Id: 8eabdb3e&#45;52e0&#45;5d8e&#45;6b75&#45;0b87f692cfd8@io&#45;warnemuende.de -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAKxOC3GQuN&#45;HD7zgYE_sUmO+6=5vzxq0Vr7L6iarBHV+jD0D=g@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Fill nan values with gray</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00070.html">Thread Prev</a>][<a href="msg00072.html">Thread Next</a>][<A HREF="threads2018.html#00071">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Fill nan values with gray</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Fill nan values with gray</strong></li>
+<li><strong>From</strong>: <strong>Martin Schmidt &lt;<a href="mailto:martin.schmidt@DOMAIN.HIDDEN">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 22 Mar 2018 11:29:30 +0100</li>
+<li>In-reply-to: &lt;CAKxOC3GQuN-HD7zgYE_sUmO+6=5vzxq0Vr7L6iarBHV+jD0D=g@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAKxOC3GQuN-HD7zgYE_sUmO+6=5vzxq0Vr7L6iarBHV+jD0D=g@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Thunderbird/52.6.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<div class="moz-cite-prefix">Anne, something like this should do
+what you want:<br>
+<br>
+let land = missing(your_variable, 9999) ! or some other value, not
+appearing in "your_variable".<br>
+shade/over/nolab/lev=(9999)/pal=grey land<br>
+<br>
+Best,<br>
+Martin<br>
+<br>
+On 03/22/2018 11:05 AM, Anna Cabre wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+<div dir="ltr">
+<div>Hello,&#xA0;</div>
+<div><br>
+</div>
+<div>I would like to fill the NAN values in a depth-longitude
+map (that will denote the coast slope) with gray or any other
+color (not white) unrelated to the colormap used for the
+actual map.&#xA0;</div>
+<div><br>
+</div>
+<div>How do I do that? I can't find it anywhere.&#xA0;</div>
+<div>Thanks!</div>
+<div><br>
+</div>
+<br clear="all">
+<div><br>
+</div>
+-- <br>
+<div class="gmail_signature" data-smartmail="gmail_signature">
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div dir="ltr"><span><span
+style="background-color:rgb(153,153,153)"><span
+style="background-color:rgb(255,255,255)"><font
+color="#999999">Anna Cabr&#xE9;</font></span></span></span></div>
+<div dir="ltr"><span
+style="color:rgb(153,153,153);font-size:12.8px">Research
+Associate at Dept. of Physical Oceanography</span></div>
+<div dir="ltr"><span
+style="color:rgb(153,153,153);font-size:12.8px">Institute
+of Marine Sciences, CSIC, Barcelona, Spain</span></div>
+<div dir="ltr"><a rel="nofollow"
+href="https://www.researchgate.net/profile/Anna_Cabre2"
+style="font-size:12.8px"
+moz-do-not-send="true"><font color="#999999">https://www.researchgate.net/profile/Anna_Cabre2</font></a>
+<div><span><span
+style="background-color:rgb(153,153,153)"><span
+style="background-color:rgb(255,255,255)"><font
+color="#999999"><br>
+</font></span></span></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<p><br>
+</p>
+<pre class="moz-signature" cols="72">-- 
+Dr. Martin Schmidt
+Leibniz-Institute for Baltic Sea Research
+Seestrasse 15
+D18119 Rostock
+Germany
+</pre>
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00069" href="msg00069.html">[ferret_users] Fill nan values with gray</a></strong>
+<ul><li><em>From:</em> Anna Cabre</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00070.html">Re: [ferret_users] Fill nan values with gray</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00072.html">[ferret_users] **ERROR: inconsistent sizes of data regions: can't label X axis of C</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00070.html">Thread Prev</a>][<a href="msg00072.html">Thread Next</a>][<A HREF="threads2018.html#00071">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

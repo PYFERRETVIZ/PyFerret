@@ -1,0 +1,169 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Installation of pyferret on windows 10 Bash wsl -->
+<!--X-From-R13: Oafyrl [naxr <n.p.znaxrNtznvy.pbz> -->
+<!--X-Date: Wed, 12 Oct 2022 19:44:56 &#45;0700 -->
+<!--X-Message-Id: 2e8ca1a4&#45;a3df&#45;5bed&#45;67ef&#45;121fff168aba@gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 00bb01d8ddfa$1f70fa90$5e52efb0$@internode.on.net -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Installation of pyferret on windows 10 Bash wsl</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01186.html">Thread Prev</a>][<a href="msg01192.html">Thread Next</a>][<A HREF="threads2019.html#01187">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Installation of pyferret on windows 10 Bash wsl</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Installation of pyferret on windows 10 Bash wsl</strong></li>
+<li><strong>From</strong>: <strong>Ansley Manke &lt;<a href="mailto:a.c.manke@DOMAIN.HIDDEN">a.c.manke@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 12 Oct 2022 19:44:46 -0700</li>
+<li>In-reply-to: &lt;00bb01d8ddfa$1f70fa90$5e52efb0$@internode.on.net&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;00bb01d8ddfa$1f70fa90$5e52efb0$@internode.on.net&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Thunderbird/91.13.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+ 
+ 
+ 
+<p>Hi Mark,<br>
+</p>
+<p>Did you install PyFerret from a tar file?&#xA0; If so then you've used
+Finstall to create the ferret_paths.sh file.&#xA0; Finstall is the same
+under csh or bash; it will create ferret_paths.csh and
+ferret_paths.sh.&#xA0; The bash shell ferret_paths.sh contains the
+definition of Faddpath:<br>
+<i><b><br>
+</b></i><i><b>## Faddpath: a tool to quickly add paths to the
+search lists</b></i><i><b><br>
+</b></i><i><b>Faddpath() { if [ -n "$*" ]</b></i><i><b><br>
+</b></i><i><b>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; then</b></i><i><b><br>
+</b></i><i><b>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; export FER_GO="$FER_GO $*"</b></i><i><b><br>
+</b></i><i><b>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; export FER_DATA="$FER_DATA $*"</b></i><i><b><br>
+</b></i><i><b>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; export FER_DESCR="$FER_DESCR $*"</b></i><i><b><br>
+</b></i><i><b>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; export FER_GRIDS="$FER_GRIDS $*"</b></i><i><b><br>
+</b></i><i><b>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; else</b></i><i><b><br>
+</b></i><i><b>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; echo "&#xA0;&#xA0;&#xA0; Usage: Faddpath
+new_directory_1 ..."</b></i><i><b><br>
+</b></i><i><b>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; fi }</b></i><i><b><br>
+</b></i></p>
+<p>So check your ferret_paths.sh file. <br>
+</p>
+<p><br>
+</p>
+<p>If you have used the miniconda install, I don't know quite where
+Faddpath is defined, but I use that installation and Faddpath
+seems to work fine.<br>
+</p>
+<div class="moz-cite-prefix"><br>
+</div>
+<div class="moz-cite-prefix">You can also explicitly add paths,
+something along these lines:<br>
+</div>
+<div class="moz-cite-prefix"><br>
+</div>
+<div class="moz-cite-prefix"><i><b>export FER_DATA="$FER_DATA
+/home/users/myhome/data"</b></i></div>
+<div class="moz-cite-prefix"><i><b>export FER_GO="$FER_GO
+/home/users/myhome/jnls"</b></i></div>
+<div class="moz-cite-prefix"><br>
+</div>
+<div class="moz-cite-prefix">so you could just make yourself a shell
+script that does this, and run it before you start pyferret.</div>
+<div class="moz-cite-prefix"><br>
+</div>
+<div class="moz-cite-prefix">Ansley<br>
+</div>
+<div class="moz-cite-prefix"><br>
+</div>
+<div class="moz-cite-prefix">On 10/11/2022 10:18 PM, Mark Williams
+wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+ 
+ 
+<div class="WordSection1">
+<p class="MsoNormal"><span lang="EN-US">Hello all<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US"><o:p>&#xA0;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">I used Ferret some time
+ago and want to run some old scripts for a project I am
+doing.&#xA0; I have a Windows 10 PC and have used wsl to run bash
+and install Ubuntu.&#xA0; In the past I had a systems manager
+doing the setting up, however I have managed to go through
+the installation process and seem to have got everything up
+running (pyferret).&#xA0; The display is fine, I can run the
+tutorial just fine.&#xA0;&#xA0; Now I want to use Faddpath to add
+pathnames to find my data and .jnl files.&#xA0; I have tried
+adding this to the my_ferret_paths file but when I do this
+ferret does not work properly.&#xA0; I have looked up the
+installation guide &#x201C;settting up to run ferret&#x201D; but this
+seems to directed to C shell users.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US"><o:p>&#xA0;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">Any suggestions greatly
+appreciated.<o:p></o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US"><o:p>&#xA0;</o:p></span></p>
+<p class="MsoNormal"><span lang="EN-US">Mark<o:p></o:p></span></p>
+</div>
+</blockquote>
+ 
+ 
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="01192" href="msg01192.html">FW: [ferret_users] Installation of pyferret on windows 10 Bash wsl</a></strong>
+<ul><li><em>From:</em> Mark Williams</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="01186" href="msg01186.html">[ferret_users] Installation of pyferret on windows 10 Bash wsl</a></strong>
+<ul><li><em>From:</em> Mark Williams</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01186.html">[ferret_users] Installation of pyferret on windows 10 Bash wsl</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01192.html">FW: [ferret_users] Installation of pyferret on windows 10 Bash wsl</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01186.html">Thread Prev</a>][<a href="msg01192.html">Thread Next</a>][<A HREF="threads2019.html#01187">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

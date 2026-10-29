@@ -1,0 +1,192 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] plot/vs/ov interferes with x&#45;axis numeric labels -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Tue, 8 Jun 2021 22:19:46 &#45;0700 -->
+<!--X-Message-Id: CAEwQpaKOYSkkFAaGOdSkNyCH1T7NW4wtVvPfqvzca0RdpW099A@mail.gmail.com -->
+<!--X-Content-Type: multipart/related -->
+<!--X-Reference: CAEwQpa+6vqhXtZkdeGbAm+&#45;39YEw9xaMdX0ruiutsE0aPzu06g@mail.gmail.com -->
+<!--X-Reference: b1fd7a03&#45;5543&#45;1b00&#45;f8c4&#45;5dbf770190ab@gmail.com -->
+<!--X-Derived: pngwSIwZGR0x_.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] plot/vs/ov interferes with x-axis numeric labels</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00950.html">Thread Prev</a>][<a href="msg00952.html">Thread Next</a>][<A HREF="threads2019.html#00951">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] plot/vs/ov interferes with x-axis numeric labels</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Ansley Manke &lt;<a href="mailto:a.c.manke@DOMAIN.HIDDEN">a.c.manke@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] plot/vs/ov interferes with x-axis numeric labels</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 9 Jun 2021 14:19:27 +0900</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00950.html">b1fd7a03-5543-1b00-f8c4-5dbf770190ab@gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00949.html">CAEwQpa+6vqhXtZkdeGbAm+-39YEw9xaMdX0ruiutsE0aPzu06g@mail.gmail.com</a>&gt; &lt;<a href="msg00950.html">b1fd7a03-5543-1b00-f8c4-5dbf770190ab@gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div dir="ltr">Hi Ansley,</div><br><div class="gmail_quote"><div class="gmail_attr">Thank you for your help!&#xA0; I also get your other message about the nessesity of NOAX on plot/vs .</div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div>
+<p>This does look like a bug, but apparently only when the PLOT/VS
+is done as an overlay.&#xA0; Try this script - you&#39;d need to clean up
+the axis labeling of course but this is the idea.<br>
+</p>
+<div><font face="monospace">---- example.jnl ----</font></div>
+<font face="monospace">set mode grat:dash<br>
+set text/font=Courier<br>
+<br>
+let/units=degrees_east xs = {110,190,210}<br>
+let/units=degrees_north ys = {-50, 50, -10}<br>
+plot/vs/hlim=20:380/vlim=-90:90/line/thick=2 xs,ys<br>
+<br>
+go fland 20, , , , , , axes</font></div></blockquote><div><br></div><div>Yes.&#xA0; That&#39;s indeed a nice solution to the problem I posted.&#xA0; I didn&#39;t need to set up the axes with an empty plot.</div><div><br></div><div>Unfortunately, the code above crashes PyFerret on my machine and I&#39;m unable to test it.&#xA0; (Since this is too technical, I just submitted my report directly to github.)&#xA0; I can try another machine, perhaps Linux, later.</div><div><br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div>
+<div>Now this doesn&#39;t help if what you
+really want is to overlay the line on some non-blank plot, but it
+might get you a step further on.<br></div></div></blockquote><div><br></div><div>I overlay many separate lines using PLOT/VS/OV and so the second plot/vs command would interfere&#xA0;with the longitude axis . . . which makes me realize I can use the following solution!<br></div><div><br></div><div><font face="monospace">let xs = {110,190,210, <font color="#ff0000">-1e34</font>, 30, 40, 60, <font color="#ff0000">-1e34</font>, . . . }</font></div><div><font face="monospace">let ys = . . .</font></div><div><font face="monospace">plot/vs/noax/hlimits= . . . /vlimits= . . . xs, ys</font></div><div><br></div><div>So, I would assemble all the lines and curves into a single curve with interruptions and plot everything at once!</div><div><br></div><div>Perhaps that&#39;s the way to go.</div><div><br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div>
+<div>(By the way your example script has a
+typo where it assigns units to xs and ys, but it doesn&#39;t seem to
+affect this issue.)</div></div></blockquote><div><br></div><div>Indeed.&#xA0; Thanks.</div><div><br></div><div>Ryo</div><div><br></div><div>&#xA0;</div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div>
+<div><br>
+</div>
+<div>-Ansley<br>
+</div>
+<div><br>
+</div>
+<div>On 6/7/2021 9:24 PM, Ryo Furue wrote:<br>
+</div>
+<blockquote type="cite">
+ 
+<div dir="ltr">Dear Ferret users and developers,
+<div><br>
+</div>
+<div>I&#39;m trying to plot a land mask (with fland) over an open
+polygon, but the numeric labels of the x axis miss the
+longitude&#xA0;labels, &quot;E&quot; or &quot;W&quot;.</div>
+<div><br>
+</div>
+<div>This is because the PLOT/VS command somehow alters some
+x-axis properties.&#xA0; POLYGON command, on the other hand,
+doesn&#39;t do this, but I need an open line, not a closed
+polygon.</div>
+<div><br>
+</div>
+<div>Below I paste a self-contained example.&#xA0; Here is its
+skeleton:</div>
+<div><br>
+</div>
+<div>fill/noaxis/nolabel . . . missingdata&#xA0;!--- (1) Set up the
+axes</div>
+<div>plot/vs/ov xpoly, ypoly&#xA0; !--- (2) plot the line</div>
+<div>go fland 20, , , , , , axes&#xA0; !--- (3) plot the land, axes,
+and gridlines<br>
+</div>
+<div><br>
+</div>
+<div>I need to plot the axes at the last command because I need
+the gridlines to show over the land.&#xA0; (Also, in my real code,
+I plot the ticks inward and I need them to show over the
+land.)</div>
+<div><br>
+</div>
+<div>I plot the line before the land because the land must
+partially cover the line.</div>
+<div><br>
+</div>
+<div>I tried getting another overlay to plot the x axis (fill/ov
+missingdata) after &quot;go fland&#xA0;20&quot;, but the resultant x axis is
+the same, that is, still missing &quot;E&quot; and &quot;W&quot;.&#xA0; So, the
+impact&#xA0;of the PLOT/VS command remains.</div>
+<div><br>
+</div>
+<div>Does somebody know a simple solution?</div>
+<div><br>
+</div>
+<div>Regards,</div>
+<div><br>
+</div>
+<div>Ryo</div>
+<div>---- example.jnl ----</div>
+<div>set mode grat:dash<br>
+set text/font=Courier<br>
+<br>
+set data levitus_climatology<br>
+let allmissing = temp[k=1] + 0/0<br>
+cancel mode nodata_lab<br>
+fill/nolabel/noax allmissing<br>
+<br>
+let xs = {110,190,210}<br>
+let ys = {-50, 50, -10}<br>
+set var/units=degrees_east xs<br>
+set var/units=degrees_north xs<br>
+plot/vs/line/thick=2/ov xs,ys<br>
+!polygon/line/thick=2/ov xs,ys<br>
+<br>
+go fland 20, , , , , , axes<br>
+<br>
+frame/file=sample.png<br>
+</div>
+<div><br>
+</div>
+<div><img src="pngwSIwZGR0x_.png" alt="sample.png" width="452" height="390"><br>
+</div>
+<div><br>
+</div>
+</div>
+</blockquote>
+</div>
+ 
+</blockquote></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00949" href="msg00949.html">[ferret_users] plot/vs/ov interferes with x-axis numeric labels</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00950" href="msg00950.html">Re: [ferret_users] plot/vs/ov interferes with x-axis numeric labels</a></strong>
+<ul><li><em>From:</em> Ansley Manke</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00950.html">Re: [ferret_users] plot/vs/ov interferes with x-axis numeric labels</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00952.html">[ferret_users] Re: plot/vs/ov interferes with x-axis numeric labels</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00950.html">Thread Prev</a>][<a href="msg00952.html">Thread Next</a>][<A HREF="threads2019.html#00951">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

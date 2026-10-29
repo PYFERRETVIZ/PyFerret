@@ -1,0 +1,125 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Randomly distributed time series plots -->
+<!--X-From-R13: "'Tnovb' ivn _AOD B[SZ Treerg Gfref" <sreerg_hfrefNabnn.tbi> -->
+<!--X-Date: Fri, 17 Jul 2020 07:34:33 &#45;0700 -->
+<!--X-Message-Id: eceecf48&#45;d881&#45;18c3&#45;ab6c&#45;88b80c102704@yahoo.it -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 0fde9cf2&#45;7047&#45;98ca&#45;0780&#45;1fc3a2fe9f75.ref@yahoo.it -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Randomly distributed time series plots</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00767.html">Thread Prev</a>][<a href="msg00773.html">Thread Next</a>][<A HREF="threads2019.html#00770">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Randomly distributed time series plots</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Randomly distributed time series plots</strong></li>
+<li><strong>From</strong>: <strong>&quot;'Fabio' via _OAR PMEL Ferret Users&quot; &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Fri, 17 Jul 2020 16:27:20 +0200</li>
+<li>In-reply-to: &lt;0fde9cf2-7047-98ca-0780-1fc3a2fe9f75.ref@yahoo.it&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;0fde9cf2-7047-98ca-0780-1fc3a2fe9f75.ref@yahoo.it&gt;</li>
+<li>Reply-to: Fabio &lt;<a href="mailto:xxtraloud@DOMAIN.HIDDEN">xxtraloud@xxxxxxxx</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 Thunderbird/68.9.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Dear all,
+ 
+</pre><tt>Sometimes I need to do a 'quick check' across a large area and visualize 
+</tt><tt>the time series of a particular variable at random locations to get an 
+</tt><tt>idea of the general trend through time.
+</tt><pre style="margin: 0em;">
+ 
+At the moment I am using a not-so-flexible approach, such as
+ 
+let indice_a = {1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4}
+let indice_b = {1, 2, 3, 1, 2, 3, 1, 2, 3, 1, 2, 3}
+let indice_x = {73,75,77,79}
+let indice_y = {11,13,15}
+go multi_view 4,3
+ 
+repeat/RANGE=1:10/NAME=m (let a = indice_a[i=`m`] ;\
+let b = indice_b[i=`m`] ;\
+let x = indice_x[i=`m`] ;\
+let y = indice_y[i=`m`] ;\
+set view V`a``b`;\
+plot my_variable[x=`x`,y=`y`,k=2]
+ 
+</pre><tt>This nested loop is not working, but it's a concept I tried to develop 
+</tt><tt>based on a single loop. As you can see it's rather tedious to write 
+</tt><tt>these indices and not easily adaptable to any region when lat and long 
+</tt><tt>can vary. Also I need two or three nested loops, which for now I can't 
+</tt><tt>make them work.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>Additionally, I want to use the maximum allowed by multi_view, which I 
+</tt><tt>think is 15 windows, and do it multiple times in a loop if I need to 
+</tt><tt>sample a large region.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>Is there anyway to make this more automatic? Such as sampling randomly 
+</tt><tt>lat and long from the available range? For example In R I would use the 
+</tt><tt>sampling function to create indices for x and y, and then use them in a 
+</tt><tt>loop.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>I am sure other people have a need to check spatial change in a variable 
+</tt><tt>across time. Any suggestion or idea is well appreciated.
+</tt><pre style="margin: 0em;">
+ 
+Thanks
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00773" href="msg00773.html">Re: [ferret_users] Randomly distributed time series plots</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00767.html">[ferret_users] Installing ferret on WSL Linux</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00773.html">Re: [ferret_users] Randomly distributed time series plots</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00767.html">Thread Prev</a>][<a href="msg00773.html">Thread Next</a>][<A HREF="threads2019.html#00770">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

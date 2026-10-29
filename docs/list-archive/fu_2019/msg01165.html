@@ -1,0 +1,127 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Strange dots from VECTOR command -->
+<!--X-From-R13: Oaql Xnpbofba <naql.wnpbofbaNabnn.tbi> -->
+<!--X-Date: Fri, 29 Jul 2022 10:11:07 &#45;0700 -->
+<!--X-Message-Id: a8a545ca&#45;44fc&#45;84e8&#45;8781&#45;fdc547afa1aa@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CAEwQpa+5tHFTQCcmtb72wtZ_2&#45;y633dVduKAz8ptUTTFeZtHig@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Strange dots from VECTOR command</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01164.html">Thread Prev</a>][<a href="msg01166.html">Thread Next</a>][<A HREF="threads2019.html#01165">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Strange dots from VECTOR command</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Strange dots from VECTOR command</strong></li>
+<li><strong>From</strong>: <strong>Andy Jacobson &lt;<a href="mailto:andy.jacobson@DOMAIN.HIDDEN">andy.jacobson@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Fri, 29 Jul 2022 11:11:03 -0600</li>
+<li>In-reply-to: &lt;<a href="msg01164.html">CAEwQpa+5tHFTQCcmtb72wtZ_2-y633dVduKAz8ptUTTFeZtHig@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg01164.html">CAEwQpa+5tHFTQCcmtb72wtZ_2-y633dVduKAz8ptUTTFeZtHig@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:91.0) Gecko/20100101 Firefox/91.0 Thunderbird/91.11.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Ryo,
+ 
+Is this one of ferret's anti-aliasing artifacts? I was hoping the python display modules took care of that once and for all.
+ 
+-Andy
+ 
+On 7/29/22 10:59 AM, Ryo Furue wrote:
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+Dear Ferret users,
+ 
+Has anybody seen this problem?&#xA0; The VECTOR command plots some black dots as can be seen below. Run the attached Ferret script like so
+ 
+pyferret -nodisplay -script try2.jnl
+ 
+I also attach the&#xA0;datafile that the script uses.
+ 
+These dots are very sensitive. If I change something, they are often gone but occasionally there are many more of them.&#xA0; (That's why I couldn't simplify the problem further.)
+ 
+macOS 12.4 &amp; 12.5
+PyFerret v7.63 (optimized); Darwin 19.6.0 - 10/13/20
+ 
+Best regards,
+ 
+Ryo
+ 
+ 
+tmp.png
+ 
+-----------
+set data tmp.nc &lt;<a  rel="nofollow" href="http://tmp.nc">http://tmp.nc</a>&gt;
+shade/nokey 0*u_anom ! dummy
+plot/vs/symbol/thick=3/size=0.5/color=red/nolabel/ov\
+&#xA0; {38.25}, {143.58333333333333333333}
+vector/aspect/ov u_anom, v_anom
+frame/file=tmp.png
+ 
+ 
+</pre></blockquote><pre style="margin: 0em;">
+ 
+--
+Andy Jacobson
+andy.jacobson@xxxxxxxx
+ 
+NOAA Global Monitoring Lab
+325 Broadway
+Boulder, Colorado 80305
+ 
+(720) 310-5782
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="01164" href="msg01164.html">[ferret_users] Strange dots from VECTOR command</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01164.html">[ferret_users] Strange dots from VECTOR command</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01166.html">Re: [ferret_users] Strange dots from VECTOR command</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01164.html">Thread Prev</a>][<a href="msg01166.html">Thread Next</a>][<A HREF="threads2019.html#01165">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

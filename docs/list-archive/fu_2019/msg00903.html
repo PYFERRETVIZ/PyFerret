@@ -1,0 +1,80 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] plot only one color bar for all viewports -->
+<!--X-From-R13: fnhenou enguber <ebuvgfeo2020Ntznvy.pbz> -->
+<!--X-Date: Tue, 16 Feb 2021 17:04:14 &#45;0800 -->
+<!--X-Message-Id: CAFXLzPiwhDzAz3&#45;q2a+T4&#45;95JNbbnJGGJb50+fRoVNa_H41DVA@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAKE4FWqiCnxnCKYdLFfgT&#45;udgMmF+eoE8f4MpoLC3tYe32Me6g@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] plot only one color bar for all viewports</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00902.html">Thread Prev</a>][<a href="msg00904.html">Thread Next</a>][<A HREF="threads2019.html#00903">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] plot only one color bar for all viewports</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Xiaoyu Bai &lt;<a href="mailto:xbai1@DOMAIN.HIDDEN">xbai1@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] plot only one color bar for all viewports</strong></li>
+<li><strong>From</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 17 Feb 2021 12:03:58 +1100</li>
+<li>Cc: ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00902.html">CAKE4FWqiCnxnCKYdLFfgT-udgMmF+eoE8f4MpoLC3tYe32Me6g@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00902.html">CAKE4FWqiCnxnCKYdLFfgT-udgMmF+eoE8f4MpoLC3tYe32Me6g@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div class="gmail_default" style="color:#000000">Dear Xiaoyu</div><div class="gmail_default" style="color:#000000">G&#39;day</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">If I understood you correctly, then here is an example to use multi_view in Pyferret (<a rel="nofollow" href="https://github.com/NOAA-PMEL/Ferret/blob/master/jnls/contrib/multi_view.jnl">https://github.com/NOAA-PMEL/Ferret/blob/master/jnls/contrib/multi_view.jnl</a>)</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">!!!!! example of 4 rows and 4 columns !!!!!!!!!!!!!</div><div class="gmail_default" style="color:#000000">go multi_view 4,4,.2185,0.052,0.012,.18,.095,0.048,a<br></div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">!!!!! putting a common shade key or colour key below the panel in the 4th row and 1st column (<a rel="nofollow" href="../../faq/modifying-the-shade-key.html">../../faq/modifying-the-shade-key</a>) for the Variable named &quot;VAR&quot;</div><div class="gmail_default" style="color:#000000">set viewport a41<br></div><div class="gmail_default" style="color:#000000">fill/nokey/set/lev=(-inf)(-2,2,.4)(inf)/nolab/palette=orange_blue VAR<br>ppl shakey 1, 0, 0.20, , 6, 6, 1.2, 7.3, .30, .47<br>ppl fill<br></div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">I hope this helps. Let us know if it doesn&#39;t work the way you want.&#xA0;</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">Cheers, Saurabh</div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Tue, Feb 16, 2021 at 8:02 PM Xiaoyu Bai &lt;<a rel="nofollow" href="mailto:xbai1@xxxxxxxx">xbai1@xxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padd                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+</blockquote></div><br clear="all"><div><br></div>-- <br><div dir="ltr" class="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><font color="#0000ff" size="4"><b><br></b></font></div><div><font color="#0000ff" size="4"><b><br></b></font></div><font color="#0000ff" size="4" face="times new roman, serif"><b>REGARDS</b></font><div><font color="#0000ff" size="4" face="times new roman, serif"><b><br></b></font><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Saurabh Rathore</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Research Scholar (PhD.)</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Centre For Oceans, Rivers, Atmosphere &amp; Land Science Technology</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Indian Institute Of Technology, Kharagpur</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>contact :- 91- 8345984434</b></font></div></div></div></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00902" href="msg00902.html">[ferret_users] plot only one color bar for all viewports</a></strong>
+<ul><li><em>From:</em> Xiaoyu Bai</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00902.html">[ferret_users] plot only one color bar for all viewports</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00904.html">Re: [ferret_users] plot only one color bar for all viewports</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00902.html">Thread Prev</a>][<a href="msg00904.html">Thread Next</a>][<A HREF="threads2019.html#00903">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

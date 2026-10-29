@@ -1,0 +1,78 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] memory problem with large file when regredding -->
+<!--X-From-R13: Bngevpx Pebpxznaa <cngevpx.oebpxznaaNyfpr.vcfy.se> -->
+<!--X-Date: Mon, 20 May 2019 06:03:35 &#45;0700 -->
+<!--X-Message-Id: 788501546.326051.1558357404559.JavaMail.zimbra@lsce.ipsl.fr -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] memory problem with large file when regredding</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00170.html">Thread Prev</a>][<a href="msg00174.html">Thread Next</a>][<A HREF="threads2019.html#00173">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] memory problem with large file when regredding</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] memory problem with large file when regredding</strong></li>
+<li><strong>From</strong>: <strong>Patrick Brockmann &lt;<a href="mailto:patrick.brockmann@DOMAIN.HIDDEN">patrick.brockmann@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 20 May 2019 15:03:24 +0200 (CEST)</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>Thread-index: mMv4+FJ+HGw7T5/TLTjcKftuPu/fIQ==</li>
+<li>Thread-topic: memory problem with large file when regredding</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #000000"><div>Hi all,<br></div><div><br data-mce-bogus="1"></div><div>I have a 5Go variable at 0.01x0.01 resolution and I would like to save it at a coarser resolution.<br data-mce-bogus="1"></div><div>My regridding script can be run because it requires too much memory.<br data-mce-bogus="1"></div><div><br data-mce-bogus="1"></div><div>Is there a strategy to run i ?<br data-mce-bogus="1"></div><div>I have tried to save it with different /append calls but cannot figure out<br data-mce-bogus="1"></div><div>because anunlimited dimension seems to be possible only for time dimension (L).<br></div><div><br data-mce-bogus="1"></div><div>Here are the simplified lines from my script for a regredding from 0.01 to 0.1&#xB0;<br data-mce-bogus="1"></div><div><br data-mce-bogus="1"></div><div>!============================<br data-mce-bogus="1"></div><div>use file_0.01.nc&nbsp;&nbsp;&nbsp;&nbsp; ! mask1 is the variable to regrid<br data-mce-bogus="1"></div><div><br data-mce-bogus="1"></div><div>def axis/x=-180:180:0.1/edges/units=degrees_east myxaxis <br>def axis/y=-90:90:0.1/edges/units=degrees_north myyaxis&nbsp; <br>def grid/x=myxaxis/y=myyaxis mygrid<br>let mask = mask1[G=MYGRID@AVE]&nbsp; <br><br data-mce-bogus="1"></div><div>save/clobber/file=file_0.1.nc mask<br data-mce-bogus="1"></div><div>!============================</div><div><br data-mce-bogus="1"></div><div>Any help would be appreciated.<br data-mce-bogus="1"></div><div>Regards<br data-mce-bogus="1"></div><div><br data-mce-bogus="1"></div><div>Patrick</div><div><br data-mce-bogus="1"></div><div data-marker="__SIG_PRE__">--<br>Data Analysis and Visualization Engineer / Project Manager<br>LSCE/IPSL, CEA-CNRS-UVSQ laboratory<br>LSCE - Climate and Environment Sciences Laboratory<br>IPSL - Institut Pierre Simon Laplace<br>--</div></div>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00175" href="msg00175.html">Re: [ferret_users] memory problem with large file when regredding</a></strong>
+<ul><li><em>From:</em> Martin Schmidt</li></ul></li>
+<li><strong><a name="00174" href="msg00174.html">Re: [ferret_users] memory problem with large file when regredding</a></strong>
+<ul><li><em>From:</em> Satyesh Ghetiya</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00170.html">[ferret_users] running trend</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00174.html">Re: [ferret_users] memory problem with large file when regredding</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00170.html">Thread Prev</a>][<a href="msg00174.html">Thread Next</a>][<A HREF="threads2019.html#00173">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

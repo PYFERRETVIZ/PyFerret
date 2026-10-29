@@ -1,0 +1,196 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Define data mask valid in all time space -->
+<!--X-From-R13: Ur Brat &#45; @AOO Ossvyvngr <tr.cratNabnn.tbi> -->
+<!--X-Date: Tue, 19 Jun 2018 04:56:36 &#45;0700 -->
+<!--X-Message-Id: CAOs80Nza_PZX0+LM204y_kQF9PQu2+Pgpsk68QcNVBhfdSihNA@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAOs80NwajO3r&#45;Ksg8oAfcbmG+oGFVMr+ds8jhTbmY+r8VBB3sA@mail.gmail.com -->
+<!--X-Reference: 6983f9ca&#45;c53a&#45;903b&#45;4433&#45;c48f687f0be5@noaa.gov -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Define data mask valid in all time space</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00201.html">Thread Prev</a>][<a href="msg00202.html">Thread Next</a>][<A HREF="threads2018.html#00203">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Define data mask valid in all time space</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Define data mask valid in all time space</strong></li>
+<li><strong>From</strong>: <strong>Ge Peng - NOAA Affiliate &lt;<a href="mailto:ge.peng@DOMAIN.HIDDEN">ge.peng@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 19 Jun 2018 07:56:34 -0400</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;, Ge Peng &lt;<a href="mailto:ge.peng@DOMAIN.HIDDEN">ge.peng@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00201.html">6983f9ca-c53a-903b-4433-c48f687f0be5@noaa.gov</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00200.html">CAOs80NwajO3r-Ksg8oAfcbmG+oGFVMr+ds8jhTbmY+r8VBB3sA@mail.gmail.com</a>&gt; &lt;<a href="msg00201.html">6983f9ca-c53a-903b-4433-c48f687f0be5@noaa.gov</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div class="gmail_default" style="font-size:small">Nice ... Thanks a lot, Ansley!&#xA0; &#xA0;--- Peng</div></div><div class="gmail_extra"><br><div class="gmail_quote">On Mon, Jun 18, 2018 at 5:02 PM, Ansley C. Manke <span dir="ltr">&lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+ 
+ 
+ 
+<div text="#000000" bgcolor="#FFFFFF">
+<p>Hi,</p>
+<p>You don&#39;t need to use a loop. You can define a mask in XY that
+shows where all the time data id present. One method would be to
+define a test based on the number of valid points in the T
+direction:<br>
+</p>
+<p><tt>let nt = `var,return=lsize`<br>
+let var_mask = if </tt><tt><tt>var[L=@ngd]</tt> EQ nt then 1</tt><tt><br>
+</tt></p><div><div class="h5">
+<br>
+<br>
+<div class="m_5039306897206299429moz-cite-prefix">On 6/18/2018 11:27 AM, Ge Peng - NOAA
+Affiliate wrote:<br>
+</div>
+<blockquote type="cite">
+<div dir="ltr">
+<div class="gmail_default" style="font-size:small">
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"><span style="color:black;background:white">Dear Ferreters,</span><span><span></span></span></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"><span><span>&#xA0;</span></span></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"><span>I
+have arrays of x, y, and t of a regular grid
+(idim,jdim,ldim).<span></span></span></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"><span><span>&#xA0;</span></span></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"><span>For
+each array, I need to define a mask for only grid cells
+that
+contain valid data in all t, i.e., common valid data grid
+cells though out t dimension.<span></span></span></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"><span><span>&#xA0;</span></span></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"><span>I
+am thinking about a repeat loop to go through t dimension.
+Just wonder if anyone has a ferret script to do that -
+perhaps in a more efficient or elegant way, or have a
+suggestion.<span></span></span></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"><span><span>&#xA0;</span></span></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"><span>Thanks
+a lot,<span></span></span></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"><span><span>&#xA0;</span></span></p>
+<p class="MsoNormal" style="margin:0in 0in 0.0001pt;font-size:12pt;font-family:Calibri,sans-serif"><span>---
+Peng<span></span></span></p>
+<br clear="all">
+</div>
+<div><br>
+</div>
+-- <br>
+<div class="m_5039306897206299429gmail_signature" data-smartmail="gmail_signature">
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div dir="ltr">
+<div dir="ltr">
+<p><b><span style="font-size:9.0pt;font-family:Arial;color:#333333;background:white">Ge
+Peng, PhD</span></b><span style="font-size:9.0pt;font-family:Arial;color:#333333;background:white"><br>
+<b>Research Scholar</b><br>
+</span><span style="font-size:9.0pt;font-family:Arial;color:#222222">Cooperative
+Institute for Climate and Satellites -
+NC (CICS-NC)/NCSU at</span><span style="font-size:9.0pt;font-family:Times"></span></p>
+<p><span style="font-size:9.0pt;font-family:Arial;color:#222222">NOAA&#x2019;s
+National Centers for Environmental
+Information (NCEI)</span><span style="font-size:9.0pt;font-family:Times"></span></p>
+<p><span style="font-size:9.0pt;font-family:Arial;color:#222222">Center
+for Weather and Climate (CWC)</span><span style="font-size:9.0pt;font-family:Times"></span></p>
+<p><span style="font-size:9.0pt;font-family:Arial;color:#333333;background:white">151
+Patton Ave, Asheville, NC
+28801<br>
+<a rel="nofollow"><span style="color:#1155cc">+1 828 257
+3009</span></a>; <span style="color:#1155cc"><a rel="nofollow" href="mailto:ge.peng@xxxxxxxx">ge.peng@xxxxxxxx</a></span></span></p>
+<p><span style="font-size:9pt;font-family:Arial">ORCID:
+<a rel="nofollow" class="m_5039306897206299429moz-txt-link-freetext">http://</a></span><span style="font-size:9pt;font-family:Arial;color:rgb(73,74,76);background-image:initial;background-position:initial;background-repeat:initial"><a rel="nofollow" href="http://orcid.org/0000-0002-1986-9115">orcid.org/0000-0002-1986-9115</a></span></p>
+<p style="color:rgb(51,51,51);font-family:Times;font-size:13.63636302947998px;margin-bottom:0.0001pt;background-color:white"><span style="font-family:arial,helvetica,sans-serif;font-size:10.909090995788574px;line-height:11.988636016845703px;text-align:-webkit-center">Following
+CICS-NC on&#xA0;</span><a rel="nofollow" href="http://www.facebook.com/cicsnc" style="font-family:arial,helvetica,sans-serif;font-size:10.909090995788574px;line-height:11.988636016845703px;text-align:-webkit-center;color:rgb(38,58,143);text-decoration:none;font-weight:bold">Facebook</a></p>
+<table style="max-width:100%;border-collapse:collapse;border-spacing:0px;color:rgb(51,51,51);font-size:14px;font-family:Times;line-height:12px" cellspacing="2" cellpadding="2" width="500" border="0">
+<tbody>
+<tr>
+<td align="center" height="71" width="71"><br>
+</td>
+<td valign="top"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<br>
+</div></div></div>
+ 
+</blockquote></div><br><br clear="all"><div><br></div>-- <br><div class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr"><div dir="ltr"><div dir="ltr"><p><b><span style="font-size:9.0pt;font-family:Arial;color:#333333;background:white">Ge
+Peng, PhD</span></b><span style="font-size:9.0pt;font-family:Arial;color:#333333;background:white"><br>
+<b>Research Scholar</b><br>
+</span><span style="font-size:9.0pt;font-family:Arial;color:#222222">Cooperative
+Institute for Climate and Satellites - NC (CICS-NC)/NCSU at</span><span style="font-size:9.0pt;font-family:Times"></span></p><p><span style="font-size:9.0pt;font-family:Arial;color:#222222">NOAA&#x2019;s
+National Centers for Environmental Information (NCEI)</span><span style="font-size:9.0pt;font-family:Times"></span></p><p><span style="font-size:9.0pt;font-family:Arial;color:#222222">Center
+for Weather and Climate (CWC)</span><span style="font-size:9.0pt;font-family:Times"></span></p><p><span style="font-size:9.0pt;font-family:Arial;color:#333333;background:white">151 Patton Ave, Asheville, NC
+28801<br>
+<a rel="nofollow"><span style="color:#1155cc">+1 828 257 3009</span></a>; <span style="color:#1155cc"><a rel="nofollow" href="mailto:ge.peng@xxxxxxxx">ge.peng@xxxxxxxx</a></span></span></p><p><span style="font-size:9pt;font-family:Arial">ORCID: http://</span><span style="font-size:9pt;font-family:Arial;color:rgb(73,74,76);background-image:initial;background-position:initial;background-repeat:initial"><a rel="nofollow" href="http://orcid.org/0000-0002-1986-9115">orcid.org/0000-0002-1986-9115</a></span></p><p style="color:rgb(51,51,51);font-family:Times;font-size:13.63636302947998px;margin-bottom:0.0001pt;background-color:white"><span style="font-family:arial,helvetica,sans-serif;font-size:10.909090995788574px;line-height:11.988636016845703px;text-align:-webkit-center">Following CICS-NC on&#xA0;</span><a rel="nofollow" href="http://www.facebook.com/cicsnc" style="font-family:arial,helvetica,sans-serif;font-size:10.909090995788574px;line-height:11.988636016845703px;text-align:-webkit-center;color:rgb(38,58,143);text-decoration:none;font-weight:bold">Facebook</a></p><table border="0" cellpadding="2" cellspacing="2" width="500" style="max-width:100%;border-collapse:collapse;border-spacing:0px;color:rgb(51,51,51);font-size:14px;font-family:Times;line-height:12px"><tbody><tr><td align="center" height="71" width="71"><br></td><td valign="top"><br></td></tr></tbody></table></div></div></div></div></div></div></div></div></div></div>
+</div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00200" href="msg00200.html">[ferret_users] Define data mask valid in all time space</a></strong>
+<ul><li><em>From:</em> Ge Peng - NOAA Affiliate</li></ul></li>
+<li><strong><a name="00201" href="msg00201.html">Re: [ferret_users] Define data mask valid in all time space</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00201.html">Re: [ferret_users] Define data mask valid in all time space</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00202.html">[ferret_users] Parsing errors particularly with semicolons on edison.nersc.gov</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00201.html">Thread Prev</a>][<a href="msg00202.html">Thread Next</a>][<A HREF="threads2018.html#00203">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

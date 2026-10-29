@@ -1,0 +1,127 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Decimal digits on a colour key bar -->
+<!--X-From-R13: Oafyrl [naxr <n.p.znaxrNtznvy.pbz> -->
+<!--X-Date: Tue, 16 Nov 2021 16:17:58 &#45;0800 -->
+<!--X-Message-Id: f30d2491&#45;66e9&#45;46a1&#45;bcd5&#45;ac8f19633552@gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAKKF8qpP=Mhg=sKsaDrfxwM_AR_B+gEnuZVQp7Bc8cbjyGgXjw@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Decimal digits on a colour key bar</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01027.html">Thread Prev</a>][<a href="msg01028.html">Thread Next</a>][<A HREF="threads2019.html#01029">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Decimal digits on a colour key bar</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Decimal digits on a colour key bar</strong></li>
+<li><strong>From</strong>: <strong>Ansley Manke &lt;<a href="mailto:a.c.manke@DOMAIN.HIDDEN">a.c.manke@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 16 Nov 2021 16:17:49 -0800</li>
+<li>In-reply-to: &lt;CAKKF8qpP=Mhg=sKsaDrfxwM_AR_B+gEnuZVQp7Bc8cbjyGgXjw@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAKKF8qpP=Mhg=sKsaDrfxwM_AR_B+gEnuZVQp7Bc8cbjyGgXjw@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Thunderbird/91.3.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+ 
+ 
+ 
+<p>Hi,</p>
+<p>You need the SHAKEY command, which allows us to set the features
+of the colorbar including its location and labeling.<br>
+</p>
+<p><b><a rel="nofollow" class="moz-txt-link-freetext"
+href="../../documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION.html#_VPINDEXENTRY_2079">../../documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION.html#_VPINDEXENTRY_2079</a></b></p>
+<p>It's a <b><a rel="nofollow" moz-do-not-send="true"
+href="../../documentation/users-guide/customizing-plots/OVERVIEW.html">PPLUS
+customization command</a></b> so you issue the plotting
+command with /SET, then the PPL SHAKEY command, and then PPL FILL
+to finish drawing the plot. Something like this should work:<br>
+</p>
+<p><font face="monospace">fill/palette= /levels= /set var<br>
+ ppl shakey,1,1,0,0,-2<br>
+ppl fill</font></p>
+<p><br>
+I've used values for the first four arguments there, to choose the
+default settings but make it easier to read, and the fourth
+argument chooses 2 decimal places to be used in the labels. You
+could alternatively work with the 5th argument. <br>
+</p>
+<p>Ansley<br>
+</p>
+<div class="moz-cite-prefix">On 11/16/2021 4:11 AM, Claude-Michel
+Nzotungicimpaye wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+<div dir="ltr">
+<div>Hello ferreters,</div>
+<div><br>
+</div>
+<div>Can someone suggest to me how to control the decimal digits
+on a colour key bar (see attached)? In other words, I'd like
+to have 0.00, 0.05, 0.10 instead of having 0.000, 0.050,
+0.100.<br>
+<br>
+</div>
+<div>Thanks,<br>
+</div>
+<div>Claude-Michel<br>
+</div>
+</div>
+</blockquote>
+ 
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="01026" href="msg01026.html">[ferret_users] Decimal digits on a colour key bar</a></strong>
+<ul><li><em>From:</em> Claude-Michel Nzotungicimpaye</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01027.html">Re: [ferret_users] Decimal digits on a colour key bar</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01028.html">[ferret_users] Insert / Paste a Logo on a Plot</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01027.html">Thread Prev</a>][<a href="msg01028.html">Thread Next</a>][<A HREF="threads2019.html#01029">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

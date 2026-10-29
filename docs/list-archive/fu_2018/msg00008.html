@@ -1,0 +1,85 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Setting shade palette then using PPL -->
+<!--X-From-R13: Bnhy Ubqqneq <ctbqqneqNrznvy.nevmban.rqh> -->
+<!--X-Date: Tue, 9 Jan 2018 12:02:58 &#45;0800 -->
+<!--X-Message-Id: CAPnt&#45;UJizM9faSL+jXgVtDxMFMUafBtcdGU9Ky&#45;1_ZdAAZ60wQ@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAC5mqyDJ&#45;LogQyJp1WnGyCOpy_tLVVzqSjnRLettqAz_wfWBfw@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Setting shade palette then using PPL</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00007.html">Thread Prev</a>][<a href="msg00009.html">Thread Next</a>][<A HREF="threads2018.html#00008">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Setting shade palette then using PPL</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Judy Gaukel &lt;<a href="mailto:judy@DOMAIN.HIDDEN">judy@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Setting shade palette then using PPL</strong></li>
+<li><strong>From</strong>: <strong>Paul Goddard &lt;<a href="mailto:pgoddard@DOMAIN.HIDDEN">pgoddard@xxxxxxxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 9 Jan 2018 15:02:48 -0500</li>
+<li>Cc: ferret_users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00007.html">CAC5mqyDJ-LogQyJp1WnGyCOpy_tLVVzqSjnRLettqAz_wfWBfw@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00007.html">CAC5mqyDJ-LogQyJp1WnGyCOpy_tLVVzqSjnRLettqAz_wfWBfw@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div><div><div><div><div>Hey Judy,<br><br></div>You&#39;ll need to add &quot;set&quot; to your first line:<br>shade/<b>set/</b>pal=blue_red_centered.spk/lev=(-inf)(-6)(-5,5,0.5)/nol temdiff<br><br></div>Adding <b>set</b> seems to let Ferret know that there will be a list of ppl commands to follow. Then you end your code with &quot;ppl shade&quot; to let Ferret know you are all done with ppl commands and it is time to plot.<br><br></div>There are many ppl commands to help customize figures. see, <a rel="nofollow" href="../../documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION.html">../../documentation/users-guide/appendix-c-ferret-specific-pplus-enhancements/ENHANCED-COMMANDS-DESCRIPTION</a><br><br></div>Best,<br></div>Paul<br></div><div class="gmail_extra"><br><div class="gmail_quote">On Tue, Jan 9, 2018 at 1:45 PM, Judy Gaukel <span dir="ltr">&lt;<a rel="nofollow" href="mailto:judy@xxxxxxxx">judy@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr">Hi,<div>&#xA0; This is my code, and I am wondering how to set the palette so my PPL SHADE</div><div>command uses the proper palette:</div><div><div><br></div><div>shade/pal=blue_red_centered.spk/lev=(-inf)(-6)(-5,5,0.5)/nol temdiff</div><div>ppl hlabs 1,.18</div><div>ppl rlabs 1,0</div><div>ppl shade</div><div><br></div></div><div>This is inherited code and I&#39;m not 100% sure -- other than specifying the labels</div><div>with ppl, why ppl shade is necessary, but when I execute it, the ppl shade uses the default ferret color palette..</div><div>Thanks for any help!</div><span class="HOEnZb"><font color="#888888"><div>&#xA0; Judy<br clear="all"><div><br></div>-- <br><div class="m_1061927601566462214gmail_signature"><div dir="ltr"><div><div dir="ltr">Judy Illeman Gaukel<br>Climate, Atmospheric Sciences, and Physical Ocea                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+</blockquote></div><br></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00009" href="msg00009.html">Re: [ferret_users] Setting shade palette then using PPL</a></strong>
+<ul><li><em>From:</em> William Kessler</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00007" href="msg00007.html">[ferret_users] Setting shade palette then using PPL</a></strong>
+<ul><li><em>From:</em> Judy Gaukel</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00007.html">[ferret_users] Setting shade palette then using PPL</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00009.html">Re: [ferret_users] Setting shade palette then using PPL</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00007.html">Thread Prev</a>][<a href="msg00009.html">Thread Next</a>][<A HREF="threads2018.html#00008">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

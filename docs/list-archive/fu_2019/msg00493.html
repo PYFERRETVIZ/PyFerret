@@ -1,0 +1,475 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] grid compressed after subtract area average -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Wed, 22 Jan 2020 11:15:32 &#45;0800 -->
+<!--X-Message-Id: f76ab44a&#45;0d51&#45;b3f4&#45;3550&#45;b9e641b31362@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 4e862735&#45;7edd&#45;466a&#45;c1b1&#45;547c0a6827e4@noaa.gov -->
+<!--X-Reference: DF00EFF9&#45;40AE&#45;4368&#45;8419&#45;7299A222714B@uncc.edu -->
+<!--X-Reference: d459827d&#45;359a&#45;f276&#45;38e3&#45;26e02c20e58c@noaa.gov -->
+<!--X-Reference: CAKE4FWoTc2wJ=h2U0s7vM_P20GynaMh=XeU70VvYpycOzKM_PA@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] grid compressed after subtract area average</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00490.html">Thread Prev</a>][<a href="msg00494.html">Thread Next</a>][<A HREF="threads2019.html#00493">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] grid compressed after subtract area average</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Xiaoyu Bai &lt;<a href="mailto:xbai1@DOMAIN.HIDDEN">xbai1@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] grid compressed after subtract area average</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 22 Jan 2020 11:15:25 -0800</li>
+<li>Cc: ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;CAKE4FWoTc2wJ=h2U0s7vM_P20GynaMh=XeU70VvYpycOzKM_PA@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00453.html">4e862735-7edd-466a-c1b1-547c0a6827e4@noaa.gov</a>&gt; &lt;<a href="msg00454.html">DF00EFF9-40AE-4368-8419-7299A222714B@uncc.edu</a>&gt; &lt;<a href="msg00455.html">d459827d-359a-f276-38e3-26e02c20e58c@noaa.gov</a>&gt; &lt;CAKE4FWoTc2wJ=h2U0s7vM_P20GynaMh=XeU70VvYpycOzKM_PA@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 Thunderbird/68.3.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+ 
+ 
+ 
+<p>Hi,</p>
+<p>Once the data has been averaged, applying @DIN in the same
+directions does not make sense, as there is nothing to integrate.
+I'm not sure how adj_EB_land_CNRM_AM5 is computed but if its grid
+in the X and Y directions shows as compressed, then there is no
+dependence on those directions and pyferret should refuse to even
+compute a @DIN transformation. To show a simple example,<br>
+</p>
+<p><br>
+<tt>yes? use coads_climatology</tt><tt><br>
+</tt><tt>yes? let sstave = sst[x=@ave,y=@ave]</tt></p>
+<p><tt>yes? show grid sstave</tt><tt><br>
+</tt><tt> GRID GSQ1</tt><tt><br>
+</tt><tt>name axis # pts
+start end subset</tt><tt><br>
+</tt><tt>COADSX LONGITUDE 180mr
+21E 19E(379) compressed</tt><tt><br>
+</tt><tt>COADSY LATITUDE 90 r
+89S 89N compressed</tt><tt><br>
+</tt><tt>normal Z</tt><tt><br>
+</tt><tt>TIME TIME 12mr 16-JAN
+06:00 16-DEC 01:20 full</tt><tt><br>
+</tt></p>
+<p><tt>yes? list sstave[x=@din,y=@din]<br>
+**ERROR: illegal use of transformation:
+SSTAVE[X=20E:20E(380)@IN4,D=1] applied to point<br>
+</tt></p>
+<p><tt><br>
+</tt></p>
+<p>So, I am not sure I understand what you are doing. How is
+adj_EB_land_CNRM_AM5 defined?</p>
+<p>Sometimes if the order of operations that PyFerret uses is not
+what you need, a method can be to write intermediate results to a
+file and then read that back in to, say, subtract from another
+_expression_.</p>
+<p><br>
+</p>
+<p>-Ansley<br>
+</p>
+<p><br>
+</p>
+<div class="moz-cite-prefix">On 1/21/2020 12:05 PM, Xiaoyu Bai
+wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+<div dir="ltr">
+<div dir="ltr">Hi Ansley,
+<div><br>
+</div>
+<div>What I am trying to do is to subtract global average
+(@AVE, which is only ONE value for the whole globe) from
+model output (which has value at every grid). This
+calculation may be weird to pyferret but I have to use this
+method to adjust the model's energy budget. </div>
+<div>yes? sh grid adj_EB_land_CNRM_AM5 (adjusted value),
+AHT_land_CNRM_AM5 (energy budget)<br>
+  GRID (G033)<br>
+name    axis       # pts  start       
+end         subset<br>
+LON    LONGITUDE     256mr  0E         
+1.406W(358.59)   compressed<br>
+LAT    LATITUDE      128 i  88.928S      
+88.928N       compressed<br>
+PLEV   Z (Pa)       17 i- 1000        
+100000       compressed<br>
+MONTH_GREGORIAN TIME     12mi  16-JAN 12:00    
+15-DEC 17:49    full<br>
+  GRID (G033)<br>
+name    axis       # pts  start       
+end         subset<br>
+LON    LONGITUDE     256mr  0E         
+1.406W(358.59)   full<br>
+LAT    LATITUDE      128 i  88.928S      
+88.928N       full<br>
+PLEV   Z (Pa)       17 i- 1000        
+100000       compressed<br>
+MONTH_GREGORIAN TIME     12mi  16-JAN 12:00    
+15-DEC 17:49    full<br>
+</div>
+<div><br>
+</div>
+<div>The incorrect grid affects my further calculation. I need
+to apply@DIN to myadj_EB_land_CNRM_AM5. Since the grid is
+compressed, pyferret doesn't apply cosine correction
+anymore. My proof for this is the value for
+AHT_land_CNRM_AM5 is around -100 to 50. The@AVE value is
+4.021. So the adj_EB_land_CNRM_AM5 value is roughly around
+-104 to 46. If I apply@DIN for both latitude and longitude
+to AHT_land_CNRM_AM5, the outcome is 2.051E+15 W/m2 which
+makes sense. If I apply@DIN toadj_EB_land_CNRM_AM5, the
+outcome is -61.33 W/m2 which doesn't make sense.</div>
+<div><br>
+</div>
+<div>list/L=7 AHT_land_CNRM_AM5[X=@DIN,Y=@DIN],
+adj_EB_land_CNRM_AM5[X=@DIN,Y=@Din]<br>
+      LONGITUDE: 0.7W(-0.7) to 0.7W(359.3) (XY
+integ.)<br>
+      LATITUDE: 90S to 90N (XY integ.)<br>
+      TIME: 15-JUL 17:49<br>
+Column 1: AHT_LAND_CNRM_AM5 is
+SWABS_LAND_CNRM_AM5-OLR_LAND_CNRM_AM5+SHF_LAND_CNRM_AM5-STORAGE_LAND_CNRM_AM5<br>
+Column 2: ADJ_EB_LAND_CNRM_AM5 is
+AHT_LAND_CNRM_AM5-EB_LAND_CNRM_AM5<br>
+     AHT_LAND_ ADJ_EB_LAND_CNRM_AM5<br>
+I / *:   2.051E+15 -61.33<br>
+</div>
+<div><br>
+</div>
+<div>So I tried with a single month to useAHT_land_CNRM_AM5
+just minus the ave value which is 4.021.</div>
+<div> </div>
+<div>yes? let test=AHT_land_CNRM_AM5-4.021<br>
+yes? list/L=7 AHT_land_CNRM_AM5[X=@DIN,Y=@DIN],
+adj_EB_land_CNRM_AM5[X=@DIN,Y=@DIN], test[X=@DIN,Y=@DIN] <br>
+      LONGITUDE: 0.7W(-0.7) to 0.7W(359.3) (XY
+integ.)<br>
+      LATITUDE: 90S to 90N (XY integ.)<br>
+      TIME: 15-JUL 17:49<br>
+Column 1: AHT_LAND_CNRM_AM5 is
+SWABS_LAND_CNRM_AM5-OLR_LAND_CNRM_AM5+SHF_LAND_CNRM_AM5-STORAGE_LAND_CNRM_AM5<br>
+Column 2: ADJ_EB_LAND_CNRM_AM5 is
+AHT_LAND_CNRM_AM5-EB_LAND_CNRM_AM5<br>
+Column 3: TEST is AHT_LAND_CNRM_AM5-4.021<br>
+     AHT_LAND_ ADJ_EB_  TEST<br>
+I / *:   2.051E+15 -61.33 1.507E+11<br>
+</div>
+<div><br>
+</div>
+<div>These results are indicating that pyferret was not
+applying cosine correction to compressed latitude and
+longitude (which makes sense to ferret since it's
+compressed). But I have 10 models with 12 months' data, it's
+hard for me to subtract the value one by one. I am wondering
+whether there are some methods that I can transfer the@AVE
+value into a numeric or I can regridadj_EB_land_CNRM_AM5 to
+be likeAHT_land_CNRM_AM5 (I already tried with
+let/like=AHT_land_CNRM_AM5
+adj_EB_land_CNRM_AM5=AHT_land_CNRM_AM5-EB_land_CNRM_AM5(this
+the @AVE variable) and set variable/name=tt
+adj_EB_land_CNRM_AM5 \ let
+adj_EB_land_CNRM_AM5=tt[g=AHT_land_CNRM_AM5,gt=@ASN] but
+neither of them worked). I tend to use transfering @AVE to a
+numeric method now. Any suggestions?</div>
+<div><br>
+</div>
+<div>Thank you very much.</div>
+<div><br>
+</div>
+<div>Xiaoyu</div>
+<div><br>
+</div>
+<div></div>
+</div>
+<br>
+<div class="gmail_quote">
+<div dir="ltr" class="gmail_attr">On Wed, Dec 4, 2019 at 1:04
+PM Ansley C. Manke &lt;<a rel="nofollow"
+href="mailto:ansley.b.manke@xxxxxxxx"
+moz-do-not-send="true">ansley.b.manke@xxxxxxxx</a>&gt;
+wrote:<br>
+</div>
+<blockquote class="gmail_quote" style="margin:0px 0px 0px
+0.8ex;border-left:1px solid
+rgb(204,204,204);padding-left:1ex">
+<div>
+<p>Hi,</p>
+<p>Maybe this is just some detail in the syntax. The
+coordinate axes for the variable "temp" are not actually
+compressed, it's just that SHOW GRID is incorrectly
+saying they are. Are you seeing an error message? If
+this doesn't resolve things, please send more about the
+commands you are using and the results.</p>
+<p>Your original example was with levitus_climatology, so
+let's go back to that. <br>
+</p>
+<p><tt>yes? use levitus_climatology</tt><br>
+<tt>yes? let test=TEMP-TEMP[X=@AVE,Y=@AVE]</tt><br>
+<br>
+<tt>yes? list test[x=@din,y=@din]</tt><br>
+<tt> VARIABLE : TEMP-TEMP[X=@AVE,Y=@AVE]</tt><br>
+<tt> FILENAME : levitus_climatology.cdf</tt><br>
+<tt> FILEPATH :
+/home/users/tmap/ferret/linux/fer_dsets/data/</tt><br>
+<tt> SUBSET : 20 points (DEPTH (m))</tt><br>
+<tt> LONGITUDE: 20E to 20E(380) (XY integ.)</tt><br>
+<tt> LATITUDE : 90S to 90N (XY integ.)</tt><br>
+<tt>0 / 1: -538.5</tt><br>
+<tt>10 / 2: -633.9</tt><br>
+<tt>20 / 3: -530.8</tt><br>
+<tt>30 / 4: -575.1</tt><br>
+<tt>50 / 5: -335.4</tt><br>
+<tt>75 / 6: -440.2</tt><br>
+<tt>100 / 7: -459.0</tt><br>
+<tt>150 / 8: -405.4</tt><br>
+<tt>200 / 9: -287.2</tt><br>
+<tt>300 / 10: -305.7</tt><br>
+<tt>400 / 11: -234.4</tt><br>
+<tt>600 / 12: -118.7</tt><br>
+<tt>800 / 13: -113.0</tt><br>
+<tt>1000 / 14: -73.9</tt><br>
+<tt>1200 / 15: -52.0</tt><br>
+<tt>1500 / 16: -35.0</tt><br>
+<tt>2000 / 17: -6.6</tt><br>
+<tt>3000 / 18: -13.9</tt><br>
+<tt>4000 / 19: 7.7</tt><br>
+<tt>5000 / 20: 0.5</tt><br>
+</p>
+<div>On 12/3/2019 6:02 PM, Xiaoyu Bai wrote:<br>
+</div>
+<blockquote type="cite"> I picked the wrong word. I do
+want to remove the mean over lat and Lon. After that I
+want to apply @DIN. The compressed coordinates blocked
+@DIN to work. I tried with TEMP-Temp[x=@ave, y=@ave] and
+TEMP-number. They gave me very different results.
+<div><br>
+</div>
+<div>Thank you &#x1F60A;<br>
+<br>
+<div dir="ltr">Xiaoyu</div>
+<div dir="ltr"><br>
+<blockquote type="cite">&#x5728; 2019&#x5E74;12&#x6708;3&#x65E5;&#xFF0C;&#x4E0B;&#x5348;8:13&#xFF0C;Ansley
+C. Manke <a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx"  moz-do-not-send="true">&lt;ansley.b.manke@xxxxxxxx&gt;</a>
+&#x5199;&#x9053;&#xFF1A;<br>
+<br>
+</blockquote>
+</div>
+<blockquote type="cite">
+<div dir="ltr">&#xFEFF;
+<p>Hi Xiaoyu,</p>
+<p>First, what you have done with
+TEMP-TEMP[X=@AVE,Y=@AVE] is to remove the mean
+over longitude and latitude. That will not be
+less noisy. If you want to work with a
+less-noisy version of TEMP, you might use one of
+the smoothing transformations such as the boxcar
+smoother, @SBX. Here is a list of all the
+transformations: <br>
+</p>
+<p><a rel="nofollow"
+href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#Chapter3-Transformations"  moz-do-not-send="true">../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#Chapter3-Transformations</a>,
+and further down that page are detailed
+descriptions of the different transformations.<br>
+</p>
+<p><br>
+</p>
+<p>Now, it looks as if you've discovered an error
+in the SHOW GRID output. It should not be
+listing the x and y axes as "compressed". So
+we'll look into that.<br>
+</p>
+<tt>yes? use coads_climatology<br>
+yes? let sst_demean = sst - sst[x=@ave,y=@ave]<br>
+<br>
+yes? show grid sst_demean<br>
+ GRID GSQ1<br>
+name axis # pts
+start end subset<br>
+COADSX LONGITUDE 180mr
+21E 19E(379)
+compressed<br>
+COADSY LATITUDE 90 r
+89S 89N
+compressed<br>
+normal Z<br>
+TIME TIME 12mr 16-JAN
+06:00 16-DEC 01:20 full<br>
+</tt><br>
+<p>However <tt>sst_demean </tt>does still vary
+in longitude and latitude. See how STAT shows
+180 points in X and 90 points in Y, and a plot
+at one time and latitude varies in X.<br>
+</p>
+<tt><br>
+yes? stat/brief sst_demean<br>
+<br>
+Total # of data points: 194400
+(180*90*1*12*1*1)<br>
+# flagged as bad data: 89622<br>
+Minimum value: -23.622<br>
+Maximum value: 12.722<br>
+Mean value: -2.1127 (unweighted average)<br>
+</tt><tt><br>
+</tt><tt>yes? plot/L=1/y=0 sst_demean</tt><br>
+<p><br>
+</p>
+<p>First, what you have done with
+TEMP-TEMP[X=@AVE,Y=@AVE] is merely to remove the
+mean. If you want a less-noisy version of TEMP,
+you might look at the smoothing transformations.
+Here is a list of all the transformations: <br>
+</p>
+<p><a rel="nofollow"
+href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#Chapter3-Transformations"  moz-do-not-send="true">../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#Chapter3-Transformations</a><br>
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<div>On 12/3/2019 4:38 PM, Xiaoyu Bai wrote:<br>
+</div>
+<blockquote type="cite">
+<div dir="ltr">Dear ferreters,
+<div><br>
+</div>
+<div>I noticed that when I subtract area
+average from a variable, it will make the
+variable's Lat and Lon becomecompressed
+instead of full. For example:</div>
+<div><br>
+</div>
+<div>use levi_climatology</div>
+<div>let test=TEMP-TEMP[X=@AVE,Y=@AVE]<br>
+</div>
+<div>sh grid TEMP,test<br>
+  GRID GMS1<br>
+name    axis       # pts  start
+       end         subset<br>
+XAXLEVITR LONGITUDE     360mr  20.5E
+       19.5E(379.5)    full<br>
+YAXLEVITR LATITUDE      180 r  89.5S
+       89.5N        full<br>
+ZAXLEVITR DEPTH (m)      20 i- 0  
+       5000        full<br>
+normal  T<br>
+  GRID GMS1<br>
+name    axis       # pts  start
+       end         subset<br>
+XAXLEVITR LONGITUDE     360mr  20.5E
+       19.5E(379.5)   
+compressed<br>
+YAXLEVITR LATITUDE      180 r  89.5S
+       89.5N       
+compressed<br>
+ZAXLEVITR DEPTH (m)      20 i- 0  
+       5000        full<br>
+normal  T<br>
+</div>
+<div><br>
+</div>
+<div>What I want is to get a less noisy
+variable, then apply@DIN to it. But this
+compressed grid was blocking me to use @DIN.</div>
+<div><br>
+</div>
+<div>So I am wondering how to get my
+coordinate to full again.</div>
+<div><br>
+</div>
+<div>Thank you in advance.</div>
+<div></div>
+<div>-- <br>
+<div dir="ltr">
+<div dir="ltr">Xiaoyu</div>
+</div>
+</div>
+</div>
+</blockquote>
+</div>
+</blockquote>
+</div>
+</blockquote>
+</div>
+</blockquote>
+</div>
+<br clear="all">
+<div><br>
+</div>
+-- <br>
+<div dir="ltr">
+<div dir="ltr">Xiaoyu</div>
+</div>
+</div>
+</blockquote>
+ 
+ 
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00494" href="msg00494.html">Re: [ferret_users] grid compressed after subtract area average</a></strong>
+<ul><li><em>From:</em> Xiaoyu Bai</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00453" href="msg00453.html">Re: [ferret_users] grid compressed after subtract area average</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+<li><strong><a name="00454" href="msg00454.html">Re: [ferret_users] grid compressed after subtract area average</a></strong>
+<ul><li><em>From:</em> Xiaoyu Bai</li></ul></li>
+<li><strong><a name="00455" href="msg00455.html">Re: [ferret_users] grid compressed after subtract area average</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+<li><strong><a name="00490" href="msg00490.html">Re: [ferret_users] grid compressed after subtract area average</a></strong>
+<ul><li><em>From:</em> Xiaoyu Bai</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00490.html">Re: [ferret_users] grid compressed after subtract area average</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00494.html">Re: [ferret_users] grid compressed after subtract area average</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00490.html">Thread Prev</a>][<a href="msg00494.html">Thread Next</a>][<A HREF="threads2019.html#00493">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

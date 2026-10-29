@@ -1,0 +1,212 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Re: trimming out missing data -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Wed, 24 Jan 2018 09:54:38 &#45;0800 -->
+<!--X-Message-Id: 4370786d&#45;707e&#45;bd25&#45;b9be&#45;1c2f7aeaba7f@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAC67f&#45;YEobznaiDmTdMaNC7iEEhmq6wriJj&#45;2SNedKZ4=eyUEA@mail.gmail.com -->
+<!--X-Reference: CAC67f&#45;Z7X3HsD7ZqFm&#45;fmdm_xbZ0ZMc3edci8LVa8BO0q50bjQ@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Re: trimming out missing data</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00016.html">Thread Prev</a>][<a href="msg00017.html">Thread Next</a>][<A HREF="threads2018.html#00019">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Re: trimming out missing data</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Re: trimming out missing data</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 24 Jan 2018 09:54:34 -0800</li>
+<li>In-reply-to: &lt;<a href="msg00014.html">CAC67f-Z7X3HsD7ZqFm-fmdm_xbZ0ZMc3edci8LVa8BO0q50bjQ@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAC67f-YEobznaiDmTdMaNC7iEEhmq6wriJj-2SNedKZ4=eyUEA@mail.gmail.com&gt; &lt;<a href="msg00014.html">CAC67f-Z7X3HsD7ZqFm-fmdm_xbZ0ZMc3edci8LVa8BO0q50bjQ@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.5.2</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>There's no real need to write a new file. You can also specify
+only the timesteps you wish to use when you call the function:<br>
+</p>
+<p>&#xA0;&#xA0; yes? let result = ffta(var[L=26:1073])<br>
+</p>
+<br>
+<div class="moz-cite-prefix">On 1/23/2018 11:34 PM, USHNANSHU DUTTA
+wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+<div dir="ltr">Hello, ferreters,
+<div><br>
+</div>
+<div>I have a data which timestep is from 1 to 1073. but the
+first 25 timesteps has no value.&#xA0; while using FFTA the error
+is coming saying missing data at L=1.</div>
+<div><br>
+</div>
+<div>I have used redefining axis command but it is in vain. Can
+you please help me to arrange the data such&#xA0;a way it will trim
+the first 25 timesteps and will start from 1 at 26th&#xA0;timestep.<br>
+<div class="gmail-yj6qo gmail-ajU">
+<div id="gmail-:19c" class="gmail-ajR" tabindex="0"><img
+class="gmail-ajT"
+src=""
+style="opacity: 0.3;" moz-do-not-send="true"></div>
+</div>
+<span class="gmail-HOEnZb gmail-adL"><font color="#888888"><br
+style="font-size:12.8px" clear="all">
+</font></span></div>
+</div>
+<div class="gmail_extra"><br>
+<div class="gmail_quote">On Wed, Jan 24, 2018 at 1:02 PM,
+USHNANSHU DUTTA <span dir="ltr">&lt;<a rel="nofollow"
+href="mailto:ushnanshudutta@xxxxxxxxx"
+moz-do-not-send="true">ushnanshudutta@xxxxxxxxx</a>&gt;</span>
+wrote:<br>
+<blockquote class="gmail_quote" style="margin:0 0 0
+.8ex;border-left:1px #ccc solid;padding-left:1ex">
+<div dir="ltr">Hello ferreters,
+<div><br>
+</div>
+<div>I have a data which timestep is from 1 to 1073. but
+the first 25 timesteps has no value.&#xA0; while using FFTA
+the error is coming saying missing data at L=1<span
+class="HOEnZb"><font color="#888888"><br clear="all">
+<div><br>
+</div>
+-- <br>
+<div class="m_-451749586511726776gmail_signature"
+data-smartmail="gmail_signature">
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div>
+<div>
+<div><b><span
+style="font-family:garamond,serif">Ushnanshu
+Dutta</span><br>
+</b></div>
+<b><span
+style="font-family:garamond,serif">Research
+Fellow<br>
+</span></b></div>
+<b><span
+style="font-family:garamond,serif">Indian
+Institute of Tropical
+Meteorology<br>
+</span></b></div>
+<b><span
+style="font-family:garamond,serif">Pune,411008<br>
+</span></b></div>
+<b><span
+style="font-family:garamond,serif">Mob:
+9405022799</span></b><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</font></span></div>
+</div>
+</blockquote>
+</div>
+<br>
+<br clear="all">
+<div><br>
+</div>
+-- <br>
+<div class="gmail_signature" data-smartmail="gmail_signature">
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div>
+<div>
+<div><b><span
+style="font-family:garamond,serif">Ushnanshu
+Dutta</span><br>
+</b></div>
+<b><span style="font-family:garamond,serif">Research
+Fellow<br>
+</span></b></div>
+<b><span style="font-family:garamond,serif">Indian
+Institute of Tropical Meteorology<br>
+</span></b></div>
+<b><span style="font-family:garamond,serif">Pune,411008<br>
+</span></b></div>
+<b><span style="font-family:garamond,serif">Mob:
+9405022799</span></b><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<br>
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00013" href="msg00013.html">[ferret_users] trimming out missing data</a></strong>
+<ul><li><em>From:</em> USHNANSHU DUTTA</li></ul></li>
+<li><strong><a name="00014" href="msg00014.html">[ferret_users] Re: trimming out missing data</a></strong>
+<ul><li><em>From:</em> USHNANSHU DUTTA</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00016.html">Re: [ferret_users] Re: trimming out missing data</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00017.html">[ferret_users] creating variables in a loop</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00016.html">Thread Prev</a>][<a href="msg00017.html">Thread Next</a>][<A HREF="threads2018.html#00019">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

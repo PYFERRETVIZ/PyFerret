@@ -1,0 +1,127 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] fixed scaling factor by default -->
+<!--X-From-R13: [nepb ina Vhygra <[nepb.VhygraNhvo.ab> -->
+<!--X-Date: Thu, 19 Dec 2019 02:41:05 &#45;0800 -->
+<!--X-Message-Id: 20191219114056.61c94254@gfi063209.klientdrift.uib.no -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20191218174000.21b9c739@gfi063209.klientdrift.uib.no -->
+<!--X-Reference: CAELLC7U&#45;b5dFWvk03jfoTcPCfSi1KGe3yo3rLrBiDKj4D55i6Q@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] fixed scaling factor by default</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00467.html">Thread Prev</a>][Thread Next][<A HREF="threads2019.html#00468">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] fixed scaling factor by default</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Karl Smith - NOAA Affiliate &lt;<a href="mailto:karl.smith@DOMAIN.HIDDEN">karl.smith@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] fixed scaling factor by default</strong></li>
+<li><strong>From</strong>: <strong>Marco van Hulten &lt;<a href="mailto:Marco.Hulten@DOMAIN.HIDDEN">Marco.Hulten@xxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 19 Dec 2019 11:40:56 +0100</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00467.html">CAELLC7U-b5dFWvk03jfoTcPCfSi1KGe3yo3rLrBiDKj4D55i6Q@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Organization: University of Bergen</li>
+<li>References: &lt;<a href="msg00466.html">20191218174000.21b9c739@gfi063209.klientdrift.uib.no</a>&gt;	&lt;<a href="msg00467.html">CAELLC7U-b5dFWvk03jfoTcPCfSi1KGe3yo3rLrBiDKj4D55i6Q@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>Karl&#x2014;
+ 
+On 18 Dec 10:14 Karl Smith - NOAA Affiliate wrote:
+&gt; The /SCALE=... option to SET WINDOW will allow you to set the value in
+&gt; Image -&gt; Scale through the ferret command line.
+&gt; And I see that option is not described in the Ferret manual; my apologies.
+&gt; 
+&gt; -- If the value is a positive number, the image is scaled with that factor,
+&gt; the window is resized as best possible to fit that image size and display
+&gt; size, and automatic rescaling of the image to fit the window size (by the
+&gt; user interacting with the window frame) is turned off.
+&gt; 
+&gt; -- If the value is negative, the image is scaled with that factor, the
+&gt; window is resized as best possible to fit that image size, and automatic
+&gt; rescaling of the image to fit the window size is turned on (which may
+&gt; revise the scaling factor to fit the window on the display and may revise
+&gt; the window size - aspect ratio - to fit the image aspect ratio).
+&gt; 
+&gt; -- If the value is zero, the current window scaling factor is used but
+&gt; automatic rescaling of the image to fit the window size is turned
+&gt; on  (which, again, may revise the scaling factor to fit the window on the
+&gt; display and may revise the window size - aspect ratio - to fit the image
+&gt; aspect ratio).
+ 
+Thank you, this helps a lot.  It would indeed be useful to add it to the
+documentation.
+ 
+I needed the /SCALE option for forcing the image size to fit my
+window.  Otherwise the image would be scaled slightly too large.  The
+window resizing is ignored by tiling window managers; it's effectively
+an inconsequential side-effect of the /SCALE option.  These are
+somewhat curious things, but things are working for me with
+/SCALE=-0.834, which is the size the image needs to be scaled to when I
+use half of the screen height for Ferret windows (typical in horizontal
+layout).  The minus sign is useful as I do sometimes change to a
+fullscreen layout; and going back to the horizontal layout works out
+properly; the issue of a wrong image/window size mismatch occured only
+for the initial plot in the window.  All this may relate to an
+underlying bug causing also flickering issue mentioned earlier this
+year.
+ 
+All that information is for later reference.  With this sentence, I'll
+make it also searchable for tiling window manager users like spectrwm,
+i3wm and xmonad.  Yet again, tiling windows and Ferret are an ideal
+combination (first only with classic Ferret, and now also PyFerret).
+ 
+&#x2014;Marco
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00466" href="msg00466.html">[ferret_users] fixed scaling factor by default</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+<li><strong><a name="00467" href="msg00467.html">Re: [ferret_users] fixed scaling factor by default</a></strong>
+<ul><li><em>From:</em> Karl Smith - NOAA Affiliate</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00467.html">Re: [ferret_users] fixed scaling factor by default</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00467.html">Thread Prev</a>][Thread Next][<A HREF="threads2019.html#00468">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

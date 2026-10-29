@@ -1,0 +1,96 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Averaging multi variables -->
+<!--X-From-R13: fnhenou enguber <ebuvgfeo2020Ntznvy.pbz> -->
+<!--X-Date: Mon, 22 Jul 2019 17:48:06 &#45;0700 -->
+<!--X-Message-Id: CAFXLzPi1OBPsKVJ6uP58=dyas2q=67PuVVQMJnx&#45;GesYTBL0&#45;A@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAMvWTtWHt55dFd86nyGc+9YYmawWtnixt8Oz=nWroZitSsEaaQ@mail.gmail.com -->
+<!--X-Reference: CALC=m4pcWrUdSF1uviiyqh6bXeL5GWJEWf3jm3s1S_7ZA+LKaA@mail.gmail.com -->
+<!--X-Reference: CAMvWTtVoWLn74A2bk&#45;cAxs94o+qq_i1MsKqU0b4iYfA22Lc9tg@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Averaging multi variables</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00281.html">Thread Prev</a>][<a href="msg00284.html">Thread Next</a>][<A HREF="threads2019.html#00282">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Averaging multi variables</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Saat Mubarrok &lt;<a href="mailto:saatmubarrok@DOMAIN.HIDDEN">saatmubarrok@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Averaging multi variables</strong></li>
+<li><strong>From</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 23 Jul 2019 10:47:47 +1000</li>
+<li>Cc: Satyesh Ghetiya &lt;<a href="mailto:satyeshghetiya@DOMAIN.HIDDEN">satyeshghetiya@xxxxxxxxx</a>&gt;,        ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00281.html">CAMvWTtVoWLn74A2bk-cAxs94o+qq_i1MsKqU0b4iYfA22Lc9tg@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAMvWTtWHt55dFd86nyGc+9YYmawWtnixt8Oz=nWroZitSsEaaQ@mail.gmail.com&gt; &lt;CALC=m4pcWrUdSF1uviiyqh6bXeL5GWJEWf3jm3s1S_7ZA+LKaA@mail.gmail.com&gt; &lt;<a href="msg00281.html">CAMvWTtVoWLn74A2bk-cAxs94o+qq_i1MsKqU0b4iYfA22Lc9tg@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div class="gmail_default" style="color:#000000">Hi Saat,</div><div class="gmail_default" style="color:#000000">G&#39;day</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">There is a function in CDO called as &quot;ensmean&quot; which can solve your problem if you want to average (ensemble mean) the variable/s.&#xA0;</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">let suppose you have files as <a rel="nofollow" href="http://sst1.nc">sst1.nc</a> <a rel="nofollow" href="http://sst2.nc">sst2.nc</a> <a rel="nofollow" href="http://sst3.nc">sst3.nc</a> ......... <a rel="nofollow" href="http://sstn.nc">sstn.nc</a></div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">you can do like this using the wild card in CDO.</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">cdo -r -f nc4 ensmean sst*.nc <a rel="nofollow" href="http://ensemble_mean_output.nc">ensemble_mean_output.nc</a></div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">here *.nc covers all the files that you want to average with the help of * wild card. You have to be careful while using wild card &quot; * &quot; because if you are using *.nc it will take all the netcdf files present in the folder. So better that you make a separate folder that contains only those files that you want to use for a particular operation.&#xA0;</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">this is the direct way to do mean of variable/s across multiple files.&#xA0;</div><div class="gmail_default" style="color:#000000"><br></div><div class="gmail_default" style="color:#000000">let me know if this doesn&#39;t work. we will try something else also with the help of ferret.</div><div class="gmail_defau                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+<pre><span style="font-family:arial,sans-serif">fill/nolab/lev=(-inf)(23,32,2)(inf) ave/6<br><br><br></span></pre><pre><span style="font-family:arial,sans-serif">the error I get is <br><br>**ERROR: stack overflow<br><br></span></pre><pre><span style="font-family:arial,sans-serif">Any lead is much appreciate. Thank you<br><br></span></pre><pre><span style="font-family:arial,sans-serif">Saat M.<br></span><br></pre>
+ 
+</div><div><br></div><div><br></div><div><br></div></div>
+</blockquote></div><br clear="all"><div><br></div><div dir="ltr" class="gmail-m_7086118432228285157gmail-m_-2075607186887450516m_3947469842451787857gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr"><br></div></div></div></div></div></div></div>
+</blockquote></div>
+</blockquote></div><br clear="all"><div><br></div>-- <br><div dir="ltr" class="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><font color="#0000ff" size="4"><b><br></b></font></div><div><font color="#0000ff" size="4"><b><br></b></font></div><font color="#0000ff" size="4" face="times new roman, serif"><b>REGARDS</b></font><div><font color="#0000ff" size="4" face="times new roman, serif"><b><br></b></font><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Saurabh Rathore</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Research Scholar (PhD.)</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Centre For Oceans, Rivers, Atmosphere &amp; Land Science Technology</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Indian Institute Of Technology, Kharagpur</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>contact :- 91- 8345984434</b></font></div></div></div></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00284" href="msg00284.html">Re: [ferret_users] Averaging multi variables</a></strong>
+<ul><li><em>From:</em> Saat Mubarrok</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00277" href="msg00277.html">[ferret_users] Averaging multi variables</a></strong>
+<ul><li><em>From:</em> Saat Mubarrok</li></ul></li>
+<li><strong><a name="00278" href="msg00278.html">Re: [ferret_users] Averaging multi variables</a></strong>
+<ul><li><em>From:</em> Satyesh Ghetiya</li></ul></li>
+<li><strong><a name="00281" href="msg00281.html">Re: [ferret_users] Averaging multi variables</a></strong>
+<ul><li><em>From:</em> Saat Mubarrok</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00281.html">Re: [ferret_users] Averaging multi variables</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00284.html">Re: [ferret_users] Averaging multi variables</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00281.html">Thread Prev</a>][<a href="msg00284.html">Thread Next</a>][<A HREF="threads2019.html#00282">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

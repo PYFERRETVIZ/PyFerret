@@ -1,0 +1,80 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] variance Calculation -->
+<!--X-From-R13: Englrfu Uurgvln <fnglrfuturgvlnNtznvy.pbz> -->
+<!--X-Date: Wed, 3 Oct 2018 06:45:57 &#45;0700 -->
+<!--X-Message-Id: CALC=m4pJR5Cr=vbFew5hkRj+zjwm809RiJyfn=eDTyJpOzSw+A@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAC67f&#45;Z1XOEUZk&#45;3uARZ_ptjF9eapYGqh+4GBNB2MXaCzjjbfQ@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] variance Calculation</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00351.html">Thread Prev</a>][<a href="msg00355.html">Thread Next</a>][<A HREF="threads2018.html#00352">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] variance Calculation</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ushnanshudutta@DOMAIN.HIDDEN">ushnanshudutta@xxxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] variance Calculation</strong></li>
+<li><strong>From</strong>: <strong>Satyesh Ghetiya &lt;<a href="mailto:satyeshghetiya@DOMAIN.HIDDEN">satyeshghetiya@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 3 Oct 2018 19:19:04 +0530</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00351.html">CAC67f-Z1XOEUZk-3uARZ_ptjF9eapYGqh+4GBNB2MXaCzjjbfQ@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00351.html">CAC67f-Z1XOEUZk-3uARZ_ptjF9eapYGqh+4GBNB2MXaCzjjbfQ@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Yes it is possible. The script will differ slightly depending upon what dimensions (XYZT) your data have and what type of variance you want to calculate (e.g. variance at each XY points etc. )<div><br></div><div>Anyway, here one sample command is given to start with:&#xA0;</div><div><div>Suppose your main variable is&#xA0;<b>var</b>&#xA0;of XYT dimension having daily data from 2001:2010. Then to find variance for each year (which will give 10 variance images having XY dimension each location of which represents variance for that location computed over all days of a year)</div><div><br></div><div><br></div><div>repeat/range=2001:2010/name=year (set region/t=1-jan-`year`:31-dec-`year`; let var_`year`=<b>var</b>[l=@var]; save/file=var_`year`.nc var_`year`;)</div></div><div>cancel region/T<br></div><div><br></div><div><br></div><div>This will save variance of each year to different nc files. This you can use later.&#xA0;</div><div>I hope this&#xA0;helps.</div><div>Regards,&#xA0;<br></div><div><div dir="ltr" class="gmail-m_-2977909762464095023m_1626026433980712688gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr"><div><div><div><div>G Satyesh</div></div></div></div></div></div></div></div></div></div></div></div><br><div class="gmail_quote"><div dir="ltr">On Wed, Oct 3, 2018 at 5:32 PM USHNANSHU DUTTA &lt;<a rel="nofollow" href="mailto:ushnanshudutta@xxxxxxxxx">ushnanshudutta@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><br clear="all"><div>Is it possible to compute variance for each year in a single scrpt&#xA0;in ferret?</div>-- <br><div dir="ltr" class="m_6902692667810074951gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr"><div><div><div><div><b><span style="font-family:garamond,serif">Ushnanshu Dutta</span><br></b></div><b><span style="font-family:garamond,serif">Research Fellow<br></span></b></div><b><span style="font-fa                                                                                                                                                                                                                                                                                  
+</blockquote></div><br clear="all"><div><br></div>-- <br><div dir="ltr" class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr"><div><div><div><div>G Satyesh<br></div></div></div></div><br></div></div></div></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00351" href="msg00351.html">[ferret_users] variance Calculation</a></strong>
+<ul><li><em>From:</em> USHNANSHU DUTTA</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00351.html">[ferret_users] variance Calculation</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00355.html">Re: [ferret_users] variance Calculation</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00351.html">Thread Prev</a>][<a href="msg00355.html">Thread Next</a>][<A HREF="threads2018.html#00352">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

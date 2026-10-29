@@ -1,0 +1,83 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] vector/aspect changes for the same velocity -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Sun, 4 Mar 2018 05:09:32 &#45;0800 -->
+<!--X-Message-Id: CAEwQpa+GRu4xVTteKDk8qErw+mJEku8owo4JpK_LVNr9AfFbZw@mail.gmail.com -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Derived: binukuwgkdmtj.bin -->
+<!--X-Derived: pdfrOClxicImm.pdf -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] vector/aspect changes for the same velocity</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00042.html">Thread Prev</a>][<a href="msg00044.html">Thread Next</a>][<A HREF="threads2018.html#00043">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] vector/aspect changes for the same velocity</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] vector/aspect changes for the same velocity</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Sun, 4 Mar 2018 22:09:11 +0900</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Dear Ferreters,<div><br></div><div>I overlaid multiple VECTOR/ASPECT plots of a single velocity field and accidentally plotted the same vectors twice. To my surprise they had different angles!</div><div><br></div><div>If you look at the arrows at z = 95.74 m in the attached plot, the blue and red arrows are supposed to be identical but they are very different.&#xA0; (The nearest data points are at 84.2 m and 108.00 m, which are far enough from 95.74 m we are looking at.)&#xA0; Both are plotted with ASPECT.&#xA0; The sample script and data are also attached.</div><div><br></div><div>I also wonder about a totally peripheral issue.&#xA0; I thought PPL WINDOW,OFF refers to the plotting area.&#xA0; But the attached script and plot suggest that the window-edge truncation is carried out according to the box of x=X1:X2/z=Z1:Z2 rather than the axes.&#xA0; The blue arrows are truncated at z=300m. I would think truncating graphics elements at the edges of x= and z= isn&#39;t very intuitive.</div><div><br></div><div>I use</div><div><br></div><div><div>&#xA0;<span style="white-space:pre">	</span>NOAA/PMEL TMAP</div><div>&#xA0;<span style="white-space:pre">	</span>FERRET v7.3 (optimized)</div><div>&#xA0;<span style="white-space:pre">	</span>Linux 2.6.32-696.13.2.el6.x86_64 64-bit - 12/04/17</div><div>&#xA0;<span style="white-space:pre">	</span> 4-Mar-18 22:07</div></div><div><br></div><div>on a Linux machine.</div><div><br></div><div>Regards,</div><div>Ryo</div><div><br></div><div><div>!==== Sample script =============</div><div>set mode grat:dash</div><div>set data <a rel="nofollow" href="http://mv-mw.nc">mv-mw.nc</a></div><div><br></div><div>let fac = 1e3 ! velocity-length scale</div><div><br></div><div>define symbol y1_ 31S</div><div>define symbol y2_ 27S</div><div>let z2_ = 900</div><div><br></div><div>!-------</div><div>!go init-print</div><div><br></div><div>let samp_vec_in_ = 0.35</div><div>let samp_vec_ = fac/200</div><div><br></div><div>vector/aspect/hlimits=30S:28S/vlimits=0:900:20/y=($y1_):($y2_)/nola                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+<p><strong>Attachment:
+<a href="binukuwgkdmtj.bin" ><tt>mv-mw.nc</tt></a></strong><br>
+<em>Description:</em> Binary data</p>
+<p><strong>Attachment:
+<a href="pdfrOClxicImm.pdf" ><tt>try-vector-overlay.pdf</tt></a></strong><br>
+<em>Description:</em> Adobe PDF document</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00044" href="msg00044.html">Re: [ferret_users] vector/aspect changes for the same velocity</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00042.html">[ferret_users] create a matrix</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00044.html">Re: [ferret_users] vector/aspect changes for the same velocity</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00042.html">Thread Prev</a>][<a href="msg00044.html">Thread Next</a>][<A HREF="threads2018.html#00043">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

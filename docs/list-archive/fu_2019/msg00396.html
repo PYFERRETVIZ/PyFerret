@@ -1,0 +1,71 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] get attributes with pyferret -->
+<!--X-From-R13: Bngevpx Pebpxznaa <cngevpx.oebpxznaaNyfpr.vcfy.se> -->
+<!--X-Date: Tue, 15 Oct 2019 10:10:12 &#45;0700 -->
+<!--X-Message-Id: 1902042071.1075091.1571159402824.JavaMail.zimbra@lsce.ipsl.fr -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] get attributes with pyferret</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00390.html">Thread Prev</a>][<a href="msg00398.html">Thread Next</a>][<A HREF="threads2019.html#00396">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] get attributes with pyferret</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] get attributes with pyferret</strong></li>
+<li><strong>From</strong>: <strong>Patrick Brockmann &lt;<a href="mailto:patrick.brockmann@DOMAIN.HIDDEN">patrick.brockmann@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 15 Oct 2019 19:10:02 +0200 (CEST)</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>Thread-index: aJsBrBHFerV794gFA94FwfJnqtGruA==</li>
+<li>Thread-topic: get attributes with pyferret</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #000000"><div>Hi pyferreters,<br></div><div><br data-mce-bogus="1"></div><div>How do you get variable attributes with pyferret ?<br data-mce-bogus="1"></div><div><br data-mce-bogus="1"></div><div>You have the getdata method to get a title but it correponds to the variable name<br data-mce-bogus="1"></div><div>not the long_name that is present as an attribut.<br data-mce-bogus="1"></div><div><br data-mce-bogus="1"></div><div>In [45]: vardict = pyferret.getdata('gpp', False)<br><br>In [46]: vardict.keys()<br>Out[46]: <br>['axis_coords',<br>&nbsp;'axis_types',<br>&nbsp;'data_unit',<br>&nbsp;'axis_units',<br>&nbsp;'title',<br>&nbsp;'axis_names',<br>&nbsp;'missing_value',<br>&nbsp;'data']<br><br data-mce-bogus="1"></div><div>In [47]: vardict['title']<br>Out[47]: 'gpp'<br data-mce-bogus="1"></div><div><br data-mce-bogus="1"></div><div>In [48]: (a, b) = pyferret.run('show att gpp')<br>&nbsp;&nbsp;&nbsp;&nbsp; attributes for dataset: https://xxxx/xxxxx/gpp.nc<br>&nbsp;gpp.units = kg C&nbsp; s-1 <br>&nbsp;gpp.long_name = Gross Primary Production <br>&nbsp;gpp._ChunkSizes = 1, 46<br><br data-mce-bogus="1"></div><div>The previous command shows attributs but how to capture them <br data-mce-bogus="1"></div><div>as python variable.<br data-mce-bogus="1"></div><div><br data-mce-bogus="1"></div><div><div>Same question, if I want to get global attributs.</div></div><div><br data-mce-bogus="1"></div><div>For info, the ncdump is like this:<br data-mce-bogus="1"></div><div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; float gpp(time, reg) ;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gpp:units = "kg C&nbsp; s-1" ;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gpp:long_name = "Gross Primary Production" ;<br data-mce-bogus="1"></div><div><br data-mce-bogus="1"></div><div>Lert me know if I have missed something.<br></div><div><br data-mce-bogus="1"></div><div>Best regar                                                                                                                                                                                                                                                                                                                                                                
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00390.html">[ferret_users] which version of Ferret for macOS Mojave</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00398.html">[ferret_users] anomalies in time series</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00390.html">Thread Prev</a>][<a href="msg00398.html">Thread Next</a>][<A HREF="threads2019.html#00396">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

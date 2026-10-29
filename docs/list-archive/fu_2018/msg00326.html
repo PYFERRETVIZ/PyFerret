@@ -1,0 +1,91 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] interpolation to make an uniform NaN in data for all time steps -->
+<!--X-From-R13: fnhenou enguber <ebuvgfeo2020Ntznvy.pbz> -->
+<!--X-Date: Tue, 4 Sep 2018 18:41:17 &#45;0700 -->
+<!--X-Message-Id: CAFXLzPibKPwzH=n+7LP9s1Y20dMN0&#45;qaWZzo1=DqkTaD69Hw9w@mail.gmail.com -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Derived: pngrXufD17rl4.png -->
+<!--X-Derived: pngR5Y8qLZaDu.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] interpolation to make an uniform NaN in data for all time steps</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00325.html">Thread Prev</a>][<a href="msg00328.html">Thread Next</a>][<A HREF="threads2018.html#00326">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] interpolation to make an uniform NaN in data for all time steps</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] interpolation to make an uniform NaN in data for all time steps</strong></li>
+<li><strong>From</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 5 Sep 2018 11:40:46 +1000</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)">Dear Ferreters,</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">I am facing a problem that in my data set I dont have uniform NaN locations i.e. location of NaN is changing with time so as the Number of Good Points. So I thought to use interpolation to make uniform NaN location at all time steps. such that Number of Good Points will be same at all time steps.&#xA0;</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">let rain1=rain[x=@fln:5,y=@fln:5]<br>list rain1[x=@ngd,y=@ngd], rain[x=@ngd,y=@ngd]<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; DATA SET: ./<a rel="nofollow" href="http://rain_land.nc">rain_land.nc</a><br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; TIME: 16-JAN-1961 00:00 to 16-DEC-2017 00:00 360_DAY<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LONGITUDE: 112E to 154E (XY # valid)<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LATITUDE: 44S to 10S (XY # valid)<br>&#xA0;Column&#xA0; 1: RAIN1 is RAIN[X=@FLN:5,Y=@FLN:5]<br>&#xA0;Column&#xA0; 2: RAIN is RAIN2[D=1]*MASK[GXY=ROSEXY]<br>&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; RAIN1&#xA0;&#xA0;&#xA0; RAIN<br>01-FEB-1961 /&#xA0;&#xA0; 1:&#xA0; 372084.&#xA0; 251863.<br>16-APR-1961 /&#xA0;&#xA0; 2:&#xA0; 372084.&#xA0; 252028.<br>16-JUL-1961 /&#xA0;&#xA0; 3:&#xA0; 372200.&#xA0; 251145.<br>16-OCT-1961 /&#xA0;&#xA0; 4:&#xA0; 372200.&#xA0; 252175.<br>16-JAN-1962 /&#xA0;&#xA0; 5:&#xA0; 372200.&#xA0; 252582.<br>16-APR-1962 /&#xA0;&#xA0; 6:&#xA0; 372200.&#xA0; 252074.<br>16-JUL-1962 /&#xA0;&#xA0; 7:&#xA0; 372200.&#xA0; 252014.<br>16-OCT-1962 /&#xA0;&#xA0; 8:&#xA0; 372200.&#xA0; 251934.<br>16-JAN-1963 /&#xA0;&#x                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<p><strong>Attachment:
+<a href="pngrXufD17rl4.png" ><tt>rain1.png</tt></a></strong><br>
+<em>Description:</em> PNG image</p>
+<p><strong>Attachment:
+<a href="pngR5Y8qLZaDu.png" ><tt>rain.png</tt></a></strong><br>
+<em>Description:</em> PNG image</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00334" href="msg00334.html">Re: [ferret_users] interpolation to make an uniform NaN in data for all time steps</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00332" href="msg00332.html">Re: [ferret_users] interpolation to make an uniform NaN in data for all time steps</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+<li><strong><a name="00331" href="msg00331.html">Re: [ferret_users] interpolation to make an uniform NaN in data for all time steps</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+<li><strong><a name="00329" href="msg00329.html">Re: [ferret_users] interpolation to make an uniform NaN in data for all time steps</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+<li><strong><a name="00328" href="msg00328.html">Re: [ferret_users] interpolation to make an uniform NaN in data for all time steps</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00325.html">[ferret_users] SVD analysis for Coupled field</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00328.html">Re: [ferret_users] interpolation to make an uniform NaN in data for all time steps</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00325.html">Thread Prev</a>][<a href="msg00328.html">Thread Next</a>][<A HREF="threads2018.html#00326">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

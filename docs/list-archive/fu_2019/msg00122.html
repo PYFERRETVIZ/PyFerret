@@ -1,0 +1,152 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] installing ferret on OSX, 2019 experience -->
+<!--X-From-R13: Oaql Xnpbofba <naql.wnpbofbaNabnn.tbi> -->
+<!--X-Date: Tue, 9 Apr 2019 10:15:15 &#45;0700 -->
+<!--X-Message-Id: 487fb978&#45;d4f6&#45;edc9&#45;7e42&#45;d12dc56c9579@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] installing ferret on OSX, 2019 experience</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00120.html">Thread Prev</a>][<a href="msg00123.html">Thread Next</a>][<A HREF="threads2019.html#00122">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] installing ferret on OSX, 2019 experience</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] installing ferret on OSX, 2019 experience</strong></li>
+<li><strong>From</strong>: <strong>Andy Jacobson &lt;<a href="mailto:andy.jacobson@DOMAIN.HIDDEN">andy.jacobson@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 9 Apr 2019 11:15:10 -0600</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:60.0) Gecko/20100101 Thunderbird/60.6.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Howdy Folks,
+ 
+</pre><tt>I just succeeded in installing ferret 7.442 on a new Macbook running OS 
+</tt><tt>X 10.14.4, and I have some experiences to report.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>(1) Sure I wanted to try out pyferret. My experience with this install 
+</tt><tt>was not good, however. There are confusing circular references all 
+</tt><tt>throughout the website, no possibility of precompiled binaries, and 
+</tt><tt>anaconda is astonishingly complex. It looks like a whole duplicate set 
+</tt><tt>of unix packages, like another MacPorts/Homebrew system. I eventually 
+</tt><tt>got miniconda installed, but could not convince it to download, compile, 
+</tt><tt>install, or run ferret. Happy to rm -rf that whole mess.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>(2) I was able to compile from source by cloning the git repo following 
+</tt><tt><a  rel="nofollow" href="https://github.com/NOAA-PMEL/Ferret/blob/master/README_ferret_mac_homebrew.md">https://github.com/NOAA-PMEL/Ferret/blob/master/README_ferret_mac_homebrew.md</a> 
+</tt><tt>and making appropriate changes to platform_specific.mk.intel-mac and and 
+</tt><tt>site_specific.mk.  Yay for the good old days. My main challenge is that 
+</tt><tt>I use MacPorts, not Homebrew, for the netCDF, readline, szip, etc. 
+</tt><tt>libraries. I could not get MacPorts to install static libraries in many 
+</tt><tt>cases (this apparently needs to be specifically added by package 
+</tt><tt>developer). Here's what I had to do:
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt> - copy /opt/local/bin/gfortran-mp-8 to /opt/local/bin/gfortran. Could 
+</tt><tt>not convince the Make system to use a different FC. This ought to be fixed.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt> - needed to install not just the MacPorts netcdf package, but also 
+</tt><tt>netcdf-fortran.
+</tt><pre style="margin: 0em;">
+ 
+- all LIBDIR variables in site_specific.mk are set to /opt/local/lib
+ 
+</pre><tt> - the references to .a static libraries in 
+</tt><tt>platform_specific.mk.intel-mac had to be changed to .dylib:
+</tt><pre style="margin: 0em;">
+ 
+else ifeq ($(strip $(SZ_LIBDIR)),)
+#       CDFLIB          = $(NETCDF_LIBDIR)/libnetcdff.a \
+#                         $(NETCDF_LIBDIR)/libnetcdf.a \
+#                         $(HDF5_LIBDIR)/libhdf5_hl.a \
+#                         $(HDF5_LIBDIR)/libhdf5.a
+CDFLIB          = $(NETCDF_LIBDIR)/libnetcdff.dylib \
+$(NETCDF_LIBDIR)/libnetcdf.dylib \
+$(HDF5_LIBDIR)/libhdf5_hl.dylib \
+$(HDF5_LIBDIR)/libhdf5.dylib
+else
+#       CDFLIB          = $(NETCDF_LIBDIR)/libnetcdff.a \
+#                         $(NETCDF_LIBDIR)/libnetcdf.a \
+#                         $(HDF5_LIBDIR)/libhdf5_hl.a \
+#                         $(HDF5_LIBDIR)/libhdf5.a \
+#                         $(SZ_LIBDIR)/libsz.a
+CDFLIB          = $(NETCDF_LIBDIR)/libnetcdff.dylib \
+$(NETCDF_LIBDIR)/libnetcdf.dylib \
+$(HDF5_LIBDIR)/libhdf5_hl.dylib \
+$(HDF5_LIBDIR)/libhdf5.dylib \
+$(SZ_LIBDIR)/libsz.dylib
+ 
+ 
+</pre><tt>Sorry if this is a knock on pyferret, but my summary is that the install 
+</tt><tt>system is not ready for prime time.
+</tt><pre style="margin: 0em;">
+ 
+--
+Andy Jacobson
+andy.jacobson@xxxxxxxx
+ 
+NOAA Earth System Research Lab
+Global Monitoring Division
+325 Broadway R/GMD1
+Boulder, Colorado 80305
+ 
+303/497-4916
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00123" href="msg00123.html">Re: [ferret_users] installing ferret on OSX, 2019 experience</a></strong>
+<ul><li><em>From:</em> Karl Smith - NOAA Affiliate</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00120.html">[ferret_users] Pyferret help - plotting ensembles</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00123.html">Re: [ferret_users] installing ferret on OSX, 2019 experience</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00120.html">Thread Prev</a>][<a href="msg00123.html">Thread Next</a>][<A HREF="threads2019.html#00122">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

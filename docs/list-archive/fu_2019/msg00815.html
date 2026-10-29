@@ -1,0 +1,70 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] strange behavior using @DIN for vertical pressure levels -->
+<!--X-From-R13: Jvnblh Pnv <konv1Nhapp.rqh> -->
+<!--X-Date: Thu, 3 Sep 2020 15:52:03 &#45;0700 -->
+<!--X-Message-Id: CAKE4FWrMmA4J&#45;MBbdiDr=r6ucRZy218CFZZTk7nQVw3dAs2Q4Q@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] strange behavior using @DIN for vertical pressure levels</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00814.html">Thread Prev</a>][<a href="msg00819.html">Thread Next</a>][<A HREF="threads2019.html#00815">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] strange behavior using @DIN for vertical pressure levels</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] strange behavior using @DIN for vertical pressure levels</strong></li>
+<li><strong>From</strong>: <strong>Xiaoyu Bai &lt;<a href="mailto:xbai1@DOMAIN.HIDDEN">xbai1@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 3 Sep 2020 18:50:31 -0400</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Dear&#xA0;ferreters,<div><br></div><div>Thank you for updating v7.6 to fix the variable-variable[@AVE] shown as compressed&#xA0;gird problem.&#xA0;</div><div><br></div><div>However, when I applied&#xA0;@DIN to&#xA0;variable-variable[@AVE], it still shows a very different result&#xA0;from variable-number. For instance:</div><div>&#xA0;list/l=9 VA_4CO2_CAM3_MONTHLY_AVAV[J=9]<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;VARIABLE : VA_4CO2_CAM3_MONTHLY_DIN[K=@AVE]<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LONGITUDE: 1.4W(-1.4) to 1.4W(358.6)<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LATITUDE : 65.6S<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;Z (Pa) &#xA0; : 500 to 103750<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;TIME &#xA0; &#xA0; : 16-SEP 00:00 NOLEAP<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; 85926.<br></div><div><font color="#3d85c6">&#xA0; So the ave value is 85926.</font></div><div>Then I compare:</div><div>list/j=9/l=9 test,test7<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;Z (Pa): 500 to 103750<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LONGITUDE: 1.4062W(-1.4062) to 1.4062W<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LATITUDE: 65.578S<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;TIME: 16-SEP 00:00 NOLEAP<br>&#xA0;Column &#xA0;1: TEST is VA_4CO2_CAM3_MONTHLY_DIN[J=9]-VA_4CO2_CAM3_MONTHLY_AVAV[J=9]<br>&#xA0;Column &#xA0;2: TEST7 is VA_4CO2_CAM3_MONTHLY_DIN[J=9]-85926<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; TEST &#xA0; &#xA0; TEST7<br>1000 &#xA0; &#xA0; / &#xA0;1: &#xA0;4.964E+06 &#xA0;4.456E+06<br>2000 &#xA0; &#xA0; / &#xA0;2: &#xA0;2.687E+06 &#xA0;2.179E+06<br>...</div><div><font color="#3d85c6">The results are quite different. And if I apply&#xA0;@DIN:</font></div><div>list/j=9/l=9 test[Z=1000:2000@DIN],test7[Z=1000:2000@DIN]<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LONGITUDE: 1.4062W(-1.4062) to 1.4062W<br>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;LATITUDE: 65.578S<br>&#xA0; &#xA0; &                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00814.html">[ferret_users] Vertical Axis Truncated during REPEAT: GO MYSCRIPT</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00819.html">[ferret_users] CSV file with commas in string fields</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00814.html">Thread Prev</a>][<a href="msg00819.html">Thread Next</a>][<A HREF="threads2019.html#00815">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

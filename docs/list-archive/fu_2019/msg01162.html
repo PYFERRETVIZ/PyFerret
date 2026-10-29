@@ -1,0 +1,92 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Refer to a file with an escaped character -->
+<!--X-From-R13: Ayvivre [negv <byvivre.znegvNyfpr.vcfy.se> -->
+<!--X-Date: Thu, 21 Jul 2022 00:14:45 &#45;0700 -->
+<!--X-Message-Id: 37C7B946&#45;C39A&#45;438C&#45;BE82&#45;981D92D1B1B5@lsce.ipsl.fr -->
+<!--X-Content-Type: multipart/signed -->
+<!--X-Reference: CAK0Qe2McFzrTozHJTNpz3Zxjd=CokMgrvy+7ULYcD777HLB96Q@mail.gmail.com -->
+<!--X-Derived: p7s8186WW_S4X.p7s -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Refer to a file with an escaped character</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01161.html">Thread Prev</a>][<a href="msg01163.html">Thread Next</a>][<A HREF="threads2019.html#01162">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Refer to a file with an escaped character</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>William Kessler - NOAA Federal &lt;<a href="mailto:william.s.kessler@DOMAIN.HIDDEN">william.s.kessler@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Refer to a file with an escaped character</strong></li>
+<li><strong>From</strong>: <strong>Olivier Marti &lt;<a href="mailto:olivier.marti@DOMAIN.HIDDEN">olivier.marti@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 21 Jul 2022 09:14:27 +0200</li>
+<li>Cc: &quot;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&quot; &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>Dkim-filter: OpenDKIM Filter v2.10.3 zmtaauth04.partage.renater.fr 5EB821C0256</li>
+<li>In-reply-to: &lt;CAK0Qe2McFzrTozHJTNpz3Zxjd=CokMgrvy+7ULYcD777HLB96Q@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAK0Qe2McFzrTozHJTNpz3Zxjd=CokMgrvy+7ULYcD777HLB96Q@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td style="">From the "<font face="Courier" class="">/Volumes"</font> path, I guess you're on a Mac (?)<div class=""><br class=""></div><div class="">I've tested it, and its works, with quotes and no escape character.</div><div class=""><br class=""></div><div class=""><div class=""><font face="Courier" class="">yes? use "/Users/marti/My File.nc"</font></div><div class=""><font face="Courier" class="">yes? show data/all</font></div><div class=""><font face="Courier" class="">&nbsp; &nbsp; &nbsp;currently SET data sets:</font></div><div class=""><font face="Courier" class="">&nbsp; &nbsp; 1&gt; /Users/marti/My File.nc &nbsp;(default)</font></div><div class=""><font face="Courier" class="">....</font></div><div class=""><br class=""></div><div class="">I use pyferret 7.6.3 installed with Anaconda (python 3.9), on MacOS X 12.4 (Monterey)</div><div class=""><br class=""></div><div class="">What version do you use ? It could come from the readline library, which is not probably not the same in different version of [py]ferret</div><div class=""><br class=""></div><div class="">Olivier</div><div><br class=""><blockquote type="cite" class=""><div class="">Le 20 juil. 2022 &#xE0; 23:31, William Kessler - NOAA Federal &lt;<a rel="nofollow" href="mailto:william.s.kessler@xxxxxxxx" class="">william.s.kessler@xxxxxxxx</a>&gt; a &#xE9;crit :</div><br class="Apple-interchange-newline"><div class=""><div dir="ltr" class=""><div class="">Hi all -</div><div class=""><br class=""></div><div class="">I have a netcdf file on an external disk with a space character in the directory name. I can find no direct way to bring it into Ferret.</div><div class=""><br class=""></div><div class="">All commands done from within Ferret:</div><div class=""><br class=""></div><div class="">1) The file exists (note the escaped space character in the directory name):</div><div class="">yes? sp ls -l /Volumes/WD\ Backup/Data/P145e_g.e20.G.TL319_t13.control.001.pop.wcit.2007_5day_FOR3p5Ntest.cdf<br class="">-rw-r--r--@ 1 billy &                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+</div></blockquote></div><br class=""><div class="">
+<div dir="auto" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=""><div dir="auto" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=""><div dir="auto" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=""><div dir="auto" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=""><div dir="auto" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=""><div dir="auto" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=""><div dir="auto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+</div>
+<br class=""></div></td></tr></table><p><strong>Attachment:
+<a href="p7s8186WW_S4X.p7s" ><tt>smime.p7s</tt></a></strong><br>
+<em>Description:</em> S/MIME cryptographic signature</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="01163" href="msg01163.html">Re: [ferret_users] Refer to a file with an escaped character</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="01161" href="msg01161.html">[ferret_users] Refer to a file with an escaped character</a></strong>
+<ul><li><em>From:</em> William Kessler - NOAA Federal</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01161.html">[ferret_users] Refer to a file with an escaped character</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01163.html">Re: [ferret_users] Refer to a file with an escaped character</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01161.html">Thread Prev</a>][<a href="msg01163.html">Thread Next</a>][<A HREF="threads2019.html#01162">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

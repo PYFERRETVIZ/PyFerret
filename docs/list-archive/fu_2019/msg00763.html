@@ -1,0 +1,185 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] minor issue: "Ignoring erroneous point_spacing=even attribute." -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Wed, 8 Jul 2020 05:54:38 &#45;0700 -->
+<!--X-Message-Id: CAEwQpa+d6HKw8tjWxaXkjeOmKO1mAGrWEf9kgAfXf8t0jaa7KQ@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAEwQpa+PF1pgqvzDQkbWFe_hMtLmsH5NjzgqWWUc9Pab_UhhWA@mail.gmail.com -->
+<!--X-Reference: be2512de&#45;bec3&#45;18f2&#45;b732&#45;1a45ee8f88be@noaa.gov -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] minor issue: &quot;Ignoring erroneous point_spacing=even attribute.&quot;</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00762.html">Thread Prev</a>][<a href="msg00764.html">Thread Next</a>][<A HREF="threads2019.html#00763">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] minor issue: &quot;Ignoring erroneous point_spacing=even attribute.&quot;</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] minor issue: &quot;Ignoring erroneous point_spacing=even attribute.&quot;</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 8 Jul 2020 21:54:20 +0900</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00762.html">be2512de-bec3-18f2-b732-1a45ee8f88be@noaa.gov</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00761.html">CAEwQpa+PF1pgqvzDQkbWFe_hMtLmsH5NjzgqWWUc9Pab_UhhWA@mail.gmail.com</a>&gt; &lt;<a href="msg00762.html">be2512de-bec3-18f2-b732-1a45ee8f88be@noaa.gov</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div dir="ltr">Hi Ansley,</div><div dir="ltr"><br></div><div>Thank you for the detailed, helpful explanation!</div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Wed, Jul 8, 2020 at 5:54 AM Ansley C. Manke &lt;<a rel="nofollow" href="mailto:ansley.b.manke@xxxxxxxx">ansley.b.manke@xxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+ 
+ 
+ 
+<div>When a coordinates are read in on
+initializing a dataset, they&#39;re checked for regular spacing using
+the data type of the coordinates in the file, so a floating-point
+axis is checked using single-precision testing.</div></blockquote><div>&#xA0;[ . . . ]</div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div>&#xA0;But, on writing a netCDF dataset, Ferret/PyFerret always
+writes coordinates in double precision.&#xA0;</div></blockquote><div><br></div><div>Has that changed recently?&#xA0; Initially I suspected that that was the reason, but the new netCDF file from the SAVE command has single-precision axes:</div><div><br></div><font face="monospace">float LON(LON) ;<br>		LON:units = &quot;degrees_east&quot; ;<br>		LON:modulo = 360.f ;<br>		LON:point_spacing = &quot;even&quot; ;<br>		LON:axis = &quot;X&quot; ;<br></font><div><font face="monospace">LON:standard_name = &quot;longitude&quot; ;&#xA0;<br></font></div><div><font face="monospace">. . .</font></div><div><font face="monospace"><br></font></div><div><font face="arial, sans-serif">(from</font><font face="monospace"> ncdump -h <a rel="nofollow" href="http://tmp.nc">tmp.nc</a> </font><font face="arial, sans-serif">)&#xA0; This causes an &quot;irregular axis&quot; warning for LON in this case on PyFerret v7.6 on macOS .&#xA0; In the original netCDF file</font></div><div><font face="arial, sans-serif"><br></font></div><div><font face="monospace">float lon(lon) ;<br>		lon:units = &quot;degree east&quot; ;<br></font></div><div><br></div><div>(It was produced by a colleague and I don&#39;t have much control over it).&#xA0; I&#39;ve found that some of the values of longitude (<font face="monospace">ncdump -p9 -c . . .</font> )&#xA0; are different between the two datasets.</div><div><br></div><div>As you say below, you are in the middle of moving toward preserving original data and names, and I guess this particular transition to recovering axis data types has been implemented.</div><div><br></div><div>But, I still don&#39;t understand exactly what&#39;s causing the problem,&#xA0; because all the bits of a single-precision number are preserved by the single -&gt; double conversion and the re-conversion double -&gt; single should always recover the original single precision value, bit-by-bit.&#xA0; Perhaps something beyond straightforward conversions is happening?</div><div><br></div><div>Anyway, this is a harmelss issue.&#xA0; I just wa                                                                                                                                                                                                                                  
+<br>
+It looks as&#xA0; though we changed the testing for regular-spacing
+somewhere at about version 7.4, and I&#39;ll have a look at that.&#xA0; Also,
+we&#39;ve been working along in general on changes so that any netCDF
+files that Ferret writes as subsets or otherwise based on netcdf
+files, match what is in the input files.&#xA0; Things like upcasing
+variable names and ignoring attributes should at least be
+controllable. In recent versions we write data using the same data
+type as the input file, and it should be easy to do the same for
+axes, so for this example the y-axis would be written as single
+precision coordinate variable.&#xA0; So we&#39;ll have a look at that too.<br>
+<br>
+Ansley<br>
+<br>
+<div>On 7/3/2020 6:51 AM, Ryo Furue wrote:<br>
+</div>
+<blockquote type="cite">
+ 
+<div dir="ltr">Ferret Team,
+<div><br>
+</div>
+<div>I searched our mailing archive but didn&#39;t find it there.</div>
+<div><br>
+</div>
+<div>My original netCDF file has an&#xA0;x axis like</div>
+<div><br>
+</div>
+<div>&#xA0; &#xA0;<font face="monospace">float lat = 9.95, 10.05, 10.15, .
+. .</font></div>
+<div><br>
+</div>
+<div>without the &quot;point_spacing=even&quot; attribute.</div>
+<div><br>
+</div>
+<div>I open the file in PyFerret and save just one timestep (L)
+into a new file:</div>
+<div><br>
+</div>
+<div>&#xA0; &#xA0; <font face="monospace">save/file=<a rel="nofollow" href="http://tmp.nc/l=10">tmp.nc/l=10</a>
+var</font></div>
+<div><br>
+</div>
+<div>I then open this new file and PyFerret says,</div>
+<div><br>
+</div>
+<div><font face="monospace">&#xA0; &#xA0; *** NOTE: Axis &quot;LAT&quot; is
+irregular. Ignoring erroneous point_spacing=even attribute.</font><br>
+</div>
+<div><br>
+</div>
+<div>Indeed the new file has gotten the &quot;point_spacing=even&quot;
+attribute.</div>
+<div><br>
+</div>
+<div>I come across this problem from time to time.&#xA0; (Today I
+reproduced this on PyFerret v7.5 on Linux.)</div>
+<div><br>
+</div>
+<div>The axis is a single-precision real and the&#xA0;gridpoints&#xA0;may
+not be&#xA0; precisely&#xA0;represented.&#xA0; So, I&#39;m not surprised&#xA0;that
+this axis isn&#39;t regarded as &quot;even&quot;.&#xA0; That is, PyFerret is
+doing the right thing when it reads the new netCDF file.&#xA0; So,
+it&#39;s probably a mistake that it added the &quot;even&quot; attribute
+when it saved the data.</div>
+<div><br>
+</div>
+<div>Strangely, the longitude axis -0.05, 0.05, 0.15, . . . ,
+which originally didn&#39;t have a point_spacing attribute either,
+got a point_spacing = &quot;<font color="#ff0000">un</font>even&quot;
+attribute in the new file!</div>
+<div><br>
+</div>
+<div>Cheers,</div>
+<div>Ryo</div>
+<div><br>
+</div>
+</div>
+</blockquote>
+<br>
+<pre cols="72">-- 
+Ansley Manke
+Science Data Integration Group
+NOAA Pacific Marine Environmental Laboratory
+7600 Sand Point Way NE
+Seattle WA 98115
+ 
+I am currently teleworking and am available Tue-Wed-Thu.</pre>
+</div>
+ 
+</blockquote></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00764" href="msg00764.html">Re: [ferret_users] minor issue: &quot;Ignoring erroneous point_spacing=even attribute.&quot;</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00761" href="msg00761.html">[ferret_users] minor issue: &quot;Ignoring erroneous point_spacing=even attribute.&quot;</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00762" href="msg00762.html">Re: [ferret_users] minor issue: &quot;Ignoring erroneous point_spacing=even attribute.&quot;</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00762.html">Re: [ferret_users] minor issue: &quot;Ignoring erroneous point_spacing=even attribute.&quot;</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00764.html">Re: [ferret_users] minor issue: &quot;Ignoring erroneous point_spacing=even attribute.&quot;</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00762.html">Thread Prev</a>][<a href="msg00764.html">Thread Next</a>][<A HREF="threads2019.html#00763">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

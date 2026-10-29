@@ -1,0 +1,128 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Re: decadal time axis -->
+<!--X-From-R13: [nepb ina Vhygra <[nepb.VhygraNhvo.ab> -->
+<!--X-Date: Thu, 26 Sep 2019 03:53:31 &#45;0700 -->
+<!--X-Message-Id: 20190926125321.0a9e47a2@gfi063209.klientdrift.uib.no -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: alpine.DEB.2.20.1909261136180.7486@lsce3235.lsce.ipsl.fr -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Re: decadal time axis</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00363.html">Thread Prev</a>][<a href="msg00365.html">Thread Next</a>][<A HREF="threads2019.html#00364">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Re: decadal time axis</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>James Orr &lt;<a href="mailto:James.Orr@DOMAIN.HIDDEN">James.Orr@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Re: decadal time axis</strong></li>
+<li><strong>From</strong>: <strong>Marco van Hulten &lt;<a href="mailto:Marco.Hulten@DOMAIN.HIDDEN">Marco.Hulten@xxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 26 Sep 2019 12:53:21 +0200</li>
+<li>Cc: Ferret Users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00363.html">alpine.DEB.2.20.1909261136180.7486@lsce3235.lsce.ipsl.fr</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Organization: University of Bergen</li>
+<li>References: &lt;<a href="msg00363.html">alpine.DEB.2.20.1909261136180.7486@lsce3235.lsce.ipsl.fr</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>James, others&#x2014;
+ 
+Thanks, this solved my issue!
+ 
+On 26 Sep 11:39 James Orr wrote:
+&gt; In response to your recent question on the ferret list, try something like the 
+&gt; following:
+&gt; 
+&gt; define axis/t=&quot;1-jul-1000&quot;:&quot;1-jul-2000&quot;:1/units=&quot;years&quot;/npoints=100/cal=noleap/edges tdecadal
+ 
+I tried this, and indeed
+ 
+ 
+yes? sh grid gdecadal
+GRID GDECADAL
+name       axis              # pts   start                end
+normal    X
+normal    Y
+normal    Z
+TDECADAL  TIME               100 r   01-JUL-1005 00:00    01-JUL-1995 00:00
+yes? sh axis tdecadal
+name       axis              # pts   start                end
+TDECADAL  TIME               100 r   01-JUL-1005 00:00    01-JUL-1995 00:00
+T0 = 01-JAN-1000
+CALENDAR = NOLEAP
+Axis span (to cell edges) = 1000
+yes? plot sssO12[d=1,i=1,j=100,k=1,gt=gdecadal]
+**ERROR: regridding: only @ASN regridding between calendar and
+non-calendar axes: SSSO12
+yes? plot sssO12[d=1,i=1,j=100,k=1,gt=gdecadal@asn]
+yes? 
+ 
+ 
+The last command works and the figure shows something decent!
+ 
+I guess that the @ASN is applied first to get rid of the (wrong) time
+axis, and then the gdecadal grid is used (which has normal x, y and z
+axes and tdecadal as the time axis).
+ 
+For me, the essential points from James' solution are the 'npoints'
+specification and taking the outer boundaries of the timespan.
+ 
+&#x2014;Marco
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00365" href="msg00365.html">[ferret_users] time axis of over 9999 yr</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00363" href="msg00363.html">[ferret_users] response to ferret question on decadal time axis</a></strong>
+<ul><li><em>From:</em> James Orr</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00363.html">[ferret_users] response to ferret question on decadal time axis</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00365.html">[ferret_users] time axis of over 9999 yr</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00363.html">Thread Prev</a>][<a href="msg00365.html">Thread Next</a>][<A HREF="threads2019.html#00364">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

@@ -1,0 +1,85 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Problems with netcdf output and zaxreplace -->
+<!--X-From-R13: Uvbetvb Uenssvab <t.tenssvabNgvz.vg> -->
+<!--X-Date: Thu, 16 Apr 2020 07:19:46 &#45;0700 -->
+<!--X-Message-Id: 171835bf252.g.graffino@tim.it -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Derived: cdfs5bzdRrcKv.cdf -->
+<!--X-Derived: binWwHxM_Oc98.bin -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Problems with netcdf output and zaxreplace</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00609.html">Thread Prev</a>][<a href="msg00615.html">Thread Next</a>][<A HREF="threads2019.html#00614">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Problems with netcdf output and zaxreplace</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Problems with netcdf output and zaxreplace</strong></li>
+<li><strong>From</strong>: <strong>Giorgio Graffino &lt;<a href="mailto:g.graffino@DOMAIN.HIDDEN">g.graffino@xxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 16 Apr 2020 16:19:33 +0200 (CEST)</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Reply-to: Giorgio Graffino &lt;<a href="mailto:g.graffino@DOMAIN.HIDDEN">g.graffino@xxxxxx</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div>Dear Ferreters,</div><div>hope you can help me with this. <br></div><div><br></div><div>I'm using Ferret (v6.842) on a cluster machine. My purpose is to regrid the meridional mass transport (time depth lat lon) into density space (time density lat lon) to compute the transport between some density layers. I'm writing a script based on this (https://github.com/NOAA-PMEL/Ferret/blob/master/jnls/examples/depth_to_density_demo.jnl), which is using zaxreplace. I also found something about auxiliary regridding (<a href="../../faq/depth-axis-to-density-axis.html">../../faq/depth-axis-to-density-axis</a>), but it requires a newer version of Ferret.</div><div><br></div><div>I'm using the script on several CMIP6 models, and saving the resulting time series as netcdf files for further analysis. I'm including as attachments the script and one of the output files, not the input files being too big. I'm facing two problems, and I can't find anything useful on the archives.</div><div><br></div><div>1) First problem: for most models Ferret isn't producing any useful output files, because of error messages like this one:<br></div><div><br></div><div>TMAP ERR: error in line definition<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; file coords dont match variable coords on axis LAT153_153</div><div><br></div><div>As a result, I'm left with empty files. The point is that no LAT153_153 should exist, the variable being a time series. There is nothing special about 153, since other models produce different errors (LAT122_122, LAT124_124, LAT156_156, and so on). What is even more puzzling is that the computed variables are alright, because I can plot them with Ferret. I'm just not able to attach them as netcdf variables, and the resulting file is empty. Why is Ferret defining such axis for a time series?<br></div><div><br></div><div>2) Second problem: for other models Ferret is complaining about the axis transformation. The error in this case is:</div><div><br></div><div>**ERROR: regridding: only @ASN regridding between calendar and<br>&nbsp;&nbsp;&nbsp;&nbs                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+<a href="cdfs5bzdRrcKv.cdf" ><tt>STC_rho_historical_EC-Earth3_pacific.nc</tt></a></strong><br>
+<em>Description:</em> Cdf file</p>
+<p><strong>Attachment:
+<a href="binWwHxM_Oc98.bin" ><tt>generate_STC_rho_CMIP6.jnl</tt></a></strong><br>
+<em>Description:</em> Binary data</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00616" href="msg00616.html">Re: [ferret_users] Problems with netcdf output and zaxreplace</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+<li><strong><a name="00615" href="msg00615.html">Re: [ferret_users] Problems with netcdf output and zaxreplace</a></strong>
+<ul><li><em>From:</em> William Kessler</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00609.html">[ferret_users] PyFerret on Windows?</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00615.html">Re: [ferret_users] Problems with netcdf output and zaxreplace</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00609.html">Thread Prev</a>][<a href="msg00615.html">Thread Next</a>][<A HREF="threads2019.html#00614">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

@@ -1,0 +1,93 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] axlabp fails for time axis -->
+<!--X-From-R13: Ayvivre [negv <byvivre.znegvNyfpr.vcfy.se> -->
+<!--X-Date: Mon, 23 Nov 2020 02:32:34 &#45;0800 -->
+<!--X-Message-Id: F722A2CE&#45;5C09&#45;47C7&#45;A6D8&#45;E0BE45598A73@lsce.ipsl.fr -->
+<!--X-Content-Type: multipart/signed -->
+<!--X-Reference: CAEwQpa+AnMFFEPPdC1agXSOXuRM0C=cBTkq7Gk5CwtbTb3Dw4A@mail.gmail.com -->
+<!--X-Derived: pngn6lezA6Ba8.png -->
+<!--X-Derived: p7suK6_nHE8Z2.p7s -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] axlabp fails for time axis</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00873.html">Thread Prev</a>][<a href="msg00875.html">Thread Next</a>][<A HREF="threads2019.html#00874">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] axlabp fails for time axis</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] axlabp fails for time axis</strong></li>
+<li><strong>From</strong>: <strong>Olivier Marti &lt;<a href="mailto:olivier.marti@DOMAIN.HIDDEN">olivier.marti@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 23 Nov 2020 11:31:50 +0100</li>
+<li>Dkim-filter: OpenDKIM Filter v2.10.3 zmtaauth02.partage.renater.fr 08FF7A046A</li>
+<li>In-reply-to: &lt;CAEwQpa+AnMFFEPPdC1agXSOXuRM0C=cBTkq7Gk5CwtbTb3Dw4A@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAEwQpa+AnMFFEPPdC1agXSOXuRM0C=cBTkq7Gk5CwtbTb3Dw4A@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td style="">Ryo,<div class=""><br class=""></div><div class="">Time axes always request for a special, dedicated treatment :</div><div class=""><br class=""></div><div class=""><div class="">SET DATA sample.nc</div><div class=""><br class=""></div><div class="">FILL/TRANSPOSE/HLIMITS=34S:22S/VLIMITS=0:365/NOKEY/SET_UP eta</div><div class="">PPL txlabp, 1&nbsp;</div><div class="">PPL FILL</div><div class=""><br class=""></div></div><div class=""><br class=""></div><div class="">However, even if the axis is on the right like requested, the result is pretty bad on my plot :-((</div><div class=""><br class=""></div><div class="">(with&nbsp;PyFerret v7.63)</div><div class=""><br class=""></div><div class="">Olivier</div><div class=""><br class=""></div><div class=""><img apple-inline="yes" id="D8F1A987-0DD0-4A59-B6F6-878E0EB3FE4A" src="pngn6lezA6Ba8.png" class=""><br class=""><div><br class=""><blockquote type="cite" class=""><div class="">Le 23 nov. 2020 &#xE0; 09:16, Ryo Furue &lt;<a rel="nofollow" href="mailto:furue@xxxxxxxxxx" class="">furue@xxxxxxxxxx</a>&gt; a &#xE9;crit :</div><br class="Apple-interchange-newline"><div class=""><span style="caret-color: rgb(0, 0, 0); font-family: Helvetica; font-size: 14px; font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; float: none; display: inline !important;" class="">set data<span class="Apple-converted-space">&nbsp;</span></span><a rel="nofollow" href="http://sample.nc/" style="font-family: Helvetica; font-size: 14px; font-style: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: auto; word-spacing: 0px; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;" class="">sample.nc</a><br style="caret-color: rgb(0, 0, 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+<div dir="auto" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=""><div dir="auto" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=""><div dir="auto" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=""><div dir="auto" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=""><div dir="auto" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=""><div dir="auto" style="caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration: none; word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class=""><div dir="auto                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+</div>
+<br class=""></div></td></tr></table><p><strong>Attachment:
+<a href="p7suK6_nHE8Z2.p7s" ><tt>smime.p7s</tt></a></strong><br>
+<em>Description:</em> S/MIME cryptographic signature</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00877" href="msg00877.html">Re: [ferret_users] axlabp fails for time axis</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00875" href="msg00875.html">Re: [ferret_users] axlabp fails for time axis</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00873" href="msg00873.html">[ferret_users] axlabp fails for time axis</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00873.html">[ferret_users] axlabp fails for time axis</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00875.html">Re: [ferret_users] axlabp fails for time axis</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00873.html">Thread Prev</a>][<a href="msg00875.html">Thread Next</a>][<A HREF="threads2019.html#00874">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

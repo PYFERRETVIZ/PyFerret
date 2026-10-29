@@ -1,0 +1,115 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Decimal digits on a plot axis -->
+<!--X-From-R13: Ivyyvnz Yrffyre <jvyyvnz.f.xrffyreNabnn.tbi> -->
+<!--X-Date: Wed, 28 Jul 2021 17:16:19 &#45;0700 -->
+<!--X-Message-Id: 11204225&#45;7E92&#45;4754&#45;96C9&#45;733B47292CAC@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CAKKF8qo5Hf1TMOt2X2rQaF0_X060&#45;0mezQAcaUM_ovz5Gx5odQ@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Decimal digits on a plot axis</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00984.html">Thread Prev</a>][<a href="msg00987.html">Thread Next</a>][<A HREF="threads2019.html#00985">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Decimal digits on a plot axis</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Claude-Michel Nzotungicimpaye &lt;<a href="mailto:miklonzo.science@DOMAIN.HIDDEN">miklonzo.science@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Decimal digits on a plot axis</strong></li>
+<li><strong>From</strong>: <strong>William Kessler &lt;<a href="mailto:william.s.kessler@DOMAIN.HIDDEN">william.s.kessler@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 28 Jul 2021 17:16:15 -0700</li>
+<li>Cc: Ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00984.html">CAKKF8qo5Hf1TMOt2X2rQaF0_X060-0mezQAcaUM_ovz5Gx5odQ@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00984.html">CAKKF8qo5Hf1TMOt2X2rQaF0_X060-0mezQAcaUM_ovz5Gx5odQ@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>This is controlled by PPL XFOR and YFOR:
+ 
+In each plot panel:
+ 
+PLOT/SET ....
+PPL XFOR,(f5.2); PPL YFOR,(...)   ! fortran-style formats
+PPL PLOT
+ 
+You can also control lat/lon labels this way (for example to force these if the data is not on a lat-lon grid but it should be):
+ 
+PPL YFOR,(i5,''lat'')   ! force integer labels
+PPL YFOR,(f5.1,''lon'')   ! single decimal label; I think you must allow for 5 digits
+ 
+In the above, those are two single quotes around lat and lon, not a double quote as my mail tool thinks I want!
+ 
+Using the two-single-quote method you can add other things, for example ''#C'' etc. Search the documentation for XFOR and YFOR.
+ 
+Billy
+ 
+&gt; On Jul 28, 2021, at 4:24 PM, Claude-Michel Nzotungicimpaye &lt;miklonzo.science@xxxxxxxxx&gt; wrote:
+&gt; 
+&gt; Hi Ferreters,
+&gt; 
+&gt; Is there a way of controlling the number of decimal digits (or decimal figures) for labels on a plot axis?
+&gt; 
+&gt; To illustrate what I mean, please check the attached figure. For example, I'd like the horizontal axis in panel (b) to have two-decimal numbers -0.01, 0 (or 0.00 at most) and 0.01, instead of the four-decimal numbers currently displayed by default.
+&gt; 
+&gt; Thanks,
+&gt; &lt;Figure_FerretList.png&gt;
+ 
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00987" href="msg00987.html">Re: [ferret_users] Decimal digits on a plot axis</a></strong>
+<ul><li><em>From:</em> Claude-Michel Nzotungicimpaye</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00984" href="msg00984.html">[ferret_users] Decimal digits on a plot axis</a></strong>
+<ul><li><em>From:</em> Claude-Michel Nzotungicimpaye</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00984.html">[ferret_users] Decimal digits on a plot axis</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00987.html">Re: [ferret_users] Decimal digits on a plot axis</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00984.html">Thread Prev</a>][<a href="msg00987.html">Thread Next</a>][<A HREF="threads2019.html#00985">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

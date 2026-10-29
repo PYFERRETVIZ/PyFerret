@@ -1,0 +1,100 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Edges and @AVG -->
+<!--X-From-R13: "Ivyyvnz E. Yrffyre" <jvyyvnz.f.xrffyreNabnn.tbi> -->
+<!--X-Date: Tue, 25 Feb 2020 13:28:19 &#45;0800 -->
+<!--X-Message-Id: AEB9D751&#45;C106&#45;4BDC&#45;8808&#45;4313B0CE067E@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CAP06G6Qt&#45;GLxUqLY0AA+aHEEVq_3wTKhB6cLC3yFeMVtUjOVcg@mail.gmail.com -->
+<!--X-Reference: CAEwQpa+SgCVR19G5bx2KXzNOKOKV52N7068YiTcU&#45;rbEHrDQTA@mail.gmail.com -->
+<!--X-Reference: CAP06G6QuNKn59BwAS7udR3i5Ef37dhEo74ku5xy95f_LxeSb5Q@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Edges and @AVG</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00542.html">Thread Prev</a>][<a href="msg00544.html">Thread Next</a>][<A HREF="threads2019.html#00543">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Edges and @AVG</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Alexander Audet &lt;<a href="mailto:alexander.c.audet@DOMAIN.HIDDEN">alexander.c.audet@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Edges and @AVG</strong></li>
+<li><strong>From</strong>: <strong>&quot;William S. Kessler&quot; &lt;<a href="mailto:william.s.kessler@DOMAIN.HIDDEN">william.s.kessler@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 25 Feb 2020 13:28:14 -0800</li>
+<li>Cc: &quot;William S. Kessler&quot; &lt;<a href="mailto:william.s.kessler@DOMAIN.HIDDEN">william.s.kessler@xxxxxxxx</a>&gt;,        Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;, ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00542.html">CAP06G6QuNKn59BwAS7udR3i5Ef37dhEo74ku5xy95f_LxeSb5Q@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00540.html">CAP06G6Qt-GLxUqLY0AA+aHEEVq_3wTKhB6cLC3yFeMVtUjOVcg@mail.gmail.com</a>&gt; &lt;<a href="msg00541.html">CAEwQpa+SgCVR19G5bx2KXzNOKOKV52N7068YiTcU-rbEHrDQTA@mail.gmail.com</a>&gt; &lt;<a href="msg00542.html">CAP06G6QuNKn59BwAS7udR3i5Ef37dhEo74ku5xy95f_LxeSb5Q@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>
+ 
+&gt; On Feb 25, 2020, at 12:26 PM, Alexander Audet &lt;alexander.c.audet@xxxxxxxxx&gt; wrote:
+&gt; 
+&gt; The full fix would probably be to first regrid it into proper 1-month time slots using the @ASN transformation as described in the above link, then regrid it a second time into the seasonal 3 months using the @AVG.
+ 
+There's a danger here: The first step of averaging to put the data onto explicit months when the time points are centered on the first of the month is a smoothing operation before you start to do anything else. Won't that have a larger effect than the length-of-month problem?
+ 
+It seems to me that &quot;1/2 December, January, February, and 1/2 of March&quot; is the right way (least smoothing) to define DJF. You could do this manually, or use @ave specifying dates; in that case if Ferret understands the calendar it will do this correctly.
+ 
+Billy K
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00544" href="msg00544.html">Re: [ferret_users] Edges and @AVG</a></strong>
+<ul><li><em>From:</em> Alexander Audet</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00540" href="msg00540.html">[ferret_users] Edges and @AVG</a></strong>
+<ul><li><em>From:</em> Alexander Audet</li></ul></li>
+<li><strong><a name="00541" href="msg00541.html">Re: [ferret_users] Edges and @AVG</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00542" href="msg00542.html">Re: [ferret_users] Edges and @AVG</a></strong>
+<ul><li><em>From:</em> Alexander Audet</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00542.html">Re: [ferret_users] Edges and @AVG</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00544.html">Re: [ferret_users] Edges and @AVG</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00542.html">Thread Prev</a>][<a href="msg00544.html">Thread Next</a>][<A HREF="threads2019.html#00543">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

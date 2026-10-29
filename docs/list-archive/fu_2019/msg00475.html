@@ -1,0 +1,83 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] ERA5 only shows up as a time&#45;series -->
+<!--X-From-R13: Oafyrl [naxr &#45; @AOO Ossvyvngr <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Thu, 2 Jan 2020 10:22:33 &#45;0800 -->
+<!--X-Message-Id: CAJb4+dwBvggbqx13WT4Cw=wviHcKbHAbsk9PG4XBbidh5_WBfg@mail.gmail.com -->
+<!--X-Content-Type: multipart/related -->
+<!--X-Reference: CAP06G6SzQZarQpgmzgnyufU0RP4NXW4_W7TgnytibyYK9B=+Gw@mail.gmail.com -->
+<!--X-Derived: pngT__bLSESe0.png -->
+<!--X-Derived: pnglf4tPvvDTl.png -->
+<!--X-Derived: pngycWx1i70bA.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] ERA5 only shows up as a time-series</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00474.html">Thread Prev</a>][<a href="msg00476.html">Thread Next</a>][<A HREF="threads2019.html#00475">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] ERA5 only shows up as a time-series</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] ERA5 only shows up as a time-series</strong></li>
+<li><strong>From</strong>: <strong>Ansley Manke - NOAA Affiliate &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 2 Jan 2020 10:22:21 -0800</li>
+<li>Cc: Ferret users mailing list &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;CAP06G6SzQZarQpgmzgnyufU0RP4NXW4_W7TgnytibyYK9B=+Gw@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAP06G6SzQZarQpgmzgnyufU0RP4NXW4_W7TgnytibyYK9B=+Gw@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Hi Alexander,</div><div><br></div><div>I believe this is because of the variable namse in the file. &quot;T&quot; is a reserved name in Ferret/PyFerret, referring to coordiantes in the T direction. This means thats SHOW GRID T is interpreted as asking about the &quot;abstract&quot; T axis, a pre-defined general axis in the T direction. <br></div><div><br></div><div>When there are conflicts like this ,you can refer to the file variable T by enclosing it in single quotes, &#39;T&#39;</div><div><br></div><div>Here&#39;s the documentation abou this:<br></div><div><a rel="nofollow" href="../../documentation/users-guide/variables-xpressions/VARIABLES.html#_VPINDEXENTRY_filevars">../../documentation/users-guide/variables-xpressions/VARIABLES#_VPINDEXENTRY_filevars</a></div><div><br></div><div>One thing you might do is to rename the variable in the Ferret session:</div><div><a rel="nofollow" href="../../documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_1759">../../documentation/users-guide/commands-reference/SET.html#_VPINDEXENTRY_1759</a></div><div><br></div><div>So you might do something like this, with a name that makes sense for the data<br></div><div><br></div><div>yes? use era_T_W_A1.nc</div><div>yes? set variable/name=temperature &#39;T&#39;</div><div><br></div><div>Then within the session, refer to 
+temperature instead of T. <br></div><div><br></div><div>Ansley<br></div><div><br></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Sun, Dec 29, 2019 at 8:02 AM Alexander Audet &lt;<a rel="nofollow" href="mailto:alexander.c.audet@xxxxxxxxx">alexander.c.audet@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr">Hello,<div>     I recently tried downloading and using portions of ERA5. However, it appears that ferret only recognizes ERA5 as a time series instead of as 4D data.</div><div>     I have experimented a little bit with<b>show grid</b>and even<b>set</b>ting a grid. This has revealed that while <b>Show</b>ing the data suggests that there is data in 4 dimensions, showing the grid for one of the data variables shows that the grid is abstract and entirely in the T dimension.</div><div><br></div><div><img src="pngT__bLSESe0.png" alt="image (3).png" width="444" height="196"><b><br></b></div><div><br></div><div><b>    Set</b>ting a grid then<b>use</b>(ing) the dataset seems to give it a grid structure, but when I try to<b>list</b>a subset of the dataset (doesn&#39;t allow me to list the whole dataset) the Lat-Long coordinatespaces on the grid don&#39;t seem to have data (the data points listed seem to only be listed with time).</div><div><br></div><div><div><img src="pnglf4tPvvDTl.png" alt="image.png" width="444" height="213"><br></div></div><div><div><img src="pngycWx1i70bA.png" alt="image.png" width="444" height="223"><br></div></div><div><br></div><div>     I both tried downloading directly from the Copernicus Climate Data Store and importing the data into my Windows 10 bash Ubuntu whichcreated a file with a .nc extension, and downloadingthe data using cdsapi(<strong style="box-sizi                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+</blockquote></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00474" href="msg00474.html">[ferret_users] ERA5 only shows up as a time-series</a></strong>
+<ul><li><em>From:</em> Alexander Audet</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00474.html">[ferret_users] ERA5 only shows up as a time-series</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00476.html">[ferret_users] Selecting groups of data</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00474.html">Thread Prev</a>][<a href="msg00476.html">Thread Next</a>][<A HREF="threads2019.html#00475">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

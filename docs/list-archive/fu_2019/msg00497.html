@@ -1,0 +1,147 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Python externat function with several arguments with different shapes. -->
+<!--X-From-R13: Ayvivre [negv <byvivre.znegvNyfpr.vcfy.se> -->
+<!--X-Date: Thu, 23 Jan 2020 02:53:09 &#45;0800 -->
+<!--X-Message-Id: 748B98C5&#45;C36F&#45;4AC7&#45;94CD&#45;4A8EB83083C2@lsce.ipsl.fr -->
+<!--X-Content-Type: multipart/signed -->
+<!--X-Derived: p7segY6zN6TJc.p7s -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Python externat function with several arguments with different shapes.</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00496.html">Thread Prev</a>][<a href="msg00498.html">Thread Next</a>][<A HREF="threads2019.html#00497">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Python externat function with several arguments with different shapes.</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Python externat function with several arguments with different shapes.</strong></li>
+<li><strong>From</strong>: <strong>Olivier Marti &lt;<a href="mailto:olivier.marti@DOMAIN.HIDDEN">olivier.marti@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 23 Jan 2020 11:52:58 +0100</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>Hello everybody,
+ 
+I'm trying to build a python external function (PyEF). It should build an histogram from a list of classes. So the input arguments will be a Ferret array, and a list of classes. With a call like :
+ 
+histo(  SIICECOV[L=1,K=1])         , XSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )
+or
+histo( XSEQUENCE(SIICECOV[L=1,K=1]), XSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )
+or
+histo( XSEQUENCE(SIICECOV[L=1,K=1]), YSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )
+ 
+But it always fails. For instance :
+ 
+&gt; STAT histo( XSEQUENCE(SIICECOV[L=1,K=1]), XSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )
+**ERROR: inconsistent sizes of data regions: X axis
+XSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) has 5 points (I=1:5)
+expression has 9216 points (I=0001:9216)
+STAT histo( XSEQUENCE(SIICECOV[L=1,K=1]), XSEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )
+Command file, command group, or REPEAT execution aborted
+ 
+ 
+or 
+ 
+&gt; STAT histo( XSEQUENCE(SIICECOV[L=1,K=1]), XYEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )
+**ERROR: command syntax: XYEQUENCE({0., 0.1, 0.2, 1.0, 2.0})
+unknown function &quot;XYEQUENCE&quot;
+STAT histo( XSEQUENCE(SIICECOV[L=1,K=1]), XYEQUENCE({0., 0.1, 0.2, 1.0, 2.0}) )
+Command file, command group, or REPEAT execution aborted
+ 
+ 
+ 
+ 
+Before performing any computation, I cannot find a way to write an external function that accept two arguments with different shapes. Any hint or exemple ?
+ 
+Thanks,
+ 
+Olivier
+ 
+The python function :
+ 
+Example Ferret external function written in Python
+'''
+import numpy
+import pyferret
+ 
+def ferret_init(id):
+'''Creates and returns the initialization dictionary for this PyEF'''
+initdict = { &quot;numargs&quot; : 2, &quot;descript&quot;: &quot;Test function&quot;,
+&quot;argnames&quot;: (&quot;A&quot;, &quot;Histogram boundaries&quot;),
+}
+return initdict
+ 
+def ferret_compute(id, result, result_bad_flag, inputs, input_bad_flags):
+''' Essai d'histogramme
+ARG1 is the array. 
+ARG2 is the list of class boundaries
+'''
+ 
+badmask = ( numpy.fabs(inputs[pyferret.ARG1] - input_bad_flags[pyferret.ARG1]) &lt; 1.0E-5 )
+goodmask = numpy.logical_not(badmask)
+ 
+result[badmask]  = input_bad_flags[pyferret.ARG1]
+result[goodmask] = inputs[pyferret.ARG1][goodmask]
+ 
+&#x2014; 
+Olivier Marti  - LSCE B&#xE2;t 714 p. 1049
+Tel : +33 1 69 08 77 27
+<a  rel="nofollow" href="mailto:olivier.marti@xxxxxxxxxxxx">mailto:olivier.marti@xxxxxxxxxxxx</a>
+ 
+ 
+</pre><p><strong>Attachment:
+<a href="p7segY6zN6TJc.p7s" ><tt>smime.p7s</tt></a></strong><br>
+<em>Description:</em> S/MIME cryptographic signature</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00498" href="msg00498.html">Re: [ferret_users] Python externat function with several arguments with different shapes.</a></strong>
+<ul><li><em>From:</em> Karl Smith - NOAA Affiliate</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00496.html">[ferret_users] Memory error</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00498.html">Re: [ferret_users] Python externat function with several arguments with different shapes.</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00496.html">Thread Prev</a>][<a href="msg00498.html">Thread Next</a>][<A HREF="threads2019.html#00497">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

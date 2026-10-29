@@ -1,0 +1,124 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] mp_stereographic_south -->
+<!--X-From-R13: Zri Fnenfbi <yriNzha.pn> -->
+<!--X-Date: Wed, 13 Mar 2019 15:58:57 &#45;0700 -->
+<!--X-Message-Id: alpine.LNX.2.21.1.1903132023500.8394@garfield.cs.mun.ca -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CABKKfvVRDXATRc_19TVipwHKKd+j9WzjC=3JgpjKTVDNk5g9bA@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] mp_stereographic_south</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00070.html">Thread Prev</a>][<a href="msg00106.html">Thread Next</a>][<A HREF="threads2019.html#00069">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] mp_stereographic_south</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Muyin Wang - NOAA Affiliate &lt;<a href="mailto:muyin.wang@DOMAIN.HIDDEN">muyin.wang@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] mp_stereographic_south</strong></li>
+<li><strong>From</strong>: <strong>Lev Tarasov &lt;<a href="mailto:lev@DOMAIN.HIDDEN">lev@xxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 13 Mar 2019 20:28:44 -0230 (NDT)</li>
+<li>Cc: <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></li>
+<li>In-reply-to: &lt;CABKKfvVRDXATRc_19TVipwHKKd+j9WzjC=3JgpjKTVDNk5g9bA@mail.gmail.com&gt;</li>
+<li>Ironport-sdr: iu0kB6nDElKiRArFam8uTbJ4bT9w3bUF/E2GLhWGyeq3LA/Y+mw4/Mz6oyItZu49YQ3qPJVgWx kLk+ddlwHVM/6ZPjwTRYBnls3fLv4zXem0T9uuoLXi8NAph9xPVpAXybmuayzqX87rnJidzEEH akpb10FHrVAtp2KQSB7mIXmAOexwSNVRIweDVkB3MnKrxumI7jTrXVSLDxaNWYvU7FEuFa1Jd8 Yi0JjPVazBHHAYNMR3omyeP/sI8dAR4cURqoYijybnhH0naWekVcvKxJqMG47MgzLqzM0YUFDx 630=</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CABKKfvVRDXATRc_19TVipwHKKd+j9WzjC=3JgpjKTVDNk5g9bA@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Alpine 2.21.1 (LNX 202 2017-01-01)</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<tt>I would urge you to first run and study the ferret demos before asking 
+</tt><tt>folks on the list, eg
+</tt><pre style="margin: 0em;">
+go mp_demo
+but in this case, had this handy:
+ 
+ 
+set reg /y=-90:-60
+go mp_stereographic_south
+set grid hice
+GO mp_grid hice
+shade/noaxes/nolab hice*mp_mask, x_page, y_page
+!CONTOUR/nolab /over /LEVEL= &quot;(-400, 400,400) (600,3200,200)&quot; hd*mp_mask, x_page, y_page
+go mp_land 10
+!cont/nolab/col=8 /over /lev=(0,0.1,0.1) (H-0.2)*mp_mask, x_page, y_page
+go mp_label 180,-46,0,0,0.2 @P7TITLE
+go mp_label 165,-46,0,0,0.2 @p7(mm/yr)
+ 
+ 
+Lev Tarasov -   Dept of Physics and Physical Oceanography,
+		Memorial University of Newfoundland.
+email: lev@xxxxxx
+<a  rel="nofollow" href="http://www.physics.mun.ca/
+		Tel (709)-864-2675
+		Fax (709)-864-8739
+ 
+On Wed, 13 Mar 2019, Muyin Wang - NOAA Affiliate wrote:
+ 
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+Date: Wed, 13 Mar 2019 20:00:43
+From: Muyin Wang - NOAA Affiliate &lt;muyin.wang@xxxxxxxx&gt;
+To: ferret_users@xxxxxxxx
+Subject: [ferret_users] mp_stereographic_south
+ 
+Can Ferret plot the polar stereographic project for the Antarctic?
+Is so, what is the command?
+ 
+Thanks.
+Muyin
+ 
+ 
+ 
+</pre></blockquote><pre style="margin: 0em;">
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00067" href="msg00067.html">[ferret_users] mp_stereographic_south</a></strong>
+<ul><li><em>From:</em> Muyin Wang - NOAA Affiliate</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00070.html">Re: [ferret_users] mp_stereographic_south</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00106.html">[ferret_users] polygon to mask country</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00070.html">Thread Prev</a>][<a href="msg00106.html">Thread Next</a>][<A HREF="threads2019.html#00069">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

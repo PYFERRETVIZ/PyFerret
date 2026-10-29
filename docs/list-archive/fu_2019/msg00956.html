@@ -1,0 +1,179 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] ppl commands for a Vector overlay on a projection. -->
+<!--X-From-R13: Oafyrl [naxr <n.p.znaxrNtznvy.pbz> -->
+<!--X-Date: Mon, 21 Jun 2021 17:34:59 &#45;0700 -->
+<!--X-Message-Id: 748069d3&#45;6a87&#45;57f1&#45;4038&#45;dd92290114c0@gmail.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CAP06G6Q256oQsRjOathZpHjLw6aLSRJkvQu5pvpKn2pMsF3TkA@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] ppl commands for a Vector overlay on a projection.</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00954.html">Thread Prev</a>][<a href="msg00959.html">Thread Next</a>][<A HREF="threads2019.html#00956">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] ppl commands for a Vector overlay on a projection.</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] ppl commands for a Vector overlay on a projection.</strong></li>
+<li><strong>From</strong>: <strong>Ansley Manke &lt;<a href="mailto:a.c.manke@DOMAIN.HIDDEN">a.c.manke@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 21 Jun 2021 17:34:39 -0700</li>
+<li>In-reply-to: &lt;<a href="msg00954.html">CAP06G6Q256oQsRjOathZpHjLw6aLSRJkvQu5pvpKn2pMsF3TkA@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00954.html">CAP06G6Q256oQsRjOathZpHjLw6aLSRJkvQu5pvpKn2pMsF3TkA@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:78.0) Gecko/20100101 Thunderbird/78.11.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Hi Alexander,
+ 
+</pre><tt>I haven't tried your examples in any detail, but I think for the map 
+</tt><tt>projection vector overlay to work correctly, you would need to have the 
+</tt><tt>vector variables on the same grid as the underlying plot.&#xA0; That way the 
+</tt><tt>x_page, y_page coordinate variables are defined once and are consistent 
+</tt><tt>for the plot:
+</tt><pre style="margin: 0em;">
+ 
+USE RawERA5WindSpeed500Annual.nc
+USE RawERA5WindSpeedComp500annual.nc
+go mp_mcbryde_fpq
+go mp_grid p[D=1]
+ 
+Set window/asp=0.7 1
+SHADE/PALETTE=difference/nolab/LEVELS=(-38, 38, 2) p[D=1], x_page, y_page
+ 
+let uwnd_ov = uwnd[d=2,gxy=p[d=1]]
+let vwnd_ov = vwnd[d=2,gxy=p[d=1]]
+ 
+</pre><tt>VECTOR/overlay/Thickness=0.25/Xskip=60/Yskip=40/set Uwind_ov, Vwind_ov, 
+</tt><tt>x_page, y_page
+</tt><pre style="margin: 0em;">
+ppl VECSET 0.25,25
+ppl VECKEY/NOUSER 3.5,1,,(f3.0,&quot; m/s&quot;)
+ppl vector/overlay
+ 
+ 
+ 
+ 
+On 6/21/2021 9:05 AM, Alexander Audet wrote:
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+Hello ferret community,
+ 
+</pre><tt>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; Not sure if this is an impossible combination, but 
+</tt><tt>I was trying to see if I could refine my vector overlay over my 
+</tt><tt>projected shade. In one method, I try to use PPlus commands after 
+</tt><tt>setting up the vector overlay, however, without fail this creates a 
+</tt><tt>black map and does not seem to produce the desired effect with the legend.
+</tt><pre style="margin: 0em;">
+ 
+USE RawERA5WindSpeed500Annual.nc
+USE RawERA5WindSpeedComp500annual.nc
+go mp_mcbryde_fpq
+go mp_grid p[D=1]
+go mp_grid Vwind, Uwind
+Set window/asp=0.7 1
+SHADE/PALETTE=difference/nolab/LEVELS=(-38, 38, 2) p[D=1], x_page, y_page
+</pre><tt>VECTOR/overlay/Thickness=0.25/Xskip=60/Yskip=40/set Uwind, Vwind, 
+</tt><tt>x_page, y_page
+</tt><pre style="margin: 0em;">
+ppl VECSET 0.25,25
+ppl VECKEY/NOUSER 3.5,1,,(f3.0,&quot; m/s&quot;)
+ppl vector/overlay
+GO mp_land
+go mp_label 675,80,0,0,0.13&#xA0; &quot;ERA5&quot;
+PPL COLOR,6,50,50,50
+Go mp_graticule 0, 360, 20, -90, 90, 20, 6, 1
+ 
+</pre><tt>In another variation, I can use PPlus commands before shading, 
+</tt><tt>however, while&#xA0;this does impact the standard vector length, and the 
+</tt><tt>format&#xA0;of the vactor key, it does not place the key where desired. It 
+</tt><tt>even seems to have mixed results about getting the scale correct, and 
+</tt><tt>I think when it gets it correct, it might just be due to rounding.
+</tt><pre style="margin: 0em;">
+ 
+USE RawERA5WindSpeed500Annual.nc
+USE RawERA5WindSpeedComp500annual.nc
+go mp_mcbryde_fpq
+go mp_grid p[D=1]
+go mp_grid Vwind, Uwind
+Set window/asp=0.7 1
+</pre><tt>SHADE/PALETTE=difference/nolab/LEVELS=(-38, 38, 2)/set p[D=1], x_page, 
+</tt><tt>y_page
+</tt><pre style="margin: 0em;">
+ppl VECSET 0.25,25
+ppl VECKEY 1,1,,(f3.0,&quot; m/s&quot;)
+ppl shade
+</pre><tt>VECTOR/over/NOLABELS/KEY/Thickness=0.25/Xskip=60/Yskip=40 Uwind, 
+</tt><tt>Vwind, x_page, y_page
+</tt><pre style="margin: 0em;">
+GO mp_land
+go mp_label 520,80,0,0,0.13&#xA0; &quot;ERA5&quot;
+PPL COLOR,6,50,50,50
+Go mp_graticule 0, 360, 20, -90, 90, 20, 6, 1
+ 
+</pre><tt>I can live without the scale placement as I can always move it in 
+</tt><tt>illustrator, though it may be a pain to keep it the correct size when 
+</tt><tt>resizing my images, however not being able to control the scale could 
+</tt><tt>be a dealbreaker.
+</tt><pre style="margin: 0em;">
+ 
+Cheers!
+ 
+Alexander
+</pre></blockquote>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00959" href="msg00959.html">Re: [ferret_users] ppl commands for a Vector overlay on a projection.</a></strong>
+<ul><li><em>From:</em> Alexander Audet</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00954" href="msg00954.html">[ferret_users] ppl commands for a Vector overlay on a projection.</a></strong>
+<ul><li><em>From:</em> Alexander Audet</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00954.html">[ferret_users] ppl commands for a Vector overlay on a projection.</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00959.html">Re: [ferret_users] ppl commands for a Vector overlay on a projection.</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00954.html">Thread Prev</a>][<a href="msg00959.html">Thread Next</a>][<A HREF="threads2019.html#00956">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

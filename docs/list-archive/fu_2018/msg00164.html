@@ -1,0 +1,104 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] shakey and polymark -->
+<!--X-From-R13: xnera thvubh <xnera.thvubhNtznvy.pbz> -->
+<!--X-Date: Wed, 16 May 2018 12:01:58 &#45;0700 -->
+<!--X-Message-Id: CAORxmhuwUVf9zq3dEJS40i8nzL+Xx80XF4nzBv+4fcmNOC93GA@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAORxmhunihgpdhR1OZTwQu6c37gX9NzUVk_qQ&#45;OQiBXafDfzqA@mail.gmail.com -->
+<!--X-Reference: 86F1EEB6&#45;966C&#45;4BDE&#45;BC89&#45;01CA9A4FDE8A@noaa.gov -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] shakey and polymark</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00163.html">Thread Prev</a>][<a href="msg00165.html">Thread Next</a>][<A HREF="threads2018.html#00164">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] shakey and polymark</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] shakey and polymark</strong></li>
+<li><strong>From</strong>: <strong>karen guihou &lt;<a href="mailto:karen.guihou@DOMAIN.HIDDEN">karen.guihou@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 16 May 2018 16:01:47 -0300</li>
+<li>Cc: Ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00163.html">86F1EEB6-966C-4BDE-BC89-01CA9A4FDE8A@noaa.gov</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00161.html">CAORxmhunihgpdhR1OZTwQu6c37gX9NzUVk_qQ-OQiBXafDfzqA@mail.gmail.com</a>&gt; &lt;<a href="msg00163.html">86F1EEB6-966C-4BDE-BC89-01CA9A4FDE8A@noaa.gov</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Hi Marco and William<div><br></div><div>Thank you for your comments. I am familiar with the PPL and SHAKEY commands, but I didn&#39;t how to do a &quot;ppl fill&quot; over &quot;go polymark&quot;.</div><div>&quot;ppl fillpol/ov&quot; seems to work fine.</div><div><br></div><div>Have a good day</div><div>Karen</div></div><div class="gmail_extra"><br><div class="gmail_quote">On 16 May 2018 at 13:10, William Kessler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:william.s.kessler@xxxxxxxx">william.s.kessler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><span class="im HOEnZb">Use PPL SHAKEY:<br>
+<br>
+go polymark poly/SET ....<br>
+ppl shakey [0=nokey,1=key] [0=hor,1=vert] lab-size lab-inc lab-dig lab-len xlo xhi ylo yhi<br>
+ppl fillpol<br>
+<br>
+=&gt; xlo xhi ylo yhi give the dimensions of the key, relative to the lower left corner of the &quot;page&quot; (this can be confusing and might need experimentation).<br>
+<br>
+See <a rel="nofollow" href="../../faq/modifying-the-shade-key.html" rel="noreferrer">modifying-the-shade-key</a><br>
+<br>
+Billy<br>
+<br>
+&gt; On May 16, 2018, at 7:55 AM, karen guihou &lt;<a rel="nofollow" href="mailto:karen.guihou@xxxxxxxxx">karen.guihou@xxxxxxxxx</a>&gt; wrote:<br>
+&gt; <br>
+</span><div class="HOEnZb"><div class="h5">&gt; Hi all<br>
+&gt; <br>
+&gt; Does anyone know how to change the size of the shade key when using polymark?<br>
+&gt; <br>
+&gt; go polymark polygon/ov/fill/pal=yellow_/green_blue/nolabels/key x,y,depth,circle,0.15<br>
+&gt; <br>
+&gt; <br>
+&gt; Thanks <br>
+<br>
+</div></div></blockquote></div><br></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00161" href="msg00161.html">[ferret_users] shakey and polymark</a></strong>
+<ul><li><em>From:</em> karen guihou</li></ul></li>
+<li><strong><a name="00163" href="msg00163.html">Re: [ferret_users] shakey and polymark</a></strong>
+<ul><li><em>From:</em> William Kessler</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00163.html">Re: [ferret_users] shakey and polymark</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00165.html">[ferret_users]</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00163.html">Thread Prev</a>][<a href="msg00165.html">Thread Next</a>][<A HREF="threads2018.html#00164">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

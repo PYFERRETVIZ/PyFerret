@@ -1,0 +1,212 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] List data incorrectly -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Tue, 5 Mar 2019 09:20:03 &#45;0800 -->
+<!--X-Message-Id: a4b5afc8&#45;cf67&#45;f189&#45;c9b6&#45;00a8c6ccc718@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAK9AafRFEDVgorh1BzUvbnFG3Jic1Eur48jH6OQz&#45;dX_pMmwkg@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] List data incorrectly</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00051.html">Thread Prev</a>][<a href="msg00053.html">Thread Next</a>][<A HREF="threads2019.html#00052">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] List data incorrectly</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] List data incorrectly</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 5 Mar 2019 09:20:00 -0800</li>
+<li>In-reply-to: &lt;<a href="msg00051.html">CAK9AafRFEDVgorh1BzUvbnFG3Jic1Eur48jH6OQz-dX_pMmwkg@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00051.html">CAK9AafRFEDVgorh1BzUvbnFG3Jic1Eur48jH6OQz-dX_pMmwkg@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:60.0) Gecko/20100101 Thunderbird/60.5.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hi,</p>
+<p>Yes, Ferret writes double precision data. <br>
+</p>
+<p><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/data-set-basics/BINARY-DATA.html">../../documentation/users-guide/data-set-basics/BINARY-DATA</a></p>
+<p>says, <br>
+</p>
+<blockquote>
+<p><i>Since Ferret represents all variables as REAL*8, it will
+read all data int 8-byte words. On writing data using the
+LIST/FORMAT=stream command, it writes data in 8-byte words.</i></p>
+</blockquote>
+<div class="moz-cite-prefix"><br>
+</div>
+<div class="moz-cite-prefix">As a side note, NetCDF is really
+Ferret's native file type. When writing NetCDF, one can specify
+the output data type when writing out data, with the /OUTTYPE
+qualifier (/OUTTYPE is not a valid option for writing STREAM
+data).</div>
+<div class="moz-cite-prefix"><br>
+</div>
+<div class="moz-cite-prefix">Ansley<br>
+</div>
+<div class="moz-cite-prefix"><br>
+</div>
+<div class="moz-cite-prefix">On 3/5/2019 8:38 AM, Boyin Huang - NOAA
+Federal wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+<div dir="ltr">
+<div dir="ltr">
+<div dir="ltr">
+<div dir="ltr">
+<div dir="ltr">
+<div dir="ltr">
+<div class="gmail_default" style="font-size:small">Dear
+Ferret users,</div>
+<div class="gmail_default" style="font-size:small"><br>
+</div>
+<div class="gmail_default" style="font-size:small">I
+tried to list data from aNetCDF file to a binary
+file using the following command:</div>
+<div class="gmail_default" style="font-size:small"><br>
+</div>
+<div class="gmail_default">use <a rel="nofollow"
+href="http://HadCRUT.4.6.0.0.anomalies.100.nc"
+moz-do-not-send="true">HadCRUT.4.6.0.0.anomalies.100.nc</a><br>
+</div>
+<div class="gmail_default">list/file="HadCRUT.4.6.anm.100.dat"/format=stream/i=1:72/j=1:36/L=1/clobber
+temperature_anomaly<br>
+</div>
+<div><br>
+</div>
+<div>
+<div class="gmail_default" style="font-size:small">I
+suspect that the data were not saved correctly,
+since the si<span class="gmail_default">ze of the
+data file is20736 ratherthan 10368.</span></div>
+<div class="gmail_default" style="font-size:small"><span
+class="gmail_default"><br>
+</span></div>
+<div class="gmail_default" style="font-size:small"><span
+class="gmail_default">Is ferret writing double
+precision data?</span></div>
+<div class="gmail_default" style="font-size:small"><span
+class="gmail_default"><br>
+</span></div>
+<div class="gmail_default" style="font-size:small"><span
+class="gmail_default">Ferret version:</span></div>
+<div class="gmail_default"><span
+class="gmail_default">
+<div class="gmail_default"
+style="font-size:small">    NOAA/PMEL TMAP</div>
+<div class="gmail_default"
+style="font-size:small">    FERRET v6.93</div>
+<div class="gmail_default"
+style="font-size:small">    Linux
+2.6.32-504.el6.x86_64 64-bit - 11/13/14</div>
+<div class="gmail_default"
+style="font-size:small">    5-Mar-19
+11:36</div>
+<div style="font-size:small"><br>
+</div>
+<div style="font-size:small">Linux version:</div>
+<div>
+<div>Linux <a rel="nofollow"
+href="http://ersst-prod.ncdc.noaa.gov"
+moz-do-not-send="true">ersst-prod.ncdc.noaa.gov</a>
+2.6.32-042stab108.2 #1 SMP Tue May 12
+18:07:50 MSK 2015 x86_64 x86_64 x86_64
+GNU/Linux</div>
+</div>
+<div style="font-size:small"><br>
+</div>
+</span></div>
+<div class="gmail_default" style="font-size:small"><span
+class="gmail_default">Thanks a lot.</span></div>
+<div class="gmail_default" style="font-size:small">--</div>
+</div>
+<div dir="ltr" class="gmail_signature">
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">Boyin Huang, Room-468<br>
+NOAA/NCEI/CCOG<br>
+Asheville, NC.<br>
+828-271-4851</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00051" href="msg00051.html">[ferret_users] List data incorrectly</a></strong>
+<ul><li><em>From:</em> Boyin Huang - NOAA Federal</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00051.html">[ferret_users] List data incorrectly</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00053.html">[ferret_users] how to find top five temperature values</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00051.html">Thread Prev</a>][<a href="msg00053.html">Thread Next</a>][<A HREF="threads2019.html#00052">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

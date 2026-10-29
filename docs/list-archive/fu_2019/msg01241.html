@@ -1,0 +1,79 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] fetching the time axis -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Tue, 7 Mar 2023 00:44:37 &#45;0800 -->
+<!--X-Message-Id: CAEwQpa+R4T6K4cji3+ihDoaZTef&#45;=1TTbK4cwAHVObVHN_M2=g@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAN0SqnPzGZExKVB2wHRQUGTqY+b6_fen2EgKTF7gZawBNTkSDg@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] fetching the time axis</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01240.html">Thread Prev</a>][<a href="msg01242.html">Thread Next</a>][<A HREF="threads2019.html#01241">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] fetching the time axis</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Ranjan Kumar Sahu &lt;<a href="mailto:ranzan998@DOMAIN.HIDDEN">ranzan998@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] fetching the time axis</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 7 Mar 2023 17:44:20 +0900</li>
+<li>Cc: <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></li>
+<li>In-reply-to: &lt;<a href="msg01240.html">CAN0SqnPzGZExKVB2wHRQUGTqY+b6_fen2EgKTF7gZawBNTkSDg@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg01240.html">CAN0SqnPzGZExKVB2wHRQUGTqY+b6_fen2EgKTF7gZawBNTkSDg@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div dir="ltr">Dear&#xA0;Ranjan,</div><div dir="ltr"><br></div><div dir="ltr"><br></div><div class="gmail_quote"><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div>yes? let t_len = `uvel,return=lsize`</div><div>&#xA0;!-&gt; DEFINE VARIABLE t_len=8109</div><div><br></div><div>As you see, there&#39;s a new variable t_len. <br></div><div>My aim is to fetch the time axis and subsequently define a time axis using it</div></div></blockquote><div><br></div><div>So,<br></div><div><br></div><div>let tvals = t[gt=uvel]</div><div><br></div><div>is likely what you want.&#xA0; In this case tvals is just a regular variable containing the coordinate values defined on the underlying time axis.&#xA0; For example, see</div><div><br></div><div>plot tvals</div><div><br></div><div>Ryo</div><div><br></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="01240" href="msg01240.html">[ferret_users] fetching the time axis</a></strong>
+<ul><li><em>From:</em> Ranjan Kumar Sahu</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01240.html">[ferret_users] fetching the time axis</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01242.html">[ferret_users] Is it possible to add a pen color as gray?</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01240.html">Thread Prev</a>][<a href="msg01242.html">Thread Next</a>][<A HREF="threads2019.html#01241">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>
