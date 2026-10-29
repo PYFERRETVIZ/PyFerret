@@ -1,0 +1,91 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] MEMORY/SIZE= changes the result of SAVE -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Mon, 16 Dec 2019 00:09:46 &#45;0800 -->
+<!--X-Message-Id: CAEwQpaJoiUVN3TGX0Ab8&#45;fLohnKeO1QrfR0oGY9wfv_&#45;OejdCA@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAEwQpaKVFocmfaDOdRg9UZ1Mc81DEv2y44fVsq6SpuXhAzY0vw@mail.gmail.com -->
+<!--X-Reference: b3a2d861&#45;78db&#45;ce5f&#45;d8b0&#45;d5a25f36dba5@io&#45;warnemuende.de -->
+<!--X-Reference: CAEwQpaLY7unwks6dwaN_XghK8SY&#45;syeM&#45;TsOw1dpSaMjDZLU_Q@mail.gmail.com -->
+<!--X-Reference: CAEwQpa+aFn_EppGbk1XwyE0qtK2CMtc9EJHgRnAJcFpmf=yD9w@mail.gmail.com -->
+<!--X-Reference: 41d65332&#45;328e&#45;1e2f&#45;8565&#45;d533a0432fb1@io&#45;warnemuende.de -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] MEMORY/SIZE= changes the result of SAVE</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00462.html">Thread Prev</a>][<a href="msg00464.html">Thread Next</a>][<A HREF="threads2019.html#00463">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] MEMORY/SIZE= changes the result of SAVE</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Martin Schmidt &lt;<a href="mailto:martin.schmidt@DOMAIN.HIDDEN">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] MEMORY/SIZE= changes the result of SAVE</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 16 Dec 2019 17:09:26 +0900</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00461.html">41d65332-328e-1e2f-8565-d533a0432fb1@io-warnemuende.de</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00456.html">CAEwQpaKVFocmfaDOdRg9UZ1Mc81DEv2y44fVsq6SpuXhAzY0vw@mail.gmail.com</a>&gt; &lt;<a href="msg00457.html">b3a2d861-78db-ce5f-d8b0-d5a25f36dba5@io-warnemuende.de</a>&gt; &lt;<a href="msg00458.html">CAEwQpaLY7unwks6dwaN_XghK8SY-syeM-TsOw1dpSaMjDZLU_Q@mail.gmail.com</a>&gt; &lt;CAEwQpa+aFn_EppGbk1XwyE0qtK2CMtc9EJHgRnAJcFpmf=yD9w@mail.gmail.com&gt; &lt;<a href="msg00461.html">41d65332-328e-1e2f-8565-d533a0432fb1@io-warnemuende.de</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Hi Martin,<br><br>Thank you for your help.<div><br></div><div>First, I&#39;ve found that if I trim my data a little bit, the problem goes away.&#xA0; There seems to be a clear threshold.&#xA0; When i=1:3600, the problem occurs.&#xA0; If I save the i=31:3600 portion or the i=1:3500 portion of the data, the new datafile doesn&#39;t cause the problem.&#xA0; Something like that.</div><div><br></div><div>That means that I have to debug the problem with this largish dataset.</div><div><br></div><div>On Mon, Dec 16, 2019 at 3:57 PM Martin Schmidt &lt;<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt; wrote:<br><br><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Generate the axes and than the data like<br> &#xA0; &#xA0;let myvar = 0*(x[gx=xax] + y[gy=yax} ......) + 1<br>&#xA0; &#xA0;save /file= &#xA0; ... myvar</blockquote><br>That&#39;s brilliant!&#xA0; Unfortunately, I haven&#39;t been able to generate a variable like that which reproduces my problem.&#xA0; I confirm<div><br></div><div>1) &quot;set data <a rel="nofollow" href="http://the_new_dummy_data.nc">the_new_dummy_data.nc</a>&quot; ---The problem doesn&#39;t occur.</div><div>2) &quot;set data <a rel="nofollow" href="http://my_problematic_data.nc">my_problematic_data.nc</a>&quot; --- The problem occurs.</div><div><br></div><div>To repeat, the problem is</div><div><br></div><blockquote style="margin:0 0 0 40px;border:none;padding:0px"><div>set data <a rel="nofollow" href="http://my_problematic_data.nc">my_problematic_data.nc</a> ! contains variable &quot;usss&quot;</div></blockquote><blockquote style="margin:0 0 0 40px;border:none;padding:0px"><div>set memory/size=300 !&lt;--</div></blockquote><blockquote style="margin:0 0 0 40px;border:none;padding:0px"><div>let u = usss[d=1]</div><div>save . . . u[m=1:10@AVE]</div><div>save . . . usss[m=1:10@AVE]</div></blockquote><br><div>The two datasets contains different values when th                                                                                                                                                                                                                                                                                                             
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00456" href="msg00456.html">[ferret_users] MEMORY/SIZE= changes the result of SAVE</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00457" href="msg00457.html">Re: [ferret_users] MEMORY/SIZE= changes the result of SAVE</a></strong>
+<ul><li><em>From:</em> Martin Schmidt</li></ul></li>
+<li><strong><a name="00458" href="msg00458.html">Re: [ferret_users] MEMORY/SIZE= changes the result of SAVE</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00459" href="msg00459.html">Re: [ferret_users] MEMORY/SIZE= changes the result of SAVE</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00461" href="msg00461.html">Re: [ferret_users] MEMORY/SIZE= changes the result of SAVE</a></strong>
+<ul><li><em>From:</em> Martin Schmidt</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00462.html">Re: [ferret_users] MEMORY/SIZE= changes the result of SAVE</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00464.html">Re: [ferret_users] MEMORY/SIZE= changes the result of SAVE</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00462.html">Thread Prev</a>][<a href="msg00464.html">Thread Next</a>][<A HREF="threads2019.html#00463">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

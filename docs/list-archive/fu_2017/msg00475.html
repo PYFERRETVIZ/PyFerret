@@ -1,0 +1,130 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] glitch in automatic shade color levels -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Wed, 5 Jul 2017 10:41:48 &#45;0700 -->
+<!--X-Message-Id: fbb40834&#45;8707&#45;5b7c&#45;41e4&#45;2a15cf167298@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: f6883ccf&#45;6675&#45;a9a6&#45;052f&#45;c7a1cdc29384@mpic.de -->
+<!--X-Reference: ea74a8da&#45;e6e0&#45;37de&#45;c44e&#45;a21f6094d2fb@csiro.au -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] glitch in automatic shade color levels</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00471.html">Thread Prev</a>][<a href="msg00469.html">Thread Next</a>][<A HREF="threads2017.html#00475">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] glitch in automatic shade color levels</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] glitch in automatic shade color levels</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 5 Jul 2017 10:41:45 -0700</li>
+<li>In-reply-to: &lt;<a href="msg00471.html">ea74a8da-e6e0-37de-c44e-a21f6094d2fb@csiro.au</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00468.html">f6883ccf-6675-a9a6-052f-c7a1cdc29384@mpic.de</a>&gt; &lt;<a href="msg00471.html">ea74a8da-e6e0-37de-c44e-a21f6094d2fb@csiro.au</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.2.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Thanks Hella for the example and your ideas Russ.
+ 
+</pre><tt>The automatically-generated symbols, LEV_MIN, LEV_MAX etc. are set using 
+</tt><tt>some formatting that isn't capturing the values used. For generating the 
+</tt><tt>levels themselves, I think Russ's guess that there is a precision 
+</tt><tt>round-off issue is correct.  We should be able to clear this up.
+</tt><pre style="margin: 0em;">
+ 
+Ansley
+ 
+ 
+ 
+On 7/3/2017 6:23 PM, Russ Fiedler wrote:
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+ 
+</pre><tt>This looks like a rounding error in the calculation of the bounds. If 
+</tt><tt>you change the number of levels to 50 a suitable upper bound is found.
+</tt><pre style="margin: 0em;">
+ 
+shade/lev=50 co_emac
+ 
+</pre><tt>works as expected. The maximum level appears to be calculated as 
+</tt><tt>1.85E-7 rather than 1.90E-7. The symbol LEV_MAX should report this but 
+</tt><tt>I see it as &quot;0&quot; which is rather useless.
+</tt><pre style="margin: 0em;">
+ 
+ 
+LEV_MIN = &quot;0&quot;
+LEV_MAX = &quot;0&quot;
+LEV_NUM = &quot;29&quot;
+LEV_DEL = &quot;0&quot;
+ 
+</pre><tt>My guess is that there is a problem with the number of significant 
+</tt><tt>figures required and the precision available in the 1E-7 neighbourhood.
+</tt><pre style="margin: 0em;">
+ 
+Russ
+ 
+ 
+On 04/07/17 05:30, Riede, Hella wrote:
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+shade co_emac
+</pre></blockquote><pre style="margin: 0em;">
+ 
+ 
+</pre></blockquote><pre style="margin: 0em;">
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00468" href="msg00468.html">[ferret_users] glitch in automatic shade color levels</a></strong>
+<ul><li><em>From:</em> Riede, Hella</li></ul></li>
+<li><strong><a name="00471" href="msg00471.html">Re: [ferret_users] glitch in automatic shade color levels</a></strong>
+<ul><li><em>From:</em> Russ Fiedler</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00471.html">Re: [ferret_users] glitch in automatic shade color levels</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00469.html">[ferret_users] additional ')' in repeat loop does not lead to error but wrong values</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00471.html">Thread Prev</a>][<a href="msg00469.html">Thread Next</a>][<A HREF="threads2017.html#00475">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

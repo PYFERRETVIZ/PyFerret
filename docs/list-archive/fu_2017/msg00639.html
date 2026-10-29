@@ -1,0 +1,450 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] memory problems in ferret 7.20 (pyferret) -->
+<!--X-From-R13: Yney Ezvgu &#45; @AOO Ossvyvngr <xney.fzvguNabnn.tbi> -->
+<!--X-Date: Wed, 20 Sep 2017 12:15:00 &#45;0700 -->
+<!--X-Message-Id: CAELLC7Vxs&#45;Rc7QBUNzcRm_8fhBiTwC2ySZPG3mzCZ2y=UOCxXA@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAORxmhuDzG858S8HUnNzfEVMskemtzxX7BgQiPe&#45;bunN2zR+ag@mail.gmail.com -->
+<!--X-Reference: 85011cbf&#45;739d&#45;c69a&#45;5d66&#45;a72611e3aef2@io&#45;warnemuende.de -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] memory problems in ferret 7.20 (pyferret)</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00638.html">Thread Prev</a>][<a href="msg00642.html">Thread Next</a>][<A HREF="threads2017.html#00639">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] memory problems in ferret 7.20 (pyferret)</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Martin Schmidt &lt;<a href="mailto:martin.schmidt@DOMAIN.HIDDEN">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] memory problems in ferret 7.20 (pyferret)</strong></li>
+<li><strong>From</strong>: <strong>Karl Smith - NOAA Affiliate &lt;<a href="mailto:karl.smith@DOMAIN.HIDDEN">karl.smith@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 20 Sep 2017 12:14:56 -0700</li>
+<li>Cc: ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00638.html">85011cbf-739d-c69a-5d66-a72611e3aef2@io-warnemuende.de</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00637.html">CAORxmhuDzG858S8HUnNzfEVMskemtzxX7BgQiPe-bunN2zR+ag@mail.gmail.com</a>&gt; &lt;<a href="msg00638.html">85011cbf-739d-c69a-5d66-a72611e3aef2@io-warnemuende.de</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Hi Martin,<div><br>
+</div><div>Yes, I am able to reproduce your result (using 7.2.1 just to make sure the problem was not associated with the fixes from 7.2.0 to 7.2.1), as well as the older results using ferret 6.9.7 and 7.1.0.</div><div><br>
+</div><div>I suspect the problem is the handling of calculations that exceed the allocated memory size. In 7.2.0 the ability to split the calculation over a transformed axis was added, and I suspect this might be the source of this problem.</div><div><br>
+</div><div>To show this a little more clearly, I modified your script to play with the memory sizes for each region. I also added a &quot;can mem /all&quot; to make sure ferret was always re-reading data from the source. Using Ferret 7.2.1, for the smaller region I got the value 1.263E+09 for all memory sizes. For the larger region, the values were 3.244E+08 (for 30), 8.262E+08 (for 50), 4.973E+09 (for 300), and 4.973E+09 (for 500). Using Ferret 6.9.7 or 7.1.0 with the smaller region I got the value 1.232E+09 for all memory sizes and with the larger region I got the value 4.760E+09 for all memory sizes.</div><div><br>
+</div><div>I do notice that your lon, lat, and depth axes are irregularly spaced. This might be pertinent to this problem, but I am not sure at this time. Obviously this is a high priority issue in 7.2 to get fixed.</div><div><br>
+</div><div>Best regards,</div><div>Karl</div><div><br>
+</div><div>===</div><div><br>
+</div><div>My script:</div><div><br>
+</div><div>(definitions as before)</div><div><br>
+</div><div><div>set region/t=1-jan-2010:31-dec-2010/x=13.5:14.7/y=-23.5:-22.5</div><div><br>
+</div><div>set memory/size=30</div><div>can memory/all</div><div>list n2_prod[x=@din,y=@din,k=@sum,t=@sum]</div><div><br>
+</div><div>set memory/size=50</div><div>can memory/all</div><div>list n2_prod[x=@din,y=@din,k=@sum,t=@sum]</div><div><br>
+</div><div>set memory/size=300</div><div>can memory/all</div><div>list n2_prod[x=@din,y=@din,k=@sum,t=@sum]</div><div><br>
+</div><div>set memory/size=500</div><div>can memory/all</div><div>list n2_prod[x=@din,y=@din,k=@sum,t=@sum]</div><div><br>
+</div><div>! Increase in y</div><div>set region/t=1-jan-2010:31-dec-2010/x=13.5:14.7/y=-28:-22.5</div><div><br>
+</div><div>set memory/size=30</div><div>can memory/all</div><div>list n2_prod[x=@din,y=@din,k=@sum,t=@sum]</div><div><br>
+</div><div>set memory/size=50</div><div>can memory/all</div><div>list n2_prod[x=@din,y=@din,k=@sum,t=@sum]</div><div><br>
+</div><div>set memory/size=300</div><div>can memory/all</div><div>list n2_prod[x=@din,y=@din,k=@sum,t=@sum]</div><div><br>
+</div><div>set memory/size=500</div><div>can memory/all</div><div>list n2_prod[x=@din,y=@din,k=@sum,t=@sum]</div></div><div><br>
+</div></div><div class="gmail_extra"><br>
+<div class="gmail_quote">On Tue, Sep 19, 2017 at 3:33 PM, Martin Schmidt <span dir="ltr">&lt;<a rel="nofollow" href="mailto:martin.schmidt@xxxxxxxxxxxxxxxxx">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</span> wrote:<br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Hi,<br>
+ 
+<br>
+ 
+I find a strange behaviour with pyferret 7.20<br>
+ 
+<br>
+ 
+&lt;phy-8:mschmidt&gt;ferret<br>
+ 
+NOAA/PMEL TMAP<br>
+ 
+PyFerret v7.2 (optimized)<br>
+ 
+Linux 4.4.85-22-default - 09/19/17<br>
+ 
+19-Sep-17 23:27<br>
+ 
+<br>
+ 
+the binary is build on openSuse 42.3. netcdf/hdf/szip are build separately, all other ingredients come from the system. The compiler is gcc-5, python is 2.7.13.<br>
+ 
+<br>
+ 
+The following example illustrates the problem. Averaging and integrating a bigger dataset. Data are model results kept on a public THREDDS, so it should be reproducable. I leave things as they are without streamlining. Don&#39;t ask for the meaning ...<br>
+ 
+<br>
+ 
+use <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/genus_run_88_5day_ocean.nc" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/genus_run_88_5day_ocean.nc</a><br>
+ 
+set region/t=1-jan-2010:31-dec-2010/x=13.5:14.7/y=-23.5:-22.5<br>
+ 
+<br>
+ 
+let n2_prod_anamm = P_DET_ANAM_N2 * 13.25<br>
+ 
+let n2_prod_denit = P_DET_DENIT_NH4 * 5.3/2<br>
+ 
+let n2_prod_h2s = P_H2S_OXNO3_SUL * 0.2<br>
+ 
+let n2_prod_sul = P_SUL_OXNO3_SO4*3/5<br>
+ 
+let n2_prod = (n2_prod_anamm + n2_prod_denit + n2_prod_h2s + n2_prod_sul)<br>
+ 
+<br>
+ 
+list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
+ 
+<br>
+ 
+yes? list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
+ 
+VARIABLE : (N2_PROD_ANAMM + N2_PROD_DENIT + N2_PROD_H2S + N2_PROD_SUL)<br>
+ 
+DATA SET : MOM4 Baltic Sea 3 n.m.<br>
+ 
+FILENAME : <a rel="nofollow" href="http://genus_run_88_5day_ocean.nc" rel="noreferrer">genus_run_88_5day_ocean.nc</a><br>
+ 
+FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/</a><br>
+ 
+LONGITUDE: 13.5E to 14.7E (XY integ.)<br>
+ 
+LATITUDE : 23.5S to 22.5S (XY integ.)<br>
+ 
+DEPTH (m): -0.0009867 to 5700 (ZT summed)<br>
+ 
+TIME : 01-JAN-2010 00:00 to 31-DEC-2010 00:00 (ZT summed) JULIAN<br>
+ 
+1.263E+09<br>
+ 
+<br>
+ 
+Now increase the region, the result should be growing significantly<br>
+ 
+<br>
+ 
+set region/t=1-jan-2010:31-dec-2010/x=13.5:14.7/y=-28:-22.5 ! Note y!<br>
+ 
+<br>
+ 
+list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
+ 
+<br>
+ 
+yes? list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
+ 
+VARIABLE : (N2_PROD_ANAMM + N2_PROD_DENIT + N2_PROD_H2S + N2_PROD_SUL)<br>
+ 
+DATA SET : MOM4 Baltic Sea 3 n.m.<br>
+ 
+FILENAME : <a rel="nofollow" href="http://genus_run_88_5day_ocean.nc" rel="noreferrer">genus_run_88_5day_ocean.nc</a><br>
+ 
+FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/</a><br>
+ 
+LONGITUDE: 13.5E to 14.7E (XY integ.)<br>
+ 
+LATITUDE : 28S to 22.5S (XY integ.)<br>
+ 
+DEPTH (m): -0.0009867 to 5700 (ZT summed)<br>
+ 
+TIME : 01-JAN-2010 00:00 to 31-DEC-2010 00:00 (ZT summed) JULIAN<br>
+ 
+8.011E+08<br>
+ 
+<br>
+ 
+This is strange, since the quantity is positive everywhere. Check with stats (not shown).<br>
+ 
+<br>
+ 
+Now play with the memory size:<br>
+ 
+<br>
+ 
+set memory/size=30 ---&gt; 3.244E+08<br>
+ 
+<br>
+ 
+set memory/size=50 ---&gt; 3.244E+08 ! Is this stable? No!<br>
+ 
+<br>
+ 
+can memory<br>
+ 
+<br>
+ 
+set memory/size=50 ---&gt; 8.262E+08<br>
+ 
+<br>
+ 
+can memory<br>
+ 
+<br>
+ 
+set memory/size=300 ---&gt; 4.973E+09<br>
+ 
+<br>
+ 
+I think, this is enough to show, that something does not work correctly.<br>
+ 
+<br>
+ 
+The classical ferret shows similar results. Aggregating withouth THREDDS gives 4.973E+09 for the larger region without increasing the memory size!<br>
+ 
+<br>
+ 
+Now a previous ferret version:<br>
+ 
+<br>
+ 
+ferret<br>
+ 
+NOAA/PMEL TMAP<br>
+ 
+PyFERRET v7 (opt)<br>
+ 
+Linux 2.6.32-642.1.1.el6.x86_64 - 07/01/16<br>
+ 
+20-Sep-17 00:02<br>
+ 
+<br>
+ 
+CAN MODE LOGO<br>
+ 
+SET MEM /SIZE=25.6<br>
+ 
+Cached data cleared from memory<br>
+ 
+SET MODE VERIFY<br>
+ 
+yes? list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
+ 
+VARIABLE : (N2_PROD_ANAMM + N2_PROD_DENIT + N2_PROD_H2S + N2_PROD_SUL)<br>
+ 
+DATA SET : MOM4 Baltic Sea 3 n.m.<br>
+ 
+FILENAME : <a rel="nofollow" href="http://genus_run_88_5day_ocean.nc" rel="noreferrer">genus_run_88_5day_ocean.nc</a><br>
+ 
+FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/</a><br>
+ 
+LONGITUDE: 13.5E to 14.7E (XY integ.)<br>
+ 
+LATITUDE : 23.5S to 22.5S (XY integ.)<br>
+ 
+DEPTH (m): -0.0009867 to 5700 (ZT summed)<br>
+ 
+TIME : 01-JAN-2010 00:00 to 31-DEC-2010 00:00 (ZT summed) JULIAN<br>
+ 
+1.232E+09<br>
+ 
+<br>
+ 
+Similar, but not the same as before! Make the region bigger now.<br>
+ 
+<br>
+ 
+set region/t=1-jan-2010:31-dec-2010/x=13.5:14.7/y=-28:-22.5<br>
+ 
+<br>
+ 
+list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
+ 
+<br>
+ 
+yes? list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
+ 
+VARIABLE : (N2_PROD_ANAMM + N2_PROD_DENIT + N2_PROD_H2S + N2_PROD_SUL)<br>
+ 
+DATA SET : MOM4 Baltic Sea 3 n.m.<br>
+ 
+FILENAME : <a rel="nofollow" href="http://genus_run_88_5day_ocean.nc" rel="noreferrer">genus_run_88_5day_ocean.nc</a><br>
+ 
+FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/</a><br>
+ 
+LONGITUDE: 13.5E to 14.7E (XY integ.)<br>
+ 
+LATITUDE : 28S to 22.5S (XY integ.)<br>
+ 
+DEPTH (m): -0.0009867 to 5700 (ZT summed)<br>
+ 
+TIME : 01-JAN-2010 00:00 to 31-DEC-2010 00:00 (ZT summed) JULIAN<br>
+ 
+4.760E+09<br>
+ 
+<br>
+ 
+Not in spectrum of the previous results!<br>
+ 
+<br>
+ 
+Now with another elder ferret:<br>
+ 
+<br>
+ 
+ferret<br>
+ 
+NOAA/PMEL TMAP<br>
+ 
+FERRET v6.96<br>
+ 
+Linux 2.6.18-406.el5 64-bit - 12/02/15<br>
+ 
+20-Sep-17 00:09<br>
+ 
+<br>
+ 
+CAN MODE LOGO<br>
+ 
+SET MEM /SIZE=25.6<br>
+ 
+Cached data cleared from memory<br>
+ 
+SET MODE VERIFY<br>
+ 
+<br>
+ 
+use &quot;<a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/genus_run_88_5day_ocean.nc" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/genus_run_88_5day_ocean.nc</a>&quot;<br>
+ 
+....<br>
+ 
+<br>
+ 
+list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
+ 
+VARIABLE : (N2_PROD_ANAMM + N2_PROD_DENIT + N2_PROD_H2S + N2_PROD_SUL)<br>
+ 
+DATA SET : MOM4 Baltic Sea 3 n.m.<br>
+ 
+FILENAME : <a rel="nofollow" href="http://genus_run_88_5day_ocean.nc" rel="noreferrer">genus_run_88_5day_ocean.nc</a><br>
+ 
+FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/</a><br>
+ 
+LONGITUDE: 13.5E to 14.7E (XY integ.)<br>
+ 
+LATITUDE : 23.5S to 22.5S (XY integ.)<br>
+ 
+DEPTH (m): -0.0009867 to 5700 (ZT summed)<br>
+ 
+TIME : 01-JAN-2010 00:00 to 31-DEC-2010 00:00 (ZT summed) JULIAN<br>
+ 
+1.232E+09<br>
+ 
+<br>
+ 
+!The same as with 7.0<br>
+ 
+<br>
+ 
+set region/t=1-jan-2010:31-dec-2010/x=13.5:14.7/y=-28:-22.5<br>
+ 
+<br>
+ 
+yes? list n2_prod[x=@din,y=@din,k=@sum,t=@sum]<br>
+ 
+VARIABLE : (N2_PROD_ANAMM + N2_PROD_DENIT + N2_PROD_H2S + N2_PROD_SUL)<br>
+ 
+DATA SET : MOM4 Baltic Sea 3 n.m.<br>
+ 
+FILENAME : <a rel="nofollow" href="http://genus_run_88_5day_ocean.nc" rel="noreferrer">genus_run_88_5day_ocean.nc</a><br>
+ 
+FILEPATH : <a rel="nofollow" href="http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/" rel="noreferrer">http://phy-50.io-warnemuende.de:8080/thredds/dodsC/genus/</a><br>
+ 
+LONGITUDE: 13.5E to 14.7E (XY integ.)<br>
+ 
+LATITUDE : 28S to 22.5S (XY integ.)<br>
+ 
+DEPTH (m): -0.0009867 to 5700 (ZT summed)<br>
+ 
+TIME : 01-JAN-2010 00:00 to 31-DEC-2010 00:00 (ZT summed) JULIAN<br>
+ 
+4.759E+09<br>
+ 
+<br>
+ 
+Again another result - with higher precision the difference does not become small.<br>
+ 
+<br>
+ 
+Is it possible to reproduce this finding, or is this specific for my build? Any help is very welcome!<br>
+ 
+<br>
+ 
+Greetings,<br>
+ 
+<br>
+ 
+Martin<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+</blockquote></div><br>
+<br clear="all"><div><br>
+</div>-- <br>
+<div class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr">Karl M. Smith, Ph.D.<br>
+JISAO Univ. Wash. and PMEL NOAA<br>
+&quot;The contents of this message are mine personally and do<br>
+not necessarily reflect any position of the Government<br>
+or the National Oceanic and Atmospheric Administration.&quot;<br>
+</div></div>
+</div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00637" href="msg00637.html">[ferret_users] error when saving a .ps figure</a></strong>
+<ul><li><em>From:</em> karen guihou</li></ul></li>
+<li><strong><a name="00638" href="msg00638.html">[ferret_users] memory problems in ferret 7.20 (pyferret)</a></strong>
+<ul><li><em>From:</em> Martin Schmidt</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00638.html">[ferret_users] memory problems in ferret 7.20 (pyferret)</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00642.html">[ferret_users] pH calculation from co2 in water</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00638.html">Thread Prev</a>][<a href="msg00642.html">Thread Next</a>][<A HREF="threads2017.html#00639">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

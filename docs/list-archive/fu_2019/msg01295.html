@@ -1,0 +1,80 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] axis transfer from depth to time&#45;reg -->
+<!--X-From-R13: Dnawna Yhzne Enuh <enamna998Ntznvy.pbz> -->
+<!--X-Date: Wed, 27 Sep 2023 06:18:48 &#45;0700 -->
+<!--X-Message-Id: CAN0SqnNnNNLY2mfqwQOebFRKDoTM0wMnkgWqKre4+pmkKHPkJw@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CADDb+48JDPifCMHG3SfWdWMPevHS=67o=nNJXaw0jB2r_Ekfdg@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] axis transfer from depth to time-reg</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01294.html">Thread Prev</a>][<a href="msg01296.html">Thread Next</a>][<A HREF="threads2019.html#01295">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] axis transfer from depth to time-reg</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>srinivas kotta &lt;<a href="mailto:srinivas.kotta116@DOMAIN.HIDDEN">srinivas.kotta116@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] axis transfer from depth to time-reg</strong></li>
+<li><strong>From</strong>: <strong>Ranjan Kumar Sahu &lt;<a href="mailto:ranzan998@DOMAIN.HIDDEN">ranzan998@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 27 Sep 2023 18:48:04 +0530</li>
+<li>Cc: <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></li>
+<li>In-reply-to: &lt;CADDb+48JDPifCMHG3SfWdWMPevHS=67o=nNJXaw0jB2r_Ekfdg@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CADDb+48JDPifCMHG3SfWdWMPevHS=67o=nNJXaw0jB2r_Ekfdg@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Hii,</div><div>One crude approach would be to create a dummy time axis (along with the lat-lon axis) and reassign the dimensions.</div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div>define axis/x=79.3104E:79.3504E:1/unit=degree xaxis &#xA0; &#xA0; &#xA0; &#xA0; !change lat lon<br>define axis/y=9.1931N:9.2245N:1/unit=degree yaxis<br>define axis/t=&quot;dd-mon-yyyy hh:mm&quot;:&quot;dd-mon-yyyy hh:mm&quot;:1/unit=hours taxis</div></blockquote><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div>define grid/x=xaxis/y=yaxis/t=taxis grd1 <br></div></blockquote><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div>LET dummy= x[gx=xaxis]&#xA0; + y[gy=yaxis] + t[GT=taxis]</div></blockquote><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div>LET uwnd1 = RESHAPE(UWND,dummy) <br></div></blockquote><div>then save the file&#xA0;</div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div>save/file=<a rel="nofollow" href="http://test.nc">test.nc</a> uwnd1 <br></div></blockquote><div>&#xA0;</div><div>&#xA0;</div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Wed, Sep 27, 2023 at 6:27&#x202F;PM srinivas kotta &lt;<a rel="nofollow" href="mailto:srinivas.kotta116@xxxxxxxxx">srinivas.kotta116@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div>Dear ferret users,</div><div><br></div><div>I have a netcdf file, data have 4time steps at single level. But it shows the time axis in depth axis. How can I transfer the depth axis into time axis.&#xA0; Dimensions of the data is attached here. <br></div><div><br></d                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+</blockquote></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="01294" href="msg01294.html">[ferret_users] axis transfer from depth to time-reg</a></strong>
+<ul><li><em>From:</em> srinivas kotta</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01294.html">[ferret_users] axis transfer from depth to time-reg</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01296.html">Re: [ferret_users] axis transfer from depth to time-reg</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01294.html">Thread Prev</a>][<a href="msg01296.html">Thread Next</a>][<A HREF="threads2019.html#01295">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

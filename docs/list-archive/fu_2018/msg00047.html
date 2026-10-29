@@ -1,0 +1,83 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] z range (z=zz:zzz) doesn't limit the plotting within the range -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Mon, 5 Mar 2018 23:48:13 &#45;0800 -->
+<!--X-Message-Id: CAEwQpaKawUPGaAKbTW8VMrzSQ1tF8HftaLYFMxUQatw7U7c5bA@mail.gmail.com -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Derived: pdfezu9chHX7z.pdf -->
+<!--X-Derived: binp3DF6_njNq.bin -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] z range (z=zz:zzz) doesn't limit the plotting within the range</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00043.html">Thread Prev</a>][<a href="msg00049.html">Thread Next</a>][<A HREF="threads2018.html#00047">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] z range (z=zz:zzz) doesn't limit the plotting within the range</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] z range (z=zz:zzz) doesn't limit the plotting within the range</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 6 Mar 2018 16:47:55 +0900</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Dear Ferret users,<div><br></div><div>I&#39;m puzzled why</div><div><br></div><div>&#xA0; &#xA0; &#xA0;vector/z=300:900/ . . . v, w</div><div><br></div><div>plots vectors below 900 m.&#xA0; PPL WINDOW,OFF seems to be causing it, but I thought the z range is sufficient to prevent it.&#xA0; (If the z range is ignored, vectors should be plotted all the way down to the bottom, which is at 6000 m.)</div><div><br></div><div>A sample script, the data file, and a sample plot are attached.&#xA0; (It&#39;s actually an extension of the same script I showed a few days ago.)</div><div><br></div><div>Regards,</div><div>Ryo</div><div><br></div><div>! =============</div><div><div>set mode grat:dash</div><div>set data <a rel="nofollow" href="http://mv-mw.nc">mv-mw.nc</a></div><div><br></div><div>let fac = 1e3 ! velocity-length scale</div><div><br></div><div>define symbol y1_ 30S</div><div>define symbol y2_ 28S</div><div>let z2_ = 900</div><div><br></div><div>!-------</div><div>!go init-print</div><div><br></div><div>let samp_vec_in_ = 0.45</div><div>let samp_vec_ = fac/200</div><div><br></div><div>vector/aspect/hlimits=($y1_):($y2_)/vlimits=0:`z2_`:50/color=red\</div><div>/y=($y1_):($y2_)/z=0:100/set mv,mw</div><div>&#xA0; ppl WINDOW,OFF</div><div>&#xA0; ppl vecset,`samp_vec_in_`,`samp_vec_`</div><div>ppl vector,2,3</div><div>vector/aspect/nolabel/color=blue\</div><div>/y=($y1_):($y2_)/z=94:300/OVER/set mv,mw</div><div>&#xA0; ppl vecset,`samp_vec_in_`,`samp_vec_`</div><div>ppl vector/ov,2,1</div><div>vector/aspect/nolabel/color=red\</div><div>/y=($y1_):($y2_)/z=300:`z2_`/OVER/set mv,mw</div><div>&#xA0; ppl vecset,`samp_vec_in_`,`samp_vec_`</div><div>ppl vector/ov,2,1</div><div><br></div><div>!go finish-print try-vector-overlay 3 false</div></div></div>
+<p><strong>Attachment:
+<a href="pdfezu9chHX7z.pdf" ><tt>try-vector-overlay.pdf</tt></a></strong><br>
+<em>Description:</em> Adobe PDF document</p>
+<p><strong>Attachment:
+<a href="binp3DF6_njNq.bin" ><tt>mv-mw.nc</tt></a></strong><br>
+<em>Description:</em> Binary data</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00049" href="msg00049.html">Re: [ferret_users] z range (z=zz:zzz) doesn't limit the plotting within the range</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00043.html">[ferret_users] vector/aspect changes for the same velocity</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00049.html">Re: [ferret_users] z range (z=zz:zzz) doesn't limit the plotting within the range</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00043.html">Thread Prev</a>][<a href="msg00049.html">Thread Next</a>][<A HREF="threads2018.html#00047">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

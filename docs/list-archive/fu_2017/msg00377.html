@@ -1,0 +1,168 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Ferret and debian/ubuntu packages -->
+<!--X-From-R13: Oynfgnve [pYvafgel <zpxvafgelNqrovna.bet> -->
+<!--X-Date: Thu, 25 May 2017 04:06:50 &#45;0700 -->
+<!--X-Message-Id: 25d8fff6&#45;56f5&#45;dac7&#45;8b0e&#45;de701b7d12e5@debian.org -->
+<!--X-Content-Type: multipart/signed -->
+<!--X-Derived: pgpHGNZA2F53N.pgp -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Ferret and debian/ubuntu packages</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00357.html">Thread Prev</a>][<a href="msg00379.html">Thread Next</a>][<A HREF="threads2017.html#00377">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Ferret and debian/ubuntu packages</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>, <a href="mailto:marco.Hulten@DOMAIN.HIDDEN">marco.Hulten@xxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Ferret and debian/ubuntu packages</strong></li>
+<li><strong>From</strong>: <strong>Alastair McKinstry &lt;<a href="mailto:mckinstry@DOMAIN.HIDDEN">mckinstry@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 25 May 2017 12:06:43 +0100</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>List-unsubscribe: &lt;<a href="mailto:googlegroups-manage+809428289204+unsubscribe@googlegroups.com">mailto:googlegroups-manage+809428289204+unsubscribe@googlegroups.com</a>&gt;, &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/subscribe">https://groups.google.com/a/noaa.gov/group/ferret_users/subscribe</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Organization: Debian</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:52.0) Gecko/20100101 Thunderbird/52.1.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<pre style="margin: 0em;">Hi,
+ 
+Thanks to Marco for pointing me to this thread.
+ 
+I'm the Debian maintainer and packager of ferret for Debian/Ubuntu. 
+ 
+The current version in Debian stable is v6.92; the latest version in Debian (unstable/ testing) is 7.0 ; this is also
+the version in Ubuntu.
+ 
+Also pyferret 7.0 is present in Debian unstable/testing and Ubuntu.
+ 
+Debian is currently frozen and release is expected 'any day now'; after this I plan to keep ferret updated via "backports" (which for various reasons' didn't happen in Jessie)
+ 
+As well as making it available for end-users, I'm working on its integration with other Met and geo software, and the larger python stack.
+There are a number of patches I have yet to forward upstream: in particular support for Python3  (both python2 and python3 versions
+of pyferret are in Debian).
+ 
+Ferret in Debian (labelled ferret-vis, as it conflicts with "GNU Ferret") uses a separate version of xgks (2.6.1),
+as there are multiple packages using xgks in Debian and we ship common code as shared libs. This version has some (irrelevant to ferret?)
+fixes and additions (a PDF backed, IIRC). Similarly I'm testing patches to work with multiple netcdf / hdf libraries so we can
+do both compression (for SZIP netcdf4, pnetcdf, and parallel netcdf). 
+ 
+To make the package standalone, I have a patch to use default values of the Env. variables that Ferret typically requires to be set.
+ 
+Please don't hestitate to contact me with any comments / bugs/ questions.
+ 
+Best regards
+Alastair McKinstry
+ 
+ 
+ 
+&gt;Hi Karen,
+ 
+</pre>
+<tt>&gt;We hadn't heard about this. Apparently somebody has also
+made it </tt><tt>available as a Debian package. I would not have
+any reservations &gt;about </tt><tt>trying this, except that it
+shows the version as v6.92, which is almost </tt><tt>2 years old.
+If anybody wants to try it, we'd be &gt;interested to hear of </tt><tt>your
+experience in using it.
+</tt><tt>The best recommendation is to install PyFerret, </tt><tt><a rel="nofollow"
+rel="nofollow" href="https://github.com/NOAA-PMEL/PyFerret">https://github.com/NOAA-&gt;PMEL/PyFerret</a>.
+On that page, note that there is </tt><tt>an Anaconda
+Installation for Linux, OS X, and Windows 10/bash, or via </tt><tt>the
+more traditional tar files and shell-based install script.
+</tt><tt>Classic Ferret is available via tar files. Both Ferret and
+PyFerret </tt><tt>contain the same updates and capabilities from
+the Ferret command line.
+</tt>
+<pre style="margin: 0em;">&gt; Ansley
+ 
+On 5/17/2017 8:20 AM, karen guihou wrote:
+</pre>
+<blockquote style="border-left: #5555EE solid 0.2em; margin: 0em;
+padding-left: 0.85em">
+<pre style="margin: 0em;">Hi all
+ 
+</pre>
+<tt>I have seen that ferret and pyferret are available in the
+official </tt><tt>debian/ubuntu packages.
+</tt>
+<pre style="margin: 0em;"><a rel="nofollow" rel="nofollow" href="https://packages.debian.org/jessie/utils/ferret-vis">https://packages.debian.org/jessie/utils/ferret-vis</a>
+ 
+</pre>
+<tt>However, the official Ferret website provides instructions for
+</tt><tt>downloading and installing Ferret manually and does not
+mention that </tt><tt>at all.
+</tt><tt>Have some of you installed Ferret/PyFerret with these
+packages? What </tt><tt>are the "official" recommendations?
+</tt>
+<pre style="margin: 0em;">Cheers
+ 
+ 
+ 
+ 
+ 
+</pre>
+</blockquote>
+<pre class="moz-signature" cols="72">-- 
+Alastair McKinstry, <a rel="nofollow" class="moz-txt-link-rfc2396E" href="mailto:alastair@xxxxxxxx">&lt;alastair@xxxxxxxx&gt;</a>, <a rel="nofollow" class="moz-txt-link-rfc2396E" href="mailto:mckinstry@xxxxxxxxxx">&lt;mckinstry@xxxxxxxxxx&gt;</a>, <a rel="nofollow" class="moz-txt-link-freetext" href="https://diaspora.sceal.ie/u/amckinstry">https://diaspora.sceal.ie/u/amckinstry</a>
+Misentropy: doubting that the Universe is becoming more disordered. </pre>
+ 
+ 
+</font></td></tr></table><p><strong>Attachment:
+<a href="pgpHGNZA2F53N.pgp" ><tt>signature.asc</tt></a></strong><br>
+ 
+<em>Description:</em> OpenPGP digital signature</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00379" href="msg00379.html">Re: [ferret_users] Ferret and debian/ubuntu packages</a></strong>
+<ul><li><em>From:</em> karen guihou</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00357.html">Re: [ferret_users] Ferret and debian/ubuntu packages</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00379.html">Re: [ferret_users] Ferret and debian/ubuntu packages</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00357.html">Thread Prev</a>][<a href="msg00379.html">Thread Next</a>][<A HREF="threads2017.html#00377">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

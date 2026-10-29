@@ -1,0 +1,132 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] inverting cmocean color bar -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Wed, 4 Mar 2020 19:31:35 &#45;0800 -->
+<!--X-Message-Id: CAEwQpa+x+Fz53NMp7tEfFRmK6hEnoffNHXypEzqwS=1MX1zLNA@mail.gmail.com -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: CAFXLzPghAFywxa=YhU2RTxcaCB6TDiqYNQywvoRtp+QE=YtAEw@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] inverting cmocean color bar</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00552.html">Thread Prev</a>][<a href="msg00563.html">Thread Next</a>][<A HREF="threads2019.html#00553">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] inverting cmocean color bar</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] inverting cmocean color bar</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 5 Mar 2020 12:31:13 +0900</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;CAFXLzPghAFywxa=YhU2RTxcaCB6TDiqYNQywvoRtp+QE=YtAEw@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAFXLzPghAFywxa=YhU2RTxcaCB6TDiqYNQywvoRtp+QE=YtAEw@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Hi&#xA0;Saurabh,</div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Thu, Mar 5, 2020 at 9:29 AM saurabh rathore &lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx">rohitsrb2020@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div style="color:rgb(0,0,0)"><br></div><div style="color:rgb(0,0,0)">I am using cmocean color bar and I like to plot the color bar in reverse direction means upside down. I tried a lot using Matlab also to flip it upside down but unsuccessful and too much of time-consuming. So is it possible to invert the colour the cmocean color bar like blue_orange to orange_blue?</div></div></blockquote><div><br></div><div><br></div><div>I&#39;m attaching my script which does that.</div><div><br></div><div>$ ruby ferret-invert-spk.rb your-rainbow.spk my-grayscale.spk . . .</div><div><br></div><div>I hope it works for you.</div><div><br></div><div>Cheers,</div><div>Ryo</div></div></div>
+<pre>#!/usr/bin/ruby
+ 
+#-- return the next non-comment, non-blank line.
+def next_line(f)
+line = nil
+while (line = f.gets) &amp;&amp; (line =
+end
+return line
+end
+ 
+#-- Main loop over palette files ---
+ARGV.each {|fname|
+inf = File.open(fname,&quot;r&quot;)
+ 
+line = next_line(inf) #-- first non-comment line
+ 
+begin
+if ! line then raise &quot;#{fname}: empty?  Skipping. . .&quot; end
+case line
+when /\s*(rgb_mapping\s+by_value)/i, /\s*(rgb_mapping\s+by_level)/i
+raise &quot;#{fname}: cannot invert #{$1} .&quot;
+end
+rescue RuntimeError =&gt; err
+$stderr.puts err
+inf.close
+next
+end
+ 
+ofname = &quot;inverse-&quot; + File.basename(fname)
+ouf = File.open(ofname, &quot;w&quot;)
+ 
+if line =
+ouf.puts line
+line = next_line(inf)
+end
+ 
+buff = Array.new
+while line
+v, *rest = line.split
+buff &lt;&lt; &quot;#{100 - v.to_f} #{rest.join(' ')}&quot;
+line = next_line(inf)
+end
+inf.close
+ 
+buff.reverse_each {|e| ouf.puts e }
+ 
+ouf.close
+}
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00563" href="msg00563.html">Re: [ferret_users] inverting cmocean color bar</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00552" href="msg00552.html">[ferret_users] inverting cmocean color bar</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00552.html">[ferret_users] inverting cmocean color bar</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00563.html">Re: [ferret_users] inverting cmocean color bar</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00552.html">Thread Prev</a>][<a href="msg00563.html">Thread Next</a>][<A HREF="threads2019.html#00553">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

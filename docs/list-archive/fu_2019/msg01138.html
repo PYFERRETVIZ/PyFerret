@@ -1,0 +1,220 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Aspect, bad values using poly_vector.jnl -->
+<!--X-From-R13: Ereran Wyyvt <freran.vyyvt.veqNtznvy.pbz> -->
+<!--X-Date: Tue, 21 Jun 2022 05:13:40 &#45;0700 -->
+<!--X-Message-Id: CADczVkMacf09+WUi70sP8X_Fx6gbo4&#45;&#45;vEP&#45;+OQ9X3wdQVnBHA@mail.gmail.com -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Derived: binD13EKx429f.bin -->
+<!--X-Derived: pngnuKvqdxJRh.png -->
+<!--X-Derived: png_Tw8gLjuyQ.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Aspect, bad values using poly_vector.jnl</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01137.html">Thread Prev</a>][<a href="msg01139.html">Thread Next</a>][<A HREF="threads2019.html#01138">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Aspect, bad values using poly_vector.jnl</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Aspect, bad values using poly_vector.jnl</strong></li>
+<li><strong>From</strong>: <strong>Serena Illig &lt;<a href="mailto:serena.illig.ird@DOMAIN.HIDDEN">serena.illig.ird@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 21 Jun 2022 14:13:16 +0200</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Dear Ferret users,<br><br>I hope this email finds you well.<br><br>I am writing regarding some vector plots. I am using PyFerret v7.63 on Linux Ubuntu (via miniconda) but I have the same issues with PyFerret v7.62 and ferret v6.71.<br><br>I am drawing an hovmuller vector plot (x-t plot) of the wind stress anomalies along the equator for 2021, overlaying SST anomalies.<br>I am pretty happy with the result of the command VECTOR/OV without specifying /ASPECT, because the time axis does not have a spatial scale. However, I prefer the look of the arrows drawn by the &quot;go poly_vector.jnl&quot; script, associated with POLYGON/OVER.<br><br>I encountered 2 problems using the poly_vector.jnl script:<br><br>1) Using go poly_vector.jnl, my first problem was the difference in the axis scaling (y_scale/x_scale) between the VECTOR/OV plot and the poly_vector.jnl script.<br>---&gt; I thus modified the poly_vector scrip.jnl (<font color="#660000">see script attached</font>) to include the possibility to adjust the direction of the vectors just like with /ASPECT in the VECTOR/OV plot.<br>I created a 7th input argument, that corrects the direction of the arrows.<br>The script works with or without specifying the 7th argument and mimics the arrows drawn with the command VECTOR/OV (<b>I do not know why I had to scale with sqrt(2), see below</b>).<br><br><font color="#274e13">let vect_aspect = $7&quot;-1.&quot;<br><br>! Compute the vector direction on the plot<br>let vect_rotation= if vect_aspect lt 0 then plt_y_per_inch/plt_x_per_inch else vect_aspect*(plt_x_inch_span/plt_y_inch_span)<b>*(2)^0.5</b><br>let pi = 4*atan(1)<br>let vect_dir = atan2(vect_rotation*vect_y_comp/plt_y_per_inch, vect_x_comp/plt_x_per_inch)</font><br><br>2) My second problem was linked to bad values. I do not want to plot vectors if the arrows are too small. I thus masked the wind stress components using a simple if loop.<br>It works fine until I add a value to color the arrows.<br>*** POLYGON/OVER/NOLABEL/KEY/NOAXES/LINE PLT_X_ARROW, PLT_Y_A                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+<p><strong>Attachment:
+<a href="binD13EKx429f.bin" ><tt>poly_vectors2.jnl</tt></a></strong><br>
+<em>Description:</em> Binary data</p>
+<p><strong>Attachment:
+<a href="pngnuKvqdxJRh.png" ><tt>My_plot_shifted.png</tt></a></strong><br>
+<em>Description:</em> PNG image</p>
+<p><strong>Attachment:
+<a href="png_Tw8gLjuyQ.png" ><tt>My_plot_corrected.png</tt></a></strong><br>
+<em>Description:</em> PNG image</p>
+<pre>* 
+*  keep_good.F in 6D
+* 
+*  Serena Illig
+*  June 2022
+* 
+*  Remove the bad values by shifting the data !!!
+* 
+ 
+SUBROUTINE keep_good_init(id)
+ 
+INCLUDE 'EF_Util.cmn'
+ 
+INTEGER id, arg
+*
+* **********************************************************************
+*                                            USER CONFIGURABLE PORTION |
+*                                                                      |
+*
+CALL ef_set_desc(id,'Keep good data and remove bad values')
+*
+CALL ef_set_num_args(id, 1)
+CALL ef_set_has_vari_args(id, NO)
+CALL ef_set_axis_inheritance_6d(id, NORMAL, 
+.     IMPLIED_BY_ARGS, IMPLIED_BY_ARGS, IMPLIED_BY_ARGS,
+.     IMPLIED_BY_ARGS, IMPLIED_BY_ARGS)
+CALL ef_set_piecemeal_ok_6d(id, YES, YES, YES, YES, YES, YES)
+*
+arg = 1
+CALL ef_set_arg_name(id, arg, 'A')
+CALL ef_set_arg_desc(id, arg, 'Field to be Processed')
+CALL ef_set_axis_influence_6d(id, arg, YES, YES, YES, YES, YES, YES)
+*
+*                                                                      ^
+*                                                                      |
+*                                            USER CONFIGURABLE PORTION |
+* **********************************************************************
+ 
+RETURN 
+END
+ 
+ 
+* 
+*  In this subroutine we compute the result
+* 
+SUBROUTINE keep_good_compute(id, arg_1, result)
+ 
+IMPLICIT none
+ 
+INCLUDE 'EF_Util.cmn'
+INCLUDE 'EF_mem_subsc.cmn'
+ 
+INTEGER id, arg
+ 
+REAL bad_flag(EF_MAX_ARGS), bad_flag_result
+REAL arg_1(mem1lox:mem1hix, mem1loy:mem1hiy, mem1loz:mem1hiz,
+.           mem1lot:mem1hit, mem1loe:mem1hie, mem1lof:mem1hif)
+ 
+REAL result(memreslox:memreshix, memresloy:memreshiy,
+.            memresloz:memreshiz, memreslot:memreshit,
+.            memresloe:memreshie, memreslof:memreshif)
+*
+* After initialization, the 'res_' arrays contain indexing information 
+* for the result axes.  The 'arg_' arrays will contain the indexing 
+* information for each variable's axes. 
+*
+INTEGER res_lo_ss(6), res_hi_ss(6), res_incr(6)
+INTEGER arg_lo_ss(6,EF_MAX_ARGS), arg_hi_ss(6,EF_MAX_ARGS),
+.     arg_incr(6,EF_MAX_ARGS)
+*
+* **********************************************************************
+*                                            USER CONFIGURABLE PORTION |
+*                                                                      |
+*                                                                      V
+INTEGER i,j,k,l,m,n
+INTEGER i1,j1,k1,l1,m1,n1   
+*
+CALL ef_get_res_subscripts_6d(id, res_lo_ss, res_hi_ss, res_incr)
+CALL ef_get_arg_subscripts_6d(id, arg_lo_ss, arg_hi_ss, arg_incr)
+CALL ef_get_bad_flags(id, bad_flag, bad_flag_result)
+*
+DO 105 n=res_lo_ss(F_AXIS), res_hi_ss(F_AXIS)
+DO 104 m=res_lo_ss(E_AXIS), res_hi_ss(E_AXIS) 
+DO 103 l=res_lo_ss(T_AXIS), res_hi_ss(T_AXIS)
+DO 102 k=res_lo_ss(Z_AXIS), res_hi_ss(Z_AXIS)       
+DO 101 j=res_lo_ss(Y_AXIS), res_hi_ss(Y_AXIS)
+DO 100 i=res_lo_ss(X_AXIS), res_hi_ss(X_AXIS) 
+result(i,j,k,l,m,n)=bad_flag_result
+100  ENDDO
+101  ENDDO
+102  ENDDO
+103  ENDDO
+104  ENDDO
+105  ENDDO
+ 
+DO 205 n1=arg_lo_ss(F_AXIS,ARG1), arg_hi_ss(F_AXIS,ARG1)
+DO 204 m1=arg_lo_ss(E_AXIS,ARG1), arg_hi_ss(E_AXIS,ARG1)  
+i=res_lo_ss(X_AXIS)
+j=res_lo_ss(Y_AXIS)
+k=res_lo_ss(Z_AXIS)
+l=res_lo_ss(T_AXIS)     
+DO 203 l1=arg_lo_ss(T_AXIS,ARG1), arg_hi_ss(T_AXIS,ARG1)
+DO 202 k1=arg_lo_ss(Z_AXIS,ARG1), arg_hi_ss(Z_AXIS,ARG1)       
+DO 201 j1=arg_lo_ss(Y_AXIS,ARG1), arg_hi_ss(Y_AXIS,ARG1)
+DO 200 i1=arg_lo_ss(X_AXIS,ARG1), arg_hi_ss(X_AXIS,ARG1) 
+if (arg_1(i1,j1,k1,l1,m1,n1).ne.bad_flag(1)) then
+result(i,j,k,l,m1,n1)=arg_1(i1,j1,k1,l1,m1,n1)
+if (i.ne.res_hi_ss(X_AXIS)) then
+i=i+1
+else
+i=res_lo_ss(X_AXIS)
+if (j.ne.res_hi_ss(Y_AXIS)) then
+j=j+1
+else
+j=res_lo_ss(Y_AXIS)
+if (k.ne.res_hi_ss(Z_AXIS)) then
+k=k+1
+else
+k=res_lo_ss(Z_AXIS)
+l=l+1
+endif                               
+endif          
+endif
+endif
+*            
+200  ENDDO
+201  ENDDO
+202  ENDDO
+203  ENDDO
+204  ENDDO
+205  ENDDO
+*                                                                      ^
+*                                                                      |
+*                                            USER CONFIGURABLE PORTION |
+* **********************************************************************
+ 
+RETURN 
+END
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01137.html">[ferret_users] Fill and</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01139.html">[ferret_users] Frame/file= and Framing of the output image</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01137.html">Thread Prev</a>][<a href="msg01139.html">Thread Next</a>][<A HREF="threads2019.html#01138">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

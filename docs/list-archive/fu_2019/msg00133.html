@@ -1,0 +1,135 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] MacOS pyferret problem with eps output -->
+<!--X-From-R13: [negva Epuzvqg <znegva.fpuzvqgNvb&#45;jnearzhraqr.qr> -->
+<!--X-Date: Sat, 20 Apr 2019 06:31:36 &#45;0700 -->
+<!--X-Message-Id: c0b337c8&#45;0e82&#45;30ea&#45;0058&#45;2186eb0bbb3c@io&#45;warnemuende.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 6FE25465&#45;26B6&#45;4E65&#45;9478&#45;15F80578706E@Gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] MacOS pyferret problem with eps output</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00132.html">Thread Prev</a>][<a href="msg00134.html">Thread Next</a>][<A HREF="threads2019.html#00133">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] MacOS pyferret problem with eps output</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] MacOS pyferret problem with eps output</strong></li>
+<li><strong>From</strong>: <strong>Martin Schmidt &lt;<a href="mailto:martin.schmidt@DOMAIN.HIDDEN">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Sat, 20 Apr 2019 15:30:36 +0200</li>
+<li>In-reply-to: &lt;<a href="msg00132.html">6FE25465-26B6-4E65-9478-15F80578706E@Gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00132.html">6FE25465-26B6-4E65-9478-15F80578706E@Gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.9.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Hi Tony,
+ 
+</pre><tt>as far as I know the message is correct. I had the same problem some 
+</tt><tt>time ago. There is no simple solution at the horizon. The best 
+</tt><tt>recommendation would be, to to make friends with other formats like png 
+</tt><tt>or pdf.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>I had searched through several forums on qt. The support of Postcript 
+</tt><tt>output was discussed and some of the developpers clearly expressed that 
+</tt><tt>Postcript will not be supported any more in future. I cannot simply find 
+</tt><tt>the links - just remebering in this as a fact.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>With linux there is a partial solution to keep eps-output. Most systems, 
+</tt><tt>i.e. linux destributions, still deliver qt4. One may install both, qt4 
+</tt><tt>and qt5, in parallel. Qt4 supports eps-output. I am pretty sure, this is 
+</tt><tt>also possible for MacOS, but I cannot tell you how. Here you need to ask 
+</tt><tt>a Mac-wizzard. The next thing would be to change pyferret a little bit. 
+</tt><tt>There are several python scripts (.py-files), importing either PyQt4 or 
+</tt><tt>PyQt5. If there is PyQt5 installed, it would be preferred. You would 
+</tt><tt>have to edit these files to import the PyQt4 module in any case. Just a 
+</tt><tt>few lines to modify.&#xA0; Even possible without any python knowledge. If you 
+</tt><tt>need more details I could help, but in this case please wait until next 
+</tt><tt>Tuesday.&#xA0;&#xA0; So your turn would be to learn, how to keep qt4 and qt5 in 
+</tt><tt>parallel on your Mac, no need to downgrade.
+</tt><pre style="margin: 0em;">
+ 
+Best,
+ 
+Martin
+ 
+ 
+ 
+Am 20.04.2019 um 12:24 schrieb Jian (Tony) Ma:
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+Dear All,
+ 
+I got problem with PyFerret on Mac. When I use frame/file=1.eps, it tells me there is no postscriptformat for QPrinter. I searched online and found this is a problem with qt5, but I cannot downgrade to pyqt4. Any solution? Frustrated!
+ 
+Thanks,
+Tony
+ 
+Sent from my iPhone
+</pre></blockquote><pre style="margin: 0em;">
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00136" href="msg00136.html">Re: [ferret_users] MacOS pyferret problem with eps output</a></strong>
+<ul><li><em>From:</em> Jian (Tony) Ma</li></ul></li>
+<li><strong><a name="00135" href="msg00135.html">Re: [ferret_users] MacOS pyferret problem with eps output</a></strong>
+<ul><li><em>From:</em> Jian (Tony) Ma</li></ul></li>
+<li><strong><a name="00134" href="msg00134.html">Re: [ferret_users] MacOS pyferret problem with eps output</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00132" href="msg00132.html">[ferret_users] MacOS pyferret problem with eps output</a></strong>
+<ul><li><em>From:</em> Jian (Tony) Ma</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00132.html">[ferret_users] MacOS pyferret problem with eps output</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00134.html">Re: [ferret_users] MacOS pyferret problem with eps output</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00132.html">Thread Prev</a>][<a href="msg00134.html">Thread Next</a>][<A HREF="threads2019.html#00133">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

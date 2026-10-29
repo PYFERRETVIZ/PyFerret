@@ -1,0 +1,108 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Masking regions that have standard deviation outside of the range I have set -->
+<!--X-From-R13: Englrfu Uurgvln <fnglrfuturgvlnNtznvy.pbz> -->
+<!--X-Date: Sun, 10 Feb 2019 02:28:09 &#45;0800 -->
+<!--X-Message-Id: CALC=m4rAoR6ORfkp&#45;zZ0Noth41m62uR=4nUvYVEyGP_U1xSyqA@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: DM6PR03MB4348A45B2F5A58BF332D6B06C56A0@DM6PR03MB4348.namprd03.prod.outlook.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Masking regions that have standard deviation outside of the range I have set</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00026.html">Thread Prev</a>][<a href="msg00029.html">Thread Next</a>][<A HREF="threads2019.html#00031">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Masking regions that have standard deviation outside of the range I have set</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;<a href="mailto:JoshAB1995@DOMAIN.HIDDEN">JoshAB1995@xxxxxxxxxxx</a>&quot; &lt;<a href="mailto:JoshAB1995@DOMAIN.HIDDEN">JoshAB1995@xxxxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Masking regions that have standard deviation outside of the range I have set</strong></li>
+<li><strong>From</strong>: <strong>Satyesh Ghetiya &lt;<a href="mailto:satyeshghetiya@DOMAIN.HIDDEN">satyeshghetiya@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Sun, 10 Feb 2019 16:04:44 +0530</li>
+<li>Cc: &quot;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&quot; &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00026.html">DM6PR03MB4348A45B2F5A58BF332D6B06C56A0@DM6PR03MB4348.namprd03.prod.outlook.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00026.html">DM6PR03MB4348A45B2F5A58BF332D6B06C56A0@DM6PR03MB4348.namprd03.prod.outlook.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div dir="ltr">Hi Josh,<div>Perhaps the syntax needs to be corrected for the condition. Corrected one --&gt;&#xA0;</div><div>let mask= if mld[l=1:120@std] lt 30 <b>OR</b>&#xA0;mld[l=1:120@std] gt 80 then 1000 else mld[l=1:120@std]</div><div>Now you should shade mask (and not mld). Because mld variable is unchanged here.</div><div><br></div><div><br></div><div>Another way which I use in ferret for masking is :</div><div>let mask=if mld[l=1:120@std] lt 30&#xA0;<b>OR</b>&#xA0;mld[l=1:120@std] gt 80 then 1/0 else 1;</div><div>let mld_good=mld*mask ;&#xA0;</div><div>^ So mld_good variable is my mld variable at places where std is in (30,80). Everywhere else it is bad or missing (1/0 is not commutable, hence is treated as missing .... )</div><div><br></div><div>Regards,</div><div>Ghetiya Satyesh,</div><div>India</div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Sat, Feb 9, 2019 at 11:45 PM <a rel="nofollow" href="mailto:JoshAB1995@xxxxxxxxxxx">JoshAB1995@xxxxxxxxxxx</a> &lt;<a rel="nofollow" href="mailto:JoshAB1995@xxxxxxxxxxx">JoshAB1995@xxxxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+ 
+ 
+ 
+ 
+ 
+<div lang="EN-GB">
+<div class="gmail-m_-412474608741593068WordSection1">
+<p class="MsoNormal">Hello everyone,</p>
+<p class="MsoNormal"><u></u>&#xA0;<u></u></p>
+<p class="MsoNormal">Context: I&#x2019;m trying to shade data to show regions with a standard deviation between X values. I&#x2019;ve tried using the following code, however when I then go back to shade x[l=x:x@std] nothing changes.</p>
+<p class="MsoNormal"><u></u>&#xA0;<u></u></p>
+<p class="MsoNormal">yes? let mask = if mld[l=1:120@std] lt 30 gt 80 then 1000 else mld[l=1:120@std]</p>
+<p class="MsoNormal">yes? set var/bad = 1000 mld[l=1:120@std]</p>
+<p class="MsoNormal">yes? shade mld[l=1:120@std] !the normal unmasked map appears...</p>
+<p class="MsoNormal"><u></u>&#xA0;<u></u></p>
+<p class="MsoNormal">So with that code I&#x2019;m trying to describe to ferret that if the standard deviation of that time period lies outside of 30 and 80 then it should ignore it. The outcome I am after is the plot only shading the area that fits within those bounds
+(with a std of between 30 and 80). Any Idea&#x2019;s as to why this isn&#x2019;t working? Apologies if this is simple but I&#x2019;ve been stuck on this for a while as a new user!!</p>
+<p class="MsoNormal"><u></u>&#xA0;<u></u></p>
+<p class="MsoNormal">Many thanks,</p>
+<p class="MsoNormal"><u></u>&#xA0;<u></u></p>
+<p class="MsoNormal">Josh</p>
+<p class="MsoNormal"><u></u>&#xA0;<u></u></p>
+<p class="MsoNormal">Sent from <a rel="nofollow" href="https://go.microsoft.com/fwlink/?LinkId=550986">
+Mail</a> for Windows 10</p>
+<p class="MsoNormal"><u></u>&#xA0;<u></u></p>
+</div>
+</div>
+ 
+</blockquote></div><br clear="all"><div><br></div><div dir="ltr" class="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr"><br></div></div></div></div></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00026" href="msg00026.html">[ferret_users] Masking regions that have standard deviation outside of the range I have set</a></strong>
+<ul><li><em>From:</em> JoshAB1995@xxxxxxxxxxx</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00026.html">[ferret_users] Masking regions that have standard deviation outside of the range I have set</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00029.html">[ferret_users] Problem with detrending spatial rainfall</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00026.html">Thread Prev</a>][<a href="msg00029.html">Thread Next</a>][<A HREF="threads2019.html#00031">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

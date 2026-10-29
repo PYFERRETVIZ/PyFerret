@@ -1,0 +1,239 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Retrive online data from ftp servers and zipped datasets; -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Fri, 22 Dec 2017 09:57:35 &#45;0800 -->
+<!--X-Message-Id: 8907902d&#45;dc67&#45;d913&#45;0bd4&#45;e75b9e143d07@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAFYXeb_vKpdvcMsQ3G0fe&#45;9+20XM_riub1U6BXPsZHWN0&#45;&#45;okA@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Retrive online data from ftp servers and zipped datasets;</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00716.html">Thread Prev</a>][Thread Next][<A HREF="threads2017.html#00717">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Retrive online data from ftp servers and zipped datasets;</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Retrive online data from ftp servers and zipped datasets;</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Fri, 22 Dec 2017 09:57:32 -0800</li>
+<li>In-reply-to: &lt;<a href="msg00716.html">CAFYXeb_vKpdvcMsQ3G0fe-9+20XM_riub1U6BXPsZHWN0--okA@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00716.html">CAFYXeb_vKpdvcMsQ3G0fe-9+20XM_riub1U6BXPsZHWN0--okA@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.5.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hi Karnan,</p>
+<p>You can do that kind of thing with OPeNDAP datasets, but FTP does
+not work that way. The netCDF library, which Ferret uses to open
+netCDF and remote urls does not open FTP datasets.</p>
+<p>A search for "OSCAR data sets opendap jpl" turns up, for
+instance, this link:
+<a rel="nofollow" class="moz-txt-link-freetext" href="https://podaac.jpl.nasa.gov/dataset/OSCAR_L4_OC_third-deg">https://podaac.jpl.nasa.gov/dataset/OSCAR_L4_OC_third-deg</a>. Near
+the top of that page is a blue tab called "Data Access", which
+shows the different modes of access with some explanations. <br>
+ 
+</p>
+<p>I chose the second link there, "OPeNDAP". Exploring the
+different links from there for available data, I found this page
+which shows a big <a rel="nofollow" moz-do-not-send="true"
+href="https://opendap.jpl.nasa.gov/opendap/OceanCirculation/oscar/preview/L4/resource/LAS/oscar_third_deg_180">dataset
+listing</a>. Click on one of those files, or on the 'html' link
+over to the right for a file you want to access. The next you'll
+see next gives the "Data URL" and that's what you can put into a
+Ferret command:<br>
+ 
+</p>
+<tt>yes? use
+<a rel="nofollow" class="moz-txt-link-rfc2396E" href="https://opendap.jpl.nasa.gov:443/opendap/OceanCirculation/oscar/preview/L4/resource/LAS/oscar_third_deg_180/oscar_vel1992_180.nc">"https://opendap.jpl.nasa.gov:443/opendap/OceanCirculation/oscar/preview/L4/resource/LAS/oscar_third_deg_180/oscar_vel1992_180.nc"</a><br>
+ 
+*** NOTE: Axis coordinates are decreasing-ordered.
+Reversing ordering for axis latitude<br>
+ 
+yes? show data<br>
+ 
+currently SET data sets:<br>
+ 
+1&gt;
+<a rel="nofollow" class="moz-txt-link-freetext" href="https://opendap.jpl.nasa.gov:443/opendap/OceanCirculation/oscar/preview/L4/resource/LAS/oscar_third_deg_180/oscar_vel1992_180.nc">https://opendap.jpl.nasa.gov:443/opendap/OceanCirculation/oscar/preview/L4/resource/LAS/oscar_third_deg_180/oscar_vel1992_180.nc</a>
+(default)<br>
+ 
+name title I J
+K L<br>
+ 
+U Ocean Surface Zonal Currents 1:1081 1:481
+1:1 1:14<br>
+ 
+V Ocean Surface Meridional Curren 1:1081 1:481
+1:1 1:14<br>
+ 
+UM Ocean Surface Zonal Currents Ma 1:1081 1:481
+1:1 1:14<br>
+ 
+VM Ocean Surface Meridional Curren 1:1081 1:481
+1:1 1:14<br>
+ 
+<br>
+ 
+yes? shade/l=3 u ! quick look at the data<br>
+ 
+<br>
+ 
+yes? show grid u<br>
+ 
+GRID GAS1<br>
+ 
+name axis # pts start
+end subset<br>
+ 
+LONGITUDE LONGITUDE <b><font size="+1">1081 r</font></b>
+180E(-180) 180E full<br>
+ 
+LATITUDE LATITUDE 481 r 80S
+80N full<br>
+ 
+DEPTH DEPTH (m) 1 r- 15
+15 full<br>
+ 
+TIME TIME 14 r 21-OCT-1992 20:00
+26-DEC-1992 21:59 full<br>
+ 
+</tt><tt><br>
+ 
+</tt><br>
+ 
+Just one more hint here. Note that the longitude is not a modulo
+access (if it were the SHOW GRID would show <b><font size="+1">1081mr
+</font></b>with an "m" under # pts). If you wanted to save, say a
+set that spans the Pacific Ocean, you could tell Ferret to treat
+that axis as a modulo axis<br>
+ 
+<br>
+ 
+<tt>yes? set axis/modulo `u,return=xaxis`</tt><tt><br>
+ 
+</tt><tt>!-&gt; set axis/modulo LONGITUDE</tt><tt><br>
+ 
+</tt><tt>yes? show grid u</tt><tt><br>
+ 
+</tt><tt> GRID GAS1</tt><tt><br>
+ 
+</tt><tt>name axis # pts start
+end subset</tt><tt><br>
+ 
+</tt><tt>LONGITUDE LONGITUDE <font size="+1"><b>1081mr</b></font>
+180E(-180) 180E full</tt><tt><br>
+ 
+</tt><tt>LATITUDE LATITUDE 481 r 80S
+80N full</tt><tt><br>
+ 
+</tt><tt>DEPTH DEPTH (m) 1 r- 15
+15 full</tt><tt><br>
+ 
+</tt><tt>TIME TIME 14 r 21-OCT-1992 20:00
+26-DEC-1992 21:59 full</tt><tt><br>
+ 
+</tt><tt><br>
+ 
+<br>
+ 
+yes? save/x=150:190/y=-2:12/file=mysubset.nc u,v<br>
+ 
+<br>
+ 
+<br>
+ 
+<br>
+ 
+</tt><br>
+ 
+<div class="moz-cite-prefix">On 12/21/2017 11:16 PM, Karnan C wrote:<br>
+ 
+</div>
+<blockquote type="cite"
+cite="">
+<pre wrap="">Dear ferret users,
+ 
+I would like to download the OSCAR data sets directly from the web
+servers through ferret. If I do that, I can set my area of interest
+and store a small size data in my computer, rather than downloading
+ 
+ 
+I can't succeed do obtain the data.
+ 
+1). It was FTP server and when I tried, I got error.
+Data: oscar_vel1992_180.nc
+Server: <a rel="nofollow" class="moz-txt-link-freetext" href="ftp://podaac-ftp.jpl.nasa.gov/allData/oscar/preview/L4/resource/LAS/oscar_third_deg_180/">ftp://podaac-ftp.jpl.nasa.gov/allData/oscar/preview/L4/resource/LAS/oscar_third_deg_180/</a>
+ 
+use <a rel="nofollow" class="moz-txt-link-rfc2396E" href="ftp://podaac-ftp.jpl.nasa.gov/allData/oscar/preview/L4/resource/LAS/oscar_third_deg_180/oscar_vel1992_180.nc">"ftp://podaac-ftp.jpl.nasa.gov/allData/oscar/preview/L4/resource/LAS/oscar_third_deg_180/oscar_vel1992_180.nc"</a>
+ 
+**netCDF error
+No such file or directory (OPeNDAP/netCDF Error code 2)
+Data set:
+<a rel="nofollow" class="moz-txt-link-freetext" href="ftp://podaac-ftp.jpl.nasa.gov/allData/oscar/preview/L4/resource/LAS/oscar_third_deg_180/oscar_vel1992_180.nc">ftp://podaac-ftp.jpl.nasa.gov/allData/oscar/preview/L4/resource/LAS/oscar_third_deg_180/oscar_vel1992_180.nc</a>
+ 
+2). Some of the online data sets were zipped in the FTP server.
+Data: oscar_vel1992.nc.gz
+Server: <a rel="nofollow" class="moz-txt-link-freetext" href="ftp://podaac-ftp.jpl.nasa.gov/allData/oscar/preview/L4/oscar_third_deg/">ftp://podaac-ftp.jpl.nasa.gov/allData/oscar/preview/L4/oscar_third_deg/</a>
+ 
+Please share some ideas to do it successfully.
+Thank you.
+</pre>
+</blockquote>
+<br>
+ 
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00716" href="msg00716.html">[ferret_users] Retrive online data from ftp servers and zipped datasets;</a></strong>
+<ul><li><em>From:</em> Karnan C</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00716.html">[ferret_users] Retrive online data from ftp servers and zipped datasets;</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00716.html">Thread Prev</a>][Thread Next][<A HREF="threads2017.html#00717">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

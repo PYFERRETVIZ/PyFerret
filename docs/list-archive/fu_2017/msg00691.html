@@ -1,0 +1,210 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] white space in the map projections. -->
+<!--X-From-R13: fnhenou enguber <ebuvgfeo2020Ntznvy.pbz> -->
+<!--X-Date: Sun, 3 Dec 2017 20:51:33 &#45;0800 -->
+<!--X-Message-Id: CAFXLzPgYRh43Hi=xtM_X&#45;W5pC9BA8=_A4ix7ik6vVOnp1YZPWA@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAFXLzPjrBVKer+=9jERfFcaVdL7r6EOxkR+SNe0QgZfKAfyazg@mail.gmail.com -->
+<!--X-Reference: 3f2fcb09&#45;780f&#45;e3c5&#45;62ef&#45;027cd8683179@csiro.au -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] white space in the map projections.</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00690.html">Thread Prev</a>][<a href="msg00692.html">Thread Next</a>][<A HREF="threads2017.html#00691">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] white space in the map projections.</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Russ Fiedler &lt;<a href="mailto:russell.fiedler@DOMAIN.HIDDEN">russell.fiedler@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] white space in the map projections.</strong></li>
+<li><strong>From</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 4 Dec 2017 15:51:23 +1100</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00690.html">3f2fcb09-780f-e3c5-62ef-027cd8683179@csiro.au</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAFXLzPjrBVKer+=9jERfFcaVdL7r6EOxkR+SNe0QgZfKAfyazg@mail.gmail.com&gt; &lt;<a href="msg00690.html">3f2fcb09-780f-e3c5-62ef-027cd8683179@csiro.au</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)">Thanks a lot Russ, my problem is solved from your commands.</div><div class="gmail_default" style="color:rgb(0,0,0)"><br>
+</div><div class="gmail_default" style="color:rgb(0,0,0)">Thank you so much</div><div class="gmail_default" style="color:rgb(0,0,0)"><br>
+</div><div class="gmail_default" style="color:rgb(0,0,0)">regards, saurabh<br>
+</div></div><div class="gmail_extra"><br>
+<div class="gmail_quote">On Mon, Dec 4, 2017 at 2:51 PM, Russ Fiedler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:russell.fiedler@xxxxxxxx">russell.fiedler@xxxxxxxx</a>&gt;</span> wrote:<br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">
+ 
+ 
+ 
+<div text="#000000" bgcolor="#FFFFFF">
+<div class="m_-6178268204149125613moz-cite-prefix">Hi Saurabh,<br>
+ 
+<br>
+ 
+It looks like there some shaving of edges and something odd in the
+calculation of the graticules.<br>
+ 
+<br>
+ 
+I got a nice result by extending the X-Region by 0.5 degrees in
+both directions limiting y to 63S:63N and setting the graticules
+directly.<br>
+ 
+<br>
+ 
+<br>
+ 
+SET DATA coads_climatology<br>
+ 
+SET REGION/X=19.5:380.5/Y=-63:63/l=1
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!<br>
+ 
+GO mp_mcbryde_fpp<br>
+ 
+SET GRID sst; GO mp_aspect<br>
+ 
+SHADE/NOLAB/NOAX/NOKEY sst, x_page, y_page<br>
+ 
+GO mp_graticule 20 380 30 -63 63 `126/12` 1
+!!!!!!!!!!!!!!!!!!!!!!<br>
+ 
+GO mp_fland 120 gray<br>
+ 
+LABEL/NOUSER `($PPL$XLEN)*0.5`,-0.4,0,0,.20 McBryde Flat Polar<span class="HOEnZb"><font color="#888888"><br>
+ 
+<br>
+ 
+<br>
+ 
+Russ</font></span><div><div class="h5"><br>
+ 
+<br>
+ 
+On 04/12/17 12:30, saurabh rathore wrote:<br>
+ 
+</div></div></div><div><div class="h5">
+<blockquote type="cite">
+ 
+<div dir="ltr">
+<div class="gmail_default" style="color:rgb(0,0,0)">Dear
+Ferreters,</div>
+<div class="gmail_default" style="color:rgb(0,0,0)"><br>
+ 
+</div>
+<div class="gmail_default" style="color:rgb(0,0,0)">I am not
+understanding why there are white spaces in the attached map
+projections from sinusoidal and McBryde. I tried a lot to
+adjust the lats and lon to get rid of these white annoying
+spaces but failed.</div>
+<div class="gmail_default" style="color:rgb(0,0,0)"><br>
+ 
+</div>
+<div class="gmail_default" style="color:rgb(0,0,0)">So seeking
+help to get rid of these white spaces</div>
+<div class="gmail_default" style="color:rgb(0,0,0)"><br>
+ 
+</div>
+<div class="gmail_default" style="color:rgb(0,0,0)">region of
+plot is 20E:380E and 63S:63N</div>
+<div class="gmail_default" style="color:rgb(0,0,0)"><br>
+ 
+</div>
+<div class="gmail_default" style="color:rgb(0,0,0)">regards,saurabh<br clear="all">
+</div>
+<br>
+ 
+-- <br>
+ 
+<div class="m_-6178268204149125613gmail_signature" data-smartmail="gmail_signature">
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div><font color="#0000ff" size="4"><b><br>
+ 
+</b></font></div>
+<div><font color="#0000ff" size="4"><b><br>
+ 
+</b></font></div>
+<font color="#0000ff" size="4" face="times new roman, serif"><b>REGARDS</b></font>
+<div><font color="#0000ff" size="4" face="times new roman, serif"><b><br>
+ 
+</b></font>
+<div><font color="#0000ff" size="4" face="times new roman, serif"><b>Saurabh Rathore</b></font></div>
+<div><font color="#0000ff" size="4" face="times new roman, serif"><b>Research Scholar (PhD.)</b></font></div>
+<div><font color="#0000ff" size="4" face="times new roman, serif"><b>Centre For Oceans, Rivers,
+Atmosphere &amp; Land Science Technology</b></font></div>
+<div><font color="#0000ff" size="4" face="times new roman, serif"><b>Indian Institute Of Technology,
+Kharagpur</b></font></div>
+<div><font color="#0000ff" size="4" face="times new roman, serif"><b>contact :- 91- 8345984434</b></font></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<p><br>
+ 
+</p>
+</div></div></div>
+ 
+</blockquote></div><br>
+<br clear="all"><br>
+-- <br>
+<div class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><font color="#0000ff" size="4"><b><br>
+</b></font></div><div><font color="#0000ff" size="4"><b><br>
+</b></font></div><font color="#0000ff" size="4" face="times new roman, serif"><b>REGARDS</b></font><div><font color="#0000ff" size="4" face="times new roman, serif"><b><br>
+</b></font><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Saurabh Rathore</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Research Scholar (PhD.)</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Centre For Oceans, Rivers, Atmosphere &amp; Land Science Technology</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Indian Institute Of Technology, Kharagpur</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>contact :- 91- 8345984434</b></font></div></div></div></div></div></div>
+</div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00688" href="msg00688.html">[ferret_users] white space in the map projections.</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+<li><strong><a name="00690" href="msg00690.html">Re: [ferret_users] white space in the map projections.</a></strong>
+<ul><li><em>From:</em> Russ Fiedler</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00690.html">Re: [ferret_users] white space in the map projections.</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00692.html">[ferret_users] problem with longitude lines drawing</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00690.html">Thread Prev</a>][<a href="msg00692.html">Thread Next</a>][<A HREF="threads2017.html#00691">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

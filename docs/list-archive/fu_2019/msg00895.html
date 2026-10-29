@@ -1,0 +1,81 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] pyferret frame images with nodisplay have small white lines -->
+<!--X-From-R13: Bngevpx Pebpxznaa <cngevpx.oebpxznaaNyfpr.vcfy.se> -->
+<!--X-Date: Thu, 21 Jan 2021 12:05:57 &#45;0800 -->
+<!--X-Message-Id: 1070211927.729483.1611259539455.JavaMail.zimbra@lsce.ipsl.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Derived: pngAt4qQAobti.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] pyferret frame images with nodisplay have small white lines</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00887.html">Thread Prev</a>][<a href="msg00896.html">Thread Next</a>][<A HREF="threads2019.html#00895">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] pyferret frame images with nodisplay have small white lines</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] pyferret frame images with nodisplay have small white lines</strong></li>
+<li><strong>From</strong>: <strong>Patrick Brockmann &lt;<a href="mailto:patrick.brockmann@DOMAIN.HIDDEN">patrick.brockmann@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 21 Jan 2021 21:05:39 +0100 (CET)</li>
+<li>Dkim-filter: OpenDKIM Filter v2.10.3 zmtaout01.partage.renater.fr D6A951A01A2</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>Thread-index: h6pyKcqXNvILDye15znQ63LQrNCYrA==</li>
+<li>Thread-topic: pyferret frame images with nodisplay have small white lines</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div style="font-family: arial, helvetica, sans-serif; font-size: 12pt; color: #000000"><div>Hi all,</div><div><br data-mce-bogus="1"></div><div>With pyferret and the -nodisplay option I get some white horizontal lines&nbsp;</div><div>that makes the image captured by the frame command not very nice (at least strange).</div><div><br></div><div>Is there a workaround ?&nbsp;</div><div>Initially (re)discovered from a python notebook (with ferretmagic&nbsp;<a rel="nofollow" href="https://github.com/PBrockmann/ipython_ferretmagic" data-mce-href="https://github.com/PBrockmann/ipython_ferretmagic">https://github.com/PBrockmann/ipython_ferretmagic</a>)</div><div><br data-mce-bogus="1"></div><div>$ cat tyty.jnl</div><div><span style="font-family: monospace;" data-mce-style="font-family: monospace;"><span style="color: #000000; background-color: #ffffff;" data-mce-style="color: #000000; background-color: #ffffff;">use levitus_climatology </span><br>shade/lev=20v temp[k=1] <br>frame/file=tyty.png<br></span></div><div><br data-mce-bogus="1"></div><div><span style="font-family: monospace;" data-mce-style="font-family: monospace;"><span style="color: #000000; background-color: #ffffff;" data-mce-style="color: #000000; background-color: #ffffff;">$ pyferret -nodisplay -script tyty.jnl</span><br></span></div><div><br data-mce-bogus="1"></div><div>I have tested the pyferret -png option.</div><div>It produces an image without lines. That would be perfect but how to retrieve this mode </div><div>from a&nbsp;pyferret.start function (the way ferretmagic produces images).</div><div><br data-mce-bogus="1"></div><div>Please test:</div><div><br data-mce-bogus="1"></div><div>$cat tyty.py</div><div><span style="font-family: monospace;" data-mce-style="font-family: monospace;"><span style="color: #000000; background-color: #ffffff;" data-mce-style="color: #000000; background-color: #ffffff;">import pyferret </span><br>pyferret.start(verify=False, journal=False, unmapped=True, quiet=True) <br>pyferret.run('use levitus_climatology') <br>pyferr                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+<a href="pngAt4qQAobti.png" ><tt>tyty.png</tt></a></strong><br>
+<em>Description:</em> PNG image</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00896" href="msg00896.html">Re: [ferret_users] pyferret frame images with nodisplay have small white lines</a></strong>
+<ul><li><em>From:</em> Patrick Brockmann</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00887.html">[ferret_users] Reading ascii file</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00896.html">Re: [ferret_users] pyferret frame images with nodisplay have small white lines</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00887.html">Thread Prev</a>][<a href="msg00896.html">Thread Next</a>][<A HREF="threads2019.html#00895">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

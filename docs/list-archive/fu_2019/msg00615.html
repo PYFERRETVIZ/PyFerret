@@ -1,0 +1,130 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Problems with netcdf output and zaxreplace -->
+<!--X-From-R13: Ivyyvnz Yrffyre <jvyyvnz.f.xrffyreNabnn.tbi> -->
+<!--X-Date: Thu, 16 Apr 2020 08:52:40 &#45;0700 -->
+<!--X-Message-Id: BF94A3E9&#45;F961&#45;4DA2&#45;B3B7&#45;5C18360AF3ED@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 171835bf252.g.graffino@tim.it -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Problems with netcdf output and zaxreplace</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00614.html">Thread Prev</a>][<a href="msg00616.html">Thread Next</a>][<A HREF="threads2019.html#00615">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Problems with netcdf output and zaxreplace</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Giorgio Graffino &lt;<a href="mailto:g.graffino@DOMAIN.HIDDEN">g.graffino@xxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Problems with netcdf output and zaxreplace</strong></li>
+<li><strong>From</strong>: <strong>William Kessler &lt;<a href="mailto:william.s.kessler@DOMAIN.HIDDEN">william.s.kessler@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 16 Apr 2020 08:52:36 -0700</li>
+<li>Cc: Ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00614.html">171835bf252.g.graffino@tim.it</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00614.html">171835bf252.g.graffino@tim.it</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>Hi Giorgio -
+ 
+Without having looked at your files, here's a guess:
+ 
+If some or all of your files include an unused axis (perhaps a single-point axis, either y=LAT or t=a calendar), then that is being carried through the calculation and possibly conflicting with the regridding of ZAXREPLACE.
+ 
+One way to avoid this is to RESHAPE the original files to get rid of the unused axes.
+ 
+Suppose you have a time series that includes the position encoded in the grid, perhaps with single-point x,y axes (try SHOW GRID). 
+ 
+Then:
+let omit_xy = RESHAPE(varname,t[gt=time_axis]+z[gz=depth_axis])
+ 
+The new variable omit_xy will have just the z,t axes you want.
+ 
+Since RESHAPE &quot;wraps&quot; the variable onto the new axes, first be sure that the omitted axes are in fact single points.
+ 
+This is just a guess!
+ 
+Billy
+ 
+&gt; On Apr 16, 2020, at 7:19 AM, Giorgio Graffino &lt;g.graffino@xxxxxx&gt; wrote:
+&gt; 
+&gt; Dear Ferreters,
+&gt; hope you can help me with this. 
+&gt; 
+&gt; I'm using Ferret (v6.842) on a cluster machine. My purpose is to regrid the meridional mass transport (time depth lat lon) into density space (time density lat lon) to compute the transport between some density layers. I'm writing a script based on this (<a  rel="nofollow" href="https://github.com/NOAA-PMEL/Ferret/blob/master/jnls/examples/depth_to_density_demo.jnl">https://github.com/NOAA-PMEL/Ferret/blob/master/jnls/examples/depth_to_density_demo.jnl</a>), which is using zaxreplace. I also found something about auxiliary regridding (<a  rel="nofollow" href="../../faq/depth-axis-to-density-axis.html">../../faq/depth-axis-to-density-axis</a>), but it requires a newer version of Ferret.
+&gt; 
+&gt; I'm using the script on several CMIP6 models, and saving the resulting time series as netcdf files for further analysis. I'm including as attachments the script and one of the output files, not the input files being too big. I'm facing two problems, and I can't find anything useful on the archives.
+&gt; 
+&gt; 1) First problem: for most models Ferret isn't producing any useful output files, because of error messages like this one:
+&gt; 
+&gt; TMAP ERR: error in line definition
+&gt;              file coords dont match variable coords on axis LAT153_153
+&gt; 
+&gt; As a result, I'm left with empty files. The point is that no LAT153_153 should exist, the variable being a time series. There is nothing special about 153, since other models produce different errors (LAT122_122, LAT124_124, LAT156_156, and so on). What is even more puzzling is that the computed variables are alright, because I can plot them with Ferret. I'm just not able to attach them as netcdf variables, and the resulting file is empty. Why is Ferret defining such axis for a time series?
+&gt; 
+&gt; 2) Second problem: for other models Ferret is complaining about the axis transformation. The error in this case is:
+&gt; 
+&gt; **ERROR: regridding: only @ASN regridding between calendar and
+&gt;           non-calendar axes: DENS
+&gt; 
+&gt; No variable is produced after using zaxreplace. I'm puzzled here because I'm defining a vertical axis, and I don't understand why calendars should matter. Is it a problem with zaxreplace? In case, could you provide me the relevant code?
+&gt; 
+&gt; Thanks in advance.
+&gt; 
+&gt; Giorgio
+&gt; 
+&gt; 
+&gt; &lt;STC_rho_historical_EC-Earth3_pacific.nc&gt;&lt;generate_STC_rho_CMIP6.jnl&gt;
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00614" href="msg00614.html">[ferret_users] Problems with netcdf output and zaxreplace</a></strong>
+<ul><li><em>From:</em> Giorgio Graffino</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00614.html">[ferret_users] Problems with netcdf output and zaxreplace</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00616.html">Re: [ferret_users] Problems with netcdf output and zaxreplace</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00614.html">Thread Prev</a>][<a href="msg00616.html">Thread Next</a>][<A HREF="threads2019.html#00615">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

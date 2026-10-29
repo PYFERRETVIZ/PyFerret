@@ -1,0 +1,78 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Adding a time&#45;axis -->
+<!--X-From-R13: Oyrknaqre Ohqrg <nyrknaqre.p.nhqrgNznvar.rqh> -->
+<!--X-Date: Wed, 27 May 2020 16:38:06 &#45;0700 -->
+<!--X-Message-Id: CAP06G6ROUiwDL+=BomxwLeQmxKT7jKy_a7CX8oBCU5yh872+tA@mail.gmail.com -->
+<!--X-Content-Type: multipart/related -->
+<!--X-Derived: pngCqR3nLO9x0.png -->
+<!--X-Derived: pngINzSzRANST.png -->
+<!--X-Derived: pngSvTZoCAl0c.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Adding a time-axis</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00695.html">Thread Prev</a>][<a href="msg00705.html">Thread Next</a>][<A HREF="threads2019.html#00704">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Adding a time-axis</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Adding a time-axis</strong></li>
+<li><strong>From</strong>: <strong>Alexander Audet &lt;<a href="mailto:alexander.c.audet@DOMAIN.HIDDEN">alexander.c.audet@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 27 May 2020 19:37:47 -0400</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div>Ferret community,</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;&#xA0; My main question is how to add a time-axis to a file without one. Regridding the file on a grid with a single time point does not seem to work.</div><div><br></div><div>Original variable:</div><div><div><img width="452" height="73" alt="image.png" src="pngCqR3nLO9x0.png"><br></div><b></b><i></i><u></u><sub></sub><sup></sup><strike></strike><br></div><div>This is my grid:<br></div><div><div><img width="452" height="72" alt="image.png" src="pngINzSzRANST.png"></div><div><b>Let PascalVAPOUR = VarMonth[g=fullVAPOUR, gt=@ASN]</b></div><div><b></b><br></div><b></b><i></i><u></u><sub></sub><sup></sup><strike></strike>And here is my regridded variable.&#xA0;</div><div><div><img width="452" height="64" alt="image.png" src="pngSvTZoCAl0c.png"></div><div>(Ignore my pascal labeling, I first experimented with changing those units then abandoned that without switching the labels)</div><b></b><i></i><u></u><sub></sub><sup></sup><strike></strike><br></div><div>Here is some background as to what I am actually trying to do:</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;&#xA0; I have a netcdf file that is the result of a correlation analysis that I am trying to view in VAPOUR (a 3D display software). Currently, I have taken the correlation results I have calculated for each pressure level and appended them into a file with a vertical axis. However because the results are a correlation of two time series, the file does not have a T axis as is appropriate. However, when I place my completed file into VAPOUR, VAPOUR does not read it.</div><div>&#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;&#xA0; It seems to me that not having a time axis might be part of the problem. (See <                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00705" href="msg00705.html">Re: [ferret_users] Adding a time-axis</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00695.html">[ferret_users] Different behavior when reading calendars between Pyferret V7.1 and Pyferret V7.5</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00705.html">Re: [ferret_users] Adding a time-axis</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00695.html">Thread Prev</a>][<a href="msg00705.html">Thread Next</a>][<A HREF="threads2019.html#00704">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

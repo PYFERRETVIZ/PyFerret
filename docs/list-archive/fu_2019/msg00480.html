@@ -1,0 +1,141 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] grid interpolation -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Tue, 14 Jan 2020 09:37:26 &#45;0800 -->
+<!--X-Message-Id: f9ad3717&#45;a26b&#45;8064&#45;892a&#45;a3d8092eef0e@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 76a843a6.bcd.16f9dae04fe.Coremail.e.gavilan@hhu.edu.cn -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] grid interpolation</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00479.html">Thread Prev</a>][<a href="msg00481.html">Thread Next</a>][<A HREF="threads2019.html#00480">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] grid interpolation</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] grid interpolation</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 14 Jan 2020 09:37:22 -0800</li>
+<li>In-reply-to: &lt;<a href="msg00479.html">76a843a6.bcd.16f9dae04fe.Coremail.e.gavilan@hhu.edu.cn</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00479.html">76a843a6.bcd.16f9dae04fe.Coremail.e.gavilan@hhu.edu.cn</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 Thunderbird/68.3.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+ 
+ 
+ 
+<p>Hi Estanislao,</p>
+<p>There are several regridding transformations available. By
+default a regridding operation uses linear interpolation, or you
+can specify @LIN explicitly, or @AVE for regridding using weighted
+averaging, or @ASN to do the regridding by assignment. "yes? show
+transforms" will give you the complete list. @ASN asks Ferret to
+simply map the data values onto the requested axis without any
+interpolation.<br>
+</p>
+<p>Here is the documentation about regridding: <br>
+</p>
+<p><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/Grids-Regions/GRIDS.html#">../../documentation/users-guide/Grids-Regions/GRIDS#</a><span><a rel="nofollow"
+class="attribute-value">Chapter4-Regridding</a></span></p>
+<p>cheers, Ansley<br>
+</p>
+<div class="moz-cite-prefix">On 1/12/2020 10:53 PM, ESTANISLAO
+GAVILAN PASCUAL-AHU wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+Hi community,
+<div>I would like to interpolate this data. The sea surface
+elevation is inside a grid where the points are in the center of
+the cell. I am trying to get the interpolation to the u and v
+points which are on the walls of the cell. I used this code but
+I obtain the same values for the u a v points. Thank in advance
+for your help</div>
+<div><br>
+</div>
+<div>define grid/x=lon/y=lat grid_t</div>
+<div>define grid/x=lonu/y=latu/like=velu grid_u</div>
+<div>define grid/x=lonv/y=latv/like=velv grid_v</div>
+<div><br>
+</div>
+<div>
+<div>let t_com=etan[g=grid_t@asn]</div>
+<div>let u_com=velu[g=grid_u@asn]</div>
+<div>let v_com=velv[g=grid_v@asn]</div>
+<div><br>
+</div>
+<div>let tcomu=t_com[gx=u_com,gy=u_com]</div>
+<div>let tcomv=t_com[gx=v_com,gy=v_com]</div>
+</div>
+<div><br>
+</div>
+<div><br>
+</div>
+<div>Kind regards,</div>
+<div><br>
+</div>
+<div>Estanislao</div>
+</blockquote>
+ 
+ 
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00481" href="msg00481.html">Re: [ferret_users] grid interpolation</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00479" href="msg00479.html">[ferret_users] grid interpolation</a></strong>
+<ul><li><em>From:</em> ESTANISLAO GAVILAN PASCUAL-AHU</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00479.html">[ferret_users] grid interpolation</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00481.html">Re: [ferret_users] grid interpolation</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00479.html">Thread Prev</a>][<a href="msg00481.html">Thread Next</a>][<A HREF="threads2019.html#00480">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

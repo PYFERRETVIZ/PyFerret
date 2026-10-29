@@ -1,0 +1,93 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] ferret and ERDDAP -->
+<!--X-From-R13: Dbynaq Epujrvgmre &#45; @AOO Ossvyvngr <ebynaq.fpujrvgmreNabnn.tbi> -->
+<!--X-Date: Mon, 2 Nov 2020 05:25:36 &#45;0800 -->
+<!--X-Message-Id: CAFzBDArHdZ4B0n675Q0018MR=J0HuHHBDNMsDxuKy6yMiv1c5A@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 1364465171.1725595.1603905692525.JavaMail.zimbra@lsce.ipsl.fr -->
+<!--X-Reference: CAHFMwDWu7Qw19qtH8hGEm_Xz6ux+f2CQbn8wMznXq2Ojc_ESRw@mail.gmail.com -->
+<!--X-Reference: CAEwQpaJ4gzovu9ycACFVzbtMou9LjmD+F0&#45;aUaJmusgtpw5kgw@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] ferret and ERDDAP</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00862.html">Thread Prev</a>][<a href="msg00864.html">Thread Next</a>][<A HREF="threads2019.html#00863">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] ferret and ERDDAP</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] ferret and ERDDAP</strong></li>
+<li><strong>From</strong>: <strong>Roland Schweitzer - NOAA Affiliate &lt;<a href="mailto:roland.schweitzer@DOMAIN.HIDDEN">roland.schweitzer@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 2 Nov 2020 05:25:22 -0800</li>
+<li>Cc: Joshua Osborne - NOAA Affiliate &lt;<a href="mailto:joshua.osborne@DOMAIN.HIDDEN">joshua.osborne@xxxxxxxx</a>&gt;,        Patrick Brockmann &lt;<a href="mailto:patrick.brockmann@DOMAIN.HIDDEN">patrick.brockmann@xxxxxxxxxxxx</a>&gt;,        ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00862.html">CAEwQpaJ4gzovu9ycACFVzbtMou9LjmD+F0-aUaJmusgtpw5kgw@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00860.html">1364465171.1725595.1603905692525.JavaMail.zimbra@lsce.ipsl.fr</a>&gt; &lt;<a href="msg00861.html">CAHFMwDWu7Qw19qtH8hGEm_Xz6ux+f2CQbn8wMznXq2Ojc_ESRw@mail.gmail.com</a>&gt; &lt;<a href="msg00862.html">CAEwQpaJ4gzovu9ycACFVzbtMou9LjmD+F0-aUaJmusgtpw5kgw@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">HI,<div><br></div><div>I&#39;ll take a stab at elaborating. An&#xA0;ERDDAP server is an OPeNDAP server and takes the later part of its name from the Data Access Protocol (DAP) of OPeNDAP.</div><div><br></div><div>Broadly speaking, data in ERDDAP servers are organized into two subcategories which the ERDDAP documentation&#xA0;refers to as &quot;TABLEDAP&quot; and &quot;GRIDDAP&quot; data sets. GRIDDAP datasets are rectilinear grids in up to 4 dimensions&#xA0;(XYZT) which follow the CF conventions for grids, and TABLEDAP data sets are served as OPeNDAP sequences (more in a moment). However, both data types can also be retrieved from the server in a couple of dozen different data formats. Given an ERDDAP URL (<a rel="nofollow" href="https://coastwatch.pfeg.noaa.gov/erddap/">https://coastwatch.pfeg.noaa.gov/erddap/</a>) you can get a nice list of the GRIDDAP data sets using this URL (<a rel="nofollow" href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/index.html">https://coastwatch.pfeg.noaa.gov/erddap/griddap/index.html</a>) and the TABLEDAP data sets using this URL (<a rel="nofollow" href="https://coastwatch.pfeg.noaa.gov/erddap/tabledap/index.html">https://coastwatch.pfeg.noaa.gov/erddap/tabledap/index.html</a>)</div><div><br></div><div>So to use a grid data set in PyFerret, you operate just as you did in the example you shared (clicking on the &quot;<a rel="nofollow" href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/jplAvisoSshMon.html">data</a>&quot; link on one of the data sets the &quot;GRIDDAP&quot; URL above) you land on an interactive page for that data set. The PyFerret accessible URL is the same minus the &quot;.html&quot;.</div><div><br></div><div><font face="monospace">[rhs@dunkel
+el="nofollow" href="http://apdrc.soest.hawaii.edu:80/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean">http://apdrc.soest.hawaii.edu:80/dods/public_data/Argo_Products/annual_mean/Gridded_annual_mean</a>&quot;<br></font><div class="gmail_quote"><font face="monospace">yes? show data&#xA0;</font><br></div><div class="gmail_quote"><br></div><div class="gmail_quote">and then you can use the dataset as if it were a local netCDF file.</div><div class="gmail_quote"><br></div><div class="gmail_quote">What about ERDDAP ?&#xA0; The page (<a rel="nofollow" href="https://ferret.pmel.noaa.gov/pmel/erddap/index.html">https://ferret.pmel.noaa.gov/pmel/erddap/index.html</a> ) seems to be saying that OPeNDAP is somehow included or covered or something.</div><div class="gmail_quote"><br></div><div class="gmail_quote">Regards,</div><div class="gmail_quote">Ryo</div><div class="gmail_quote"><br></div></div>
+</blockquote></div><br clear="all"><div><br></div>-- <br><div dir="ltr" class="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><div dir="ltr">The policy of the DOC and NOAA requires me to inform you that the opinions in this email are mine and do not necessarily represent the opinion or policy of the Department of Commerce or the National Oceanic and Atmospheric Administration.</div></div></div></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00865" href="msg00865.html">Re: [ferret_users] ferret and ERDDAP</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00864" href="msg00864.html">Re: [ferret_users] ferret and ERDDAP</a></strong>
+<ul><li><em>From:</em> Ansley Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00860" href="msg00860.html">[ferret_users] ferret and ERDDAP</a></strong>
+<ul><li><em>From:</em> Patrick Brockmann</li></ul></li>
+<li><strong><a name="00861" href="msg00861.html">Re: [ferret_users] ferret and ERDDAP</a></strong>
+<ul><li><em>From:</em> Joshua Osborne - NOAA Affiliate</li></ul></li>
+<li><strong><a name="00862" href="msg00862.html">Re: [ferret_users] ferret and ERDDAP</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00862.html">Re: [ferret_users] ferret and ERDDAP</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00864.html">Re: [ferret_users] ferret and ERDDAP</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00862.html">Thread Prev</a>][<a href="msg00864.html">Thread Next</a>][<A HREF="threads2019.html#00863">Index</A>]</center>
+ 
+<hr>
+</body>

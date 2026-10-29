@@ -1,0 +1,201 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Gap in orthographic projection -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Fri, 25 Aug 2017 10:04:49 &#45;0700 -->
+<!--X-Message-Id: b9cd5e0a&#45;a797&#45;bf84&#45;b5de&#45;38e2a52e2c4a@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: AD1F2D9A&#45;3D72&#45;45FF&#45;AC86&#45;97C427F19B40@gmail.com -->
+<!--X-Derived: gifSXHA1i6PWQ.gif -->
+<!--X-Derived: gifZWM_qACH2x.gif -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Gap in orthographic projection</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00607.html">Thread Prev</a>][<a href="msg00609.html">Thread Next</a>][<A HREF="threads2017.html#00611">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Gap in orthographic projection</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Gap in orthographic projection</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Fri, 25 Aug 2017 10:04:45 -0700</li>
+<li>In-reply-to: &lt;<a href="msg00607.html">AD1F2D9A-3D72-45FF-AC86-97C427F19B40@gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00607.html">AD1F2D9A-3D72-45FF-AC86-97C427F19B40@gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.3.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+Hi Roger,<br>
+ 
+You can ask Ferret to use one extra grid-cell around the globe as
+it's drawing the plot. Using a dataset from the Ferret
+distribution,<br>
+ 
+<blockquote><tt>yes? use monthly_navy_winds</tt><br>
+ 
+<tt>yes? let clim = uwnd[t=1-jan-1989:31-dec-2008@ave] </tt><br>
+ 
+<tt>yes? go mp_orthographic 90 -45</tt><br>
+ 
+<tt>yes? set grid clim</tt><br>
+ 
+<tt>yes? go mp_aspect</tt><br>
+ 
+<tt>yes? LET masked_clim = clim * mp_mask</tt><br>
+ 
+<br>
+ 
+<tt>! Here is the gap you're seeing. The plot doesn't interpolate
+out to the edges of the cells at the</tt><br>
+ 
+<tt>! ends of the x axis.</tt><br>
+ 
+<br>
+ 
+<tt>yes? FILL/NOAX/NOLAB masked_clim, x_page, y_page</tt><br>
+ 
+<br>
+ 
+<tt>! The curvilinear plot commands take into account a SET REGION
+setting,</tt><br>
+ 
+<tt>! and because the grid is modulo in X, any setting with a
+range of 360 degrees </tt><br>
+ 
+<tt>! will draw the plot you want:<br>
+ 
+</tt><br>
+ 
+<tt>yes? set region/x=0:360</tt><br>
+ 
+<tt>yes? FILL/NOAX/NOLAB masked_clim, x_page, y_page</tt><br>
+ 
+</blockquote>
+Ansley<br>
+ 
+<br>
+ 
+<div class="moz-cite-prefix">On 8/24/2017 8:57 PM, Roger Bodman
+wrote:<br>
+ 
+</div>
+<blockquote type="cite"
+cite="">
+ 
+Hi,
+<div class=""><br class="">
+</div>
+<div class="">I have generated a plot,aj458_tas_test_map.gif, as
+attached using mp_hammer which looks ok. However, when I use
+mp_orthographic to generate a similar
+plot,aj458_tas_ortho_test.gif, it has a narrow white stripe. How
+do I avoid that?</div>
+<div class=""><br class="">
+</div>
+<div class="">First plot:</div>
+<div class="">
+<div class="">use
+"/Users/bodmanr/Desktop/Working_Suites/u-aj458/tas_aj458.nc"</div>
+<div class="">let clim = tas[t=1-jan-1989:31-dec-2008@ave] -273</div>
+<div class="">go mp_hammer</div>
+<div class="">go mp_grid clim</div>
+<div class="">go mp_aspect</div>
+<div class="">SHADE/NOAXIS/TITLE="AMIP tas climatology"
+clim*mp_mask, x_page, y_page</div>
+<div class="">go mp_land.jnl</div>
+</div>
+<div class=""><br class="">
+</div>
+<div class="">Second plot:</div>
+<div class="">
+<div class="">use
+"/Users/bodmanr/Desktop/Working_Suites/u-aj458/tas_aj458.nc"</div>
+<div class="">let clim = tas[t=1-jan-1989:31-dec-2008@ave] -273</div>
+<div class="">go mp_orthographic 90 -45</div>
+<div class="">set grid clim</div>
+<div class="">go mp_aspect</div>
+<div class="">LET masked_clim = clim * mp_mask</div>
+<div class="">FILL/NOAX/NOLAB masked_clim, x_page, y_page</div>
+<div class="">go mp_land</div>
+</div>
+<div class=""><br class="">
+</div>
+<div class="">Thanks,</div>
+<div class=""><br class="">
+</div>
+<div class="">Roger Bodman<br class="">
+Research Fellow<br class="">
+The University of Melbourne,<br class="">
+<br class="">
+</div>
+<div class=""><img apple-inline="yes"
+id="D94165B7-8271-4E2E-83DA-013964F922DD"
+src="gifSXHA1i6PWQ.gif" class=""></div>
+<div class=""><br class="">
+</div>
+<div class=""><br class="">
+</div>
+<div class=""><img apple-inline="yes"
+id="7A0038D8-1EF5-499F-AE1A-BDFEA888FC0B"
+src="gifZWM_qACH2x.gif" class=""></div>
+</blockquote>
+<br>
+ 
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00607" href="msg00607.html">[ferret_users] Gap in orthographic projection</a></strong>
+<ul><li><em>From:</em> Roger Bodman</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00607.html">[ferret_users] Gap in orthographic projection</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00609.html">[ferret_users] query for regression analysis.</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00607.html">Thread Prev</a>][<a href="msg00609.html">Thread Next</a>][<A HREF="threads2017.html#00611">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

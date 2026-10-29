@@ -1,0 +1,123 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] different fonts through SET TEXT -->
+<!--X-From-R13: [nepb ina Vhygra <[nepb.VhygraNhvo.ab> -->
+<!--X-Date: Wed, 3 Apr 2019 10:55:09 &#45;0700 -->
+<!--X-Message-Id: 20190403195453.41dc7cd7@jasniac.instanton -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20190402114912.35ced2f4@gfi063209.klientdrift.uib.no -->
+<!--X-Reference: b39ad5df&#45;2f7f&#45;e04c&#45;1863&#45;a2c944248334@noaa.gov -->
+<!--X-Reference: 20190403174027.27b61ece@gfi063209.klientdrift.uib.no -->
+<!--X-Reference: 397815d8&#45;966b&#45;3092&#45;2332&#45;8b55b243c78e@noaa.gov -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] different fonts through SET TEXT</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00118.html">Thread Prev</a>][<a href="msg00115.html">Thread Next</a>][<A HREF="threads2019.html#00119">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] different fonts through SET TEXT</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] different fonts through SET TEXT</strong></li>
+<li><strong>From</strong>: <strong>Marco van Hulten &lt;<a href="mailto:Marco.Hulten@DOMAIN.HIDDEN">Marco.Hulten@xxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 3 Apr 2019 19:54:53 +0200</li>
+<li>Cc: <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></li>
+<li>Importance: low</li>
+<li>In-reply-to: &lt;<a href="msg00118.html">397815d8-966b-3092-2332-8b55b243c78e@noaa.gov</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Organization: University of Bergen</li>
+<li>References: &lt;<a href="msg00112.html">20190402114912.35ced2f4@gfi063209.klientdrift.uib.no</a>&gt;	&lt;<a href="msg00114.html">b39ad5df-2f7f-e04c-1863-a2c944248334@noaa.gov</a>&gt;	&lt;<a href="msg00116.html">20190403174027.27b61ece@gfi063209.klientdrift.uib.no</a>&gt;	&lt;<a href="msg00118.html">397815d8-966b-3092-2332-8b55b243c78e@noaa.gov</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>Hi Ansley&#x2014;
+ 
+Je Wed, 3 Apr 2019 09:17:04 -0700 skribis Ansley:
+&gt; It looks as if we need a clarification to the documentation, and perhaps 
+&gt; the code itself. In my example,
+&gt; 
+&gt; yes? set text/font=serif
+&gt; yes? set text/font=arial/bold/color=blue vtics
+&gt; yes? ! draw plots...
+&gt; 
+&gt; if we leave off the first SET TEXT, then the second one, asking for a 
+&gt; setting for one text group, is ignored, and we're still using Hershey 
+&gt; font. I think that's what you were reporting at the start of this 
+&gt; thread. PyFerret should write a NOTE in that case.
+ 
+Such a NOTE is useful.
+ 
+The documentation,
+ 
+<a  rel="nofollow" href="../../documentation/pyferret/pyferret-quick-start-notes.html">../../documentation/pyferret/pyferret-quick-start-notes.html</a>
+<a  rel="nofollow" href="../../documentation/users-guide/commands-reference/SET.html#_SETTEXT">../../documentation/users-guide/commands-reference/SET.html#_SETTEXT</a>
+ 
+says that &#xAB;the settings are applied only to that text grouping.&#xBB;
+However, they are apparently applied to a subset of the text groups, so
+the documentation could say something like
+ 
+For the options /ISIZ=, ... and ..., the settings are applied only to
+the that text group; whereas for the options /FONT=, ... and ...,
+ 
+they are not applied/something else happens.
+ 
+&#x2014;Marco
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00112" href="msg00112.html">[ferret_users] different fonts through SET TEXT</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+<li><strong><a name="00114" href="msg00114.html">Re: [ferret_users] different fonts through SET TEXT</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+<li><strong><a name="00116" href="msg00116.html">Re: [ferret_users] different fonts through SET TEXT</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+<li><strong><a name="00118" href="msg00118.html">Re: [ferret_users] different fonts through SET TEXT</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00118.html">Re: [ferret_users] different fonts through SET TEXT</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00115.html">[ferret_users] Error with SCAT2GRID_BIN_XYZT function</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00118.html">Thread Prev</a>][<a href="msg00115.html">Thread Next</a>][<A HREF="threads2019.html#00119">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

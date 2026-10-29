@@ -1,0 +1,145 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] BUG REPORT: TSERIES creates spurious modulo axes -->
+<!--X-From-R13: Dhff Tvrqyre <ehffryy.svrqyreNpfveb.nh> -->
+<!--X-Date: Tue, 5 Sep 2017 01:01:17 &#45;0700 -->
+<!--X-Message-Id: 43c0e2eb&#45;7ec5&#45;6866&#45;4400&#45;17a88ad1503a@csiro.au -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] BUG REPORT: TSERIES creates spurious modulo axes</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00619.html">Thread Prev</a>][<a href="msg00624.html">Thread Next</a>][<A HREF="threads2017.html#00623">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] BUG REPORT: TSERIES creates spurious modulo axes</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&quot; &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] BUG REPORT: TSERIES creates spurious modulo axes</strong></li>
+<li><strong>From</strong>: <strong>Russ Fiedler &lt;<a href="mailto:russell.fiedler@DOMAIN.HIDDEN">russell.fiedler@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 5 Sep 2017 18:00:37 +1000</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Thunderbird/52.2.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+ 
+Hi,
+ 
+ 
+</pre><tt>I'm aggregating some files from MOM output data with TSERIES but Ferret 
+</tt><tt>insists on making the time axis &quot;modulo&quot; for some reason.
+</tt><pre style="margin: 0em;">
+ 
+Issuing &quot;CAN AXIS/MOD time&quot;  fixes things but it's a pain.
+ 
+Each file has 12 months of data
+ 
+From an ncdump on a file
+ 
+...
+ 
+time = UNLIMITED ; // (12 currently)
+...
+ 
+double time(time) ;
+time:long_name = &quot;time&quot; ;
+time:units = &quot;days since 0001-01-01 00:00:00&quot; ;
+time:cartesian_axis = &quot;T&quot; ;
+time:calendar_type = &quot;NOLEAP&quot; ;
+time:calendar = &quot;NOLEAP&quot; ;
+time:bounds = &quot;time_bounds&quot; ;
+ 
+ 
+There's no modulo attribute here.
+ 
+But SHOW AXIS
+ 
+</pre><tt> time      TIME                24mi   16-JAN 12:00 16-DEC-0002 
+</tt><tt>12:00         &lt;---- start time has no year!
+</tt><pre style="margin: 0em;">
+ 
+It looks to be a problem when the base year is 0001.
+ 
+When I changed the base year in the units string to 0010 it looks fine
+ 
+time      TIME                24 i   16-JAN-0010 12:00 16-DEC-0011 12:00
+ 
+ 
+</pre><tt>On further investigation it looks like a general problem with having a 
+</tt><tt>file with data only in the year 0001. Ferret seems to get a bit too 
+</tt><tt>frisky and wants to make climatologies no matter what.
+</tt><pre style="margin: 0em;">
+ 
+ 
+If I load only the first year a climatology is automatically made
+ 
+time      TIME                12mi   16-JAN 12:00         16-DEC 12:00
+ 
+if I load the second year by itself it's fine
+ 
+time      TIME                12 i   16-JAN-0002 12:00 16-DEC-0002 12:00
+ 
+ 
+If I concatenate the two files using ncrcat no climatology is made.
+ 
+time      TIME                24 i   16-JAN-0001 12:00 16-DEC-0002 12:00
+ 
+Cheers,
+ 
+Russ
+ 
+ 
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00624" href="msg00624.html">Re: [ferret_users] BUG REPORT: TSERIES creates spurious modulo axes</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00619.html">[ferret_users] running sum with restart after a missing value</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00624.html">Re: [ferret_users] BUG REPORT: TSERIES creates spurious modulo axes</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00619.html">Thread Prev</a>][<a href="msg00624.html">Thread Next</a>][<A HREF="threads2017.html#00623">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

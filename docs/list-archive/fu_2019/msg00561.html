@@ -1,0 +1,219 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] nc file run -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Thu, 5 Mar 2020 11:48:39 &#45;0800 -->
+<!--X-Message-Id: 1c43c9b2&#45;3b44&#45;95bd&#45;73a8&#45;ff630fe25d24@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CABqc+W8kXO6HRfX_y8ex2q0cFh0o1LJoqgcqJ+QK4ryxLYDG&#45;w@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] nc file run</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00560.html">Thread Prev</a>][Thread Next][<A HREF="threads2019.html#00561">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] nc file run</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] nc file run</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 5 Mar 2020 11:48:33 -0800</li>
+<li>In-reply-to: &lt;<a href="msg00558.html">CABqc+W8kXO6HRfX_y8ex2q0cFh0o1LJoqgcqJ+QK4ryxLYDG-w@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00558.html">CABqc+W8kXO6HRfX_y8ex2q0cFh0o1LJoqgcqJ+QK4ryxLYDG-w@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 Thunderbird/68.5.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+ 
+ 
+ 
+<p>Hi Mir,<br>
+</p>
+<div class="moz-cite-prefix">On 3/5/2020 10:52 AM, Mir Kashem wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+<div dir="auto">Dear Ferret User,
+<div dir="auto"><br>
+</div>
+<div dir="auto">I am very new user in pyferret. I would run to
+netcdf (nc) file by pyferret. I don't know how to run?</div>
+<div dir="auto"><br>
+</div>
+<div dir="auto">I would know the command of....</div>
+<div dir="auto"><br>
+</div>
+<div dir="auto">a. how to see data of nc?</div>
+<div dir="auto">b. how to plot nc file?</div>
+<div dir="auto">c. how to convert nc to csv?</div>
+<div dir="auto">d. how to run nc file?</div>
+<div dir="auto"><br>
+</div>
+<div dir="auto">Please advise me as soon as possible.....Thank
+you.</div>
+<div dir="auto"><br>
+</div>
+</div>
+</blockquote>
+<p>Welcome to PyFerret!</p>
+<p>NetCDF is the preferred file type for PyFerret and it reads the
+coordinate information and attributes to automatically make use of
+them in plots and analysis. Here is a very short demo - I will
+include more information below about resources for you.</p>
+<p>Open one of the exampe datasets that is part of the pyferret
+installation. Look at the variables, make a plot, and write out a
+subset to a netCDF file,<br>
+</p>
+<p><tt>yes? use coads_climatology</tt></p>
+<p><tt> ! list the variables in the file and show the shape of
+their grids,<br>
+yes? show data</tt><tt><br>
+</tt><tt> currently SET data sets:</tt><tt><br>
+</tt><tt> 1&gt;
+/home/users/tmap/ferret/linux/fer_dsets/data/coads_climatology.cdf
+(default)</tt><tt><br>
+</tt><tt>name title I
+J K L</tt><tt><br>
+</tt><tt>SST SEA SURFACE TEMPERATURE 1:180
+1:90 ... 1:12</tt><tt><br>
+</tt><tt>AIRT AIR TEMPERATURE 1:180
+1:90 ... 1:12</tt><tt><br>
+</tt><tt>SPEH SPECIFIC HUMIDITY 1:180
+1:90 ... 1:12</tt><tt><br>
+</tt><tt>WSPD WIND SPEED 1:180
+1:90 ... 1:12</tt><tt><br>
+</tt><tt>UWND ZONAL WIND 1:180
+1:90 ... 1:12</tt><tt><br>
+</tt><tt>VWND MERIDIONAL WIND 1:180
+1:90 ... 1:12</tt><tt><br>
+</tt><tt>SLP SEA LEVEL PRESSURE 1:180
+1:90 ... 1:12</tt><tt><br>
+</tt><tt></tt><tt><br>
+</tt><tt> ! see the coordinate variables <br>
+yes? show grid sst</tt><tt><br>
+</tt><tt> GRID GSQ1</tt><tt><br>
+</tt><tt>name axis # pts
+start end subset</tt><tt><br>
+</tt><tt>COADSX LONGITUDE 180mr
+21E 19E(379) full</tt><tt><br>
+</tt><tt>COADSY LATITUDE 90 r
+89S 89N full</tt><tt><br>
+</tt><tt>normal Z</tt><tt><br>
+</tt><tt>TIME TIME 12mr 16-JAN
+06:00 16-DEC 01:20 full</tt><tt><br>
+</tt><tt><br>
+</tt><tt>yes? fill/x=100:260/y=0:50/L=1 sst</tt><tt><br>
+</tt><tt>yes? save/clobber/file="my_subset.nc"
+/x=100:260/y=0:50/L=1 sst</tt><tt><br>
+</tt><tt>LISTing to file my_subset.nc</tt><tt><br>
+</tt><br>
+</p>
+<p>The command LIST/FORMAT=comma/file="filename.dat" will write a
+comma-separated file. It doesn't convert gridded data to csv. A
+first step making 1-dimensional variables from the data and
+coordinates would be needed.<br>
+</p>
+<p><br>
+</p>
+<p>Here is more general information that we have sent out about
+getting started:<br>
+</p>
+<p> </p>
+<p>To get started with PyFerret, please look at the <b><a rel="nofollow"
+href="../../documentation/ferret-documentation.html">documentation
+on the website </a></b>a including the <b><a rel="nofollow"
+href="../../faq/ferret-faqs.html">FAQ's</a></b>,
+and try the <b><a rel="nofollow"
+href="../../documentation/ferret-tutorials.html">tutorial
+scripts and demos</a></b>. There is a single set of
+documentation for PyFerret and Ferret, as the older Ferret program
+and the newer Python-enabled PyFerret verion use almost entirely
+the same commands and syntax. PyFerret can go beyond Ferret to
+make use of Python capabilities, but it sounds as if you want to
+use the Ferret command line. Please know that every time the
+documentation says Ferret, the commands will also work with
+pyferret.<br>
+</p>
+<p>A good place to start in the documentation is the section, "<b><a rel="nofollow"
+href="../../documentation/users-guide/introduction/GETTING-STARTED.html">Getting
+Started</a></b>", and the sections that follow that,
+particularly "<b><a rel="nofollow"
+href="../../documentation/users-guide/introduction/GETTING-STARTED.html#_VPID_7">Thinking
+like a Ferret</a></b>".<br>
+</p>
+<p>Many of the tutorials are available both as web pages and scripts
+which you have as part of your PyFerret installation and which you
+can run from the PyFerret command line. <br>
+</p>
+<p>The Ferret Users List is made up of knowledgeable and experienced
+users. They are busy scientists and students, and so we find that
+they are most willing to answer specific questions. You will want
+to get started with some experiments of your own before you write
+to the list. Having said that, please do ask your questions. Here
+are a <b><a rel="nofollow"
+href="https://ferret.pmel.noaa.gov/Ferret/support/ferret-support">few
+words about getting help</a></b> - part 4 of this page talks
+about asking a good question.<br>
+</p>
+<p> Ansley Manke</p>
+<p><br>
+</p>
+<blockquote type="cite"
+cite="">
+<div dir="auto">
+<div dir="auto">Kind regards,</div>
+<div dir="auto">Mir</div>
+</div>
+</blockquote>
+ 
+ 
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00558" href="msg00558.html">[ferret_users] nc file run</a></strong>
+<ul><li><em>From:</em> Mir Kashem</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00560.html">Re: [ferret_users] nc file run</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00560.html">Thread Prev</a>][Thread Next][<A HREF="threads2019.html#00561">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

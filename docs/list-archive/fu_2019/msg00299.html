@@ -1,0 +1,141 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Latitude, longitude to length conversion while calculating derivatives in Pyferret ? -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Fri, 26 Jul 2019 14:08:00 &#45;0700 -->
+<!--X-Message-Id: 3a86eac4&#45;7f1e&#45;ef7c&#45;37c9&#45;31a7e1a9ba20@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAFcMw1hOoxBF07cdDyvhqKVXoxBOxXJYaLSDz1Reyk=BvXEV7w@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Latitude, longitude to length conversion while calculating derivatives in Pyferret ?</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00288.html">Thread Prev</a>][<a href="msg00300.html">Thread Next</a>][<A HREF="threads2019.html#00299">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Latitude, longitude to length conversion while calculating derivatives in Pyferret ?</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Latitude, longitude to length conversion while calculating derivatives in Pyferret ?</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Fri, 26 Jul 2019 14:07:57 -0700</li>
+<li>In-reply-to: &lt;CAFcMw1hOoxBF07cdDyvhqKVXoxBOxXJYaLSDz1Reyk=BvXEV7w@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAFcMw1hOoxBF07cdDyvhqKVXoxBOxXJYaLSDz1Reyk=BvXEV7w@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:60.0) Gecko/20100101 Thunderbird/60.8.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hi,</p>
+<p>Ferret/PyFerret does units conversions and takes distances on the
+earth into account when the grid units are well defined. Please
+see this documentation:
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#GeneralInfo">../../documentation/users-guide/variables-xpressions/XPRESSIONS.html#GeneralInfo</a></p>
+<p>It also discusses multi-directional transformations; including
+the cases where area-averaging is used</p>
+<p>-Ansley<br>
+</p>
+<div class="moz-cite-prefix">On 7/22/2019 11:46 PM, VL Srinivas
+wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+<div dir="ltr">Hello,
+<div><br>
+</div>
+<div>While calculating derivatives say, dU/dx, it is written as
+U[X=@DDC] for central difference. But, the dimension X is in
+degrees(longitude) and velocity U in m/s.</div>
+<div><br>
+</div>
+<div>Do I need to convert the degrees of X into metres during
+calculation? Or is it embedded in Pyferret to convert it into
+metres while calculating ?</div>
+<div><br>
+</div>
+<div>Thank you.<br clear="all">
+<div><br>
+</div>
+-- <br>
+<div dir="ltr" class="gmail_signature"
+data-smartmail="gmail_signature">
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">Regards,
+<div>V.L.Srinivas.</div>
+<div><br>
+</div>
+<div><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<div class="moz-signature">-- <br>
+<i>Ansley Manke<br>
+NOAA/PMEL Science Data Integration Group<br>
+7600 Sand Point Way NE<br>
+206-526-6246</i></div>
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00288" href="msg00288.html">[ferret_users] Latitude, longitude to length conversion while calculating derivatives in Pyferret ?</a></strong>
+<ul><li><em>From:</em> VL Srinivas</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00288.html">[ferret_users] Latitude, longitude to length conversion while calculating derivatives in Pyferret ?</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00300.html">[ferret_users] Linear regression on a vs plot</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00288.html">Thread Prev</a>][<a href="msg00300.html">Thread Next</a>][<A HREF="threads2019.html#00299">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

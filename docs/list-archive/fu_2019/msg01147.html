@@ -1,0 +1,80 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Fill and -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Wed, 29 Jun 2022 23:44:47 &#45;0700 -->
+<!--X-Message-Id: CAEwQpaLZue7GoQZQUp0p&#45;xLuxkDjCyrRVQgdkoEsF_&#45;PFBvHZA@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CADczVkNmfe1Qo&#45;piJn+R5=6Q2h2=8eRxiHfFavpDUTcYbjbaeA@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Fill and</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01142.html">Thread Prev</a>][<a href="msg01138.html">Thread Next</a>][<A HREF="threads2019.html#01147">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Fill and</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Serena Illig &lt;<a href="mailto:serena.illig.ird@DOMAIN.HIDDEN">serena.illig.ird@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Fill and</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 30 Jun 2022 15:44:28 +0900</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;CADczVkNmfe1Qo-piJn+R5=6Q2h2=8eRxiHfFavpDUTcYbjbaeA@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CADczVkNmfe1Qo-piJn+R5=6Q2h2=8eRxiHfFavpDUTcYbjbaeA@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div dir="ltr">Dear Serena,</div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Tue, Jun 21, 2022 at 8:52 PM Serena Illig &lt;<a rel="nofollow" href="mailto:serena.illig.ird@xxxxxxxxx">serena.illig.ird@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr">[ . . . ]<br>use coads_climatology.cdf<div><span style="font-family:monospace"><font color="#38761d">shade/x=50w:20e/y=30s:30n/levels=(14,29,1) SST[l=@ave]</font></span></div><div>&#xA0; ---&gt; 15 color levels, with levels 0(1), the colorscale&#xA0;is OK<span style="font-family:monospace"><font color="#000000"><br></font></span><span style="font-family:monospace"><font color="#38761d">shade/x=50w:20e/y=30s:30n/levels=(0.014,0.029,0.001) SST[l=@ave]/1000</font><br></span>&#xA0;---&gt; 15 color levels, with levels 0(1/1000), the <font color="#660000">colorscale&#xA0;is missing the last level</font></div></div></blockquote><div><br></div><div><br></div><div>That must be due to the binary (internal) representation of the fractional numbers like 0.001 .&#xA0; Because the internal representation of 0.001 is slightly larger than the exact value, the last contour level is slightly larger than 0.029 and is excluded from the list.&#xA0; See the demonstration in Fortran below.</div><div><br></div><div>As a workaround, make the terminal point slightly larger, perhaps by 1/10 of delta, than the target:</div><div><br></div><div>levels=(0.014,0.029<b><font color="#ff0000">1</font></b>,0.001)<br></div><div><br></div><div>This is not just a problem of PyFerret.&#xA0; It exists in any programming languages (which, by the way, makes me wonder how the Julia language generates the desired list of numbers from &quot;0.014:0.001:0.029&quot; . . . ).</div><div><br></div><div>Best regards,</div><div><br></div><div>Ryo</div><div>---------</div>program try<br>&#xA0; implicit NONE<br>&#xA0; real(4), parameter:: c0 = 0.014, c1 = 0.029, del =                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+&#xA0; &#xA0; &#xA0; &#xA0;&#xA0;&#xA0; &#xA0;&#xA0; &#xA0;&#xA0;&#xA0; &#xA0; &#xA0; &lt;&#xBA;)))&gt;&lt;..&#xB7;</div><div><br></div></div></div></div></div></div></div></div>
+</blockquote></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="01137" href="msg01137.html">[ferret_users] Fill and</a></strong>
+<ul><li><em>From:</em> Serena Illig</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01142.html">Re: [ferret_users] Fill and</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01138.html">[ferret_users] Aspect, bad values using poly_vector.jnl</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01142.html">Thread Prev</a>][<a href="msg01138.html">Thread Next</a>][<A HREF="threads2019.html#01147">Index</A>]</center>
+ 
+<hr>
+</body>

@@ -1,0 +1,102 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] lag correlations: time&#45;lag products for all lags -->
+<!--X-From-R13: Ivyyvnz Yrffyre <jvyyvnz.f.xrffyreNabnn.tbi> -->
+<!--X-Date: Sat, 22 Jul 2017 10:24:18 &#45;0700 -->
+<!--X-Message-Id: D568EF6F&#45;4152&#45;41F0&#45;A496&#45;212360649170@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] lag correlations: time-lag products for all lags</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00515.html">Thread Prev</a>][<a href="msg00522.html">Thread Next</a>][<A HREF="threads2017.html#00521">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] lag correlations: time-lag products for all lags</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret_users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] lag correlations: time-lag products for all lags</strong></li>
+<li><strong>From</strong>: <strong>William Kessler &lt;<a href="mailto:william.s.kessler@DOMAIN.HIDDEN">william.s.kessler@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Sat, 22 Jul 2017 10:24:14 -0700</li>
+<li>Cc: &quot;William S. Kessler&quot; &lt;<a href="mailto:William.S.Kessler@DOMAIN.HIDDEN">William.S.Kessler@xxxxxxxx</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>Hi Ferreters -
+ 
+I want to construct a lag-correlation matrix, ideally without a REPEAT loop (there are thousands of points in my time series).
+ 
+Thus I need to find the time-lagged products, including all lags within a range.
+ 
+Suppose I have a time series of values DATA[L=1:LL], and the lag range is from L-R to L+R.
+If I put the lag range on a M axis, _E=1:2*R+1, each element would be the sum of lagged products:
+ 
+LAG[M=1] is the sum of: DATA*DATA (over all L)
+ 
+LAG[M=2] is the sum of: DATA*DATA[L=@shf:1]
+ 
+LAG[M=3] is the sum of: DATA*DATA[L=@shf:2]
+ 
+...
+ 
+LAG[M=2*R+1] is the sum of: DATA*DATA[L=@shf:2*R]   
+ 
+For the moment, let's not worry about the ones that run off the end of the L-axis.
+ 
+Can I do this without a massive REPEAT loop? For instance, is there a way to promote the time series DATA to 2-d where the 2nd dimension is the time-shifted terms as above?
+ 
+Billy K
+ 
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00522" href="msg00522.html">Re: [ferret_users] lag correlations: time-lag products for all lags</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00515.html">[ferret_users] ppl for levels</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00522.html">Re: [ferret_users] lag correlations: time-lag products for all lags</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00515.html">Thread Prev</a>][<a href="msg00522.html">Thread Next</a>][<A HREF="threads2017.html#00521">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

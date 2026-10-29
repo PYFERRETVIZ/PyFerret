@@ -1,0 +1,200 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Customizing a shade plot with specified value range and color -->
+<!--X-From-R13: Oafyrl [naxr <n.p.znaxrNtznvy.pbz> -->
+<!--X-Date: Wed, 22 Dec 2021 12:52:00 &#45;0800 -->
+<!--X-Message-Id: c68a2fa9&#45;7928&#45;91fd&#45;78b5&#45;ed77eef251ee@gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAPYcFvNhojPocCmoANY+vzPMgOt+7dsWeR2wBXWvUeg6DL1r2Q@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Customizing a shade plot with specified value range and color</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01041.html">Thread Prev</a>][<a href="msg01043.html">Thread Next</a>][<A HREF="threads2019.html#01042">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Customizing a shade plot with specified value range and color</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Customizing a shade plot with specified value range and color</strong></li>
+<li><strong>From</strong>: <strong>Ansley Manke &lt;<a href="mailto:a.c.manke@DOMAIN.HIDDEN">a.c.manke@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 22 Dec 2021 12:51:49 -0800</li>
+<li>In-reply-to: &lt;<a href="msg01040.html">CAPYcFvNhojPocCmoANY+vzPMgOt+7dsWeR2wBXWvUeg6DL1r2Q@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg01040.html">CAPYcFvNhojPocCmoANY+vzPMgOt+7dsWeR2wBXWvUeg6DL1r2Q@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Thunderbird/91.4.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+ 
+ 
+ 
+<p>Hi Swetha,</p>
+Yes you can do this. It will require some features that might not be
+well known to a lot of users. You will need to know how to specify a
+particular set of color-levels that don't use the
+/levels=(lo,hi,del) syntax, and you will need to define a custom
+color palette. I'll show this with some simple examples to try.<br>
+<br>
+Color levels can be specified with a lot of flexibility. Here is
+the whole list of the settings,
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/customizing-plots/CONTOURING.html#_VPINDEXENTRY_852">../../documentation/users-guide/customizing-plots/CONTOURING#_VPINDEXENTRY_852</a><br>
+<br>
+For a FILL plot (recall that FILL is an alias for CONTOUR/FILL), the
+levels specified using the /LEVELS= qualifier are where the contour
+lines are drawn, with the color fill between the lines. For a SHADE
+plot, the levels are the boundaries between the colors on the
+colorbar with grid cells colored accordingly. The most common way
+to set levels is with /LEVELS=(lo,hi,del).<br>
+<br>
+Compare these two plots, which use a variable I have made up.<br>
+<br>
+<font face="Courier New, Courier, monospace">yes?
+fill/line/key/x=1:5/y=1:5/</font><font face="Courier New, Courier,
+monospace"><font face="Courier New, Courier, monospace">level</font>=(2,10,1)
+x+y<br>
+yes? shade/x=1:5/y=1:5/</font><font face="Courier New, Courier,
+monospace"><font face="Courier New, Courier, monospace">level</font>=(2,10,1)
+x+y</font><br>
+<br>
+Now try using a set of individual levels. This is the style you will
+want. Try these commands:<br>
+<br>
+<font face="Courier New, Courier, monospace">yes?
+fill/line/key/x=1:5/y=1:5/level=(2.5)(5.2)(6)(7.1)(10) x+y<br>
+yes? shade/x=1:5/y=1:5/level=(2.5)(5.2)(6)(7.1)(10) x+y<br>
+</font><br>
+For your variable you will probably use
+/level=(-0.2)(0)(0.2)(0.3)(0.6)(1) <br>
+<br>
+It looks as if you want to leave some blank space between 0.2 and
+0.3. I think the best way to do that is to color that piece of the
+plot using white, though there might also be ways to do it by
+overlaying two different SHADE commands. This way the white will
+show up on your color key.<br>
+<br>
+To define your color palette, you need a color palette that is a "by
+level" color palette. For the details of the different kinds of
+color palettes see
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/customizing-plots/COLOR.html#_VPID_247">../../documentation/users-guide/customizing-plots/COLOR#_VPID_247</a><br>
+<br>
+Try this to see what a by-level color palette does:<br>
+<br>
+<font face="Courier New, Courier, monospace">yes?
+shade/x=1:5/y=1:5/lev=(2.5)(5.2)(6)(7.1)(10)/palette=ten_by_levels
+x+y</font><br>
+<br>
+The first color in the palette is assigned to the first level, the
+second color is assigned to the second level, and so on. You can
+create your own palette of this type, making the colors blue, then
+yellow, etc.<br>
+<br>
+You can search the pre-installed color palettes using the Unix
+command-line command "Fpalette". Search for the palettes that
+include "level" in their name<br>
+<br>
+<font face="Courier New, Courier, monospace">&gt; Fpalette level<br>
+* * * * * * * * in /home/ansley/my_pyferret/ppl<br>
+...<br>
+ten2_levels.spk:<br>
+ten_bright_levels.spk:<br>
+ten_by_levels.spk:<br>
+ten_reordered_levels.spk:<br>
+thirty_by_levels.spk:</font><br>
+<br>
+I would start with one of these. Copy it from where it is installed
+on your system to your local directory, and rename it. Edit your
+palette file so that color 1 is blue, color 2 is yellow, color 3 is
+white (for that gap between 0.2 and 0.3), color 4 is orange, and
+color 5 is green. If I'm making a palette, I use the Fpalette
+command a lot. Maybe I want a different orange than what I have, so
+<br>
+<p><font face="Courier New, Courier, monospace">&gt; Fpalette orange</font></p>
+<p>and then look in those files to see how different colors are
+defined.</p>
+<p>The palette file you make can either be in the local directory
+where you are when running PyFerret, or you can put it in any
+directory and make sure that that directory is included in the
+environment variable FER_PALETTE.</p>
+<p>Ansley<br>
+</p>
+<br>
+<div class="moz-cite-prefix">On 12/21/2021 12:14 AM, Swetha
+sivakumar wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+<div dir="ltr">
+<div>Hello all</div>
+<div><br>
+</div>
+<div>I want to make a shade plot, value ranges from -0.2 to 1 ,
+but want to customize the plot as below</div>
+<div>(-0.2 to 0) - Blue</div>
+<div>(0 to 0.2) -yellow</div>
+<div>(0.3 to 0.6) - orange</div>
+<div>(0.6 to 1) - green</div>
+<div><br>
+</div>
+<div>Is there any way in ferret to customize shade plot as
+above.</div>
+<div><br>
+</div>
+<div>TIA</div>
+<div>Swetha<br>
+</div>
+</div>
+</blockquote>
+ 
+ 
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="01040" href="msg01040.html">[ferret_users] Customizing a shade plot with specified value range and color</a></strong>
+<ul><li><em>From:</em> Swetha sivakumar</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01041.html">Re: [ferret_users] Customizing a shade plot with specified value range and color</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01043.html">[ferret_users] too many tics</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01041.html">Thread Prev</a>][<a href="msg01043.html">Thread Next</a>][<A HREF="threads2019.html#01042">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

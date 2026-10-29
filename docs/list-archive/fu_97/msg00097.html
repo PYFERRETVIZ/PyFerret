@@ -1,0 +1,90 @@
+<!-- MHonArc v2.5.4 -->
+<!--X-Subject: Re: Filters -->
+<!--X-From-R13: xrffyreNczry.abnn.tbi (Pvyyl Yrffyre) -->
+<!--X-Date: Thu, 5 Jun 1997 15:23:34 &#45;0700 -->
+<!--X-Message-Id: 199706052221.PAA01705@pontus.pmel.noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!doctype html public "-//W3C//DTD HTML//EN">
+<html>
+<head>
+<title>Re: Filters</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00096.html">Thread Prev</a>][<a href="msg00099.html">Thread Next</a>][<A HREF="threads97.html#00097">Index</A>]</center>
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: Filters</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><A HREF="mailto:wainer@DOMAIN.HIDDEN">wainer@xxxxxx</A></strong></li>
+<li><strong>Subject</strong>: <strong>Re: Filters</strong></li>
+<li><strong>From</strong>: <strong><A HREF="mailto:kessler@DOMAIN.HIDDEN">kessler@xxxxxxxxxxxxx</A> (Billy Kessler)</strong></li>
+<li>Date: Thu, 05 Jun 1997 15:21:05 -0700</li>
+<li>Cc: <A HREF="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxxxxxxxxxxxxx</A></li>
+<li>Sender: owner-ferret_users</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>
+
+Easy. Low-pass and subtract: Original - Low-pass = High-pass
+
+I like the low-pass filter @spz, which is a triangle. Any of the
+filters except the boxcar will do the job, though. The boxcar can
+have &quot;ringing&quot; that may contaminate your time series. Try the
+following experiment to see the ringing:
+
+yes? let zigzag=sin(x*3.14159)
+yes? plot/line/sym=27/x=0:10 zigzag,zigzag[i=@sbx:3]
+
+Ringing means that you get energy at opposite phase (or negative
+frequency).
+
+An alternate, where you can see that @spz does not produce ringing,
+just smoothing:
+
+yes? let zigzag=sin(x*3.14159/2)
+yes? plot/line/sym=27/x=0:10 zigzag,zigzag[i=@sbx:5],zigzag[i=@spz:5]
+
+Billy K
+
+
+</pre>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00096.html">Re: Filters</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00099.html">Re: Filters</a></strong>
+</li>
+
+</UL>
+<center>[<a href="msg00096.html">Thread Prev</a>][<a href="msg00099.html">Thread Next</a>][<A HREF="threads97.html#00097">Index</A>]</center>
+
+
+
+<hr>
+</body>
+</html>

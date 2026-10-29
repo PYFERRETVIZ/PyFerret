@@ -1,0 +1,84 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] figure window can not save the full figure -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Sun, 23 Aug 2020 08:00:19 &#45;0700 -->
+<!--X-Message-Id: CAEwQpaKS1uMQD9GqPS+_yt7D7mcoah3Fhd2cnrzk_c4c5E2fEw@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAFXLzPhGA6AbhzZ_j4_SD+z_8nVMZ_1PH0tq2gjYFpDZB3RwRQ@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] figure window can not save the full figure</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00789.html">Thread Prev</a>][<a href="msg00791.html">Thread Next</a>][<A HREF="threads2019.html#00790">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] figure window can not save the full figure</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] figure window can not save the full figure</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 24 Aug 2020 00:00:02 +0900</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00789.html">CAFXLzPhGA6AbhzZ_j4_SD+z_8nVMZ_1PH0tq2gjYFpDZB3RwRQ@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00789.html">CAFXLzPhGA6AbhzZ_j4_SD+z_8nVMZ_1PH0tq2gjYFpDZB3RwRQ@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Hi Saurabh,</div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Sat, Aug 22, 2020 at 7:51 PM saurabh rathore &lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx">rohitsrb2020@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div style="color:rgb(0,0,0)">use coads_climatology<br></div><div style="color:rgb(0,0,0)">fill sst[l=1]</div><div style="color:rgb(0,0,0)">frame/file=sst.jpeg</div><div style="color:rgb(0,0,0)"><br></div><div style="color:rgb(0,0,0)">and it is saving just a portion of the plot.</div></div></blockquote><div><br></div><div>I confirm&#xA0;the behavior.&#xA0; I thought the problem was limited to PDF, but PNG and JPEG have the same problem now.</div><div><br></div><div>The only solution I know is to produce the image non-interactively:</div><div><br></div><div>pyferret -nodisplay -script yourscript.jnl</div><div><br></div><div>Moreover, &quot;jpg&quot; or &quot;jpeg&quot; doesn&#39;t work for this case. You&#39;d need to use PNG instead.</div><div><br></div><div>**ERROR: invalid command: cairoCFerBind_saveWindow: unrecognized format &#39;JPG&#39;<br>frame/file=sst.jpg<br>Command file, command group, or REPEAT execution aborted<br></div><div><br></div><div>In any case, PNG is better than&#xA0;JPEG for scientific plots, unless you need to reduce the file size of the image at the cost of quality.</div><div><br></div><div>Regards,</div><div>Ryo</div><div><br></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00791" href="msg00791.html">Re: [ferret_users] figure window can not save the full figure</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00789" href="msg00789.html">[ferret_users] figure window can not save the full figure</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00789.html">[ferret_users] figure window can not save the full figure</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00791.html">Re: [ferret_users] figure window can not save the full figure</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00789.html">Thread Prev</a>][<a href="msg00791.html">Thread Next</a>][<A HREF="threads2019.html#00790">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

@@ -1,0 +1,75 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] zaxreplace &#45; convert z&#45;axis of density to the z&#45;axis of `m` -->
+<!--X-From-R13: fnhenou enguber <ebuvgfeo2020Ntznvy.pbz> -->
+<!--X-Date: Wed, 1 May 2019 05:11:01 &#45;0700 -->
+<!--X-Message-Id: CAFXLzPjyyPFQ3MKRHbhgw0Y5Ju8mityyfM0kfC5FSjELBmftGw@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] zaxreplace - convert z-axis of density to the z-axis of `m`</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00153.html">Thread Prev</a>][<a href="msg00156.html">Thread Next</a>][<A HREF="threads2019.html#00154">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] zaxreplace - convert z-axis of density to the z-axis of `m`</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] zaxreplace - convert z-axis of density to the z-axis of `m`</strong></li>
+<li><strong>From</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 1 May 2019 08:10:38 -0400</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)">Dear Ferretrs,</div><div class="gmail_default" style="color:rgb(0,0,0)">G&#39;day<br clear="all"></div><div><br></div><div><div style="color:rgb(0,0,0)" class="gmail_default">I am facing a problem about the conversion of z-axis from density to z-axis of meters depth. For this purpose I am using ZAXREPLACE function. I am going to explain what I did and where I am facing the problem. I replace the `m` depth axis of my data by using zaxreplace function to the depth axis of density.</div><div style="color:rgb(0,0,0)" class="gmail_default"><br></div><div style="color:rgb(0,0,0)" class="gmail_default">use <a rel="nofollow" href="http://ohc.nc">ohc.nc</a><br>use <a rel="nofollow" href="http://dens.nc">dens.nc</a><br></div><div style="color:rgb(0,0,0)" class="gmail_default"><br></div><div style="color:rgb(0,0,0)" class="gmail_default">sh gr heat[d=1]<br>GRID GTS1<br>name&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; axis&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; # pts&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; start&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0; &#xA0;&#xA0; end&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; subset<br>&#xA0;LONGITUDE&#xA0;&#xA0;&#xA0; LONGITUDE&#xA0;&#xA0;&#xA0;&#xA0; 360mr&#xA0;&#xA0; 20.5E&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 19.5E(379.5)&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; full<br>&#xA0;LATITUDE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; LATITUDE&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; 145 r&#xA0;&#xA0;&#xA0;&#xA0; 64.5S&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+0; full<br>AXDEN&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; Z&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; &#xA0; &#xA0; 118 r&#xA0;&#xA0;&#xA0;&#xA0; 16.81 &#xA0;&#xA0;&#xA0; 28.51&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; full<br>normal&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; T</div><div style="color:rgb(0,0,0)" class="gmail_default"><br></div><div style="color:rgb(0,0,0)" class="gmail_default">now I want to map it back to the `m` axis of depth which is define by `<a rel="nofollow" href="http://ohc.nc">ohc.nc</a>` so how I should do it ? or Do I map it first to `m` axis and after that I compute the slope ?<br></div><br></div><div><div style="color:rgb(0,0,0)" class="gmail_default">Eagerly waiting for the reply.</div><div style="color:rgb(0,0,0)" class="gmail_default"><br></div><div style="color:rgb(0,0,0)" class="gmail_default">Cheers, Saurabh</div><br></div>-- <br><div dir="ltr" class="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><font size="4" color="#0000ff"><b><br></b></font></div><div><font size="4" color="#0000ff"><b><br></b></font></div><font size="4" face="times new roman, serif" color="#0000ff"><b>REGARDS</b></font><div><font size="4" face="times new roman, serif" color="#0000ff"><b><br></b></font><div><font size="4" face="times new roman, serif" color="#0000ff"><b>Saurabh Rathore</b></font></div><div><font size="4" face="times new roman, serif" color="#0000ff"><b>Research Scholar (PhD.)</b></font></div><div><font size="4" face="times new roman, serif" color="#0000ff"><b>Centre For Oceans, Rivers, Atmosphere &amp; Land Science Technology</b></font></div><div><font size="4" face="times new roman, serif" color="#0000ff"><b>Indian Institute Of Technology, Kharagpur</b></font></div><div><font size="4" face="times new roman, serif" color="#0000ff"><b>contact :- 91- 8345984434</b></font></div></div></div></div></div></div></div></div></div></div></div></div  
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00156" href="msg00156.html">Re: [ferret_users] zaxreplace - convert z-axis of density to the z-axis of `m`</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00153.html">[ferret_users] rho_un calculation</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00156.html">Re: [ferret_users] zaxreplace - convert z-axis of density to the z-axis of `m`</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00153.html">Thread Prev</a>][<a href="msg00156.html">Thread Next</a>][<A HREF="threads2019.html#00154">Index</A>]</center>
+ 
+<hr>
+</body>

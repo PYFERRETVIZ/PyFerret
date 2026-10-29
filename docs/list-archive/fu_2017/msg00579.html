@@ -1,0 +1,163 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Using xbox and zbox to find total transport -->
+<!--X-From-R13: Xnzrf jnat <wnzrfjnatbfsNtznvy.pbz> -->
+<!--X-Date: Thu, 10 Aug 2017 00:12:49 &#45;0700 -->
+<!--X-Message-Id: CAJMBgoPvP1A&#45;dfx13ePX&#45;ONwKp4SwUUDanvrz6Peb1ZhXAnftg@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Using xbox and zbox to find total transport</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00573.html">Thread Prev</a>][<a href="msg00580.html">Thread Next</a>][<A HREF="threads2017.html#00579">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Using xbox and zbox to find total transport</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Using xbox and zbox to find total transport</strong></li>
+<li><strong>From</strong>: <strong>James wang &lt;<a href="mailto:jameswangosf@DOMAIN.HIDDEN">jameswangosf@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 10 Aug 2017 12:42:40 +0530</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Hi all,<br>
+<br>
+</div>I was trying to calculate the transport using v[x=@din,z=@din], and i compared these values with v*xbox*zbox followed by x=@sum,z=@sum]. The results I am getting is not at all comparable. I understood from the forum that depth axis with irregular dz can cause wrong result. Then which way I should follow?. Here I attaching the details. I would be grateful for any suggestions<br>
+<br>
+<br>
+<br>
+use Test.nc<br>
+let trans_all= vclim*xbox*zbox<br>
+let tran =trans_all[y=6,x=82:98@sum,z=0:300@sum]<br>
+<br>
+let transint= vclim[y=6,x=82:98@din,z=0:300@din]<br>
+<br>
+list tran,transint<br>
+<br>
+LIST ZBOXLO[GZ=vclim],ZBOXHI[GZ=vclim],Z[GZ=vclim],ZBOX[GZ=vclim]<br>
+<br>
+<br>
+Cached data cleared from memory<br>
+DATA SET: ./Test.nc<br>
+T: -0.5 to 11.5<br>
+LONGITUDE: 82E to 98E<br>
+LATITUDE: 5.8N<br>
+DEPTH (m): 0 to 300<br>
+Column 1: TRAN is TRANS_ALL[Y=6,X=82:98@SUM,Z=0:300@SUM]<br>
+Column 2: TRANSINT is VCLIM[Y=6,X=82:98@DIN,Z=0:300@DIN]<br>
+TRAN TRANSINT<br>
+0 / 1: -48.22 -5516444.<br>
+1 / 2: -36.44 -4617991.<br>
+2 / 3: -1.73 -1081710.<br>
+3 / 4: 36.21 3283094.<br>
+4 / 5: 37.66 4109916.<br>
+5 / 6: -15.87 -1500664.<br>
+6 / 7: -76.87 -8493372.<br>
+7 / 8: -79.02 -9094106.<br>
+8 / 9: -64.63 -7541917.<br>
+9 / 10: -17.76 -2386129.<br>
+10 / 11: 12.34 1152820.<br>
+11 / 12: -6.74 -742074.<br>
+DATA SET: ./Test.nc<br>
+DEPTH (m): -0.02 to 5500<br>
+Column 1: ZBOXLO is ZBOXLO (axis DEPTH)<br>
+Column 2: ZBOXHI is ZBOXHI (axis DEPTH)<br>
+Column 3: Z is Z (axis DEPTH)<br>
+Column 4: ZBOX is ZBOX (axis DEPTH)<br>
+ZBOXLO ZBOXHI Z ZBOX<br>
+5 / 1: -0. 10. 5. 10.1<br>
+15.1 / 2: 10. 20. 15. 10.1<br>
+25.3 / 3: 20. 31. 25. 10.3<br>
+35.8 / 4: 31. 41. 36. 10.7<br>
+46.6 / 5: 41. 52. 47. 11.1<br>
+58 / 6: 52. 64. 58. 11.7<br>
+70 / 7: 64. 76. 70. 12.5<br>
+82.9 / 8: 76. 90. 83. 13.5<br>
+96.9 / 9: 90. 105. 97. 14.7<br>
+112.3 / 10: 105. 121. 112. 16.3<br>
+129.5 / 11: 121. 139. 129. 18.3<br>
+149 / 12: 139. 160. 149. 21.0<br>
+171.4 / 13: 160. 185. 171. 24.4<br>
+197.8 / 14: 185. 214. 198. 29.0<br>
+229.5 / 15: 214. 249. 229. 35.3<br>
+268.5 / 16: 249. 293. 268. 44.1<br>
+317.6 / 17: 293. 350. 318. 56.5<br>
+381.4 / 18: 350. 424. 381. 74.1<br>
+465.9 / 19: 424. 523. 466. 99.0<br>
+579.3 / 20: 523. 654. 579. 131.7<br>
+729.4 / 21: 654. 824. 729. 169.5<br>
+918.4 / 22: 824. 1029. 918. 204.9<br>
+1139.2 / 23: 1029. 1259. 1139. 230.1<br>
+1378.6 / 24: 1259. 1502. 1379. 243.3<br>
+1625.7 / 25: 1502. 1750. 1626. 248.3<br>
+1875.1 / 26: 1750. 2000. 1875. 249.7<br>
+2125 / 27: 2000. 2250. 2125. 249.9<br>
+2375 / 28: 2250. 2500. 2375. 250.0<br>
+2625 / 29: 2500. 2750. 2625. 250.0<br>
+2875 / 30: 2750. 3000. 2875. 250.0<br>
+3125 / 31: 3000. 3250. 3125. 250.0<br>
+3375 / 32: 3250. 3500. 3375. 250.0<br>
+3625 / 33: 3500. 3750. 3625. 250.0<br>
+3875 / 34: 3750. 4000. 3875. 250.0<br>
+4125 / 35: 4000. 4250. 4125. 250.0<br>
+4375 / 36: 4250. 4500. 4375. 250.0<br>
+4625 / 37: 4500. 4750. 4625. 250.0<br>
+4875 / 38: 4750. 5000. 4875. 250.0<br>
+5125 / 39: 5000. 5250. 5125. 250.0<br>
+5375 / 40: 5250. 5500. 5375. 250.0<br>
+<br>
+</div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00581" href="msg00581.html">Re: [ferret_users] Using xbox and zbox to find total transport</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00580" href="msg00580.html">Re: [ferret_users] Using xbox and zbox to find total transport</a></strong>
+<ul><li><em>From:</em> Russ Fiedler</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00573.html">[ferret_users] label ppl_vec_xskip</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00580.html">Re: [ferret_users] Using xbox and zbox to find total transport</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00573.html">Thread Prev</a>][<a href="msg00580.html">Thread Next</a>][<A HREF="threads2017.html#00579">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

@@ -1,0 +1,71 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Unable to open window in pyferret -->
+<!--X-From-R13: "'[negva Epunrsre' ivn _AOD B[SZ Treerg Gfref" <sreerg_hfrefNabnn.tbi> -->
+<!--X-Date: Fri, 10 Mar 2023 04:43:48 &#45;0800 -->
+<!--X-Message-Id: CAF58U7JV=R7KnQmAuQpUMb_+MHFojqf4+HsTRWwWTN=4SCoD_Q@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Unable to open window in pyferret</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01242.html">Thread Prev</a>][<a href="msg01247.html">Thread Next</a>][<A HREF="threads2019.html#01244">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Unable to open window in pyferret</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Unable to open window in pyferret</strong></li>
+<li><strong>From</strong>: <strong>&quot;'Martin Schaefer' via _OAR PMEL Ferret Users&quot; &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Fri, 10 Mar 2023 12:43:04 +0000</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Reply-to: Martin Schaefer &lt;<a href="mailto:martin.schaefer@DOMAIN.HIDDEN">martin.schaefer@xxxxxxxxxx</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Hi,<div><br></div><div>I&#39;m looking into pyferret for a research student,&#xA0;I&#39;m afraid I have no prior experience with pyferret. I am installing it into a WSL Ubuntu shell on a Windows PC using miniconda. When trying to create a window I get the following error:</div><div><br clear="all"><div><div dir="ltr" class="gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><div><font face="monospace">grdelWindowCreate: error when calling createWindow in pyferret.graphbind: PY_SSIZE_T_CLEAN macro must be defined for &#39;#&#39; formats</font><br></div><div><br></div><div>As this error seems to be linked to Python&#xA0;3.10 I have created a new env using 3.9. When creating a new window I now get:</div><div><br></div><div><font face="monospace">grdelWindowCreate: error when calling createWindow in pyferret.graphbind: The PQ viewers requires PySide2, PyQt5, or PyQt4</font><br></div><div><br></div><div>pyside2, and pyqt are installed.</div><div><br></div><div>I tried installing another env, with Python 3.10 and forcing install of pyferret=7.6.5, but it seems&#xA0;to install 7.6.4 anyway and the first error reappears.</div><div><br></div><div>I can run ferretmagic&#xA0;in notebooks, so the installation seems to work&#xA0;in principle.</div><div><br></div><div>Can anyone please outline if this is a bug or if I am, probably, making some misstep in the installation. My installation steps below:</div><div><br></div><div><font face="monospace">REM Powershell as admin<br>wsl --install -d Ubuntu</font></div><div><font face="monospace"><br></font></div><div><font face="monospace">bash Miniconda3-latest-Linux-x86_64.sh<br>sudo apt-get install libxrender1<br>edit .bashrc to add export DISPLAY=:0<br>REM reload Ubuntu shell<br>REM conda install<br>conda update -y -n base -c defaults conda<br>conda create -y -n FERRET -c conda-forge pyferret ferret_datasets python=3.9 <br>conda activate FERRET<br>conda install -y -c conda-forge scipy<br>conda install -y -c conda-forge pyshp<br>conda install -y -c conda                                                                                                                                                                                                                                                                                
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01242.html">[ferret_users] Is it possible to add a pen color as gray?</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01247.html">[ferret_users] multiple regression and wavelet analysis in Pyferret</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01242.html">Thread Prev</a>][<a href="msg01247.html">Thread Next</a>][<A HREF="threads2019.html#01244">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

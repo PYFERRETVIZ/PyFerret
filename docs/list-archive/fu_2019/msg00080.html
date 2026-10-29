@@ -1,0 +1,85 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Ocean mask on a panel plot -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Mon, 18 Mar 2019 19:41:28 &#45;0700 -->
+<!--X-Message-Id: CAEwQpa+30q9e3=pWhyQHLQGQa4tEoboTJ82=cfGaQJ1b9am9rA@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAGD2cKexKisA1NnOq_S9j1Rqajvh&#45;QrKL&#45;g&#45;eLG_e5pw57NoQA@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Ocean mask on a panel plot</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00079.html">Thread Prev</a>][<a href="msg00081.html">Thread Next</a>][<A HREF="threads2019.html#00080">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Ocean mask on a panel plot</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;Kwesi A. Quagraine&quot; &lt;<a href="mailto:starskykwesi@DOMAIN.HIDDEN">starskykwesi@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Ocean mask on a panel plot</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 19 Mar 2019 11:41:08 +0900</li>
+<li>Cc: ferret_users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00079.html">CAGD2cKexKisA1NnOq_S9j1Rqajvh-QrKL-g-eLG_e5pw57NoQA@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00079.html">CAGD2cKexKisA1NnOq_S9j1Rqajvh-QrKL-g-eLG_e5pw57NoQA@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Dear Kwesi,</div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Tue, Mar 19, 2019 at 6:05 AM Kwesi A. Quagraine &lt;<a rel="nofollow" href="mailto:starskykwesi@xxxxxxxxx">starskykwesi@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div style="overflow-wrap: break-word;"><div id="gmail-m_5385854690961709710bloop_customfont" style="font-family:Helvetica,Arial;font-size:13px;color:rgb(0,0,0);margin:0px"><div id="gmail-m_5385854690961709710bloop_customfont" style="margin:0px"><br></div><div id="gmail-m_5385854690961709710bloop_customfont" style="margin:0px"><div id="gmail-m_5385854690961709710bloop_customfont" style="margin:0px">let nanom2 = anom[gt=upper[d=4]]</div><div id="gmail-m_5385854690961709710bloop_customfont" style="margin:0px">let nx = `upper,return=isize`</div><div id="gmail-m_5385854690961709710bloop_customfont" style="margin:0px">&#xA0;**ERROR: variable unknown or not in data set: UPPER</div></div></div></div></blockquote><div><br></div><div>As this message says, the variable &quot;upper&quot; isn&#39;t found in the <i>current dataset.&#xA0; </i>(I suspect you need <font face="monospace, monospace">`upper[d=4],return=isize`</font>.)</div><div><i><br></i></div><div>I suggest that immediately after you see this error message, you type</div><div><br></div></div><blockquote style="margin:0 0 0 40px;border:none;padding:0px"><div class="gmail_quote"><div>yes? show data</div></div></blockquote><div class="gmail_quote"><div><br></div><div>This command lists the datasets Ferret has loaded.&#xA0; One of the datasets will have&quot;(default)&quot; at the end of its first line.&#xA0; For non-default datasets, you need to specify its dataset number as in&#xA0;&#xA0;<span style="font-family:monospace,monospace">upper[d=4]</span><font face="arial, helvetica, sans-serif"> .</font></div><div><br></div><div>Hope this helps.</div><div><br></div><div>Cheers,</div><div>Ryo</div><                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+</blockquote></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00081" href="msg00081.html">Re: [ferret_users] Ocean mask on a panel plot</a></strong>
+<ul><li><em>From:</em> Kwesi A. Quagraine</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00079" href="msg00079.html">[ferret_users] Ocean mask on a panel plot</a></strong>
+<ul><li><em>From:</em> Kwesi A. Quagraine</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00079.html">[ferret_users] Ocean mask on a panel plot</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00081.html">Re: [ferret_users] Ocean mask on a panel plot</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00079.html">Thread Prev</a>][<a href="msg00081.html">Thread Next</a>][<A HREF="threads2019.html#00080">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

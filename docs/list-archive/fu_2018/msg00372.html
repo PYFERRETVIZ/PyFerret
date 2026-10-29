@@ -1,0 +1,154 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Plotting with a paleo time scale -->
+<!--X-From-R13: Xnzrf Aee <Xnzrf.AeeNyfpr.vcfy.se> -->
+<!--X-Date: Wed, 10 Oct 2018 03:46:28 &#45;0700 -->
+<!--X-Message-Id: alpine.DEB.2.20.1810101241300.23787@lsce3235.lsce.ipsl.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 1F5F82E0&#45;F99B&#45;4910&#45;82FA&#45;1ACD6964577D@lsce.ipsl.fr -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Plotting with a paleo time scale</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00371.html">Thread Prev</a>][<a href="msg00380.html">Thread Next</a>][<A HREF="threads2018.html#00372">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Plotting with a paleo time scale</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Olivier Marti &lt;<a href="mailto:olivier.marti@DOMAIN.HIDDEN">olivier.marti@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Plotting with a paleo time scale</strong></li>
+<li><strong>From</strong>: <strong>James Orr &lt;<a href="mailto:James.Orr@DOMAIN.HIDDEN">James.Orr@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 10 Oct 2018 12:46:14 +0200 (CEST)</li>
+<li>Cc: ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00371.html">1F5F82E0-F99B-4910-82FA-1ACD6964577D@lsce.ipsl.fr</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00371.html">1F5F82E0-F99B-4910-82FA-1ACD6964577D@lsce.ipsl.fr</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Alpine 2.20 (DEB 67 2015-01-07)</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Olivier,
+ 
+</pre><tt>Here is a simple workaround if it is only a question of the y-axis label. 
+</tt><tt>Just replace your last command with the following 4 lines:
+</tt><pre style="margin: 0em;">
+ 
+shade/nolab/set t2m[y=-2:2@ave,l=1:5000@sbx:250]
+ppl ylab &quot;Years before Present&quot;
+ppl xlab &quot;Longitude&quot;
+ppl shade
+ 
+James
+ 
+On Wed, 10 Oct 2018, Olivier Marti wrote:
+ 
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+Hello,
+ 
+I want to plot data using a paleo time scale : time is decreasing from a positive value to zero (present day).
+ 
+The following script gives more details :&#xA0;
+ 
+USE&quot;<a  rel="nofollow" href="https://vesg.ipsl.upmc.fr/thredds/dodsC/store/p86mart/IPSLCM5A2/PROD/Holocene/TR5AS-Vlr01/ATM/Analyse/TS_YE/TR">https://vesg.ipsl.upmc.fr/thredds/dodsC/store/p86mart/IPSLCM5A2/PROD/Holocene/TR5AS-Vlr01/ATM/Analyse/TS_YE/TR</a>
+5AS-Vlr01_20000101_79991231_1Y_t2m.nc&quot;
+ 
+! Model Years are from 2000 to 7999, which correspond to nothing :-(
+! I can define a time axis starting at 1, which it's less confusing
+LET nt = `t2m_yearmean,RETURN=lsize`
+DEFINE AXIS/T=1:`nt`:1/UNITS=&quot;Years&quot; YearFromStart
+ 
+! But the labelling I want is Year before present (present being 1850)
+LET/TITLE=&quot;Years BP&quot; &#xA0; YearBP=6000-T[GT=YearFromStart]+1
+ 
+! I can not define the following axis because it's reversed
+!DEFINE AXIS/T/UNITS=&quot;Years&quot;/NAME=&quot;YearBP&quot; YearBP
+ 
+ 
+LET t2m = t2m_yearmean[GT=YearFromStart@ASN]-273.15
+ 
+ 
+! How can I use YearBP as an axis to have proper labelling&#xA0;
+! of the time axis on the following plot &#xA0;?
+SHADE &#xA0;t2m[Y=-2:2@AVE,L=1:5000@SBX:250]&#xA0;
+ 
+ 
+Any idea ?
+ 
+Thanks,
+ 
+Olivier
+ 
+--&#xA0;
+Dr. Olivier Marti&#xA0;&#xA0;-&#xA0;<a  rel="nofollow" href="mailto:olivier.marti@xxxxxxxxxxxx">mailto:olivier.marti@xxxxxxxxxxxx</a>
+Laboratoire des Sciences du Climat et de l'Environnement
+Institut Pierre Simon Laplace
+Laboratoire CEA-CNRS-UVSQ &#xA0;- &#xA0;UMR 8212
+Tel : +33 1 69 08 77 27 - Mob : +33 6 45 36 43 74
+Fax : +33 1 69 08 30 73
+&lt;<a  rel="nofollow" href="http://www.lsce.ipsl.fr/Pisp/olivier.marti">http://www.lsce.ipsl.fr/Pisp/olivier.marti</a>&gt;
+ 
+ 
+ 
+ 
+ 
+</pre></blockquote><pre style="margin: 0em;">
+ 
+--
+LSCE/IPSL, Laboratoire des Sciences du Climat et de l'Environnement
+CEA-CNRS-UVSQ
+ 
+LSCE/IPSL, CEA Saclay           <a  rel="nofollow" href="http://www.ipsl.jussieu.fr/
+Bat. 712 - Orme                 mailto:  James.Orr@xxxxxxxxxxxx
+Point courrier 132
+F-91191 Gif-sur-Yvette Cedex    Phone:   (33) (0)1 69 08 39 73
+FRANCE                          Fax:     (33) (0)1 69 08 30 73</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00371" href="msg00371.html">[ferret_users] Plotting with a paleo time scale</a></strong>
+<ul><li><em>From:</em> Olivier Marti</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00371.html">[ferret_users] Plotting with a paleo time scale</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00380.html">Re: [ferret_users] Plotting with a paleo time scale</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00371.html">Thread Prev</a>][<a href="msg00380.html">Thread Next</a>][<A HREF="threads2018.html#00372">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

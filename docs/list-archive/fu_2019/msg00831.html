@@ -1,0 +1,84 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Error while defining irregular depth axis -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Thu, 10 Sep 2020 07:45:29 &#45;0700 -->
+<!--X-Message-Id: CAEwQpaKX3Cntvzxa=decu4YUswu1bG7XT0NaJX5t9D34Y7RPjw@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAOZhHuvF6Qu4md2RDbkcp_TwgDdzLndGUSO4WzxneyQ91RU4wA@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Error while defining irregular depth axis</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00830.html">Thread Prev</a>][<a href="msg00832.html">Thread Next</a>][<A HREF="threads2019.html#00831">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Error while defining irregular depth axis</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;Akash. S&quot; &lt;<a href="mailto:akash013akash@DOMAIN.HIDDEN">akash013akash@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Error while defining irregular depth axis</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 10 Sep 2020 23:45:11 +0900</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00828.html">CAOZhHuvF6Qu4md2RDbkcp_TwgDdzLndGUSO4WzxneyQ91RU4wA@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00828.html">CAOZhHuvF6Qu4md2RDbkcp_TwgDdzLndGUSO4WzxneyQ91RU4wA@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Hi Akash,</div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Thu, Sep 10, 2020 at 9:23 PM Akash. S &lt;<a rel="nofollow" href="mailto:akash013akash@xxxxxxxxx">akash013akash@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div><br></div><div><br></div>define axis/x=65.0:65.0/npoints=1/unit=degree lon<br>define axis/y=8.0:8.0/npoints=1/unit=degree lat<br>!define axis/z=0:500:5/npoints=100/DEPTH/unit=meter depth<br>file/var=depth/format=(F700.2) zaxis<br>define axis/z/depth/npoints=100/unit=meter/name=depth/from_data depth<div><br><b>&#xA0;**ERROR: improper grid or axis definition: data for DEFINE AXIS/FROM_VARIABLE is not monotonically increasing at index 2<br></b></div></div></blockquote><div><br></div><div><br></div><div>I suspect that this is what you want:</div><div><br></div><div><font face="monospace">file/var=zed zaxis.dat<br></font></div><div><font face="monospace">let depth = (-1)*zed<br>define axis/z/depth/from_data/units=meters zax = depth</font><br></div><div><br></div><div>Your zed values are all negative but defined from the sea surface toward the bottom.&#xA0; That makes the values decreasing rather than increasing.</div><div><br></div><div>On the other hand, when we talk about &quot;depth&quot;, it is normally positive and increasing toward the bottom.&#xA0; My definition of zax above conforms to this convention.</div><div><br></div><div>Cheers,</div><div>Ryo</div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00832" href="msg00832.html">Re: [ferret_users] Error while defining irregular depth axis</a></strong>
+<ul><li><em>From:</em> Akash. S</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00828" href="msg00828.html">[ferret_users] Error while defining irregular depth axis</a></strong>
+<ul><li><em>From:</em> Akash. S</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00830.html">Re: [ferret_users] Error while defining irregular depth axis</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00832.html">Re: [ferret_users] Error while defining irregular depth axis</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00830.html">Thread Prev</a>][<a href="msg00832.html">Thread Next</a>][<A HREF="threads2019.html#00831">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

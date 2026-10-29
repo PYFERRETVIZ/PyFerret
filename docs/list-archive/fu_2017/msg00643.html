@@ -1,0 +1,237 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Re: ensembling datasets of different models -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Fri, 29 Sep 2017 09:39:31 &#45;0700 -->
+<!--X-Message-Id: 426bdded&#45;ef22&#45;3ebc&#45;465b&#45;9cdf3138f3a7@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 3f5631bcf4614785a04e689e330a6dc5@INCOISEXCMB01.incois.gov.in -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Re: ensembling datasets of different models</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00642.html">Thread Prev</a>][<a href="msg00660.html">Thread Next</a>][<A HREF="threads2017.html#00643">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Re: ensembling datasets of different models</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;Prasad SJ.&quot; &lt;<a href="mailto:prasadsj@DOMAIN.HIDDEN">prasadsj@xxxxxxxxxxxxx</a>&gt;,        &quot;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&quot; &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Re: ensembling datasets of different models</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Fri, 29 Sep 2017 09:39:28 -0700</li>
+<li>In-reply-to: &lt;3f5631bcf4614785a04e689e330a6dc5@INCOISEXCMB01.incois.gov.in&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;3f5631bcf4614785a04e689e330a6dc5@INCOISEXCMB01.incois.gov.in&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.3.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hello,</p>
+<p>This would be a better question for the Ferret list. I am
+including the list here, as the ensemble capability is a new
+option in Ferret, and others will be interested in the question. <br>
+ 
+</p>
+<p><br>
+ 
+</p>
+<p>The variables in an ensemble must have the same name in each
+member dataset, and be on the same grid. Decide which X-Y-T grid
+the aggregated variables should share, and then use LET/D=
+commands to define variables associated with each member dataset
+having that desired grid.</p>
+<p><br>
+ 
+</p>
+<p>In the documentation on aggregations,
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/users-guide/commands-reference/DEFINE.html#_define_data_agg">../../documentation/users-guide/commands-reference/DEFINE#_define_data_agg</a>,
+read down, and under ENSEMBLE Examples, find the text: <a rel="nofollow"
+moz-do-not-send="true"
+href="../../documentation/users-guide/commands-reference/DEFINE.html#_define_data_agg_letd"><i>To
+define an ensemble where the variable names or grids do not
+match</i></a>, and follow the example below that. Note that
+you first do a SET VARIABLE/NAME= to rename the file variable, and
+then the LET/D=xx command can use the name that the variable will
+have in the ensemble.</p>
+<p><br>
+ 
+</p>
+<p><br>
+ 
+</p>
+Ansley
+<p><br>
+ 
+</p>
+<p><br>
+ 
+</p>
+<div class="moz-cite-prefix">On 9/28/2017 11:20 PM, Prasad SJ.
+wrote:<br>
+ 
+</div>
+<blockquote type="cite"
+cite="">
+ 
+ 
+<div
+style="font-size:12pt;color:#000000;background-color:#FFFFFF;font-family:Calibri,Arial,Helvetica,sans-serif;">
+<p>Dear Support Team,<br>
+ 
+</p>
+<p><br>
+ 
+</p>
+<p>&#x200B;I am trying to perform multi model ensembling. The following
+are the different datasets . when i tried to ensemble this
+datasets, the following error occurred. Could you please
+advise me further on the following.<br>
+ 
+</p>
+<p></p>
+<div>currently SET data sets:</div>
+<div>  1&gt; ./hy3d01to07jun17ffromcdl.nc<br>
+ 
+</div>
+<div>name  title              I    J 
+K    L    M    N</div>
+<div>UC   U1[X=@FAV:10,Y=@FAV:10]     1:168  1:171
+...   1:7   ...   ...</div>
+<div>VC   V1[X=@FAV:10,Y=@FAV:10]     1:168  1:171
+...   1:7   ...   ...</div>
+<div></div>
+<div>  2&gt; ./kollammomregjun2017fromcdlfilled.nc</div>
+<div>name  title              I    J 
+K    L    M    N</div>
+<div>UC   U[X=@FAV:10,Y=@FAV:10]     1:61   1:61
+...   1:44   ...   ...</div>
+<div>VC   V[X=@FAV:10,Y=@FAV:10]     1:61   1:61
+...   1:44   ...   ...</div>
+<div></div>
+<div>  3&gt; ./krcnaxffromcdl.nc</div>
+<div>name  title              I    J 
+K    L    M    N</div>
+<div>UC   U2[X=@FAV:10,Y=@FAV:10]     1:481  1:481
+...   1:56   ...   ...</div>
+<div>VC   V2[X=@FAV:10,Y=@FAV:10]     1:481  1:481
+...   1:56   ...   ...</div>
+<div></div>
+<div>  4&gt; ./mg3kfromcdlucvc.nc (default)</div>
+<div>name  title              I    J 
+K    L    M    N</div>
+<div>UC   U[L=1:88]            1:31   1:59
+...   1:88   ...   ...</div>
+<div>VC   V[L=1:88]            1:31   1:59
+...   1:88   ...   ...</div>
+<div><br>
+ 
+</div>
+<div>yes? ensemble new.nc=
+krcnaxffromcdl.nc,hy3d01to07jun17ffromcdl.nc,kollammomregjun2017fromcdlfilled.nc,mg3kfromcdlucvc.nc</div>
+<div>     *** NOTE: Variable "UC" excluded from aggregate:
+X axis differs among members</div>
+<div>     *** NOTE: Variable "VC" excluded from aggregate:
+X axis differs among members</div>
+<div>*<strong style="color: #4ba524; text-decoration: none
+solid #4ba524;"><span style="color: #4ba524;
+text-decoration: none solid #4ba524;">*ERROR: error
+defining aggregate dataset: No valid datasets or datasets
+share no variables.</span></strong><br style="color:
+#4ba524; text-decoration: none solid #4ba524;">
+</div>
+<p><br>
+ 
+</p>
+<div>
+<p>&#x200B;<br>
+ 
+</p>
+<div name="divtagdefaultwrapper" style="font-family: calibri,
+arial, helvetica, sans-serif; margin: 0px;">
+<div class="BodyFragment"><font size="2">
+<div class="PlainText">Thanks and Regards<br>
+ 
+<br>
+ 
+-SJP<br>
+ 
+<br>
+ 
+S.J.Prasad </div>
+<div class="PlainText">ESSO - Indian National Centre for
+Ocean Information Services
+(INCOIS)
+<br>
+ 
+Ministry of Earth Sciences, Government of
+India <br>
+ 
+OCEAN VALLEY, Near ALEAP,1 KM from Pragathi nagar,<br>
+ 
+Pragathi Nagar(BO),Nizampet(SO), Hyderabad- 500090<br>
+ 
+Phone :04023886145<br>
+ 
+url: <a rel="nofollow" class="moz-txt-link-abbreviated" href="http://www.incois.gov.in">www.incois.gov.in</a></div>
+</font></div>
+</div>
+</div>
+</div>
+</blockquote>
+<br>
+ 
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00660" href="msg00660.html">[ferret_users] data size estimation is not unique</a></strong>
+<ul><li><em>From:</em> Martin Schmidt</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00642.html">[ferret_users] pH calculation from co2 in water</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00660.html">[ferret_users] data size estimation is not unique</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00642.html">Thread Prev</a>][<a href="msg00660.html">Thread Next</a>][<A HREF="threads2017.html#00643">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

@@ -1,0 +1,88 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] how to convert Gregorian calendar to Julian -->
+<!--X-From-R13: Oqvgv Eevinfg <nfevinfg1964Ntznvy.pbz> -->
+<!--X-Date: Thu, 20 Jan 2022 02:56:46 &#45;0800 -->
+<!--X-Message-Id: CAHv3btxEfaeuVw4TdpL48fw6JxLjhb9TnhPCFVutsSq7TKezug@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAHv3btyoeb15u5oTOOn6bng=KhekD9RqV=V630ko+j1qA=6NSA@mail.gmail.com -->
+<!--X-Reference: CAEwQpa+Z1GATP25T09f1&#45;mGS+FtPK0pDMLkS4LdxTRU7si=6Fw@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] how to convert Gregorian calendar to Julian</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01066.html">Thread Prev</a>][<a href="msg01069.html">Thread Next</a>][<A HREF="threads2019.html#01067">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] how to convert Gregorian calendar to Julian</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] how to convert Gregorian calendar to Julian</strong></li>
+<li><strong>From</strong>: <strong>Aditi Srivast &lt;<a href="mailto:asrivast1964@DOMAIN.HIDDEN">asrivast1964@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 20 Jan 2022 16:28:46 +0530</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;CAEwQpa+Z1GATP25T09f1-mGS+FtPK0pDMLkS4LdxTRU7si=6Fw@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAHv3btyoeb15u5oTOOn6bng=KhekD9RqV=V630ko+j1qA=6NSA@mail.gmail.com&gt; &lt;CAEwQpa+Z1GATP25T09f1-mGS+FtPK0pDMLkS4LdxTRU7si=6Fw@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Dear Dr Ryo</div><div><br></div><div>I tried using ferret simple commands to convert gregorian calendar to Julian calendar</div><div><br></div><div>ex as follows</div><div>use <a rel="nofollow" href="http://rlds-jra.nc">rlds-jra.nc</a><br>&#xA0;name &#xA0; &#xA0; title &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; I &#xA0; &#xA0; &#xA0; &#xA0; J &#xA0; &#xA0; &#xA0; &#xA0; K &#xA0; &#xA0; &#xA0; &#xA0; L &#xA0; &#xA0; &#xA0; &#xA0; M &#xA0; &#xA0; &#xA0; &#xA0; N<br>&#xA0;RLDS &#xA0; &#xA0; Surface Downwelling Longwave Ra &#xA0;1:640 &#xA0; &#xA0; 1:320 &#xA0; &#xA0; ... &#xA0; &#xA0; &#xA0; 1:2920 &#xA0; &#xA0;... &#xA0; &#xA0; &#xA0; ...</div><div>DEFINE AXIS/CALENDAR=JULIAN/T=&quot;1-JAN-2018&quot;:&quot;31-DEC-2018&quot;:03/UNITS=hours tmodel<br>let rld=rlds[GT=tmodel@lin]<br>set mem/siz=6000<br>save/clobber/file=<a rel="nofollow" href="http://test1_lin.nc">test1_lin.nc</a> rld</div><div>This command worked, but after conversion from gregorian calendar to Julian the the file contains 2913 time steps instead of 2920<br></div><div><a rel="nofollow" href="http://test1_lin.nc">test1_lin.nc</a>. <br>&#xA0;name &#xA0; &#xA0; title &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; I &#xA0; &#xA0; &#xA0; &#xA0; J &#xA0; &#xA0; &#xA0; &#xA0; K &#xA0; &#xA0; &#xA0; &#xA0; L &#xA0; &#xA0; &#xA0; &#xA0; M &#xA0; &#xA0; &#xA0; &#xA0; N<br>&#xA0;RLD &#xA0; &#xA0; &#xA0;RLDS[GT=TMODEL@LIN] &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;1:640 &#xA0; &#xA0; 1:320 &#xA0; &#xA0; ... &#xA0; &#xA0; &#xA0; 1:2913</div><div><br></div><div>still I am not able to solve after going through the mail archives</div><div><br></div><div>Requesting for help</div><div><br></div><div>Regards</div><div>Kalyani<br></div><div><br></div><div><br></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Thu, Jan 20, 2022 at 12:56 PM Ryo Furue &lt;<a rel="nofollow" href="mailto:furue@xxxxxxxxxx">furue@xxxxxxxx                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+</blockquote></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="01069" href="msg01069.html">Re: [ferret_users] how to convert Gregorian calendar to Julian</a></strong>
+<ul><li><em>From:</em> Ansley Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="01065" href="msg01065.html">[ferret_users] how to convert Gregorian calendar to Julian</a></strong>
+<ul><li><em>From:</em> Aditi Srivast</li></ul></li>
+<li><strong><a name="01066" href="msg01066.html">Re: [ferret_users] how to convert Gregorian calendar to Julian</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01066.html">Re: [ferret_users] how to convert Gregorian calendar to Julian</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01069.html">Re: [ferret_users] how to convert Gregorian calendar to Julian</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01066.html">Thread Prev</a>][<a href="msg01069.html">Thread Next</a>][<A HREF="threads2019.html#01067">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

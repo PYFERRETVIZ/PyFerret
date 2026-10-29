@@ -1,0 +1,172 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] pyferret fails to read a very long directory -->
+<!--X-From-R13: [negva Epuzvqg <znegva.fpuzvqgNvb&#45;jnearzhraqr.qr> -->
+<!--X-Date: Mon, 3 Jun 2019 04:05:16 &#45;0700 -->
+<!--X-Message-Id: d00f9e6e&#45;3049&#45;6a03&#45;b9cb&#45;0774c8f31016@io&#45;warnemuende.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CALC=m4qQSd4x7UOo97LuV&#45;HgCR+TB&#45;+Y17Cg018j=3Qohh5i0A@mail.gmail.com -->
+<!--X-Reference: CALC=m4p9ifDiPH9Xm2JUG0s+k=8mhKKMNk_V7YqMR0epaq_YxQ@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] pyferret fails to read a very long directory</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00208.html">Thread Prev</a>][<a href="msg00210.html">Thread Next</a>][<A HREF="threads2019.html#00209">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] pyferret fails to read a very long directory</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] pyferret fails to read a very long directory</strong></li>
+<li><strong>From</strong>: <strong>Martin Schmidt &lt;<a href="mailto:martin.schmidt@DOMAIN.HIDDEN">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 3 Jun 2019 13:04:43 +0200</li>
+<li>In-reply-to: &lt;CALC=m4p9ifDiPH9Xm2JUG0s+k=8mhKKMNk_V7YqMR0epaq_YxQ@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CALC=m4qQSd4x7UOo97LuV-HgCR+TB-+Y17Cg018j=3Qohh5i0A@mail.gmail.com&gt; &lt;CALC=m4p9ifDiPH9Xm2JUG0s+k=8mhKKMNk_V7YqMR0epaq_YxQ@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Thunderbird/60.6.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Dear all,
+ 
+</pre><tt>I am trying to glue a large amount of files using the aggregate 
+</tt><tt>capability of ferret. The problem is the file list itself. The files are 
+</tt><tt>ordered by a 4-digit number. So
+</tt><pre style="margin: 0em;">
+ 
+ls -l wind_0*.nc
+ 
+gives me 1000 file names,
+ 
+ls -l wind_[0-2]*.nc
+ 
+</pre><tt>results in 3000 file names. All works well with up to 2000 file names. 
+</tt><tt>In ferret:
+</tt><pre style="margin: 0em;">
+ 
+yes? let file_list = SPAWN(&quot;ls -1 wind_0*nc&quot;)
+ 
+yes? list file_list
+ 
+gives the correct list and the aggregation works great as it should.
+ 
+yes? let file_list = SPAWN(&quot;ls -1 wind_[0-2]*nc&quot;)
+ 
+yes? list file_list
+ 
+results in huge traceback and ferret quits.
+ 
+yes? list file_list
+</pre><tt>*** Error in `/sw/data/python/miniconda/OS_42.3/2.7.15/bin/python': 
+</tt><tt>free(): invalid pointer: 0x00007fcfbc746698 ***
+</tt><pre style="margin: 0em;">
+======= Backtrace: =========
+/lib64/libc.so.6(+0x740ef)[0x7fcfbc41b0ef]
+/lib64/libc.so.6(+0x79646)[0x7fcfbc420646]
+/lib64/libc.so.6(+0x7a393)[0x7fcfbc421393]
+</pre><tt>/sw/viz/ferret/py_ferret_v750_os423_py_2715_netcdf463/lib/python2.7/site-packages/pyferret/libpyferret.so(FerMem_Free+0x1a)[0x7fcfb622ee83] 
+</tt><tt>
+</tt><pre style="margin: 0em;">
+ 
+...
+ 
+</pre><tt>/sw/data/python/miniconda/OS_42.3/2.7.15/bin/../lib/libpython2.7.so.1.0(PyEval_EvalFrameEx+0x7d14)[0x7fcfbd1b2ea4] 
+</tt><tt>
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>... several 100 similar lines from many other libraries in the miniconda 
+</tt><tt>based python including a memory map&#xA0; and finally
+</tt><pre style="margin: 0em;">
+ 
+Traceback (most recent call last):
+&#xA0; File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
+</pre><tt>&#xA0; File 
+</tt><tt>&quot;/sw/viz/ferret/py_ferret_v750_os423_py_2715_netcdf463/lib/python2.7/site-packages/pyferret/__init__.py&quot;, 
+</tt><tt>line 482, in init
+</tt><pre style="margin: 0em;">
+&#xA0;&#xA0;&#xA0; result = run()
+</pre><tt>&#xA0; File 
+</tt><tt>&quot;/sw/viz/ferret/py_ferret_v750_os423_py_2715_netcdf463/lib/python2.7/site-packages/pyferret/__init__.py&quot;, 
+</tt><tt>line 887, in run
+</tt><pre style="margin: 0em;">
+&#xA0;&#xA0;&#xA0; retval = libpyferret._run(str_command)
+RuntimeError: etc
+ 
+</pre><tt>I have no idea, which limit or ulimit, (but it is not the stacksize) 
+</tt><tt>could be violated.&#xA0; I have no idea how to produce this list in python 
+</tt><tt>directly, to check if this a python or ferret issue.
+</tt><pre style="margin: 0em;">
+ 
+in _init_.py it crashs here:
+ 
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; readline.set_completer_delims(FERRET_READLINE_DELIMS)
+&#xA0;&#xA0;&#xA0; # the actual Ferret function call
+&#xA0;&#xA0;&#xA0; retval = libpyferret._run(str_command)
+ 
+Is there eventually a limit in ferret itself?
+ 
+Any hints would be very welcome.
+ 
+Best,
+ 
+Martin
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00210" href="msg00210.html">Re: [ferret_users] pyferret fails to read a very long directory</a></strong>
+<ul><li><em>From:</em> Karl Smith - NOAA Affiliate</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00205" href="msg00205.html">[ferret_users] How to get number of variables from nc file</a></strong>
+<ul><li><em>From:</em> Satyesh Ghetiya</li></ul></li>
+<li><strong><a name="00206" href="msg00206.html">[ferret_users] Re: How to get number of variables from nc file</a></strong>
+<ul><li><em>From:</em> Satyesh Ghetiya</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00208.html">Re: [ferret_users] Re: How to get number of variables from nc file</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00210.html">Re: [ferret_users] pyferret fails to read a very long directory</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00208.html">Thread Prev</a>][<a href="msg00210.html">Thread Next</a>][<A HREF="threads2019.html#00209">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

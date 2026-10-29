@@ -1,0 +1,110 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Wrong result in division -->
+<!--X-From-R13: "'Tnovb' ivn _AOD B[SZ Treerg Gfref" <sreerg_hfrefNabnn.tbi> -->
+<!--X-Date: Sat, 18 Jul 2020 14:20:14 &#45;0700 -->
+<!--X-Message-Id: 9f0d2db9&#45;7a55&#45;dc47&#45;da5a&#45;6f88bc184976@yahoo.it -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 0fde9cf2&#45;7047&#45;98ca&#45;0780&#45;1fc3a2fe9f75.ref@yahoo.it -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Wrong result in division</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00770.html">Thread Prev</a>][<a href="msg00772.html">Thread Next</a>][<A HREF="threads2019.html#00771">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Wrong result in division</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Wrong result in division</strong></li>
+<li><strong>From</strong>: <strong>&quot;'Fabio' via _OAR PMEL Ferret Users&quot; &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Sat, 18 Jul 2020 23:19:59 +0200</li>
+<li>In-reply-to: &lt;0fde9cf2-7047-98ca-0780-1fc3a2fe9f75.ref@yahoo.it&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;0fde9cf2-7047-98ca-0780-1fc3a2fe9f75.ref@yahoo.it&gt;</li>
+<li>Reply-to: Fabio &lt;<a href="mailto:xxtraloud@DOMAIN.HIDDEN">xxtraloud@xxxxxxxx</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 Thunderbird/68.9.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Dear all,
+ 
+</pre><tt>I am sorry to send another question but I am puzzled as to why this 
+</tt><tt>simple division is giving the wrong result. The same calculations in R 
+</tt><tt>give the correct result.
+</tt><pre style="margin: 0em;">
+ 
+I have 2 variables calculated with the following
+ 
+let myvar1 = var1[k=@sum] * 30 / .12
+let nw = var2 * var3 * 30 / 1000
+let myvar2 = nw[k=@sum]
+ 
+and my result
+let result = myvar1/myvar2
+ 
+MYVAR1  MYVAR2  RESULT
+---- J:30
+25E   / 103:  0.0054  0.0049   1.09
+27E   / 104:  0.0356  0.0344   1.03
+---- J:31
+25E   / 103:  0.0490  0.0390   5.54
+27E   / 104:  0.0458  0.0338   1.36
+---- J:35
+25E   / 103:  0.1618  0.1680  47.26
+27E   / 104:  0.0028  0.1906   0.20
+ 
+But clearly RESULT is wrong, why is this happening?
+ 
+Thanks in advance
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00772" href="msg00772.html">Re: [ferret_users] Wrong result in division</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00770.html">[ferret_users] Randomly distributed time series plots</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00772.html">Re: [ferret_users] Wrong result in division</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00770.html">Thread Prev</a>][<a href="msg00772.html">Thread Next</a>][<A HREF="threads2019.html#00771">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

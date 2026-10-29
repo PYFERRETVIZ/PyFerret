@@ -1,0 +1,166 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] existence of elements in array -->
+<!--X-From-R13: Oxfunl Vrtqr <nxfunl.x.urtqrNtznvy.pbz> -->
+<!--X-Date: Fri, 16 Jun 2017 05:15:30 &#45;0700 -->
+<!--X-Message-Id: CAH1tzCRi8vgdzYAoc7_ydu6qeb1GseSvFfyUpuad3MBJaSSz4Q@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 20170616133123.12bfbb29@gfi3101569.klientdrift.uib.no -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] existence of elements in array</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00443.html">Thread Prev</a>][<a href="msg00445.html">Thread Next</a>][<A HREF="threads2017.html#00444">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] existence of elements in array</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Marco van Hulten &lt;<a href="mailto:Marco.Hulten@DOMAIN.HIDDEN">Marco.Hulten@xxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] existence of elements in array</strong></li>
+<li><strong>From</strong>: <strong>Akshay Hegde &lt;<a href="mailto:akshay.k.hegde@DOMAIN.HIDDEN">akshay.k.hegde@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Fri, 16 Jun 2017 17:45:28 +0530</li>
+<li>Cc: ferret_users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00443.html">20170616133123.12bfbb29@gfi3101569.klientdrift.uib.no</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00443.html">20170616133123.12bfbb29@gfi3101569.klientdrift.uib.no</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Hi Marco!<br>
+<br>
+</div>Make use of &quot;IS_ELEMENT_OF&quot; function<br>
+<div><br>
+[root@localhost tmp]# f<br>
+NOAA/PMEL TMAP<br>
+FERRET v6.96 <br>
+Linux 2.6.32-573.7.1.el6.x86_64 64-bit - 12/02/15<br>
+16-Jun-17 17:42 <br>
+<br>
+yes? let aa = {1, 2, 3};<br>
+yes? list IS_ELEMENT_OF(aa, 3)<br>
+VARIABLE : IS_ELEMENT_OF(AA, 3)<br>
+X : 1<br>
+1.000<br>
+yes? list IS_ELEMENT_OF(aa, 35)<br>
+VARIABLE : IS_ELEMENT_OF(AA, 35)<br>
+X : 1<br>
+0.0000<br>
+yes? IF `IS_ELEMENT_OF(aa, 35) NE 0` THEN<br>
+!-&gt; IF 0 THEN<br>
+yes? say &#39;exists&#39;<br>
+yes? ELSE<br>
+yes? say &#39;does not exists&#39;<br>
+&#39;does not exists&#39;<br>
+yes? ENDIF<br>
+yes? <br>
+<br>
+<br>
+<div><br>
+<div class="gmail_extra">Regards,<br>
+</div><div class="gmail_extra">Akshay Hegde,<br>
+</div><div class="gmail_extra">Data and Information,<br>
+</div><div class="gmail_extra">CSIR-NIO<br>
+<a rel="nofollow" href="https://about.me/akshay.k.hegde">https://about.me/akshay.k.hegde</a></div><br>
+</div></div></div><div class="gmail_extra"><br>
+<div class="gmail_quote">On Fri, Jun 16, 2017 at 5:01 PM, Marco van Hulten <span dir="ltr">&lt;<a rel="nofollow" href="mailto:Marco.Hulten@xxxxxx">Marco.Hulten@xxxxxx</a>&gt;</span> wrote:<br>
+<blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex">Hello,<br>
+ 
+<br>
+ 
+I would like to see if certain elements are in an array. Suppose I<br>
+ 
+have and array aa = {1, 2, 3} , I want to check if a number is in the<br>
+ 
+array (pseudo-ferret code):<br>
+ 
+<br>
+ 
+if `3 \in aa` then say &quot;3 is in aa&quot;<br>
+ 
+if `7 \in aa` then say &quot;7 is in aa&quot;<br>
+ 
+<br>
+ 
+How would you write out the \in in Ferret?<br>
+ 
+<br>
+ 
+Or, using fewer characters, a case statement like (pseudo-bash code):<br>
+ 
+<br>
+ 
+case bb in<br>
+ 
+3) say &quot;3 is in aa&quot;<br>
+ 
+7) say &quot;7 is in aa&quot;<br>
+ 
+<br>
+ 
+Is there any equivalent in classical Ferret?<br>
+ 
+<br>
+ 
+In the end I want to do this with an array of strings.<br>
+ 
+<span class="HOEnZb"><font color="#888888"><br>
+ 
+- Marco<br>
+ 
+</font></span></blockquote></div><br>
+</div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00445" href="msg00445.html">Re: [ferret_users] existence of elements in array</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00443" href="msg00443.html">[ferret_users] existence of elements in array</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00443.html">[ferret_users] existence of elements in array</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00445.html">Re: [ferret_users] existence of elements in array</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00443.html">Thread Prev</a>][<a href="msg00445.html">Thread Next</a>][<A HREF="threads2017.html#00444">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

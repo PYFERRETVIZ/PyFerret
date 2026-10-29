@@ -1,0 +1,141 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] library problem pyferret install -->
+<!--X-From-R13: [negva Epuzvqg <znegva.fpuzvqgNvb&#45;jnearzhraqr.qr> -->
+<!--X-Date: Wed, 19 Jul 2017 07:39:58 &#45;0700 -->
+<!--X-Message-Id: 77f03fcc&#45;9c7e&#45;85e2&#45;fd4a&#45;3e97d1030ef4@io&#45;warnemuende.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: 20170719153606.4c225745@gfi3101569.klientdrift.uib.no -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] library problem pyferret install</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00501.html">Thread Prev</a>][<a href="msg00503.html">Thread Next</a>][<A HREF="threads2017.html#00502">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] library problem pyferret install</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] library problem pyferret install</strong></li>
+<li><strong>From</strong>: <strong>Martin Schmidt &lt;<a href="mailto:martin.schmidt@DOMAIN.HIDDEN">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 19 Jul 2017 16:39:35 +0200</li>
+<li>In-reply-to: &lt;<a href="msg00501.html">20170719153606.4c225745@gfi3101569.klientdrift.uib.no</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00501.html">20170719153606.4c225745@gfi3101569.klientdrift.uib.no</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Thunderbird/45.6.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Hi Marco,
+ 
+</pre><tt>I had the same problem. The different Linux flavours tend to advance 
+</tt><tt>different libraries with different speed. Ubuntu is different from suse 
+</tt><tt>or redhat. This limits portability, as you see, but the interests of 
+</tt><tt>people are widespread. Some need stable tools and do not care, how 
+</tt><tt>results are produced. Others need the latest twist of a library and 
+</tt><tt>advance software development rapidly.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>You may try to generate a fake png15-library just linking libpng16 to 
+</tt><tt>the name of libpng15. This MAY work or may not. Be careful not to 
+</tt><tt>destroy your system: Link or better copy the library to some directory 
+</tt><tt>outside of the system and set the LD_LIBRARY_PATH to this directory. If 
+</tt><tt>it does not work, the link can be simply deleted.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>For suse linux this method did not work. My way out is to compile 
+</tt><tt>pyferret by myself from source. Karl's cookbook how to do this is 
+</tt><tt>excellent. But most probably it is not required to build all the 
+</tt><tt>libraries from Cairo to netcdf by yourself. Most of them will be in the 
+</tt><tt>ubuntu-distribution  When installing, please be aware, you have to 
+</tt><tt>install not only the libraries but also the development packages.
+</tt><pre style="margin: 0em;">
+ 
+Hope this helps. Best,
+ 
+Martin
+ 
+ 
+On 07/19/2017 03:36 PM, Marco van Hulten wrote:
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+Hello,
+ 
+In installed PyFerret, following
+<a  rel="nofollow" href="../../documentation/pyferret/build-install.html">../../documentation/pyferret/build-install.html</a>
+I get an error concerning libpng:
+ 
+ 
+$ pyferret -version
+Traceback (most recent call last):
+File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
+File &quot;/home/mhu027/installed/pyferret/lib/python2.7/site-packages/pyferret/__init__.py&quot;, line 44, in &lt;module&gt;
+from pyferret import libpyferret
+ImportError: libpng15.so.15: cannot open shared object file: No such file or directory
+ 
+ 
+I am using Ubuntu 16.04, which only provides libpng12 and libpng16.
+ 
+Maybe PyFerret could be more lenient and check for libpng&gt;=15 (or
+whatever is minimally needed)?
+ 
+- Marco
+ 
+</pre></blockquote><pre style="margin: 0em;">
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00503" href="msg00503.html">Re: [ferret_users] library problem pyferret install</a></strong>
+<ul><li><em>From:</em> Karl Smith - NOAA Affiliate</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00501" href="msg00501.html">[ferret_users] library problem pyferret install</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00501.html">[ferret_users] library problem pyferret install</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00503.html">Re: [ferret_users] library problem pyferret install</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00501.html">Thread Prev</a>][<a href="msg00503.html">Thread Next</a>][<A HREF="threads2017.html#00502">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

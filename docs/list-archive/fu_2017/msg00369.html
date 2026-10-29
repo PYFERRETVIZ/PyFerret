@@ -1,0 +1,141 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Re: regarding ocean basin mask -->
+<!--X-From-R13: Xnzrf Aee <Xnzrf.AeeNyfpr.vcfy.se> -->
+<!--X-Date: Wed, 24 May 2017 01:11:40 &#45;0700 -->
+<!--X-Message-Id: alpine.LFD.2.03.1705241005580.7114@lsce.ipsl.fr -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: CAFXLzPihXD+9qHQOd7taNUT2JmxVM0dX=NB3okTwvsj=ZWuZnA@mail.gmail.com -->
+<!--X-Reference: CAFXLzPj+7gRVMorJ7QxubnEo8BHTS=G973G=W3ovxWy6BHvEFw@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Re: regarding ocean basin mask</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00368.html">Thread Prev</a>][<a href="msg00370.html">Thread Next</a>][<A HREF="threads2017.html#00369">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Re: regarding ocean basin mask</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Re: regarding ocean basin mask</strong></li>
+<li><strong>From</strong>: <strong>James Orr &lt;<a href="mailto:James.Orr@DOMAIN.HIDDEN">James.Orr@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 24 May 2017 10:11:29 +0200 (CEST)</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;CAFXLzPj+7gRVMorJ7QxubnEo8BHTS=G973G=W3ovxWy6BHvEFw@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>List-unsubscribe: &lt;<a href="mailto:googlegroups-manage+809428289204+unsubscribe@googlegroups.com">mailto:googlegroups-manage+809428289204+unsubscribe@googlegroups.com</a>&gt;, &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/subscribe">https://groups.google.com/a/noaa.gov/group/ferret_users/subscribe</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAFXLzPihXD+9qHQOd7taNUT2JmxVM0dX=NB3okTwvsj=ZWuZnA@mail.gmail.com&gt; &lt;CAFXLzPj+7gRVMorJ7QxubnEo8BHTS=G973G=W3ovxWy6BHvEFw@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Alpine 2.03 (LFD 1266 2009-07-14)</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Hi Saurabh,
+ 
+</pre><tt>You could use the basin masks on the Levitus 1&#xB0;x1&#xB0; grid provided by the OCMIP 
+</tt><tt>project.  The following commands should get you going:
+</tt><pre style="margin: 0em;">
+ 
+use <a  rel="nofollow" href="https://vesg.ipsl.upmc.fr/thredds/dodsC/IPSLFS/jomce/ocmip/grids/LEV_grid.nc">https://vesg.ipsl.upmc.fr/thredds/dodsC/IPSLFS/jomce/ocmip/grids/LEV_grid.nc</a>
+</pre><tt>use 
+</tt><tt><a  rel="nofollow" href="https://vesg.ipsl.upmc.fr/thredds/dodsC/IPSLFS/jomce/ocmip/specials/LEV_Basins.nc">https://vesg.ipsl.upmc.fr/thredds/dodsC/IPSLFS/jomce/ocmip/specials/LEV_Basins.nc</a>
+</tt><pre style="margin: 0em;">
+ 
+let lev_basin = reshape(basin[d=LEV_Basins.nc],area[d=LEV_grid.nc])
+sho grid lev_basin
+shade/lev=(-0.5,4.5,1) lev_basin
+ 
+! &quot;lev_basin&quot; has the following indicators for each basin:
+!  0 = Atlantic
+!  1 = Pacific
+!  2 = Arctic
+!  3 = Marginal Seas
+!  4 = Indian
+ 
+-- Jim
+ 
+On Wed, 24 May 2017, saurabh rathore wrote:
+ 
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+Hello Ferreters,
+I am attaching the plot that I want to apply on my data set and the netcdf file to create that mask. Can any one will do this in
+ferret so that we can use the basin mask for the exact basin value calculations.
+ 
+Any help is appreciated. Thanks in advance
+ 
+regards, saurabh
+ 
+On Wed, May 24, 2017 at 2:43 PM, saurabh rathore &lt;rohitsrb2020@xxxxxxxxx&gt; wrote:
+Hi ferreters,
+ 
+I want to use the ocean basin mask for Indian, Atlantic and Pacific. Do we have any ocean basin mask data file. I am
+following the link
+ 
+<a  rel="nofollow" href="../fu_2010/msg00480.html">../fu_2010/msg00480.html</a>
+ 
+&#x200B;but it is not that much understandable to me. So please if anyone is having the ocean basin mask then please send it.
+ 
+regards, saurabh&#x200B;
+</pre></blockquote><pre style="margin: 0em;">
+ 
+ 
+--
+LSCE/IPSL, Laboratoire des Sciences du Climat et de l'Environnement
+CEA-CNRS-UVSQ
+ 
+LSCE/IPSL, CEA Saclay           <a  rel="nofollow" href="http://www.ipsl.jussieu.fr/
+Bat. 712 - Orme                 mailto:  James.Orr@xxxxxxxxxxxx
+Point courrier 132
+F-91191 Gif-sur-Yvette Cedex    Phone:   (33) (0)1 69 08 39 73
+FRANCE                          Fax:     (33) (0)1 69 08 30 73</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00367" href="msg00367.html">[ferret_users] regarding ocean basin mask</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+<li><strong><a name="00368" href="msg00368.html">[ferret_users] Re: regarding ocean basin mask</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00368.html">[ferret_users] Re: regarding ocean basin mask</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00370.html">Re: [ferret_users] Re: regarding ocean basin mask / create mask from GIS shapefiles with gdal_rasterize</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00368.html">Thread Prev</a>][<a href="msg00370.html">Thread Next</a>][<A HREF="threads2017.html#00369">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

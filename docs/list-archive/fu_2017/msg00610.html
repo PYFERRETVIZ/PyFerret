@@ -1,0 +1,155 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] query for regression analysis. -->
+<!--X-From-R13: Ivyyvnz Yrffyre <jvyyvnz.f.xrffyreNabnn.tbi> -->
+<!--X-Date: Fri, 25 Aug 2017 06:40:34 &#45;0700 -->
+<!--X-Message-Id: 9B6526BB&#45;0B2A&#45;4F3D&#45;B8B0&#45;A8CEBAEDEC24@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CAFXLzPiUppE52aYf+qoABay8xHh&#45;vHLsZZZ__HaZJ02gos2ebA@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] query for regression analysis.</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00609.html">Thread Prev</a>][<a href="msg00612.html">Thread Next</a>][<A HREF="threads2017.html#00610">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] query for regression analysis.</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] query for regression analysis.</strong></li>
+<li><strong>From</strong>: <strong>William Kessler &lt;<a href="mailto:william.s.kessler@DOMAIN.HIDDEN">william.s.kessler@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Fri, 25 Aug 2017 06:40:28 -0700</li>
+<li>Cc: Ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00609.html">CAFXLzPiUppE52aYf+qoABay8xHh-vHLsZZZ__HaZJ02gos2ebA@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00609.html">CAFXLzPiUppE52aYf+qoABay8xHh-vHLsZZZ__HaZJ02gos2ebA@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>Do your variables have an annual cycle?
+ 
+If your two time series have a correlated (or anti-correlated) annual cycle then the regression slope can be quite different than if they don't. Imagine three time series:
+a) a straight line (with some slope or trend)
+b) the same straight line plus an annual cycle
+c) the same straight line with the oppositely-phased annual cycle
+ 
+The correlations and regression slopes among these three will be entirely different:
+ 
+yes? define axis/t=1:60:1 tax
+yes? let a=tt*1.1
+yes? let b=tt*1.1-10*sin(pi*(tt*10)/180)
+yes? let c=tt*1.1+10*sin(pi*(tt*10)/180)
+ 
+Plot these to see the relation among them
+yes? plot a,b,c  ! the most important step
+ 
+yes? let p=a;let q=b
+yes? go regresst
+yes? yes? let p=a;let q=b
+yes? list slope,rsquare^.5
+SLOPE    EX#2
+I / *:     1.066  0.9494
+yes? let q=c
+yes? list slope,rsquare^.5
+SLOPE    EX#2
+I / *:     0.9337  0.9355
+yes? let p=b
+yes? list slope,rsquare^.5
+SLOPE    EX#2
+I / *:     0.6906  0.7772
+ 
+Note that these are quite different, because of the various correlations of their annual cycles
+ 
+! now make an &quot;annual average&quot; from b and c:
+ 
+yes? let p=c[l=@sbx:36] 
+yes? let q=b[l=@sbx:36]
+yes? list slope,rsquare^.5
+SLOPE   EX#2
+I / *:     1.000  1.000
+ 
+Removing the annual cycles changes the slope and correlation. The regression is comparing point by point, and if the time series vary coherently on the annual cycle, that will affect the results (as it should). If there are strong annual cycles then the annual-average statistics will be different than the monthly values.
+ 
+===&gt;&gt;&gt; When you get a confusing result, PLOT THE ORIGINAL DATA. Do not blindly calculate statistics without having looked at the data directly!!!!
+ 
+Billy K
+ 
+&gt; On Aug 25, 2017, at 12:25 AM, saurabh rathore &lt;rohitsrb2020@xxxxxxxxx&gt; wrote:
+&gt; 
+&gt; Dear Ferreters, 
+&gt; 
+&gt; I got a small doubt which is creating a big difference in my analysis. I computed two type linear regression from go regresst from that same set of data having 132 monthly time steps. In first method I used the monthly time series and computed the slope and multiplied it with 12 to convert it into J/year from J/month which is coming in the order of 1*10^7 J/year. But when I calculated the slope from the annually average values i.e. 11 years from 132 monthly time step values then my slope is coming in order of 1*10^8 J/year. So why is this happening and which one is right way for computation. 
+&gt; 
+&gt; &#x200B;I hope I am clear for my query and hoping that some one have overcome this problem.&#x200B;
+&gt; 
+&gt; &#x200B;regards, saurabh&#x200B;
+&gt; 
+&gt; 
+&gt; -- 
+&gt; 
+&gt; 
+&gt; REGARDS
+&gt; 
+&gt; Saurabh Rathore
+&gt; Research Scholar (PhD.)
+&gt; Centre For Oceans, Rivers, Atmosphere &amp; Land Science Technology
+&gt; Indian Institute Of Technology, Kharagpur
+&gt; contact :- 91- 8345984434
+ 
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00612" href="msg00612.html">Re: [ferret_users] query for regression analysis.</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00609" href="msg00609.html">[ferret_users] query for regression analysis.</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00609.html">[ferret_users] query for regression analysis.</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00612.html">Re: [ferret_users] query for regression analysis.</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00609.html">Thread Prev</a>][<a href="msg00612.html">Thread Next</a>][<A HREF="threads2017.html#00610">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

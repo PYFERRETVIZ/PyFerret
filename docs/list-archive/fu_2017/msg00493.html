@@ -1,0 +1,144 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] : pyferret 7.2 segmentation fault when a second variable is displayed -->
+<!--X-From-R13: [negva Epuzvqg <znegva.fpuzvqgNvb&#45;jnearzhraqr.qr> -->
+<!--X-Date: Mon, 17 Jul 2017 01:57:13 &#45;0700 -->
+<!--X-Message-Id: 21d5e616&#45;343b&#45;ddac&#45;fc7f&#45;bb72ffe9f0b0@io&#45;warnemuende.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] : pyferret 7.2 segmentation fault when a second variable is displayed</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00492.html">Thread Prev</a>][<a href="msg00494.html">Thread Next</a>][<A HREF="threads2017.html#00493">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] : pyferret 7.2 segmentation fault when a second variable is displayed</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&quot; &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] : pyferret 7.2 segmentation fault when a second variable is displayed</strong></li>
+<li><strong>From</strong>: <strong>Martin Schmidt &lt;<a href="mailto:martin.schmidt@DOMAIN.HIDDEN">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 17 Jul 2017 10:56:50 +0200</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (X11; Linux x86_64; rv:45.0) Gecko/20100101 Thunderbird/45.6.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Hi,
+ 
+</pre><tt>my new version of pyferret ends with an segmentation fault, when I am 
+</tt><tt>trying to display more than one variable.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>See the example below. I have compiled pyferret by myself, so there may 
+</tt><tt>be, perhaps, some error in my installation of python, but the same 
+</tt><tt>python behaves well with earlier pyferret versions. The same error 
+</tt><tt>occurs with two different builds on different system version (openSuse 
+</tt><tt>13.2 and SLES_11).
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>Below is an example with hycom data. Other data sets produce the same 
+</tt><tt>error. Does anyone else experience the same?
+</tt><pre style="margin: 0em;">
+ 
+Best,
+ 
+Martin
+ 
+ 
+ 
+mschmidt@phy-59:
+ 
+NOAA/PMEL TMAP
+PyFerret v7.2 (optimized)
+Linux 3.16.7-53-default - 07/15/17
+17-Jul-17 10:32
+ 
+yes? use <a  rel="nofollow" href="http://tds.hycom.org/thredds/dodsC/GLBu0.08/expt_91.2/ts3z">http://tds.hycom.org/thredds/dodsC/GLBu0.08/expt_91.2/ts3z</a>
+yes? sh data
+currently SET data sets:
+1&gt; <a  rel="nofollow" href="http://tds.hycom.org/thredds/dodsC/GLBu0.08/expt_91.2/ts3z">http://tds.hycom.org/thredds/dodsC/GLBu0.08/expt_91.2/ts3z</a> (default)
+name     title                             I         J K         L
+TAU      Tau                              ...       ... ...       1:437
+WATER_TEMP
+Water Temperature                1:4500    1:2001 1:40      1:437
+SALINITY Salinity                         1:4500    1:2001 1:40      1:437
+ 
+yes? shade/x=0/l=100 WATER_TEMP
+yes? shade/x=0/l=100 SALINITY
+Traceback (most recent call last):
+File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
+</pre><tt>  File 
+</tt><tt>&quot;/sw/viz/ferret/py_ferret_v720_os132_py_27/lib/python2.7/site-packages/pyferret/__init__.py&quot;, 
+</tt><tt>line 538, in init
+</tt><pre style="margin: 0em;">
+result = run()
+</pre><tt>  File 
+</tt><tt>&quot;/sw/viz/ferret/py_ferret_v720_os132_py_27/lib/python2.7/site-packages/pyferret/__init__.py&quot;, 
+</tt><tt>line 710, in run
+</tt><pre style="margin: 0em;">
+retval = libpyferret._run(str_command)
+RuntimeError:
+ 
+**ERROR Ferret crash; signal = 11 (SIGSEGV)
+Enter Ctrl-D to exit Python
+ 
+ 
+--
+Dr. Martin Schmidt
+Leibniz-Institute for Baltic Sea Research
+Seestrasse 15
+D18119 Rostock
+Germany
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00494" href="msg00494.html">Re: [ferret_users] : pyferret 7.2 segmentation fault when a second variable is displayed</a></strong>
+<ul><li><em>From:</em> Karl Smith - NOAA Affiliate</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00492.html">[ferret_users] Announcing the official release of PyFerret and Ferret version 7.2</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00494.html">Re: [ferret_users] : pyferret 7.2 segmentation fault when a second variable is displayed</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00492.html">Thread Prev</a>][<a href="msg00494.html">Thread Next</a>][<A HREF="threads2017.html#00493">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

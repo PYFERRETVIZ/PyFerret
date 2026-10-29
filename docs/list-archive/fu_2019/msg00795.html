@@ -1,0 +1,84 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Tue, 25 Aug 2020 22:22:25 &#45;0700 -->
+<!--X-Message-Id: CAEwQpa+fdr8YU2SmQ9aOKrFUFYTCBFu&#45;pNgSHh+Ss+ZDuyC8Mg@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAHD8rBEJSTQfE_9MrQA_=PgmCSAfiwrmXttSq+pNM2oNLXKi4Q@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users]</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00794.html">Thread Prev</a>][<a href="msg00796.html">Thread Next</a>][<A HREF="threads2019.html#00795">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users]</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Gopal Mondal &lt;<a href="mailto:gopalmondal18@DOMAIN.HIDDEN">gopalmondal18@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users]</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 26 Aug 2020 14:22:08 +0900</li>
+<li>Cc: ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;CAHD8rBEJSTQfE_9MrQA_=PgmCSAfiwrmXttSq+pNM2oNLXKi4Q@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAHD8rBEJSTQfE_9MrQA_=PgmCSAfiwrmXttSq+pNM2oNLXKi4Q@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Dear&#xA0;Gopal,</div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Wed, Aug 26, 2020 at 12:43 PM Gopal Mondal &lt;<a rel="nofollow" href="mailto:gopalmondal18@xxxxxxxxx">gopalmondal18@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div><br></div><div>&#xA0;!-&gt; SET DAT/FORM=CDF 9071_ionPrf.nc<br>ferret: v1hpg.c:234: v1h_get_nc_type: Assertion `type == 1 || type == 2 || type == 3 || type == 4 || type == 5 || type == 6 || type == 7 || type == 8 || type == 9 || type == 10 || type == 11 || type == 12&#39; failed.<br>Aborted (core dumped)</div></div></blockquote><div><br></div><div>The &quot;Assertion&quot; error and &quot;Aborted&quot; indicate that this is an error internal to Ferret(*footnote*).&#xA0; Only&#xA0;the developers of Ferret can fix it.</div><div><br></div><div>I guess the best way to address this (Correct me if I&#39;m wrong) is to submit an &quot;issue&quot; at</div><div><br></div><div><a rel="nofollow" href="https://github.com/NOAA-PMEL/Ferret">https://github.com/NOAA-PMEL/Ferret</a></div><div><br></div><div>Having said that, the error you show seems to suggest that there is something wrong&#xA0;with your netCDF file.&#xA0; On the command line (terminal), what do you get from</div><div><br></div><div>ncdump -h&#xA0; 9071_ionPrf.nc</div><div><br></div><div>?</div><div><br></div><div>Ryo</div><div>---------------------</div><div>(*footnote*) The assertion is failing actually in the code of the netCDF library:</div><div><a rel="nofollow" href="https://github.com/Unidata/netcdf-c/blob/master/libsrc/v1hpg.c">https://github.com/Unidata/netcdf-c/blob/master/libsrc/v1hpg.c</a><br></div><div><br></div><div><br></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00796" href="msg00796.html">Re: [ferret_users]</a></strong>
+<ul><li><em>From:</em> Fiedler, Russell (O&amp;A, Hobart)</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00794" href="msg00794.html">[ferret_users]</a></strong>
+<ul><li><em>From:</em> Gopal Mondal</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00794.html">[ferret_users]</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00796.html">Re: [ferret_users]</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00794.html">Thread Prev</a>][<a href="msg00796.html">Thread Next</a>][<A HREF="threads2019.html#00795">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

@@ -1,0 +1,90 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [EXTERNAL] [ferret_users] minimum range for @DIN ? -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Tue, 20 Jul 2021 20:06:09 &#45;0700 -->
+<!--X-Message-Id: CAEwQpa+hssedHNFfPuAcR0ZHej7WW9Pb8TKKDhdhh+gfCXENtQ@mail.gmail.com -->
+<!--X-Content-Type: multipart/related -->
+<!--X-Reference: CAEwQpaLJEzvabe=7h=NRgSjJ1&#45;Pgb=JxRDq4YXY70NBYLQus1g@mail.gmail.com -->
+<!--X-Reference: CAKE4FWp+gb+XdFBkxgLuE5ZJsQWsEWw1yrbckHVgv3Mz4DcJyw@mail.gmail.com -->
+<!--X-Derived: pngHN2o7j1Xtz.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [EXTERNAL] [ferret_users] minimum range for @DIN ?</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00979.html">Thread Prev</a>][<a href="msg00981.html">Thread Next</a>][<A HREF="threads2019.html#00980">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [EXTERNAL] [ferret_users] minimum range for @DIN ?</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Xiaoyu Bai &lt;<a href="mailto:xbai1@DOMAIN.HIDDEN">xbai1@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [EXTERNAL] [ferret_users] minimum range for @DIN ?</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 21 Jul 2021 12:05:47 +0900</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00979.html">CAKE4FWp+gb+XdFBkxgLuE5ZJsQWsEWw1yrbckHVgv3Mz4DcJyw@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAEwQpaLJEzvabe=7h=NRgSjJ1-Pgb=JxRDq4YXY70NBYLQus1g@mail.gmail.com&gt; &lt;<a href="msg00979.html">CAKE4FWp+gb+XdFBkxgLuE5ZJsQWsEWw1yrbckHVgv3Mz4DcJyw@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Hi Xiayu,</div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Wed, Jul 21, 2021 at 6:42 AM Xiaoyu Bai &lt;<a rel="nofollow" href="mailto:xbai1@xxxxxxxx">xbai1@xxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr">I usually use at least two grids. My understanding is that&#xA0;@DDN [<font color="#ff0000">@DIN</font>] needs to apply a weight, most of the time is the cosine effect. If there is only one grid, pyferret will possibly only consider the one grid&#39;s value only.</div></blockquote><div><br></div><div>Yes, but the point is that the weight is continuous.&#xA0; Suppose that our SST is defined at lat = 1&#xB0;, 3&#xB0;, 5&#xB0;, . . . at an interval of 2&#xB0; .&#xA0; Then,</div><div><br></div><div>SST[y=0:yhi@DIN]</div><div><br></div><div>is a continuous function of yhi.&#xA0; Below is a figure showing this function (when SST is uniformly 1). The horizontal axis of the plot is yhi.&#xA0; If you increase yhi slightly, the integral increases slightly because Ferret adjusts the weight.</div><div><br></div><div>The problem is that Ferret seems to stop adjusting the weight when yhi &lt; 2&#xB0; as the figure shows.&#xA0; In particular, one would expect that SST[y=<font color="#ff0000">0:0</font>@DIN] is zero.</div><div><br></div><div>This can be a source of error when you use Ferret programmatically&#xA0;to calculate integrals.&#xA0; For example, I can imagine a calculation like this</div><div><br></div><div>repeat/range=1:`iend`/name=ii (</div><div>&#xA0; &#xA0;let yhi = curvey[i=`ii`]<br></div><div>&#xA0; &#xA0;let xx = xvals[i=`ii`]</div><div>&#xA0; &#xA0;list/append/nohead/file=integral.txt/format=(G0,1X,G0) xx, SST[i=`ii`, y=0:`yhi`@DIN]<br></div><div>)</div><div><br></div><div>to calculate the integral of SST from the equator to a curve&#xA0; (x, curvey(x) ) as a function of x.</div><div><br></div><div>Regards,</div><div><br></div><div>Ryo</div><div><br><                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+</blockquote></div><br clear="all"><div><br></div>-- <br><div dir="ltr"><div dir="ltr">Xiaoyu</div></div>
+</blockquote></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00981" href="msg00981.html">Re: [EXTERNAL] [ferret_users] minimum range for @DIN ?</a></strong>
+<ul><li><em>From:</em> Xiaoyu Bai</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00974" href="msg00974.html">[ferret_users] minimum range for @DIN ?</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00979" href="msg00979.html">Re: [EXTERNAL] [ferret_users] minimum range for @DIN ?</a></strong>
+<ul><li><em>From:</em> Xiaoyu Bai</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00979.html">Re: [EXTERNAL] [ferret_users] minimum range for @DIN ?</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00981.html">Re: [EXTERNAL] [ferret_users] minimum range for @DIN ?</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00979.html">Thread Prev</a>][<a href="msg00981.html">Thread Next</a>][<A HREF="threads2019.html#00980">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

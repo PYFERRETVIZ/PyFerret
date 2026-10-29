@@ -1,0 +1,80 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Re: plot/vs/ov interferes with x&#45;axis numeric labels -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Thu, 10 Jun 2021 01:19:35 &#45;0700 -->
+<!--X-Message-Id: CAEwQpaJcp+1NPhiR1PF4TN7_yAEnwYa4ve&#45;LDEv+n3=2xy6nVQ@mail.gmail.com -->
+<!--X-Content-Type: multipart/related -->
+<!--X-Reference: CAEwQpa+6vqhXtZkdeGbAm+&#45;39YEw9xaMdX0ruiutsE0aPzu06g@mail.gmail.com -->
+<!--X-Derived: png5Fe8WlCKXl.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Re: plot/vs/ov interferes with x-axis numeric labels</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00951.html">Thread Prev</a>][<a href="msg00953.html">Thread Next</a>][<A HREF="threads2019.html#00952">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Re: plot/vs/ov interferes with x-axis numeric labels</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Re: plot/vs/ov interferes with x-axis numeric labels</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 10 Jun 2021 17:19:15 +0900</li>
+<li>In-reply-to: &lt;<a href="msg00949.html">CAEwQpa+6vqhXtZkdeGbAm+-39YEw9xaMdX0ruiutsE0aPzu06g@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00949.html">CAEwQpa+6vqhXtZkdeGbAm+-39YEw9xaMdX0ruiutsE0aPzu06g@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div dir="ltr">Dear Ferret users,</div><div dir="ltr"><br></div><div class="gmail_quote"><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div>I&#39;m trying to plot a land mask (with fland) over an open polygon, but the numeric labels of the x axis miss the longitude&#xA0;labels, &quot;E&quot; or &quot;W&quot;.</div><div>[ . . . ]</div><div><br></div><div>fill/noaxis/nolabel . . . missingdata&#xA0;!--- (1) Set up the axes</div><div>plot/vs/ov xpoly, ypoly&#xA0; !--- (2) plot the line</div><div>go fland 20, , , , , , axes&#xA0; !--- (3) plot the land, axes, and gridlines<br></div></div></blockquote><div><br></div><div>A friend has found another workaround</div><div><br></div><div><font face="monospace">! . . . . . . .</font></div><div><font face="monospace">ppl xfor (i3,&#39;&#39;LONE&#39;&#39;)<br>go fland 20, , , , , , axes</font><br></div><div><br></div><div>The FLAND script uses SHADE internally and the above code specifies the format of the x-axis numeric labels to be the correct one.</div><div><br></div><div>Ryo</div><div><br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div>---- example.jnl ----</div><div>set mode grat:dash<br>set text/font=Courier<br><br>set data levitus_climatology<br>let allmissing = temp[k=1] + 0/0<br>cancel mode nodata_lab<br>fill/nolabel/noax allmissing<br><br>let xs = {110,190,210}<br>let ys = {-50, 50, -10}<br>set var/units=degrees_east xs<br>set var/units=degrees_north xs<br>plot/vs/line/thick=2/ov xs,ys<br>!polygon/line/thick=2/ov xs,ys<br><br>go fland 20, , , , , , axes<br><br>frame/file=sample.png<br></div><div><br></div><div><img src="png5Fe8WlCKXl.png" alt="sample.png" width="452" height="390"><br></div><div><br></div></div>
+</blockquote></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00949" href="msg00949.html">[ferret_users] plot/vs/ov interferes with x-axis numeric labels</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00951.html">Re: [ferret_users] plot/vs/ov interferes with x-axis numeric labels</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00953.html">[ferret_users] pyferret fonts: italicize only a part of text?</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00951.html">Thread Prev</a>][<a href="msg00953.html">Thread Next</a>][<A HREF="threads2019.html#00952">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

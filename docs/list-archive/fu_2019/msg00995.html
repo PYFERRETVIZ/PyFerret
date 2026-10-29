@@ -1,0 +1,87 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] How to read WRF output and plot ? -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Sun, 5 Sep 2021 10:58:33 &#45;0700 -->
+<!--X-Message-Id: CAEwQpaKn92deMf8tu9yPye&#45;29bO5UFgB9npBZW1xPN0Z431N_Q@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 532A2680&#45;226D&#45;402E&#45;8F91&#45;DDACDCE4FFBC@gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] How to read WRF output and plot ?</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00994.html">Thread Prev</a>][<a href="msg00997.html">Thread Next</a>][<A HREF="threads2019.html#00995">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] How to read WRF output and plot ?</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Jeevan Kumar &lt;<a href="mailto:jeevan.mech.307@DOMAIN.HIDDEN">jeevan.mech.307@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] How to read WRF output and plot ?</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 6 Sep 2021 02:58:16 +0900</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00994.html">532A2680-226D-402E-8F91-DDACDCE4FFBC@gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00994.html">532A2680-226D-402E-8F91-DDACDCE4FFBC@gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div dir="ltr">Dear&#xA0;Jeevan,</div><div dir="ltr"><br></div><div class="gmail_quote"><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div style="overflow-wrap: break-word;"><div style="box-sizing:border-box"><pre style="box-sizing:border-box;font-family:ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace;font-size:11.9px;margin-top:0px;margin-bottom:16px;padding:16px;overflow:auto;line-height:1.45;border-radius:6px"><code style="box-sizing:border-box;font-family:ui-monospace,SFMono-Regular,&quot;SF Mono&quot;,Menlo,Consolas,&quot;Liberation Mono&quot;,monospace;padding:0px;margin:0px;border-radius:6px;word-break:normal;border:0px;display:inline;overflow:visible;line-height:inherit">yes? use wrfout_d01_2020-01-16_00:00_jk_E_G.nc
+*** NOTE:
+*** NOTE: Could not adjust grid for variable ZNU
+**ERROR: inconsistent data grids: File needs axis attributes on coordinate variables indicating correct directions</code></pre></div></div></blockquote><div><br></div><div>To explore what goes wrong, let&#39;s look at outputs from &quot;ncdump -h&quot; and &quot;ncdump -c&quot; on your dataset.&#xA0; On your command line,&#xA0; type</div><div><br></div><div>ncdump -h&#xA0; &#xA0;wrfout_d01_2020-01-16_00:00_jk_E_G.nc</div><div><br></div><div>and also</div><div><br></div><div>ncdump -c&#xA0; &#xA0;wrfout_d01_2020-01-16_00:00_jk_E_G.nc<br></div><div><br></div><div>(If the latter output is too long, we need perhaps only the first few lines for each coordinate variable.)</div><div><br></div><div>Ryo</div><div><br></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00997" href="msg00997.html">Re: [ferret_users] How to read WRF output and plot ?</a></strong>
+<ul><li><em>From:</em> Jeevan Kumar Bodaballa</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00994" href="msg00994.html">[ferret_users] How to read WRF output and plot ?</a></strong>
+<ul><li><em>From:</em> Jeevan Kumar</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00994.html">[ferret_users] How to read WRF output and plot ?</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00997.html">Re: [ferret_users] How to read WRF output and plot ?</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00994.html">Thread Prev</a>][<a href="msg00997.html">Thread Next</a>][<A HREF="threads2019.html#00995">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

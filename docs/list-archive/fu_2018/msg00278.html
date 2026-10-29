@@ -1,0 +1,90 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] low pass filter -->
+<!--X-From-R13: GEV@O@EVG RGFFO <hfuanafuhqhggnNtznvy.pbz> -->
+<!--X-Date: Thu, 9 Aug 2018 23:57:39 &#45;0700 -->
+<!--X-Message-Id: CAC67f&#45;b8ARRUsx8jkA88JnaUhaSQX8=0stOgdu28cKhyHbpddg@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAOhUinLYUtMvGmOuygjn_hUhrrLoSU3ENXjWHvh0BUYTSR6G_Q@mail.gmail.com -->
+<!--X-Reference: CAFXLzPgFBB7iv3Oibsxf&#45;nYDWdgHuSj_uFeA2i3srrvpfZXwXw@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] low pass filter</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00277.html">Thread Prev</a>][<a href="msg00279.html">Thread Next</a>][<A HREF="threads2018.html#00278">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] low pass filter</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] low pass filter</strong></li>
+<li><strong>From</strong>: <strong>USHNANSHU DUTTA &lt;<a href="mailto:ushnanshudutta@DOMAIN.HIDDEN">ushnanshudutta@xxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Fri, 10 Aug 2018 12:27:16 +0530</li>
+<li>Cc: Sandeep Mohapatra &lt;<a href="mailto:sandeepmohapatra21@DOMAIN.HIDDEN">sandeepmohapatra21@xxxxxxxxx</a>&gt;,        ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00277.html">CAFXLzPgFBB7iv3Oibsxf-nYDWdgHuSj_uFeA2i3srrvpfZXwXw@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00276.html">CAOhUinLYUtMvGmOuygjn_hUhrrLoSU3ENXjWHvh0BUYTSR6G_Q@mail.gmail.com</a>&gt; &lt;<a href="msg00277.html">CAFXLzPgFBB7iv3Oibsxf-nYDWdgHuSj_uFeA2i3srrvpfZXwXw@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="auto"><div dir="auto"></div>Hi,<div dir="auto">in The arguments first one is okay but the second argument will br the cut off frequency in your case it will be 1/120 (10 yr=120 months and you need to convert it to frequency domain) and the last argument is for weight..it is should be odd no..the more weight you give the smooth signal you get. Supoose you give 61 as a weight it will discard 30 data points from each end</div><div dir="auto"><br></div><div dir="auto">There is another option in NCL i.e filwgts_lanczos function there you can do lowpass highpass and bandpass all just by altering &#39;ihp&#39; value.</div><div dir="auto"><br></div><div dir="auto">best<br><div class="gmail_quote" dir="auto"><div dir="ltr">On Fri 10 Aug, 2018, 11:22 AM saurabh rathore, &lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx" rel="noreferrer">rohitsrb2020@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex"><div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)">Hello Sandeep<br></div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">you should look into this thread for understanding.</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)"><a rel="nofollow" href="../fu_2014/msg00033.html" rel="noreferrer noreferrer">../fu_2014/msg00033.html</a></div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">regards, saurabh<br></div></div><div class="gmail_extra"><br><div class="gmail_quote">On Fri, Aug 10, 2018 at 3:35 PM, Sandeep Mohapatra <span dir="ltr">&lt;<a rel="nofollow" href="mailto:sandeepmohapatra21@xxxxxxxxx" rel="noreferrer noreferrer">sandeepmohapatra21@xxxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-l                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+</blockquote></div><br><br clear="all"><br>-- <br><div class="m_4427206070648500005m_-1839614990504390938gmail_signature" data-smartmail="gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><font color="#0000ff" size="4"><b><br></b></font></div><div><font color="#0000ff" size="4"><b><br></b></font></div><font color="#0000ff" size="4" face="times new roman, serif"><b>REGARDS</b></font><div><font color="#0000ff" size="4" face="times new roman, serif"><b><br></b></font><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Saurabh Rathore</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Research Scholar (PhD.)</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Centre For Oceans, Rivers, Atmosphere &amp; Land Science Technology</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>Indian Institute Of Technology, Kharagpur</b></font></div><div><font color="#0000ff" size="4" face="times new roman, serif"><b>contact :- 91- 8345984434</b></font></div></div></div></div></div></div>
+</div>
+</blockquote></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00279" href="msg00279.html">Re: [ferret_users] low pass filter</a></strong>
+<ul><li><em>From:</em> Sandeep Mohapatra</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00276" href="msg00276.html">[ferret_users] low pass filter</a></strong>
+<ul><li><em>From:</em> Sandeep Mohapatra</li></ul></li>
+<li><strong><a name="00277" href="msg00277.html">Re: [ferret_users] low pass filter</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00277.html">Re: [ferret_users] low pass filter</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00279.html">Re: [ferret_users] low pass filter</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00277.html">Thread Prev</a>][<a href="msg00279.html">Thread Next</a>][<A HREF="threads2018.html#00278">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

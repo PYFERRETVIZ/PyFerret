@@ -1,0 +1,98 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] error in student_t_cutoff function -->
+<!--X-From-R13: Yney Ezvgu &#45; @AOO Ossvyvngr <xney.fzvguNabnn.tbi> -->
+<!--X-Date: Tue, 23 Jul 2019 16:07:17 &#45;0700 -->
+<!--X-Message-Id: CAELLC7XD90Cxr67bMfE&#45;3LgK87e0PJ1Sj3q7D&#45;fnNtWMYHFAZw@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAFXLzPjGdtuAU9n_VZyrjY8jdhcms39CJ9Js&#45;K1LBGVe+ab4bA@mail.gmail.com -->
+<!--X-Reference: CAEwQpaJY+Uao=w1NRQJ5kQpxEX_+UTi+ge9R&#45;MgkjsZ_d8WyiA@mail.gmail.com -->
+<!--X-Reference: CAFXLzPj_g6=OhuX8HBBbGUXq4_YKQCH9uRALGjodsVUydYZ1Dg@mail.gmail.com -->
+<!--X-Reference: CAFXLzPh3q3zpwVn8qn8R8Cj+e8bJYVa+AQ8jGmu2LdiwOxxieQ@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] error in student_t_cutoff function</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00293.html">Thread Prev</a>][<a href="msg00295.html">Thread Next</a>][<A HREF="threads2019.html#00294">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] error in student_t_cutoff function</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>saurabh rathore &lt;<a href="mailto:rohitsrb2020@DOMAIN.HIDDEN">rohitsrb2020@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] error in student_t_cutoff function</strong></li>
+<li><strong>From</strong>: <strong>Karl Smith - NOAA Affiliate &lt;<a href="mailto:karl.smith@DOMAIN.HIDDEN">karl.smith@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 23 Jul 2019 16:07:03 -0700</li>
+<li>Cc: Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;, ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00292.html">CAFXLzPh3q3zpwVn8qn8R8Cj+e8bJYVa+AQ8jGmu2LdiwOxxieQ@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00286.html">CAFXLzPjGdtuAU9n_VZyrjY8jdhcms39CJ9Js-K1LBGVe+ab4bA@mail.gmail.com</a>&gt; &lt;CAEwQpaJY+Uao=w1NRQJ5kQpxEX_+UTi+ge9R-MgkjsZ_d8WyiA@mail.gmail.com&gt; &lt;CAFXLzPj_g6=OhuX8HBBbGUXq4_YKQCH9uRALGjodsVUydYZ1Dg@mail.gmail.com&gt; &lt;<a href="msg00292.html">CAFXLzPh3q3zpwVn8qn8R8Cj+e8bJYVa+AQ8jGmu2LdiwOxxieQ@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">I appears the conda installation on Linux is not defining LD_LIBRARY_PATH so that the libpyferret library can be found.&#xA0; (At least this is the case with my miniconda-python3 installation on RHEL7.)&#xA0; If you defined the environment variable LD_LIBRARY_PATH to be the directory containing the libpyferret .so library then all works fine.<div>So in the bash shell:</div><div>&#xA0; &#xA0; export LD_LIBRARY_PATH=/path/to/conda/envs/FERRET/lib/python3.7/site-packages/pyferret</div><div><br></div><div>Karl</div><div><br></div><div><br></div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Tue, Jul 23, 2019 at 3:13 PM saurabh rathore &lt;<a rel="nofollow" href="mailto:rohitsrb2020@xxxxxxxxx">rohitsrb2020@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div class="gmail_default" style="color:rgb(0,0,0)">Dear Ryo,<br></div><div class="gmail_default" style="color:rgb(0,0,0)">G&#39;day</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">this is my anaconda installation and ferret installation environment:-<br></div><div class="gmail_default" style="color:rgb(0,0,0)">base &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0;* &#xA0;/home/srathore/anaconda3<br>FERRET &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; &#xA0; /home/srathore/anaconda3/envs/FERRET</div><div class="gmail_default" style="color:rgb(0,0,0)"><br></div><div class="gmail_default" style="color:rgb(0,0,0)">This is the error message that I am getting on using external function:-<br></div><div class="gmail_default" style="color:rgb(0,0,0)">**ERROR in External Function student_t_cutoff:<br>&#xA0; Dynamic linking call dlopen() returns --<br>&#xA0; &quot;<a rel="nofollow" href="http://libpyferret.cpython-37m-x86_64-linux-gnu.so">libpyferret.cpython-37m-x86_64-linux-gnu.so</a>: cannot open shared object file: No such                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+</blockquote></div>
+</blockquote></div><br clear="all"><br>-- <br><div dir="ltr" class="gmail-m_-8512876423612349730gmail_signature"><div dir="ltr"><div><div dir="ltr"><div><font size="4" color="#0000ff"><b><br></b></font></div><div><font size="4" color="#0000ff"><b><br></b></font></div><font size="4" face="times new roman, serif" color="#0000ff"><b>REGARDS</b></font><div><font size="4" face="times new roman, serif" color="#0000ff"><b><br></b></font><div><font size="4" face="times new roman, serif" color="#0000ff"><b>Saurabh Rathore</b></font></div><div><font size="4" face="times new roman, serif" color="#0000ff"><b>Research Scholar (PhD.)</b></font></div><div><font size="4" face="times new roman, serif" color="#0000ff"><b>Centre For Oceans, Rivers, Atmosphere &amp; Land Science Technology</b></font></div><div><font size="4" face="times new roman, serif" color="#0000ff"><b>Indian Institute Of Technology, Kharagpur</b></font></div><div><font size="4" face="times new roman, serif" color="#0000ff"><b>contact :- 91- 8345984434</b></font></div></div></div></div></div></div>
+</blockquote></div><br clear="all"><div><br></div>-- <br><div dir="ltr" class="gmail_signature"><div dir="ltr">Karl M. Smith, Ph.D.<br>JISAO Univ. Wash. and PMEL NOAA<br>&quot;The contents of this message are mine personally and do<br>not necessarily reflect any position of the Government<br>or the National Oceanic and Atmospheric Administration.&quot;<br></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00296" href="msg00296.html">Re: [ferret_users] error in student_t_cutoff function</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00295" href="msg00295.html">Re: [ferret_users] error in student_t_cutoff function</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00286" href="msg00286.html">[ferret_users] error in student_t_cutoff function</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+<li><strong><a name="00289" href="msg00289.html">Re: [ferret_users] error in student_t_cutoff function</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00290" href="msg00290.html">Re: [ferret_users] error in student_t_cutoff function</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+<li><strong><a name="00292" href="msg00292.html">Re: [ferret_users] error in student_t_cutoff function</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00293.html">Re: [ferret_users] error in student_t_cutoff function</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00295.html">Re: [ferret_users] error in student_t_cutoff function</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00293.html">Thread Prev</a>][<a href="msg00295.html">Thread Next</a>][<A HREF="threads2019.html#00294">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

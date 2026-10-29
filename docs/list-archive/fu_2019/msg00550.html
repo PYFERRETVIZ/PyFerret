@@ -1,0 +1,93 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Adding non&#45;consecutive levels containing missing values -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Wed, 26 Feb 2020 18:13:57 &#45;0800 -->
+<!--X-Message-Id: CAEwQpaKfdcb+Be2pS+ENm2W5OfXgQvFLBSHxXNb+6USZZo2Y6g@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: d95d2f78&#45;5a1d&#45;2e10&#45;3008&#45;e7698b694f8f.ref@yahoo.it -->
+<!--X-Reference: d95d2f78&#45;5a1d&#45;2e10&#45;3008&#45;e7698b694f8f@yahoo.it -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Adding non-consecutive levels containing missing values</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00548.html">Thread Prev</a>][<a href="msg00551.html">Thread Next</a>][<A HREF="threads2019.html#00550">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Adding non-consecutive levels containing missing values</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>&quot;Fabio B.&quot; &lt;<a href="mailto:xxtraloud@DOMAIN.HIDDEN">xxtraloud@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Adding non-consecutive levels containing missing values</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 27 Feb 2020 11:13:02 +0900</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00548.html">d95d2f78-5a1d-2e10-3008-e7698b694f8f@yahoo.it</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;d95d2f78-5a1d-2e10-3008-e7698b694f8f.ref@yahoo.it&gt; &lt;<a href="msg00548.html">d95d2f78-5a1d-2e10-3008-e7698b694f8f@yahoo.it</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Dear Fabio,</div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Thu, Feb 27, 2020 at 6:32 AM &#39;Fabio B.&#39; via _OAR PMEL Ferret Users &lt;<a rel="nofollow" href="mailto:ferret_users@xxxxxxxx">ferret_users@xxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><br>
+The first part of the question is how to add non-consecutive levels, for <br>
+example I know I can use myvar[k=3:6@sum] for consecutive ones, but how, <br>
+for example, to add levels 2,5, and 7?</blockquote><div><br></div><div><br></div><div>One idea is to mask out the other levels:</div><div><br></div><div>let myvar_masked = IF (k eq 2) or&#xA0; (k eq 5) or . . . THEN myvar</div><div><br></div><div>This new variable has valid values only at levels k = 2, 5, . . . so that the sum you want is myvar_masked[k=1:kmax@SUM].</div><div>&#xA0;</div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">
+The second part, my data contains missing values, when I use @sum NaN <br>
+are ignored and I get the desired result, for example if I have <br>
+3,NaN,2,0 the result is 5. But if instead I use the notation <br>
+myvar[k=2]+myvar[k=5]+etc. then I get NaN in every cell where there is <br>
+at least one NaN. It seems an inconsistent behavior.<br></blockquote><div><br></div><div><br></div><div>For arithmetic operations (plus, minus, . . .) and functions (sin, exp, . . . ), the entire _expression_ results in a &quot;missing&quot; (&quot;undefined&quot;) value if one value is missing.&#xA0; On the other hand, the &quot;@&quot; operations <b>skip</b>&#xA0;missing values.&#xA0; The latter property is crucial when you, for example, want to ignore land points for your ocean temperature average.</div><div><br></div><div>In other words,&#xA0;@SUM is NOT</div><div><br></div></div><blockquote style="margin:0 0 0 40px;border:none;padding:0px"><div class="gmail_quote"><div>&#xA0;<font face="monospace">a(1)&#xA0;+ a(2)&#xA0;+ a(3)&#xA0;+ . . .&#xA0;</font></div></div></blockquote><div class="gmail_quote"><div><br></div><div>BUT</div><div><br></div></div><blockquote style="margin:0 0 0 40px;border:none;padding:0px"><div class="gmail_quote"><div><font face="monospace">sum = 0</font></div></div><div class="gmail_quote"><div><font face="monospace">for i = 1 to N</font></div></div><div class="gmail_quote"><div><font face="monospace">&#xA0; &#xA0;if (a(i) is not missing) then</font></div></div><div class="gmail_quote"><div><font face="monospace">&#xA0; &#xA0; &#xA0; sum = sum&#xA0;+ a(i)</font></div></div><div class="gmail_quote"><div><font face="monospace">&#xA0; &#xA0;endif</font></div></div><div class="gmail_quote"><div><font face="monospace">endfor</font></div></div></blockquote><div class="gmail_quote"><div><br></div><div>Hope this helps.</div><div><br></div><div>Ryo</div><div><br></div></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00551" href="msg00551.html">Re: [ferret_users] Adding non-consecutive levels containing missing values</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00548" href="msg00548.html">[ferret_users] Adding non-consecutive levels containing missing values</a></strong>
+<ul><li><em>From:</em> 'Fabio B.' via _OAR PMEL Ferret Users</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00548.html">[ferret_users] Adding non-consecutive levels containing missing values</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00551.html">Re: [ferret_users] Adding non-consecutive levels containing missing values</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00548.html">Thread Prev</a>][<a href="msg00551.html">Thread Next</a>][<A HREF="threads2019.html#00550">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

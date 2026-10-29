@@ -1,0 +1,185 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] latitude &#45;time plots leaves white space -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Tue, 30 May 2017 13:22:01 &#45;0700 -->
+<!--X-Message-Id: 51159495&#45;edaf&#45;73a1&#45;1c9d&#45;64554dbe1af7@noaa.gov -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: CANVsOojFfeqfCqs7VSQj3c&#45;hhjq7Gw9AYNyX5KkmnAd1OoHq8w@mail.gmail.com -->
+<!--X-Derived: pngqnRDbhWnik.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] latitude -time plots leaves white space</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00378.html">Thread Prev</a>][<a href="msg00381.html">Thread Next</a>][<A HREF="threads2017.html#00385">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] latitude -time plots leaves white space</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] latitude -time plots leaves white space</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 30 May 2017 13:21:55 -0700</li>
+<li>In-reply-to: &lt;<a href="msg00378.html">CANVsOojFfeqfCqs7VSQj3c-hhjq7Gw9AYNyX5KkmnAd1OoHq8w@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>List-unsubscribe: &lt;<a href="mailto:googlegroups-manage+809428289204+unsubscribe@googlegroups.com">mailto:googlegroups-manage+809428289204+unsubscribe@googlegroups.com</a>&gt;, &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/subscribe">https://groups.google.com/a/noaa.gov/group/ferret_users/subscribe</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00378.html">CANVsOojFfeqfCqs7VSQj3c-hhjq7Gw9AYNyX5KkmnAd1OoHq8w@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.1.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+Hi<br>
+ 
+Ferret draws the time axis with complete months, showing that the
+first grid point is not exactly at the beginning of the month and
+the last grid point is not at the end of the last month. We don't
+have a lot of flexibility with this. The FILL command is
+interpolating between grid cells, and does not extrapolate to the
+edges of the grid cells, so for example, if the data is monthly,
+it'll fill only to the middle of the months.<br>
+ 
+<br>
+ 
+Here's an example monthly dataset, with one idea you could look at:<br>
+ 
+<br>
+ 
+<blockquote><tt>yes? use six_months</tt><br>
+ 
+<tt>yes? show grid tvar</tt><br>
+ 
+<tt> GRID (G002)</tt><br>
+ 
+<tt>name axis # pts start
+end subset</tt><br>
+ 
+<tt>FNOCX LONGITUDE 144mr 20E
+17.5E(377.5) full</tt><br>
+ 
+<tt>FNOCY LATITUDE 73 r 90S
+90N full</tt><br>
+ 
+<tt>normal Z</tt><br>
+ 
+<tt>TEVEN TIME 6 r 16-JAN-2015 00:00
+15-JUN-2015 00:00 full</tt><br>
+ 
+</blockquote>
+This has gaps at the ends of half a month (upper)<br>
+ 
+<blockquote><tt>yes? set v upper</tt><br>
+ 
+<tt>yes? fill/i=100/y=-20:20 tvar</tt><br>
+ 
+</blockquote>
+One thing you can do is underlay a SHADE plot (upper right). This
+looks bad with this monthly data but might be ok if the white-space
+we want to fill in is smaller<br>
+ 
+<blockquote><tt>yes? set v lower</tt><br>
+ 
+<tt>yes? shade/i=100/y=-20:20/TITLE="SHADE plot underlay" tvar</tt><br>
+ 
+<tt>yes? fill/over/lev/nolab /i=100/y=-20:20 tvar</tt><br>
+ 
+</blockquote>
+<br>
+ 
+<br>
+ 
+<div class="moz-cite-prefix">On 5/25/2017 7:27 AM, afwande juliet
+wrote:<br>
+ 
+</div>
+<blockquote type="cite"
+cite="">
+<div dir="ltr">
+<div>
+<div>
+<div>
+<div>Dear ferret users<br>
+ 
+</div>
+I am plotting the hovemoller diagram but latitude-time
+plot leaves white space at the edges of the first and last
+longittue. <br>
+ 
+</div>
+I have tried to use this thread <a href="../fu_2014/msg00069.html">../fu_2014/msg00069.html</a>
+to implement the changes still not succesful <br>
+ 
+<br>
+ 
+<br>
+ 
+</div>
+Attached is my sample plot and script for help<br>
+ 
+<br>
+ 
+</div>
+thanks always<br>
+ 
+</div>
+</blockquote>
+<br>
+ 
+ 
+ 
+</font></td></tr></table><p><strong>Attachment:
+<a href="pngqnRDbhWnik.png" ><tt>example.png</tt></a></strong><br>
+ 
+<em>Description:</em> PNG image</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00378" href="msg00378.html">[ferret_users] latitude -time plots leaves white space</a></strong>
+<ul><li><em>From:</em> afwande juliet</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00378.html">[ferret_users] latitude -time plots leaves white space</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00381.html">[ferret_users] Conversion of .csv to .nc</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00378.html">Thread Prev</a>][<a href="msg00381.html">Thread Next</a>][<A HREF="threads2017.html#00385">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

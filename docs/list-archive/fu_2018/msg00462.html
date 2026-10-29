@@ -1,0 +1,161 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] integration of flux vector along the coastline to compute the transport -->
+<!--X-From-R13: [negva Epuzvqg <znegva.fpuzvqgNvb&#45;jnearzhraqr.qr> -->
+<!--X-Date: Mon, 17 Dec 2018 09:35:36 &#45;0800 -->
+<!--X-Message-Id: dd88c1e1&#45;1f8d&#45;a507&#45;49df&#45;0f3dffb20e36@io&#45;warnemuende.de -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CAFXLzPhYeiEFvKvFKnHyh1Kk4H6Q67+cH0rvW&#45;0gLrXzwCT3eg@mail.gmail.com -->
+<!--X-Reference: 14D024AF&#45;FF97&#45;463F&#45;B487&#45;A388107A42BE@noaa.gov -->
+<!--X-Reference: CAFXLzPiSn5CuO9Y4LWbO1WZA6+dJAnzB1GBBO1Ok7kb9MVgxVg@mail.gmail.com -->
+<!--X-Reference: CAFXLzPj4DTrngFndX8wrntZPGzw=20GGL3ptL9BVANqRTO2pqg@mail.gmail.com -->
+<!--X-Reference: CAEwQpaKJnwrkWdjOHysXv2BHHjebQ8GGp4sHaZ71fs6kuwfJwQ@mail.gmail.com -->
+<!--X-Reference: ED957164&#45;FDDC&#45;42E8&#45;A5B1&#45;5156B6817841@noaa.gov -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] integration of flux vector along the coastline to compute the transport</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00461.html">Thread Prev</a>][<a href="msg00464.html">Thread Next</a>][<A HREF="threads2018.html#00462">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] integration of flux vector along the coastline to compute the transport</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] integration of flux vector along the coastline to compute the transport</strong></li>
+<li><strong>From</strong>: <strong>Martin Schmidt &lt;<a href="mailto:martin.schmidt@DOMAIN.HIDDEN">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 17 Dec 2018 18:34:52 +0100</li>
+<li>In-reply-to: &lt;<a href="msg00461.html">ED957164-FDDC-42E8-A5B1-5156B6817841@noaa.gov</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00454.html">CAFXLzPhYeiEFvKvFKnHyh1Kk4H6Q67+cH0rvW-0gLrXzwCT3eg@mail.gmail.com</a>&gt; &lt;<a href="msg00456.html">14D024AF-FF97-463F-B487-A388107A42BE@noaa.gov</a>&gt; &lt;<a href="msg00457.html">CAFXLzPiSn5CuO9Y4LWbO1WZA6+dJAnzB1GBBO1Ok7kb9MVgxVg@mail.gmail.com</a>&gt; &lt;CAFXLzPj4DTrngFndX8wrntZPGzw=20GGL3ptL9BVANqRTO2pqg@mail.gmail.com&gt; &lt;<a href="msg00459.html">CAEwQpaKJnwrkWdjOHysXv2BHHjebQ8GGp4sHaZ71fs6kuwfJwQ@mail.gmail.com</a>&gt; &lt;<a href="msg00461.html">ED957164-FDDC-42E8-A5B1-5156B6817841@noaa.gov</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.9.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Hi all,
+ 
+some ideas, only a concept:
+ 
+</pre><tt>- as a first step I would produde a land mask (0,1) on the grid of the 
+</tt><tt>fluxes just by mapping appropriate topography file onto the flux data 
+</tt><tt>grid. May be from etopo5.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>- as the next step we should produce another mask that is &quot;missing&quot; 
+</tt><tt>everywhere except the coastal points defined as the boundaries of the 
+</tt><tt>previous mask. There may be zonal and meridional interfaces for a cell. 
+</tt><tt>Use the sign to mark, if east = in or east=out. No need to consider 
+</tt><tt>single points explicitly.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>- multiplying u and v with the coastal mask and multiplying with the 
+</tt><tt>cell length (needs some thought dx = 1/2 (x_i - xi_1) + 1/2 (x_i+1 - 
+</tt><tt>x_i) = 1/2 (x_i+1 - x_i_1) or so) gives all transports. The sum over the 
+</tt><tt>area the full budget.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>- Now use compressi to put the data onto two lines. Regridding to a new 
+</tt><tt>grid to put the data onto one long line is the next step. Almost there.
+</tt><pre style="margin: 0em;">
+ 
+- Finally the carry out the sum and plot.
+ 
+Best,
+ 
+Martin
+ 
+ 
+Am 17.12.2018 um 14:50 schrieb William Kessler:
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+On Dec 16, 2018, at 11:25 PM, Ryo Furue &lt;furue@xxxxxxxxxx&gt; wrote:
+ 
+Hi Saurabh and Ferret users,
+ 
+On Mon, Dec 17, 2018 at 3:31 PM saurabh rathore &lt;rohitsrb2020@xxxxxxxxx&gt; wrote:
+Here is the thing that I am looking for. I want to plot the cumulative sum of the flux let's say starting from location of Melbourne covering all around Australia and ending at Melbourne.
+ 
+So it will give me line plot which show where (lat,lon) the flux is increasing or decreasing.
+ 
+If I understand correctly, that's exactly what I did in my paper:
+ 
+<a  rel="nofollow" href="https://doi.org/10.1175/JPO-D-16-0170.1">https://doi.org/10.1175/JPO-D-16-0170.1</a>
+ 
+The basic principle is &quot;easy&quot;: Let our &quot;coast line&quot; exactly follow the outline of the gridboxes that form Australia.  In this case, the &quot;cross-shore direction&quot; is either zonal or meridional exactly.  Therefore, the cumulative sum you want is the running sum of u &#x394;x or v &#x394;y, depending on the orientation of the local &quot;coastline&quot;.
+ 
+Unfortunately, implementing this is complicated in my experience.
+</pre></blockquote><pre style="margin: 0em;">
+Yes, complicated, especially where the coast has indentations. And you must pay careful attention to the grid structure of u,v and T (or whatever quantity is being advected). Is it a B or C grid? The method will be different, and the answer could be very systematically different in a long integral.
+ 
+Why do you need a line plot and specific locations of the flux? If you only want the total integrated cross-shore transport then the divergence theorem is a better solution and not subject to these complications. (Though it will also require decisions about how to take the divergence derivatives at the edges ... then the difficulty will be at peninsulas, not indentations). The two methods would be a useful check on each other; the result will not be identical, and the difference would be a measure of uncertainty.
+ 
+Billy
+</pre></blockquote><pre style="margin: 0em;">
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00466" href="msg00466.html">Re: [ferret_users] integration of flux vector along the coastline to compute the transport</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00464" href="msg00464.html">Re: [ferret_users] integration of flux vector along the coastline to compute the transport</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00454" href="msg00454.html">[ferret_users] integration of flux vector along the coastline to compute the transport</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+<li><strong><a name="00456" href="msg00456.html">Re: [ferret_users] integration of flux vector along the coastline to compute the transport</a></strong>
+<ul><li><em>From:</em> William Kessler</li></ul></li>
+<li><strong><a name="00457" href="msg00457.html">Re: [ferret_users] integration of flux vector along the coastline to compute the transport</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+<li><strong><a name="00458" href="msg00458.html">Re: [ferret_users] integration of flux vector along the coastline to compute the transport</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+<li><strong><a name="00459" href="msg00459.html">Re: [ferret_users] integration of flux vector along the coastline to compute the transport</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="00461" href="msg00461.html">Re: [ferret_users] integration of flux vector along the coastline to compute the transport</a></strong>
+<ul><li><em>From:</em> William Kessler</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00461.html">Re: [ferret_users] integration of flux vector along the coastline to compute the transport</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00464.html">Re: [ferret_users] integration of flux vector along the coastline to compute the transport</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00461.html">Thread Prev</a>][<a href="msg00464.html">Thread Next</a>][<A HREF="threads2018.html#00462">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

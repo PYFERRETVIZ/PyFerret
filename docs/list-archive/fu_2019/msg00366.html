@@ -1,0 +1,112 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] time axis of over 9999 yr -->
+<!--X-From-R13: Xnzrf Aee <wnzrf.beeNyfpr.vcfy.se> -->
+<!--X-Date: Thu, 26 Sep 2019 08:45:26 &#45;0700 -->
+<!--X-Message-Id: 1740414210.2150242.1569512714465.JavaMail.zimbra@lsce.ipsl.fr -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: alpine.DEB.2.20.1909261136180.7486@lsce3235.lsce.ipsl.fr -->
+<!--X-Reference: 20190926125321.0a9e47a2@gfi063209.klientdrift.uib.no -->
+<!--X-Reference: 20190926165426.0b8ea8e1@gfi063209.klientdrift.uib.no -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] time axis of over 9999 yr</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00365.html">Thread Prev</a>][Thread Next][<A HREF="threads2019.html#00366">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] time axis of over 9999 yr</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Marco van Hulten &lt;<a href="mailto:Marco.Hulten@DOMAIN.HIDDEN">Marco.Hulten@xxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] time axis of over 9999 yr</strong></li>
+<li><strong>From</strong>: <strong>James Orr &lt;<a href="mailto:james.orr@DOMAIN.HIDDEN">james.orr@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 26 Sep 2019 17:45:14 +0200 (CEST)</li>
+<li>Cc: Ferret Users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00365.html">20190926165426.0b8ea8e1@gfi063209.klientdrift.uib.no</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00363.html">alpine.DEB.2.20.1909261136180.7486@lsce3235.lsce.ipsl.fr</a>&gt; &lt;<a href="msg00364.html">20190926125321.0a9e47a2@gfi063209.klientdrift.uib.no</a>&gt; &lt;<a href="msg00365.html">20190926165426.0b8ea8e1@gfi063209.klientdrift.uib.no</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>Thread-index: ruukkBMuyRjeIez4d8sWFiLjL/W6UQ==</li>
+<li>Thread-topic: time axis of over 9999 yr</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>You could just simplify with something like
+ 
+define axis/t=0:15000:10/units=years/edges tdecadal
+ 
+ 
+----- Mail original -----
+De: &quot;Marco van Hulten&quot; &lt;Marco.Hulten@xxxxxx&gt;
+&#xC0;: &quot;Ferret Users&quot; &lt;ferret_users@xxxxxxxx&gt;
+Envoy&#xE9;: Jeudi 26 Septembre 2019 16:54:26
+Objet: [ferret_users] time axis of over 9999 yr
+ 
+Hi&#x2014;
+ 
+Defining this time axis works for plotting 1000 decadal averages (from a
+netCDF file with badly defined time axis):
+ 
+define axis/t=&quot;1-jul-0000&quot;:&quot;1-jul-9999&quot;:1/units=&quot;years&quot;/npoints=1000/cal=noleap/edges tdecadal
+ 
+But I need a time axis that spans over more than 9999 yr:
+ 
+define axis/t=&quot;1-jul-0000&quot;:&quot;1-jul-15000&quot;:1/units=&quot;years&quot;/npoints=1500/cal=noleap/edges tdecadal
+**ERROR: command syntax: 1-jul-15000 is not valid in this calendar
+ 
+The noleap and (extended) gregorian calendars appear to be limited to
+have four digits for the years.  Is there a calendar that can do up to
+six digits, or a way to define it?
+ 
+&#x2014;Marco
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00363" href="msg00363.html">[ferret_users] response to ferret question on decadal time axis</a></strong>
+<ul><li><em>From:</em> James Orr</li></ul></li>
+<li><strong><a name="00364" href="msg00364.html">[ferret_users] Re: decadal time axis</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+<li><strong><a name="00365" href="msg00365.html">[ferret_users] time axis of over 9999 yr</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00365.html">[ferret_users] time axis of over 9999 yr</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00365.html">Thread Prev</a>][Thread Next][<A HREF="threads2019.html#00366">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

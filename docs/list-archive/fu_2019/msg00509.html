@@ -1,0 +1,132 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] printing filename and line number at error -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Tue, 28 Jan 2020 11:15:24 &#45;0800 -->
+<!--X-Message-Id: d00080bd&#45;a43e&#45;66d1&#45;fd55&#45;de6ccab4a0b0@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 20200127153619.0a19cf13@gfi063209.klientdrift.uib.no -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] printing filename and line number at error</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00508.html">Thread Prev</a>][<a href="msg00523.html">Thread Next</a>][<A HREF="threads2019.html#00509">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] printing filename and line number at error</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] printing filename and line number at error</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 28 Jan 2020 11:15:20 -0800</li>
+<li>In-reply-to: &lt;<a href="msg00502.html">20200127153619.0a19cf13@gfi063209.klientdrift.uib.no</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00502.html">20200127153619.0a19cf13@gfi063209.klientdrift.uib.no</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101 Thunderbird/68.3.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+ 
+ 
+ 
+<p>Hi,</p>
+<p>While we're talking about debugging Ferret/PyFerret scripts, I'd
+like to point out some other commands and options that have been
+added in the last several years -- I know it can be hard to keep
+up with new things. <br>
+</p>
+<p>These are for digging into variable definitions:</p>
+<p><a rel="nofollow" moz-do-not-send="true"
+href="../../documentation/users-guide/commands-reference/SHOW.html#_VPINDEXENTRY_VTREE">SHOW
+VARIABLE/TREE</a> lists out the variable definition and
+dependence on other variables (the alias for this is VTREE)</p>
+<p>RETURN= keywords: <a rel="nofollow" title="3.3 EMBEDDED EXPRESSIONS"
+href="../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_RETURNSTATUS"
+moz-do-not-send="true">RETURN=status</a>, <a rel="nofollow" title="3.3
+EMBEDDED EXPRESSIONS"
+href="../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_RETURNISREADY">RETURN=isReady</a>,
+and <a rel="nofollow" moz-do-not-send="true"
+href="../../documentation/users-guide/variables-xpressions/EMBEDDED-XPRESSIONS.html#_VPINDEXENTRY_RETURNISREADY">RETURN=defined</a>
+<br>
+</p>
+<p><a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/release-notes/version-6-85-release-notes.html">../../documentation/release-notes/version-6-85-release-notes</a><br>
+<a rel="nofollow" class="moz-txt-link-freetext" href="../../documentation/release-notes/version-6-95-release-notes.html">../../documentation/release-notes/version-6-95-release-notes.html</a></p>
+<br>
+<div class="moz-cite-prefix">On 1/27/2020 6:36 AM, Marco van Hulten
+wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+<pre class="moz-quote-pre" wrap="">Hi&#x2014;
+ 
+When Ferret returns an error, is it possible to print the filename and
+linenumber of the GO script?
+ 
+I know how to print the filename.jnl ($0), but if it would be useful if
+Ferret can tell me the name of the file and line number at any failure
+of a command.
+ 
+This is especially useful in my case where I am using jnl scripts that
+call other jnl scripts and so on.
+ 
+&#x2014;Marco
+ 
+</pre>
+</blockquote>
+ 
+ 
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00523" href="msg00523.html">[ferret_users] reusing information from variable definitions</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00502" href="msg00502.html">[ferret_users] printing filename and line number at error</a></strong>
+<ul><li><em>From:</em> Marco van Hulten</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00508.html">Re: [ferret_users] printing filename and line number at error</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00523.html">[ferret_users] reusing information from variable definitions</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00508.html">Thread Prev</a>][<a href="msg00523.html">Thread Next</a>][<A HREF="threads2019.html#00509">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

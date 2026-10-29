@@ -1,0 +1,79 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Reading ASCII data including formatted dates -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Mon, 26 Mar 2018 19:50:44 &#45;0700 -->
+<!--X-Message-Id: CAEwQpa+rhWx1V_iq8wGwjJRS6NRh8ctuwfNqxBE2f8F+QOb8xw@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 810ABF59&#45;1460&#45;454D&#45;A888&#45;4A394C8A071E@noaa.gov -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Reading ASCII data including formatted dates</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00066.html">Thread Prev</a>][<a href="msg00063.html">Thread Next</a>][<A HREF="threads2018.html#00079">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Reading ASCII data including formatted dates</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>ferret_users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Reading ASCII data including formatted dates</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Tue, 27 Mar 2018 11:50:32 +0900</li>
+<li>In-reply-to: &lt;<a href="msg00061.html">810ABF59-1460-454D-A888-4A394C8A071E@noaa.gov</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00061.html">810ABF59-1460-454D-A888-4A394C8A071E@noaa.gov</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Ferret users,<br><div class="gmail_extra"><br></div><div class="gmail_extra"><div class="gmail_quote">On Tue, Mar 20, 2018 at 8:07 AM, William S. Kessler <span dir="ltr">&lt;<a rel="nofollow" href="mailto:william.s.kessler@xxxxxxxx">william.s.kessler@xxxxxxxx</a>&gt;</span> wrote:<br><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">[ . . . ]<br>
+I finally kluged this by editing the text</blockquote><div><br></div><div>I&#39;d like to add something that might be useful to somebody in the future.&#xA0; I sometimes have to edit text files to use as input to Ferret or other tools and do these things a lot.&#xA0; In this particular case, we want convert&#xA0;<span style="font-family:arial,helvetica,sans-serif">&quot;05-Sep-2007&quot; to &quot;</span><span style="font-family:arial,helvetica,sans-serif">05/09/2007&quot;.&#xA0; Using the GNU version of the date command, this is how you do that:</span></div><div><span style="font-family:arial,helvetica,sans-serif"><br></span></div></div></div><blockquote style="margin:0 0 0 40px;border:none;padding:0px"><div class="gmail_extra"><div class="gmail_quote"><div><font face="monospace, monospace">date --date=&quot;05-Sep-2007&quot; +&quot;%d/%m/%Y&quot;</font></div></div></div></blockquote><div class="gmail_extra"><div class="gmail_quote"><div><br></div><div>(On Mac, you can install it by &quot;brew install coreutils&quot; and the name of the command will be &quot;gdate&quot; instead of &quot;date&quot;.)&#xA0; The 3rd parameter looks scary but it&#39;s nothing but a format string like Fortran&#39;s &quot;F10.3&quot;, etc.</div><div><br></div><div>The next piece is to read lines from the text file, modify it, and write the result to a new file:</div><div><br></div></div></div><blockquote style="margin:0 0 0 40px;border:none;padding:0px"><div class="gmail_extra"><div class="gmail_quote"><div><font face="monospace, monospace">cat inputfile.txt | while read col1 col2 rest; do</font></div></div></div><div class="gmail_extra"><div class="gmail_quote"><div><font face="monospace, monospace">&#xA0; &#xA0; newdate=$(date --date=&quot;$col2&quot; +&quot;%d/%m/%Y&quot;)</font></div></div></div><div class="gmail_extra"><div class="gmail_quote"><div><font face="monospace, monospace">&#xA0; &#xA0; echo $col1 $newdate $rest</font></div></div></div><div class="gmail_extra"><div class="gmail_quote"><div><font face="monospace, monospace                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00061" href="msg00061.html">[ferret_users] Reading ASCII data including formatted dates</a></strong>
+<ul><li><em>From:</em> William S. Kessler</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00066.html">Re: [ferret_users] Reading ASCII data including formatted dates</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00063.html">[ferret_users] plotting time series</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00066.html">Thread Prev</a>][<a href="msg00063.html">Thread Next</a>][<A HREF="threads2018.html#00079">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

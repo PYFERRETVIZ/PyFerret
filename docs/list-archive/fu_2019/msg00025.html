@@ -1,0 +1,173 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Problem with 6 hourly to daily average -->
+<!--X-From-R13: [negva Epuzvqg <znegva.fpuzvqgNvb&#45;jnearzhraqr.qr> -->
+<!--X-Date: Sat, 9 Feb 2019 06:51:09 &#45;0800 -->
+<!--X-Message-Id: 6f1a78e4&#45;82bb&#45;5eec&#45;1b2c&#45;9e39a12ddbcc@io&#45;warnemuende.de -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CALC=m4p8s_=qMNw8+Yws_kpCaFbBat=P7aYm1G6eZmU&#45;1Oq8mQ@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Problem with 6 hourly to daily average</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00024.html">Thread Prev</a>][<a href="msg00027.html">Thread Next</a>][<A HREF="threads2019.html#00025">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Problem with 6 hourly to daily average</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Problem with 6 hourly to daily average</strong></li>
+<li><strong>From</strong>: <strong>Martin Schmidt &lt;<a href="mailto:martin.schmidt@DOMAIN.HIDDEN">martin.schmidt@xxxxxxxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Sat, 9 Feb 2019 15:50:35 +0100</li>
+<li>In-reply-to: &lt;CALC=m4p8s_=qMNw8+Yws_kpCaFbBat=P7aYm1G6eZmU-1Oq8mQ@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CALC=m4p8s_=qMNw8+Yws_kpCaFbBat=P7aYm1G6eZmU-1Oq8mQ@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.9.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hi,</p>
+<p>seems the syntax of your times is not correct. I should be:<br>
+</p>
+<p>define axis/t="01-jan-1993 00:00":"31-dec-2017
+18:00"/units=days/npoints=36524 <b>t6</b></p>
+The same for the other axis. <br>
+Best,<br>
+Martin<br>
+<div class="moz-cite-prefix">Am 09.02.2019 um 15:35 schrieb Satyesh
+Ghetiya:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+<div dir="ltr">
+<div dir="ltr">
+<div dir="ltr">Dear all,
+<div>I am wanting to convert 6 hourly (0,6,12,18 hr) data to
+daily average.<br>
+</div>
+<div><br>
+</div>
+<div>6 hourly <b>existing</b> time axis, of variable <b>var,&#xA0;</b>is:</div>
+<div>define
+axis/t="01-jan-1993:00:00":"31-dec-2017:18:00"/units=days/npoints=36524
+<b>t6</b><br>
+</div>
+<div>
+<div><br>
+</div>
+<div>and daily time axis (on which I want my final
+average) is:</div>
+<div>define
+axis/t="01-jan-1993:09":"31-dec-2017:09":24/units=hours
+<b>t9</b></div>
+<div><br>
+</div>
+<div>Now, following step should give my desired daily
+final mean:</div>
+<div>let var_d=<b>var</b>[gt=t9@ave]</div>
+<div><br>
+</div>
+<div>(Above method is given by the thread :<a rel="nofollow"
+href="../fu_2004/msg00540.html"
+moz-do-not-send="true">../fu_2004/msg00540.html</a>
+)</div>
+<div><br>
+</div>
+<div>But the problem is:&#xA0; <b>var_d</b> is not being
+calculated except at l=1. I have improvised all steps
+and all seem very fine, so <b>var_d</b> should give all
+daily values. But, except at l=1, all other l's are
+showing 'No Valid Data'. Any experience in this regard ?</div>
+<div><br>
+</div>
+<div>Hope to hear soon.</div>
+<br>
+<div dir="ltr" class="gmail_signature">
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div>
+<div>
+<div>Regards,</div>
+<div>G Satyesh<br>
+</div>
+</div>
+</div>
+</div>
+<br>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<br>
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00027" href="msg00027.html">Re: [ferret_users] Problem with 6 hourly to daily average</a></strong>
+<ul><li><em>From:</em> William Kessler</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00024" href="msg00024.html">[ferret_users] Problem with 6 hourly to daily average</a></strong>
+<ul><li><em>From:</em> Satyesh Ghetiya</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00024.html">[ferret_users] Problem with 6 hourly to daily average</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00027.html">Re: [ferret_users] Problem with 6 hourly to daily average</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00024.html">Thread Prev</a>][<a href="msg00027.html">Thread Next</a>][<A HREF="threads2019.html#00025">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

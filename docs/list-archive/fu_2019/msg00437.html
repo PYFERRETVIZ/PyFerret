@@ -1,0 +1,152 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] How to find the number of seconds in a timestep -->
+<!--X-From-R13: "Tvrqyre, Dhffryy (A&#38;O, Vboneg)" <Dhffryy.TvrqyreNpfveb.nh> -->
+<!--X-Date: Sun, 1 Dec 2019 15:49:27 &#45;0800 -->
+<!--X-Message-Id: ME2PR01MB32200B5DAB8B1F9891D5A8879D400@ME2PR01MB3220.ausprd01.prod.outlook.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: 3E5C2B68&#45;80C5&#45;409F&#45;BC66&#45;4278B9EE361E@noaa.gov -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] How to find the number of seconds in a timestep</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00436.html">Thread Prev</a>][<a href="msg00438.html">Thread Next</a>][<A HREF="threads2019.html#00437">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] How to find the number of seconds in a timestep</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] How to find the number of seconds in a timestep</strong></li>
+<li><strong>From</strong>: <strong>&quot;Fiedler, Russell (O&amp;A, Hobart)&quot; &lt;<a href="mailto:Russell.Fiedler@DOMAIN.HIDDEN">Russell.Fiedler@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Sun, 1 Dec 2019 23:49:13 +0000</li>
+<li>Accept-language: en-AU, en-US</li>
+<li>In-reply-to: &lt;<a href="msg00436.html">3E5C2B68-80C5-409F-BC66-4278B9EE361E@noaa.gov</a>&gt;</li>
+<li>Ironport-phdr: 9a23:mN7YnBS+nezB5AJCXkvofs9a2tpsv++ubAcI9poqja5Pea2//pPkeVbS/uhpkESXAtfA8/wRje3QvuigQmEG7Zub+FE6OJ1XH15g640NmhA4RsuMCEn1NvnvOhYnB99PUFsj0XC2PUxYAu71fFzIpTu78G1aFw==</li>
+<li>Ironport-sdr: /1p9RdCLjWyS50/ZIR7uNdgOgCAx+NJmw+9T0F+Ny/mk8YfN0d983NfMFczuyxS3W2GjpNgJtC 1/bdqLp8YJXQ==</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00436.html">3E5C2B68-80C5-409F-BC66-4278B9EE361E@noaa.gov</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>Thread-index: AQHVqJXW8b6K2iq+H02UWzHPxVWWGKel724g</li>
+<li>Thread-topic: [ferret_users] How to find the number of seconds in a timestep</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td style="">
+ 
+ 
+<div style="font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<div style="font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+Hi Billy,</div>
+<div style="font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<div style="font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+How about using the embedded _expression_ `var,return=tunits`? You'd have to do your own conversion from days-&gt;seconds or whatever via an IF-ELSE block.</div>
+<div style="font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<div style="font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+Cheers,</div>
+<div style="font-family: Calibri, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+Russ<br>
+</div>
+<div id="appendonsend"></div>
+<hr style="display:inline-block;width:98%" tabindex="-1">
+<div id="divRplyFwdMsg" dir="ltr"><font face="Calibri, sans-serif" style="font-size:11pt" color="#000000"><b>From:</b> owner-ferret_users@xxxxxxxx &lt;owner-ferret_users@xxxxxxxx&gt; on behalf of William Kessler &lt;william.s.kessler@xxxxxxxx&gt;<br>
+<b>Sent:</b> Monday, 2 December 2019 9:20 AM<br>
+<b>To:</b> Ferret &lt;ferret_users@xxxxxxxx&gt;<br>
+<b>Cc:</b> William S. Kessler &lt;william.s.kessler@xxxxxxxx&gt;<br>
+<b>Subject:</b> [ferret_users] How to find the number of seconds in a timestep</font>
+<div>&nbsp;</div>
+</div>
+<div class="BodyFragment"><font size="2"><span style="font-size:11pt;">
+<div class="PlainText">I'm sure I'm just missing something here .... <br>
+<br>
+I'm reading variables from a netcdf file that has a regular time axis in days (as I know by listing a few timesteps).
+<br>
+I can also see by this listing that the timesteps are 2 hours, but neither the axis unit nor the timestep length is a number I can use (without listing and looking each time).<br>
+<br>
+How can I reliably find the number of seconds in a timestep?<br>
+Alternately, how can I find the units of the time axis?<br>
+<br>
+yes? sho axis time<br>
+&nbsp;name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; axis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # pts&nbsp;&nbsp; start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end<br>
+&nbsp;TIME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TIME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7149 r&nbsp;&nbsp; 17-JUL-2012 04:00&nbsp;&nbsp;&nbsp; 04-MAR-2014 20:00<br>
+T0 = 01-JAN-1970 00:00:00<br>
+<br>
+let TT = t[gt=u]&nbsp;&nbsp; ! listing a few TT values shows by eye that the time axis is days, and the timestep 2 hours, but these are not numbers I can use except manually<br>
+<br>
+list TBOX[gt=u]&nbsp; ! shows that TBOX=1/12 of the time axis unit, but I don't know that unit length except by eye-balling a listing<br>
+<br>
+let TAXIS_UNIT = 1/TT[l=@ddf]&nbsp;&nbsp; ! length of a time axis unit in seconds (because Ferret takes time derivatives in seconds)<br>
+&nbsp;<br>
+let TSEC = TBOX[gt=u] * TAXIS_UNIT&nbsp;&nbsp; ! this calculation finally tells me the length of a timestep, in seconds<br>
+<br>
+Clearly Ferret knows this information but won't tell me without a calculation. Am I missing something obvious?<br>
+<br>
+It seems that TAXIS_UNIT should be a keyword like TBOX, TBOXLO, TBOXHI. Those are all similar to index units in that they are only meaningful once you know what the geophysical time axis unit is. TAXIS_UNIT (or equivalently TSEC) would make these available
+for calculations. <br>
+<br>
+And note that my method above fails at the final timestep (because of @ddf). In the present case that doesn't matter because I know that the axis is regular, but if it wasn't I would have a hard time getting this information.<br>
+<br>
+Thanks ... Billy K<br>
+</div>
+</span></font></div>
+ 
+ 
+</td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00438" href="msg00438.html">Re: [ferret_users] How to find the number of seconds in a timestep</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00436" href="msg00436.html">[ferret_users] How to find the number of seconds in a timestep</a></strong>
+<ul><li><em>From:</em> William Kessler</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00436.html">[ferret_users] How to find the number of seconds in a timestep</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00438.html">Re: [ferret_users] How to find the number of seconds in a timestep</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00436.html">Thread Prev</a>][<a href="msg00438.html">Thread Next</a>][<A HREF="threads2019.html#00437">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

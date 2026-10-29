@@ -1,0 +1,169 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Save the time dimension data -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Wed, 16 Aug 2017 10:23:13 &#45;0700 -->
+<!--X-Message-Id: 76ec8558&#45;dfd1&#45;0c6c&#45;796c&#45;cc5f1fb6ce27@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAGRd1&#45;JLZK&#45;sa4rTyuMaisPnaFKbp+erxiYg6VPx08g42zXqyA@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Save the time dimension data</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00595.html">Thread Prev</a>][<a href="msg00597.html">Thread Next</a>][<A HREF="threads2017.html#00593">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Save the time dimension data</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Save the time dimension data</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 16 Aug 2017 10:23:10 -0700</li>
+<li>In-reply-to: &lt;<a href="msg00589.html">CAGRd1-JLZK-sa4rTyuMaisPnaFKbp+erxiYg6VPx08g42zXqyA@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00589.html">CAGRd1-JLZK-sa4rTyuMaisPnaFKbp+erxiYg6VPx08g42zXqyA@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.2.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hi,</p>
+<p>Does the first SAVE command fail? If so then it sounds as if
+there is an error in the definition or computation of the variable
+uvels. Otherwise your commands look ok. You can append to a file
+in the time dimension without doing anything special.</p>
+<p>In what you show, it looks like the third command should be:<br>
+ 
+</p>
+<p> save/l=41:50/FILE=<a rel="nofollow" href="http://at.nc/append">at.nc/append</a>
+uvels<br>
+ 
+</p>
+<br>
+ 
+<div class="moz-cite-prefix">On 8/16/2017 1:14 AM, Atul Srivastava
+wrote:<br>
+ 
+</div>
+<blockquote type="cite"
+cite="">
+<div dir="ltr">Dear ferret users I have 361*292*75*73 data I want
+to save it after set my region let say
+<div><br>
+ 
+</div>
+<div>irc=uvel[x=40E:110E,y=20S:30N]</div>
+<div><br>
+ 
+</div>
+<div>I am trying to save it with the following commands but I am
+not able to save my data please tell me how I can save this
+data sets in a single nc file</div>
+<div><br>
+ 
+</div>
+<div><br>
+ 
+</div>
+<div><br>
+ 
+</div>
+<div>
+<div>ave/l=1:20/FILE=<a rel="nofollow" href="http://at.nc"
+moz-do-not-send="true">at.nc</a> uvels</div>
+<div>save/l=21:40/FILE=<a rel="nofollow" href="http://at.nc/append"
+moz-do-not-send="true">at.nc/append</a> uvels</div>
+<div>save/l=21:50/FILE=<a rel="nofollow" href="http://at.nc/append"
+moz-do-not-send="true">at.nc/append</a> uvels</div>
+<div>save/l=51:73/FILE=<a rel="nofollow" href="http://at.nc/append"
+moz-do-not-send="true">at.nc/append</a> uvels</div>
+</div>
+<div></div>
+<div><br>
+ 
+</div>
+<div>I got this error</div>
+<div><br>
+ 
+</div>
+<div>
+<div>**ERROR in external function: Segmentation Violation</div>
+<div>**ERROR: error in external function</div>
+</div>
+<div><br>
+ 
+</div>
+<div><br>
+ 
+</div>
+<div>please tell me how I can save my data.</div>
+<div><br>
+ 
+</div>
+<div><br>
+ 
+</div>
+<div><br>
+ 
+</div>
+<div><br>
+ 
+</div>
+</div>
+</blockquote>
+<br>
+ 
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00589" href="msg00589.html">[ferret_users] Save the time dimension data</a></strong>
+<ul><li><em>From:</em> Atul Srivastava</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00595.html">Re: [ferret_users] Re: Save the time dimension data</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00597.html">[ferret_users] gdelseg() 122</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00595.html">Thread Prev</a>][<a href="msg00597.html">Thread Next</a>][<A HREF="threads2017.html#00593">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

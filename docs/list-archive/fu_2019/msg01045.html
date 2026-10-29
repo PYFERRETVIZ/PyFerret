@@ -1,0 +1,90 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] too many tics -->
+<!--X-From-R13: Dlb Thehr <shehrNunjnvv.rqh> -->
+<!--X-Date: Wed, 22 Dec 2021 23:29:04 &#45;0800 -->
+<!--X-Message-Id: CAEwQpaL&#45;YMaL1GjKYL3OBt1Vu8ZQXLJCaCHaK&#45;ZgQnuw9_zh2g@mail.gmail.com -->
+<!--X-Content-Type: multipart/related -->
+<!--X-Reference: CAEwQpaJ8A3GVnKuHsVTvFJ9&#45;wJ&#45;ZcxLwCK+4VUik907DwJitrQ@mail.gmail.com -->
+<!--X-Reference: CAG0pxU9fy=D_hLEnoEbtJN2dUVHaW7LOH0_Q3XLg6kd=YDRqcQ@mail.gmail.com -->
+<!--X-Derived: png9ANQ7wcMoA.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] too many tics</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg01044.html">Thread Prev</a>][<a href="msg01046.html">Thread Next</a>][<A HREF="threads2019.html#01045">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] too many tics</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Pratik Kad &lt;<a href="mailto:pratikkad17@DOMAIN.HIDDEN">pratikkad17@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] too many tics</strong></li>
+<li><strong>From</strong>: <strong>Ryo Furue &lt;<a href="mailto:furue@DOMAIN.HIDDEN">furue@xxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 23 Dec 2021 16:28:44 +0900</li>
+<li>Cc: ferret users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;CAG0pxU9fy=D_hLEnoEbtJN2dUVHaW7LOH0_Q3XLg6kd=YDRqcQ@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg01043.html">CAEwQpaJ8A3GVnKuHsVTvFJ9-wJ-ZcxLwCK+4VUik907DwJitrQ@mail.gmail.com</a>&gt; &lt;CAG0pxU9fy=D_hLEnoEbtJN2dUVHaW7LOH0_Q3XLg6kd=YDRqcQ@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr"><div>Hi Pratik,</div><div class="gmail_quote"><div dir="ltr" class="gmail_attr"><br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div><font face="arial, sans-serif">I&#39;m using &quot;xlimits&quot; and &quot;ylimits&quot;, which&#xA0;also&#xA0;works perfectly.&#xA0;</font></div></div></blockquote><div><br></div><div><br></div><div>I guess you mean&#xA0;that ylimits&#xA0;also produces the same problem:</div><div><br></div></div><blockquote style="margin:0 0 0 40px;border:none;padding:0px"><div class="gmail_quote"><div><font face="monospace">set data etopo5</font></div></div><div class="gmail_quote"><div><font face="monospace">plot/<font color="#ff0000">ylimits</font>=-5500:0/y=30S/hlimits=111:115 rose</font></div></div><div class="gmail_quote"><div><font face="monospace">frame/file=tmp.png</font></div></div></blockquote><div class="gmail_quote"><div><br></div><div>This one shows exactly the same problem (too many tics&#xA0;along the vertical axis).</div><div><br></div><div>Anyway, xlimits and ylimits are deprecated:</div><div><br></div></div><blockquote style="margin:0 0 0 40px;border:none;padding:0px"><div class="gmail_quote"><div><font face="monospace">*** NOTE: /XLIMITS and /YLIMITS are deprecated.</font></div></div><div class="gmail_quote"><div><font face="monospace">*** NOTE: Use /HLIMITS and /VLIMITS instead.</font></div></div></blockquote><div class="gmail_quote"><div><br></div><div>I understand why they are deprecated.&#xA0; (When the vertical axis isn&#39;t a y axis, the name &quot;ylimits&quot; is highly confusing.)</div><div><br></div><div>Regards,</div><div><br></div><div>Ryo</div><div><br></div><div><br></div><div>&#xA0;</div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir="ltr"><div><font face="arial, sans-serif"><br></font></div><div><font face="arial, sans-serif">Best regards</font></div><div><font face="ar                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+</blockquote></div>
+</blockquote></div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="01046" href="msg01046.html">Re: [ferret_users] too many tics</a></strong>
+<ul><li><em>From:</em> William Kessler</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="01043" href="msg01043.html">[ferret_users] too many tics</a></strong>
+<ul><li><em>From:</em> Ryo Furue</li></ul></li>
+<li><strong><a name="01044" href="msg01044.html">Re: [ferret_users] too many tics</a></strong>
+<ul><li><em>From:</em> Pratik Kad</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg01044.html">Re: [ferret_users] too many tics</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg01046.html">Re: [ferret_users] too many tics</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg01044.html">Thread Prev</a>][<a href="msg01046.html">Thread Next</a>][<A HREF="threads2019.html#01045">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

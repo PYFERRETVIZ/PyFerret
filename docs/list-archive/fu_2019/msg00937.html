@@ -1,0 +1,88 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [EXTERNAL] [ferret_users] interannual standard deviation -->
+<!--X-From-R13: Jvnblh Pnv <konv1Nhapp.rqh> -->
+<!--X-Date: Thu, 15 Apr 2021 15:52:37 &#45;0700 -->
+<!--X-Message-Id: CAKE4FWoQkn6F=EUwA6nTmqz=OLLh8Q2z9RKR1gAzxcQyOH1jTw@mail.gmail.com -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAKBNTAYUZT7n+1_d8U5gZaGkub9Hi1vqdpvf1TthFLU3r&#45;G6Ag@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [EXTERNAL] [ferret_users] interannual standard deviation</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00936.html">Thread Prev</a>][<a href="msg00938.html">Thread Next</a>][<A HREF="threads2019.html#00937">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [EXTERNAL] [ferret_users] interannual standard deviation</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>RUKSANA SALIM &lt;<a href="mailto:ruksanasalim8197@DOMAIN.HIDDEN">ruksanasalim8197@xxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [EXTERNAL] [ferret_users] interannual standard deviation</strong></li>
+<li><strong>From</strong>: <strong>Xiaoyu Bai &lt;<a href="mailto:xbai1@DOMAIN.HIDDEN">xbai1@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 15 Apr 2021 18:51:54 -0400</li>
+<li>Cc: ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;<a href="msg00936.html">CAKBNTAYUZT7n+1_d8U5gZaGkub9Hi1vqdpvf1TthFLU3r-G6Ag@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00936.html">CAKBNTAYUZT7n+1_d8U5gZaGkub9Hi1vqdpvf1TthFLU3r-G6Ag@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div dir="ltr">Do you mean you want to use chunks of t-axis? If so, you can use something like<div><br></div><div>let mean = data[x=@SUM,T=T1:T2@SUM]/data[X=@ngd,T=T1:T2@ngd]</div></div><br><div class="gmail_quote"><div dir="ltr" class="gmail_attr">On Thu, Apr 15, 2021 at 3:40 AM RUKSANA SALIM &lt;<a rel="nofollow" href="mailto:ruksanasalim8197@xxxxxxxxx">ruksanasalim8197@xxxxxxxxx</a>&gt; wrote:<br></div><blockquote class="gmail_quote" style="margin:0px 0px 0px 0.8ex;border-left-width:1px;border-left-style:solid;border-left-color:rgb(204,204,204);padding-left:1ex">[<strong><font color="red">Caution</font></strong>: Email from External Sender. Do not click or open links or attachments unless you know this sender.]<br><span>&#xA0;</span><div dir="ltr"><div class="gmail_default" style="font-family:georgia,serif;font-size:large;color:rgb(0,0,0)"><br><blockquote style="border-left-width:0.2em;border-left-style:solid;border-left-color:rgb(85,85,238);margin:0em;padding-left:0.85em"><pre style="margin:0em">Hi Ferret users,
+ 
+I have an .nc file of dimension x,y,t, where I could find the standard deviation using following code,<br><br>let mean = data[x=@sum]/data[x=@ngd]
+let sqr = (data - mean)^2
+let stdv = (sqr[x=@sum/sqr[x=@ngd])^0.5
+ 
+ 
+</pre><tt>Now, I would like to map the interannual standard deviation.<br></tt><pre style="margin:0em">What&#39;s the best way for such a calculation ?
+<br></pre></blockquote></div>-- <br><div dir="ltr"><div dir="ltr"><div><font face="arial narrow,sans-serif">With regards,</font></div><div><b><font face="arial narrow,sans-serif">Ruksana Salim,</font></b></div><div><font face="arial narrow,sans-serif">SC19M070,</font></div><div><font face="arial narrow,sans-serif">M.Tech in Earth System Science,</font></div><div><font face="arial narrow,sans-serif">Indian Institute Of Space Science And Technology,</font></div><div style="text-align:left"><font face="arial narrow,sans-serif">Trivandrum, Kerala, India - 695547.</font></div><font face="arial narrow,sans-serif"><div><br></div></font></div></div></div>
+</blockquote></div><br clear="all"><div><br></div>-- <br><div dir="ltr" class="gmail_signature"><div dir="ltr">Xiaoyu</div></div>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00936" href="msg00936.html">[ferret_users] interannual standard deviation</a></strong>
+<ul><li><em>From:</em> RUKSANA SALIM</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00936.html">[ferret_users] interannual standard deviation</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00938.html">Re: [ferret_users] interannual standard deviation</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00936.html">Thread Prev</a>][<a href="msg00938.html">Thread Next</a>][<A HREF="threads2019.html#00937">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

@@ -1,0 +1,114 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: RE: [ferret_users] Overlapping shape file. on my lat long grid. -->
+<!--X-From-R13: "Ynqhx, Xbet R. (Re.)" <wx61Nyrvprfgre.np.hx> -->
+<!--X-Date: Mon, 26 Mar 2018 07:01:20 &#45;0700 -->
+<!--X-Message-Id: DB6PR0602MB28691358E54DA042A51479B396AD0@DB6PR0602MB2869.eurprd06.prod.outlook.com -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CA+GHuueGrHE+2xPnEyiEP_BVGvp3+w3P3G8MFBnAn7OJa5wa5w@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>RE: [ferret_users] Overlapping shape file. on my lat long grid.</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00074.html">Thread Prev</a>][<a href="msg00077.html">Thread Next</a>][<A HREF="threads2018.html#00076">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>RE: [ferret_users] Overlapping shape file. on my lat long grid.</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Anurag Kumar &lt;<a href="mailto:anuragkumar048@DOMAIN.HIDDEN">anuragkumar048@xxxxxxxxx</a>&gt;,        &quot;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&quot;	&lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>RE: [ferret_users] Overlapping shape file. on my lat long grid.</strong></li>
+<li><strong>From</strong>: <strong>&quot;Kaduk, Jorg D. (Dr.)&quot; &lt;<a href="mailto:jk61@DOMAIN.HIDDEN">jk61@xxxxxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 26 Mar 2018 14:00:39 +0000</li>
+<li>Accept-language: en-GB, en-US</li>
+<li>In-reply-to: &lt;<a href="msg00074.html">CA+GHuueGrHE+2xPnEyiEP_BVGvp3+w3P3G8MFBnAn7OJa5wa5w@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00074.html">CA+GHuueGrHE+2xPnEyiEP_BVGvp3+w3P3G8MFBnAn7OJa5wa5w@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>Spamdiagnosticmetadata: NSPM</li>
+<li>Spamdiagnosticoutput: 1:99</li>
+<li>Thread-index: AQHTxM4Oud5tAM+qJ0y+gX4tbsuKIaPiisxw</li>
+<li>Thread-topic: [ferret_users] Overlapping shape file. on my lat long grid.</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>Dear Anuarg,
+ 
+I guess, GIS methods do not translate straightforward into ferret. 
+Unless somebody knows about a shapefile import my approach would be to create a mask in a GIS and import as a text file into ferret. 
+This would entail defining your grid in the GIS and then creating a variable with the value of 1 within your region of interest and 0 outside. Export that variable as a text file and import into ferret using your grid definition.
+Just an idea. I have never done this. I do not work with GIS...
+ 
+Best regards,
+Joerg
+ 
+ 
+ 
+ 
+-----Original Message-----
+From: owner-ferret_users@xxxxxxxx [<a  rel="nofollow" href="mailto:owner-ferret_users@xxxxxxxx">mailto:owner-ferret_users@xxxxxxxx</a>] On Behalf Of Anurag Kumar
+Sent: 26 March 2018 07:44
+To: ferret_users@xxxxxxxx
+Subject: [ferret_users] Overlapping shape file. on my lat long grid.
+ 
+I have recently started working on ferret. I am working on climate data, However I am stuck at some point, so I would be needing help from ferret users.
+ 
+I want to overlap a shape file over my lat long grid. How can I do that?
+ 
+Problem that I am facing is the file that I have is in .shp format or .kml format. I dont know how to convert it into .nc. Also i dont know how I can put my study area map (that is .shp file) over my lat long grid. Once done, How can I remove the area outside my study area.
+ 
+ 
+ 
+ 
+Anurag Kumar
+ 
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00074" href="msg00074.html">[ferret_users] Overlapping shape file. on my lat long grid.</a></strong>
+<ul><li><em>From:</em> Anurag Kumar</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00074.html">[ferret_users] Overlapping shape file. on my lat long grid.</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00077.html">Re: [ferret_users] Overlapping shape file. on my lat long grid.</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00074.html">Thread Prev</a>][<a href="msg00077.html">Thread Next</a>][<A HREF="threads2018.html#00076">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

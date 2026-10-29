@@ -1,0 +1,114 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] Fw: problem in REshape -->
+<!--X-From-R13: "'fnenfnev206Nlnubb.pbz' ivn _AOD B[SZ Treerg Gfref" <sreerg_hfrefNabnn.tbi> -->
+<!--X-Date: Thu, 7 Sep 2017 13:42:51 &#45;0700 -->
+<!--X-Message-Id: 923434102.4965368.1504816958373@mail.yahoo.com -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 2039395733.4302501.1504737795756.ref@mail.yahoo.com -->
+<!--X-Reference: 2039395733.4302501.1504737795756@mail.yahoo.com -->
+<!--X-Derived: pngv6aY0t2p0u.png -->
+<!--X-Derived: png1R9hZ3IHCu.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] Fw: problem in REshape</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00625.html">Thread Prev</a>][<a href="msg00627.html">Thread Next</a>][<A HREF="threads2017.html#00626">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] Fw: problem in REshape</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Ferret_users &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] Fw: problem in REshape</strong></li>
+<li><strong>From</strong>: <strong>&quot;'<a href="mailto:sarasari206@DOMAIN.HIDDEN">sarasari206@xxxxxxxxx</a>' via _OAR PMEL Ferret Users&quot; &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 7 Sep 2017 20:42:38 +0000 (UTC)</li>
+<li>In-reply-to: &lt;2039395733.4302501.1504737795756@mail.yahoo.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;2039395733.4302501.1504737795756.ref@mail.yahoo.com&gt; &lt;2039395733.4302501.1504737795756@mail.yahoo.com&gt;</li>
+<li>Reply-to: &quot;<a href="mailto:sarasari206@DOMAIN.HIDDEN">sarasari206@xxxxxxxxx</a>&quot; &lt;<a href="mailto:sarasari206@DOMAIN.HIDDEN">sarasari206@xxxxxxxxx</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<div id="ymail_android_signature"><br>
+</div><blockquote style="margin: 0 0 20px 0;"> <div style="padding: 10px 0 0 20px; margin: 10px 0 0 0; border-left: 1px solid #6D00F6;"> <div id="yiv4324506731"><div><div style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:13px;"><div id="yMail_cursorElementTracker_1504816941684">Hi,</div><div>I try this script:</div><div><br>
+</div><div>define axis/t=1:30/npoints=697/units=day day_axis<br>
+yes? let/unit='W/m^2'/title='long wave heat flux' qlwave_on_time=RESHAPE(qlwave,t[gt=day_axis])<br>
+<div>yes?&nbsp; plot qlwave_on_time[x=74,y=33]</div><div>but it produces the attached plot 1.</div><div>While when I just ask plot qlwave[x=74,y=33] it plots correctly as in the second attachment.</div><div>anybody knows why the RESHAPE command works improperly?</div><div><br>
+</div><div>here is the details:</div><div><br>
+</div><div>use rhoneG_1.tsout2N<br>
+yes? sh d<br>
+&nbsp;&nbsp;&nbsp;&nbsp; currently SET data sets:<br>
+&nbsp;&nbsp;&nbsp; 1&gt; ./rhoneG_1.tsout2N&nbsp; (default)<br>
+&nbsp;name&nbsp;&nbsp;&nbsp;&nbsp; title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; J&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; N<br>
+&nbsp;XOUT&nbsp;&nbsp;&nbsp;&nbsp; longitude&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1:193&nbsp;&nbsp;&nbsp;&nbsp; 1:87&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>
+&nbsp;YOUT&nbsp;&nbsp;&nbsp;&nbsp; latitude&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1:193&nbsp;&nbsp;&nbsp;&nbsp; 1:87&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>
+&nbsp;DEPOUT&nbsp;&nbsp; Mean_water_depth&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1:193&nbsp;&nbsp;&nbsp;&nbsp; 1:87&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>
+&nbsp;TIME&nbsp;&nbsp;&nbsp;&nbsp; Time&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1:697&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>
+&nbsp;QLWAVE&nbsp;&nbsp; Long-wave_heat_flux&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1:193&nbsp;&nbsp;&nbsp;&nbsp; 1:87&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1:697&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...<br>
+<br>
+<div>&nbsp;Thank you,</div><div>Sara<br>
+</div><br>
+<br>
+</div><div><br>
+</div><br>
+<br>
+<br>
+<br>
+</div></div></div></div> </div> </blockquote><p><strong>Attachment:
+<a href="pngv6aY0t2p0u.png" ><tt>1.png</tt></a></strong><br>
+ 
+<em>Description:</em> PNG image</p>
+<p><strong>Attachment:
+<a href="png1R9hZ3IHCu.png" ><tt>2.png</tt></a></strong><br>
+ 
+<em>Description:</em> PNG image</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00627" href="msg00627.html">Re: [ferret_users] Fw: problem in REshape</a></strong>
+<ul><li><em>From:</em> Ansley C. Manke</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00625.html">[ferret_users] ComPlot 1.0.1 released</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00627.html">Re: [ferret_users] Fw: problem in REshape</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00625.html">Thread Prev</a>][<a href="msg00627.html">Thread Next</a>][<A HREF="threads2017.html#00626">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

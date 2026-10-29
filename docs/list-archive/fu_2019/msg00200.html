@@ -1,0 +1,199 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Customizing ppl SHAKEY -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Thu, 30 May 2019 09:34:31 &#45;0700 -->
+<!--X-Message-Id: 0bd6ca4d&#45;b9b0&#45;5669&#45;73a0&#45;ec70fe20e101@noaa.gov -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Reference: CAD3z&#45;ZkJpnsE5+&#45;yXuo40Qw4fobqxTU3sMnOfU4_Q+ZAQZd2jA@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Customizing ppl SHAKEY</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00198.html">Thread Prev</a>][<a href="msg00201.html">Thread Next</a>][<A HREF="threads2019.html#00200">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Customizing ppl SHAKEY</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Customizing ppl SHAKEY</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 30 May 2019 09:34:27 -0700</li>
+<li>In-reply-to: &lt;<a href="msg00198.html">CAD3z-ZkJpnsE5+-yXuo40Qw4fobqxTU3sMnOfU4_Q+ZAQZd2jA@mail.gmail.com</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00198.html">CAD3z-ZkJpnsE5+-yXuo40Qw4fobqxTU3sMnOfU4_Q+ZAQZd2jA@mail.gmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:60.0) Gecko/20100101 Thunderbird/60.6.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+Hi,<br>
+<p>I'm not sure what problem you are having.&#xA0; SHAKEY gives you a lot
+of control over the size of labels as well as other features of
+the colorbar.&#xA0; The SET TEXT command with /ISIZE is intended as a
+simple short-cut way to increase or decrease the size of different
+label groups including the colorbar For example, try:<br>
+</p>
+shakey for large labels:<br>
+<br>
+<blockquote><tt>use coads_climatology</tt><br>
+<tt>shade/set/l=1 sst</tt><br>
+<tt>ppl shakey 1,1,0.2</tt><br>
+<tt>ppl shade</tt><br>
+</blockquote>
+<p>settings for larger, then smaller text using SET TEXT in
+pyferret:<tt><br>
+</tt></p>
+<blockquote><tt>set text/font=arial<br>
+</tt><br>
+<tt>set text/isize=+1 cbar</tt><br>
+<tt>shade/l=1 sst</tt><br>
+<br>
+<tt>shade/l=1 sste=+3 cbar</tt><br>
+<tt>shade/l=1 sst</tt><br>
+<br>
+<tt>set text/isize=-2 cbar</tt><br>
+<tt>shade/l=1 sst</tt><br>
+</blockquote>
+<p><br>
+</p>
+<p>Please write again with what you want to do, what commands you're
+trying, and what you want to happen.<br>
+</p>
+<p><br>
+</p>
+<div class="moz-cite-prefix">On 5/28/2019 11:47 PM, Krishnapriya M
+wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+<div dir="ltr">
+<div>Hi all,</div>
+<div>I have a problem with labelling the shakey. If I set the
+label size in the shakey command, it is&#xA0; appeared on the
+colour bar. I tried the solution given in this link:</div>
+<div><a rel="nofollow"
+href="../fu_2016/msg00587.html"
+moz-do-not-send="true">../fu_2016/msg00587.html</a></div>
+<div>But I'm also experiencing the similar issue with the font
+size.</div>
+<div>I'm grateful if anyone could help me on this issue. <br>
+</div>
+<div>Thanks in advance<br>
+</div>
+<div>
+<div>
+<div dir="ltr" class="m_-5174033370464109299gmail_signature"
+data-smartmail="gmail_signature">
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div dir="ltr">
+<div>
+<div>
+<div>
+<div>
+<div><span style="color:rgb(0,0,0)"><span
+style="background-color:rgb(243,243,243)">With Regards,<br>
+Krishnapriya M<br>
+</span></span></div>
+<span style="color:rgb(0,0,0)"><span
+style="background-color:rgb(243,243,243)">Senior Research Fellow,<br>
+</span></span></div>
+<div><span style="color:rgb(0,0,0)"><span
+style="background-color:rgb(243,243,243)">Ocean Integrated
+Biogeochemical Modeling
+Group(OIBM),<br>
+</span></span></div>
+<span style="color:rgb(0,0,0)"><span
+style="background-color:rgb(243,243,243)">National
+Remote Sensing Centre (ISRO),<br>
+</span></span></div>
+<span style="color:rgb(0,0,0)"><span
+style="background-color:rgb(243,243,243)">Balanagar,<br>
+</span></span></div>
+<span style="color:rgb(0,0,0)"><span
+style="background-color:rgb(243,243,243)">Hyderabad-500037<span></span><span></span><br>
+</span></span></div>
+<span style="color:rgb(0,0,0)"><span
+style="background-color:rgb(243,243,243)">Ph:040-23884576</span></span><br>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</blockquote>
+<div class="moz-signature">-- <br>
+<i>Ansley Manke<br>
+NOAA/PMEL Science Data Integration Group<br>
+7600 Sand Point Way NE<br>
+206-526-6246</i></div>
+ 
+ 
+</font></td></tr></table>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00201" href="msg00201.html">Re: [ferret_users] Customizing ppl SHAKEY</a></strong>
+<ul><li><em>From:</em> saurabh rathore</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00198" href="msg00198.html">[ferret_users] Customizing ppl SHAKEY</a></strong>
+<ul><li><em>From:</em> Krishnapriya M</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00198.html">[ferret_users] Customizing ppl SHAKEY</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00201.html">Re: [ferret_users] Customizing ppl SHAKEY</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00198.html">Thread Prev</a>][<a href="msg00201.html">Thread Next</a>][<A HREF="threads2019.html#00200">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

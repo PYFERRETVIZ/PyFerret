@@ -1,0 +1,109 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: [ferret_users] pyferret aliasing in jupyter notebooks -->
+<!--X-From-R13: Bvreer Erchypuer <cvreer.frchypuerNyfpr.vcfy.se> -->
+<!--X-Date: Thu, 28 May 2020 14:10:13 &#45;0700 -->
+<!--X-Message-Id: 1c39f8f3&#45;78b8&#45;4a8e&#45;4983&#45;4eecd3df8de1@lsce.ipsl.fr -->
+<!--X-Content-Type: multipart/alternative -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>[ferret_users] pyferret aliasing in jupyter notebooks</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00704.html">Thread Prev</a>][<a href="msg00708.html">Thread Next</a>][<A HREF="threads2019.html#00706">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>[ferret_users] pyferret aliasing in jupyter notebooks</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>[ferret_users] pyferret aliasing in jupyter notebooks</strong></li>
+<li><strong>From</strong>: <strong>Pierre Sepulchre &lt;<a href="mailto:pierre.sepulchre@DOMAIN.HIDDEN">pierre.sepulchre@xxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 28 May 2020 23:10:03 +0200</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:68.0) Gecko/20100101 Thunderbird/68.8.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+ 
+ 
+ 
+<p>Dear all,</p>
+<p>I am using pyferret v7.43/python3.6 in jupyter notebooks, within
+jupyter-lab and with ferretmagic extension, on macOS high sierra.</p>
+<p>I realized that sometimes plotting with shade/ led to "aliased"
+maps, i.e. with unesthetic horizontal lines starting from both
+sides of the map.</p>
+<p>However running the exact same command in a terminal (i.e. not in
+a notebook) provides a nice plot !<br>
+</p>
+<p>Playing with set window/noantialiasing does not improve much, but
+I noticed that changing the window aspect in the notebook, either
+through the use of "%ferret -s X,Y" parameters or with the set
+window /aspect, would change the location of the horizontal bars.</p>
+<p>I would be grateful if someone had an hint to solve this issue.</p>
+<p>I provide the examples here :</p>
+<p><a rel="nofollow" moz-do-not-send="true"
+href="https://sharebox.lsce.ipsl.fr/index.php/s/QleW9tCk7HSYxhT">https://sharebox.lsce.ipsl.fr/index.php/s/QleW9tCk7HSYxhT</a></p>
+<p>All the best,</p>
+<p>Pierre</p>
+<div class="moz-signature">-- <br>
+<p>CNRS/Laboratoire des Sciences du Climat et de l'Environnement,
+Gif-sur-Yvette, France<br>
+tel : +33 (0) 1 69 08 65 49<br>
+<a rel="nofollow"
+href="https://scholar.google.fr/citations?hl=fr&amp;user=Er4h_F8AAAAJ&amp;view_op=list_works&amp;sortby=pubdate">What
+I am working on&#xFEFF; </a><br>
+twitter: <a rel="nofollow" href="https://twitter.com/pierresepulchre?lang=fr">@PierreSepulchre</a><br>
+github: <a rel="nofollow" href="https://github.com/psepulchre/">psepulchre</a></p>
+</div>
+ 
+ 
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00708" href="msg00708.html">Re: [ferret_users] pyferret aliasing in jupyter notebooks</a></strong>
+<ul><li><em>From:</em> Patrick Brockmann</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00704.html">[ferret_users] Adding a time-axis</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00708.html">Re: [ferret_users] pyferret aliasing in jupyter notebooks</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00704.html">Thread Prev</a>][<a href="msg00708.html">Thread Next</a>][<A HREF="threads2019.html#00706">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

@@ -1,0 +1,474 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] Ferret vs PyFerret -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Thu, 4 Jan 2018 10:11:07 &#45;0800 -->
+<!--X-Message-Id: ea307384&#45;55be&#45;31c0&#45;fada&#45;456efd8a100f@noaa.gov -->
+<!--X-Content-Type: multipart/mixed -->
+<!--X-Reference: 1BACA560&#45;87D0&#45;45FF&#45;BF53&#45;B421DFDFD330@lsce.ipsl.fr -->
+<!--X-Derived: pngmAfvXUbeHe.png -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] Ferret vs PyFerret</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00000.html">Thread Prev</a>][<a href="msg00002.html">Thread Next</a>][<A HREF="threads2018.html#00001">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] Ferret vs PyFerret</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] Ferret vs PyFerret</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 4 Jan 2018 10:11:03 -0800</li>
+<li>In-reply-to: &lt;<a href="msg00000.html">1BACA560-87D0-45FF-BF53-B421DFDFD330@lsce.ipsl.fr</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00000.html">1BACA560-87D0-45FF-BF53-B421DFDFD330@lsce.ipsl.fr</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.5.2</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<table width="100%"><tr><td bgcolor="#FFFFFF" style="background-color: #FFFFFF; color: #000000; "><font color="#000000">
+ 
+ 
+<p>Hi Olivier,</p>
+<p>Thank you for the report. We want to make the transition to
+PyFerret as simple as possible with few script changes.&#xA0; I'll look
+into the right_axis_plot.jnl script. I would expect it to work
+correctly in PyFerret. Your example figure looks to me as if some
+aspect of the scale and location information is being lost. <br>
+</p>
+<p>One possible workaround for this kind of plot is to use multiple
+identical viewports, drawing only the desired plot axes in each
+one.&#xA0; Here is the idea; one would need to do more to add the
+correct labels <br>
+</p>
+<blockquote><tt>set text/font=sans_serif</tt><br>
+<tt>use levitus_climatology</tt><br>
+<br>
+<tt>define view/x=0:1/y=0:1 full1</tt><br>
+<tt>define view/x=0:1/y=0:1 full2</tt><br>
+<br>
+<tt>set view full1</tt><br>
+<tt>plot/axes=1,1,1,0/x=150:200/y=0/z=0 /title="
+"/color=blue/thick temp</tt><br>
+<br>
+<tt>set view full2</tt><br>
+<tt>plot/axes=0,0,0,1/x=150:200/y=0/z=0/title=" "/color=red/thick
+salt</tt><br>
+</blockquote>
+<p>Ansley<br>
+</p>
+<br>
+<div class="moz-cite-prefix">On 1/4/2018 5:19 AM, Olivier Marti
+wrote:<br>
+</div>
+<blockquote type="cite"
+cite="">
+ 
+<div class="">Hello everybody. And Happy new year to all ferreters
+!</div>
+<div class=""><br class="">
+</div>
+<div class=""><br class="">
+</div>
+<div class="">In the following figure <a rel="nofollow"
+href="https://files.lsce.ipsl.fr/public.php?service=files&amp;t=676354e49864fc779a58859306ab7531"
+class="" moz-do-not-send="true">https://files.lsce.ipsl.fr/public.php?service=files&amp;t=676354e49864fc779a58859306ab7531</a>,
+the left hand plot is obtained by Ferret v7 on MacOS X 10.12.6,
+and the right hand plot by PyFerret 7.1 on the same computer.
+The jnl file is the same, except that for PyFerret, I added the
+line&#xA0;SET TEXT/FONT=Sans-serif. Without this add-on, PyFerret
+produces the same plot than Ferret, just a little more fancy !</div>
+<div class=""><br class="">
+</div>
+<div class="">After some research, I see that the problem come
+from the script&#xA0;my_right_axis_plot.jnl. This a copy a
+right_axis_plot.jnl from the Ferret distribution, where I
+removed the display of the line specimen. The line that totally
+messed up all the printings is :&#xA0;ppl %yaxis/nouser
+$3"'ppl$range_low','ppl$range_high','ppl$range_inc'",'ppl$xlen',$6",,,+1,,(1PG10.3)"</div>
+<div class=""><br class="">
+</div>
+<div class="">Could you thing of any workaround to have my right
+axis plotted, and keeping nice titles and labels ?</div>
+<div class=""><br class="">
+</div>
+<div class="">Thanks in advanced</div>
+<div class=""><br class="">
+</div>
+<div class="">Olivier</div>
+<div class=""><br class="">
+</div>
+<div class="">The script :&#xA0;<a rel="nofollow"
+href="https://files.lsce.ipsl.fr/public.php?service=files&amp;t=bc183b5ce197b1eec84ddb481359f63f"
+class="" moz-do-not-send="true">https://files.lsce.ipsl.fr/public.php?service=files&amp;t=bc183b5ce197b1eec84ddb481359f63f</a></div>
+<br class="">
+<div class="">
+<div style="color: rgb(0, 0, 0); letter-spacing: normal;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; word-wrap: break-word;
+-webkit-nbsp-mode: space; -webkit-line-break:
+after-white-space;" class="">
+<div style="color: rgb(0, 0, 0); letter-spacing: normal;
+text-align: start; text-indent: 0px; text-transform: none;
+white-space: normal; word-spacing: 0px;
+-webkit-text-stroke-width: 0px; word-wrap: break-word;
+-webkit-nbsp-mode: space; -webkit-line-break:
+after-white-space;" class=""><span class="Apple-style-span"
+style="border-collapse: separate; color: rgb(0, 0, 0);
+font-family: 'Lucida Grande'; font-style: normal;
+font-variant-ligatures: normal; font-variant-caps: normal;
+font-variant-east-asian: normal; font-variant-position:
+normal; font-weight: normal; letter-spacing: normal;
+line-height: normal; orphans: 2; text-align: -webkit-auto;
+text-indent: 0px; text-transform: none; white-space:
+normal; widows: 2; word-spacing: 0px; border-spacing: 0px;
+-webkit-text-decorations-in-effect: none;
+-webkit-text-stroke-width: 0px;">
+<div style="word-wrap: break-word; -webkit-nbsp-mode:
+space; -webkit-line-break: after-white-space;" class=""><span
+class="Apple-style-span" style="border-collapse:
+separate; color: rgb(0, 0, 0); font-family: 'Lucida
+Grande'; font-style: normal; font-variant-ligatures:
+normal; font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-position: normal; font-weight: normal;
+letter-spacing: normal; line-height: normal; orphans:
+2; text-align: -webkit-auto; text-indent: 0px;
+text-transform: none; white-space: normal; widows: 2;
+word-spacing: 0px; border-spacing: 0px;
+-webkit-text-decorations-in-effect: none;
+-webkit-text-stroke-width: 0px;">
+<div style="word-wrap: break-word; -webkit-nbsp-mode:
+space; -webkit-line-break: after-white-space;"
+class=""><span class="Apple-style-span"
+style="border-collapse: separate; color: rgb(0, 0,
+0); font-family: 'Lucida Grande';
+font-variant-ligatures: normal; font-variant-caps:
+normal; font-variant-east-asian: normal;
+font-variant-position: normal; font-weight:
+normal; letter-spacing: normal; line-height:
+normal; orphans: 2; text-align: -webkit-auto;
+text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing: 0px;
+border-spacing: 0px;
+-webkit-text-decorations-in-effect: none;
+-webkit-text-stroke-width: 0px;">
+<div style="word-wrap: break-word;
+-webkit-nbsp-mode: space; -webkit-line-break:
+after-white-space;" class=""><span
+class="Apple-style-span"
+style="border-collapse: separate; color:
+rgb(0, 0, 0); font-variant-ligatures: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-position: normal; letter-spacing:
+normal; line-height: normal; orphans: 2;
+text-indent: 0px; text-transform: none;
+white-space: normal; widows: 2; word-spacing:
+0px; border-spacing: 0px;
+-webkit-text-decorations-in-effect: none;
+-webkit-text-stroke-width: 0px;">
+<div style="word-wrap: break-word;
+-webkit-nbsp-mode: space;
+-webkit-line-break: after-white-space;"
+class=""><span class="Apple-style-span"
+style="border-collapse: separate; color:
+rgb(0, 0, 0); font-variant-ligatures:
+normal; font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-position: normal;
+letter-spacing: normal; line-height:
+normal; orphans: 2; text-indent: 0px;
+text-transform: none; white-space: normal;
+widows: 2; word-spacing: 0px;
+border-spacing: 0px;
+-webkit-text-decorations-in-effect: none;
+-webkit-text-stroke-width: 0px;">
+<div style="word-wrap: break-word;
+-webkit-nbsp-mode: space;
+-webkit-line-break: after-white-space;"
+class=""><span class="Apple-style-span"
+style="border-collapse: separate;
+color: rgb(0, 0, 0);
+font-variant-ligatures: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-position: normal;
+letter-spacing: normal; line-height:
+normal; orphans: 2; text-indent: 0px;
+text-transform: none; white-space:
+normal; widows: 2; word-spacing: 0px;
+border-spacing: 0px;
+-webkit-text-decorations-in-effect:
+none; -webkit-text-stroke-width: 0px;">
+<div style="word-wrap: break-word;
+-webkit-nbsp-mode: space;
+-webkit-line-break:
+after-white-space;" class=""><span
+class="Apple-style-span"
+style="border-collapse: separate;
+color: rgb(0, 0, 0);
+font-variant-ligatures: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-position: normal;
+letter-spacing: normal;
+line-height: normal; orphans: 2;
+text-indent: 0px; text-transform:
+none; white-space: normal; widows:
+2; word-spacing: 0px;
+border-spacing: 0px;
+-webkit-text-decorations-in-effect:
+none; -webkit-text-stroke-width:
+0px;">
+<div style="word-wrap: break-word;
+-webkit-nbsp-mode: space;
+-webkit-line-break:
+after-white-space;" class=""><span
+class="Apple-style-span"
+style="border-collapse:
+separate; color: rgb(0, 0, 0);
+font-variant-ligatures:
+normal; font-variant-caps:
+normal;
+font-variant-east-asian:
+normal; font-variant-position:
+normal; letter-spacing:
+normal; line-height: normal;
+orphans: 2; text-indent: 0px;
+text-transform: none;
+white-space: normal; widows:
+2; word-spacing: 0px;
+border-spacing: 0px;
+-webkit-text-decorations-in-effect:
+none;
+-webkit-text-stroke-width:
+0px;">
+<div style="word-wrap:
+break-word;
+-webkit-nbsp-mode: space;
+-webkit-line-break:
+after-white-space;" class=""><span
+class="Apple-style-span"
+style="border-collapse:
+separate; color: rgb(0, 0,
+0);
+font-variant-ligatures:
+normal; font-variant-caps:
+normal;
+font-variant-east-asian:
+normal;
+font-variant-position:
+normal; letter-spacing:
+normal; line-height:
+normal; orphans: 2;
+text-indent: 0px;
+text-transform: none;
+white-space: normal;
+widows: 2; word-spacing:
+0px; border-spacing: 0px;
+-webkit-text-decorations-in-effect: none; -webkit-text-stroke-width:
+0px;">
+<div style="word-wrap:
+break-word;
+-webkit-nbsp-mode:
+space;
+-webkit-line-break:
+after-white-space;"
+class=""><span
+class="Apple-style-span"
+style="border-collapse: separate; color: rgb(0, 0, 0);
+font-variant-ligatures:
+normal;
+font-variant-caps:
+normal;
+font-variant-east-asian:
+normal;
+font-variant-position:
+normal;
+letter-spacing:
+normal; line-height:
+normal; orphans: 2;
+text-indent: 0px;
+text-transform: none;
+white-space: normal;
+widows: 2;
+word-spacing: 0px;
+border-spacing: 0px;
+-webkit-text-decorations-in-effect:
+none;
+-webkit-text-stroke-width:
+0px;">
+<div style="word-wrap:
+break-word;
+-webkit-nbsp-mode:
+space;
+-webkit-line-break:
+after-white-space;"
+class="">
+<div class="">
+<div
+style="font-size:
+11px;" class="">
+<div
+style="font-style:
+normal;
+font-family:
+Helvetica;
+margin: 0px;"
+class="">--&#xA0;</div>
+<div
+style="font-style:
+normal;
+margin: 0px;"
+class=""><b
+style="font-family:
+Helvetica;"
+class="">Dr.
+Olivier Marti</b><font
+class="Apple-style-span" face="Helvetica"><span
+class="Apple-converted-space">&#xA0;</span>&#xA0;-<span
+class="Apple-converted-space">&#xA0;</span></font><font
+class="Apple-style-span"
+face="Courier"><a rel="nofollow"
+href="mailto:olivier.marti@xxxxxxxxxxxx" class="" moz-do-not-send="true">mailto:olivier.marti@xxxxxxxxxxxx</a></font></div>
+<div
+style="font-family:
+Helvetica;
+margin: 0px;"
+class=""><i
+class="">Laboratoire
+des Sciences
+du Climat et
+de
+l'Environnement</i></div>
+<div
+style="font-family:
+Helvetica;
+margin: 0px;"
+class=""><i
+class="">Institut
+Pierre Simon
+Laplace</i></div>
+<div
+style="font-style:
+normal;
+font-family:
+Helvetica;
+margin: 0px;"
+class="">Laboratoire
+CEA-CNRS-UVSQ
+&#xA0;- &#xA0;UMR 8212</div>
+<div
+style="font-style:
+normal;
+font-family:
+Helvetica;
+margin: 0px;"
+class="">Tel :
++33 1 69 08 77
+27 - Mob : +33
+6 45 36 43 74</div>
+</div>
+<div
+style="font-style:
+normal;
+font-size: 11px;
+font-family:
+Helvetica;
+margin: 0px;"
+class="">Fax :
++33 1 69 08 30
+73<br class="">
+</div>
+<div
+style="font-style:
+normal;"
+class="">
+<div class=""><font
+class="Apple-style-span" size="2" face="Courier">&lt;<a rel="nofollow"
+href="http://www.lsce.ipsl.fr/Pisp/olivier.marti"
+class=""
+moz-do-not-send="true">http://www.lsce.ipsl.fr/Pisp/olivier.marti</a>&gt;</font></div>
+</div>
+</div>
+</div>
+</span></div>
+</span></div>
+</span></div>
+</span></div>
+</span></div>
+</span></div>
+</span></div>
+</span></div>
+</span></div>
+</span></div>
+</div>
+<br class="Apple-interchange-newline">
+<br class="Apple-interchange-newline">
+</div>
+<br class="">
+</blockquote>
+<br>
+ 
+ 
+</font></td></tr></table><p><strong>Attachment:
+<a href="pngmAfvXUbeHe.png" ><tt>left_right_axis.png</tt></a></strong><br>
+<em>Description:</em> PNG image</p>
+ 
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00002" href="msg00002.html">Re: [ferret_users] Ferret vs PyFerret</a></strong>
+<ul><li><em>From:</em> Olivier Marti</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00000" href="msg00000.html">[ferret_users] Ferret vs PyFerret</a></strong>
+<ul><li><em>From:</em> Olivier Marti</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00000.html">[ferret_users] Ferret vs PyFerret</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00002.html">Re: [ferret_users] Ferret vs PyFerret</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00000.html">Thread Prev</a>][<a href="msg00002.html">Thread Next</a>][<A HREF="threads2018.html#00001">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

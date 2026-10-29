@@ -1,0 +1,172 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] how to do embedded expression inside an embedded expression with grave accent -->
+<!--X-From-R13: Ivyyvnz Yrffyre <jvyyvnz.f.xrffyreNabnn.tbi> -->
+<!--X-Date: Wed, 10 Oct 2018 10:15:40 &#45;0700 -->
+<!--X-Message-Id: 086137DE&#45;BE61&#45;411D&#45;B1C8&#45;6D63B5048FB0@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CAKE4FWpX5nFs&#45;soEQ6c&#45;QKY8C7G615UJOVPuQ=aGZrH2is3THg@mail.gmail.com -->
+<!--X-Reference: CALC=m4od6aYPKYoiDZM1JKq=XieLToaN1XX+GCCgOtFuTDcGSQ@mail.gmail.com -->
+<!--X-Reference: CAKE4FWrELJCcgH7zn=XmVBe9RS5QUb&#45;zT1fraBg7R5zZuYc=eg@mail.gmail.com -->
+<!--X-Reference: CALC=m4pRFgKaB44X3H2uYd2PNXWTu2qjGEhxdN+JZKvCetbLEg@mail.gmail.com -->
+<!--X-Reference: CAKE4FWqb7okVM9xJNU1ZPSzrGi=C293ycjaYvvc70&#45;ZwYnaaCw@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] how to do embedded expression inside an embedded expression with grave accent</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00376.html">Thread Prev</a>][<a href="msg00378.html">Thread Next</a>][<A HREF="threads2018.html#00377">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] how to do embedded expression inside an embedded expression with grave accent</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Xiaoyu Bai &lt;<a href="mailto:xbai1@DOMAIN.HIDDEN">xbai1@xxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] how to do embedded expression inside an embedded expression with grave accent</strong></li>
+<li><strong>From</strong>: <strong>William Kessler &lt;<a href="mailto:william.s.kessler@DOMAIN.HIDDEN">william.s.kessler@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 10 Oct 2018 10:15:36 -0700</li>
+<li>Cc: <a href="mailto:satyeshghetiya@DOMAIN.HIDDEN">satyeshghetiya@xxxxxxxxx</a>, Ferret &lt;<a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>&gt;</li>
+<li>In-reply-to: &lt;CAKE4FWqb7okVM9xJNU1ZPSzrGi=C293ycjaYvvc70-ZwYnaaCw@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAKE4FWpX5nFs-soEQ6c-QKY8C7G615UJOVPuQ=aGZrH2is3THg@mail.gmail.com&gt; &lt;CALC=m4od6aYPKYoiDZM1JKq=XieLToaN1XX+GCCgOtFuTDcGSQ@mail.gmail.com&gt; &lt;CAKE4FWrELJCcgH7zn=XmVBe9RS5QUb-zT1fraBg7R5zZuYc=eg@mail.gmail.com&gt; &lt;CALC=m4pRFgKaB44X3H2uYd2PNXWTu2qjGEhxdN+JZKvCetbLEg@mail.gmail.com&gt; &lt;CAKE4FWqb7okVM9xJNU1ZPSzrGi=C293ycjaYvvc70-ZwYnaaCw@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>I'm not sure I understand your question exactly, but I think a defined symbol has highest priority. Ferret will simply drop that symbol into any command. And note that symbols can be embedded (see example).
+ 
+If you only have 7 of these then the symbols can be defined manually:
+ 
+def sym root &quot;/home/xbai1/Tracmip/family1/&quot;
+def sym f1 &quot;whatever_your_first_filename_is.nc&quot;
+def sym f2 &quot;whatever_your_second_filename_is.nc&quot;
+...
+def sym f7 &quot;whatever_your_last_filename_is.nc&quot;
+ 
+repeat/range=1:7:1/name=fnum (let dummy=`fnum`; def sym sfnum `dummy`; use &quot;($root)($f($sfnum))&quot;; ... )
+ 
+I'm not sure why, but this kind of syntax inside a repeat loop requires defining a new dummy variable to use for symbol definition.
+ 
+Billy
+ 
+ 
+&gt; On Oct 10, 2018, at 9:36 AM, Xiaoyu Bai &lt;xbai1@xxxxxxxx&gt; wrote:
+&gt; 
+&gt; repeat/range=1:7/name=aa (use file_name_`aa`.nc) is a good idea. I have a handicap that I use let files_CNRM=spawn(&quot;ls -1 /home/xbai1/Tracmip/family1/*CNRM*.nc&quot;) to identify my files before I read them in. Ferret doesn't let me to use syntax `spawn(&quot;ls -1 /home/xbai1/Tracmip/family1/*CNRM*.nc&quot;)` because grave accent has the highest priority. &#x1F639; 
+&gt; 
+&gt; Thanks a lot. 
+&gt; Xiaoyu
+&gt; 
+&gt; On Wed, Oct 10, 2018 at 11:52 AM Satyesh Ghetiya &lt;satyeshghetiya@xxxxxxxxx&gt; wrote:
+&gt; Hi,
+&gt; 
+&gt; 
+&gt; On Wed, Oct 10, 2018 at 9:05 PM Xiaoyu Bai &lt;xbai1@xxxxxxxx&gt; wrote:
+&gt; Hi Ghetiya,
+&gt; 
+&gt; Yes, I wan to read all the files in through the repeat loop. When you say nested loop, do you mean let datset=0; repeat/range=1:8 (let datset=`datset+1`; use `files_CNRM[X=datset]`)? It didn't work.
+&gt; 
+&gt; ^ Yes, you are correct, I also encountered similar problem, it seems ferret is not taking nested definition of variable.
+&gt; The error message is like **ERROR: command syntax: DATSET // SET DAT/FORM=CDF `files_CNRM[X=datset]`. I feel datset needs a pair of grave accent to make it as an variable. However, ferret considers the nearest two grave accents as a pair. 
+&gt; I might need to read my files in one by one instead of using repeat loop.
+&gt; 
+&gt; ^ But once I used syntax like this which worked: repeat/range=1:7/name=aa (use file_name_`aa`.nc;) 
+&gt; Anyway if not, then yes for now, you may have to use one by one.
+&gt; Thank you very much and have a nice day. 
+&gt; 
+&gt; Welcome. 
+&gt; 
+&gt; On Wed, Oct 10, 2018 at 12:53 AM Satyesh Ghetiya &lt;satyeshghetiya@xxxxxxxxx&gt; wrote:s
+&gt; Hi,
+&gt; I also faced similar problem, but every time I am by passing using two grave accent by using some other repeat loop (nested) or by using some other variable.
+&gt; Are you wanting to use, in loop, 7 data sets ?  
+&gt; 
+&gt; On Wed, Oct 10, 2018 at 1:53 AM Xiaoyu Bai &lt;xbai1@xxxxxxxx&gt; wrote:
+&gt; Dear ferreters,
+&gt; 
+&gt; I have a syntax that's like repeat/range=1:7/name=datset use `files_CNRM[x=`datset`]`. However, ferret reads it like  `files_CNRM[x=` and `]`. So I am wondering how to make this syntax work.
+&gt; 
+&gt; Thank you very much.
+&gt; -- 
+&gt; Xiaoyu
+&gt; 
+&gt; 
+&gt; -- 
+&gt; G Satyesh
+&gt; 
+&gt; 
+&gt; 
+&gt; -- 
+&gt; Xiaoyu
+&gt; 
+&gt; 
+&gt; -- 
+&gt; G Satyesh
+&gt; 
+&gt; 
+&gt; 
+&gt; -- 
+&gt; Xiaoyu
+ 
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<ul><li><strong>Follow-Ups</strong>:
+<ul>
+<li><strong><a name="00378" href="msg00378.html">Re: [ferret_users] how to do embedded expression inside an embedded expression with grave accent</a></strong>
+<ul><li><em>From:</em> Xiaoyu Bai</li></ul></li>
+</ul></li></ul>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00369" href="msg00369.html">[ferret_users] how to do embedded expression inside an embedded expression with grave accent</a></strong>
+<ul><li><em>From:</em> Xiaoyu Bai</li></ul></li>
+<li><strong><a name="00370" href="msg00370.html">Re: [ferret_users] how to do embedded expression inside an embedded expression with grave accent</a></strong>
+<ul><li><em>From:</em> Satyesh Ghetiya</li></ul></li>
+<li><strong><a name="00373" href="msg00373.html">Re: [ferret_users] how to do embedded expression inside an embedded expression with grave accent</a></strong>
+<ul><li><em>From:</em> Xiaoyu Bai</li></ul></li>
+<li><strong><a name="00374" href="msg00374.html">Re: [ferret_users] how to do embedded expression inside an embedded expression with grave accent</a></strong>
+<ul><li><em>From:</em> Satyesh Ghetiya</li></ul></li>
+<li><strong><a name="00375" href="msg00375.html">Re: [ferret_users] how to do embedded expression inside an embedded expression with grave accent</a></strong>
+<ul><li><em>From:</em> Xiaoyu Bai</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00376.html">Re: [ferret_users] how to do embedded expression inside an embedded expression with grave accent</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00378.html">Re: [ferret_users] how to do embedded expression inside an embedded expression with grave accent</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00376.html">Thread Prev</a>][<a href="msg00378.html">Thread Next</a>][<A HREF="threads2018.html#00377">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

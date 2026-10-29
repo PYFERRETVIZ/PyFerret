@@ -1,0 +1,128 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] opendap access with ferret -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Wed, 6 Feb 2019 12:56:34 &#45;0800 -->
+<!--X-Message-Id: b7e401bd&#45;7e27&#45;3651&#45;fd4b&#45;9a2ec4c0d784@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CAFXLzPiqcyOxDpd4541Z=LXi&#45;5=rS9OUB+NDx0gOrAO8VOb=Cg@mail.gmail.com -->
+<!--X-Reference: a9bc6e9b&#45;4cd0&#45;7868&#45;b82c&#45;b62c39080122@io&#45;warnemuende.de -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] opendap access with ferret</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00022.html">Thread Prev</a>][<a href="msg00024.html">Thread Next</a>][<A HREF="threads2019.html#00023">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] opendap access with ferret</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] opendap access with ferret</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Wed, 6 Feb 2019 12:56:31 -0800</li>
+<li>In-reply-to: &lt;<a href="msg00022.html">a9bc6e9b-4cd0-7868-b82c-b62c39080122@io-warnemuende.de</a>&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CAFXLzPiqcyOxDpd4541Z=LXi-5=rS9OUB+NDx0gOrAO8VOb=Cg@mail.gmail.com&gt; &lt;<a href="msg00022.html">a9bc6e9b-4cd0-7868-b82c-b62c39080122@io-warnemuende.de</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:60.0) Gecko/20100101 Thunderbird/60.5.0</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Hi Martin
+ 
+</pre><tt>The PyFerret and Ferret v7.4.4 downloads currently on the GitHub page is 
+</tt><tt>linked with NetCDF 4.4.1.1
+</tt><pre style="margin: 0em;">
+ 
+<a  rel="nofollow" href="https://github.com/NOAA-PMEL/PyFerret/releases">https://github.com/NOAA-PMEL/PyFerret/releases</a>
+ 
+<a  rel="nofollow" href="https://github.com/NOAA-PMEL/Ferret/releases">https://github.com/NOAA-PMEL/Ferret/releases</a>
+ 
+</pre><tt>We'd found a couple of other issues with NetCDF 4.6.2, particularly 
+</tt><tt>access to data on large grids on some opendap servers.
+</tt><pre style="margin: 0em;">
+ 
+Ansley
+ 
+On 2/6/2019 4:50 AM, Martin Schmidt wrote:
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+Dear ferreters,
+</pre><tt>opendap access with ferret linked with a recent netcdf library does 
+</tt><tt>not work any more, if the remote thredds-server is password protected. 
+</tt><tt>The syntax is to include a user name and the password in the use 
+</tt><tt>statement.
+</tt><pre style="margin: 0em;">
+ 
+use &quot;<a  rel="nofollow" href="https://user:password@hostname/etc.....&quot">https://user:password@hostname/etc.....&quot</a>;
+ 
+</pre><tt>This worked well with ferret linked with netcdf-4.4.4.1 but not with 
+</tt><tt>4.6.2. The same can be verified with ncdump.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>The error message throws a lot a strange information (syntax errors, 
+</tt><tt>fonts etc.) and finally that authentication failed. Searching the web 
+</tt><tt>reveals a lengthy discussion on the netcdf-website that the login - 
+</tt><tt>information solely has to be delivered by two files .dodrc and .netrc. 
+</tt><tt>However, I cannot find this in the netcdf manual and have a running 
+</tt><tt>example with an old netcdf-library that it worked differently.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>So my question is, does anybody know, how to deal with those errors? 
+</tt><tt>Or is the method really obsolete, to include the login data in the URL 
+</tt><tt>information?
+</tt><pre style="margin: 0em;">
+Best,
+Martin
+ 
+</pre></blockquote><pre style="margin: 0em;">
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00022" href="msg00022.html">[ferret_users] opendap access with ferret</a></strong>
+<ul><li><em>From:</em> Martin Schmidt</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00022.html">[ferret_users] opendap access with ferret</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00024.html">[ferret_users] Problem with 6 hourly to daily average</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00022.html">Thread Prev</a>][<a href="msg00024.html">Thread Next</a>][<A HREF="threads2019.html#00023">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>

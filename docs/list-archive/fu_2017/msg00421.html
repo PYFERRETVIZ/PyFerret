@@ -1,0 +1,142 @@
+ 
+<!-- MHonArc v2.6.18 -->
+<!--X-Subject: Re: [ferret_users] ferret map projection help -->
+<!--X-From-R13: "Oafyrl Q. [naxr" <nafyrl.o.znaxrNabnn.tbi> -->
+<!--X-Date: Mon, 12 Jun 2017 11:26:58 &#45;0700 -->
+<!--X-Message-Id: 747de602&#45;e9a6&#45;374c&#45;0377&#45;9538778839a8@noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: CA+8NVT3_b6r79rN_seDqLM0yhwDU=A9hnkcgtZ6ASRsCQKe3sQ@mail.gmail.com -->
+<!--X-Head-End-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Re: [ferret_users] ferret map projection help</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00418.html">Thread Prev</a>][<a href="msg00419.html">Thread Next</a>][<A HREF="threads2017.html#00421">Index</A>]</center>
+ 
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: [ferret_users] ferret map projection help</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong><a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a></strong></li>
+<li><strong>Subject</strong>: <strong>Re: [ferret_users] ferret map projection help</strong></li>
+<li><strong>From</strong>: <strong>&quot;Ansley C. Manke&quot; &lt;<a href="mailto:ansley.b.manke@DOMAIN.HIDDEN">ansley.b.manke@xxxxxxxx</a>&gt;</strong></li>
+<li>Date: Mon, 12 Jun 2017 11:26:55 -0700</li>
+<li>In-reply-to: &lt;CA+8NVT3_b6r79rN_seDqLM0yhwDU=A9hnkcgtZ6ASRsCQKe3sQ@mail.gmail.com&gt;</li>
+<li>List-archive: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/">https://groups.google.com/a/noaa.gov/group/ferret_users/</a>&gt;</li>
+<li>List-help: &lt;<a href="https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838">https://support.google.com/a/noaa.gov/bin/topic.py?topic=25838</a>&gt;, &lt;<a href="mailto:ferret_users+help@noaa.gov">mailto:ferret_users+help@noaa.gov</a>&gt;</li>
+<li>List-id: &lt;ferret_users.noaa.gov&gt;</li>
+<li>List-post: &lt;<a href="https://groups.google.com/a/noaa.gov/group/ferret_users/post">https://groups.google.com/a/noaa.gov/group/ferret_users/post</a>&gt;, &lt;<a href="mailto:ferret_users@noaa.gov">mailto:ferret_users@noaa.gov</a>&gt;</li>
+<li>Mailing-list: list <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxx</a>; contact <a href="mailto:ferret_users%2Bowners@DOMAIN.HIDDEN">ferret_users+owners@xxxxxxxx</a></li>
+<li>References: &lt;CA+8NVT3_b6r79rN_seDqLM0yhwDU=A9hnkcgtZ6ASRsCQKe3sQ@mail.gmail.com&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxx</a></li>
+<li>User-agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:52.0) Gecko/20100101 Thunderbird/52.1.1</li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre style="margin: 0em;">
+Hi,
+ 
+</pre><tt>Please see this FAQ: 
+</tt><tt><a  rel="nofollow" href="../../faq/polar-stereographic-plots.html">../../faq/polar-stereographic-plots</a>, and 
+</tt><tt>and also run the demo script
+</tt><pre style="margin: 0em;">
+ 
+yes? go mp_stereo_demo.jnl
+ 
+</pre><tt>You could make your own copy of this demo script, change the definitions 
+</tt><tt>of  variables xmin,xmax,ymin,ymax, xdel,ydel at the top of the script, 
+</tt><tt>change the call from  mp_stereographic_north to mp_stereographic_south.  
+</tt><tt>Take out the commands that show things like marking some points on the 
+</tt><tt>map and making extra labels, and take out the SHAKEY command, to leave 
+</tt><tt>the color key in the standard location.
+</tt><pre style="margin: 0em;">
+ 
+</pre><tt>To make labels on a plot, you will do what is shown in mp_stereo_demo, 
+</tt><tt>calling the &quot;mp_label&quot; command to put labels around the circle.  (The 
+</tt><tt>Ferret &quot;go/help mp_label&quot; shows what that script is doing.)
+</tt><pre style="margin: 0em;">
+ 
+let mid_lon = 180
+REPEAT/K=20:360:20 (GO mp_label `k` -48 0 `mid_lon - k` 0.12 &quot;@CR`k`&quot;)
+ 
+Or in PyFerret,
+ 
+let mid_lon = 180
+set text/font=serif  ! or any font
+REPEAT/K=20:360:20 (GO mp_label `k` -48 0 `mid_lon - k` 0.12 &quot;`k`&quot;)
+ 
+ 
+More suggestions:
+ 
+* Add the /NOAXES qualifier on your FILL command.
+ 
+</pre><tt>* The mp_graticule command has arguments to control where the lines are 
+</tt><tt>drawn, so perhaps say
+</tt><pre style="margin: 0em;">
+go mp_graticule  0 360 20 -80 -50 10
+ 
+</pre><tt>* Look at the location of your main label.  You probably will want to 
+</tt><tt>put it above or below the plot. You could use the ANNOTATE command, for 
+</tt><tt>instance,
+</tt><pre style="margin: 0em;">
+annotate/norm/halign=0/xpos=0.5/ypos=-0.1 main label&quot;
+ 
+ 
+ 
+ 
+On 6/10/2017 2:01 AM, Stephy Ann Libera wrote:
+</pre><blockquote style="border-left: #5555EE solid 0.2em; margin: 0em; padding-left: 0.85em"><pre style="margin: 0em;">
+Hello
+</pre><tt>I am trying to create a polar stereographic plot and I am unable to 
+</tt><tt>mark the latitude and longitude as well as the labels.
+</tt><tt>from the errors I have understood the variables to be given for 
+</tt><tt>labeling but I tried various values and haven't understood how to 
+</tt><tt>define these.
+</tt><pre style="margin: 0em;">
+attaching my jnl file, plot and a data
+</pre></blockquote><pre style="margin: 0em;">
+ 
+ 
+</pre>
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00418" href="msg00418.html">[ferret_users] ferret map projection help</a></strong>
+<ul><li><em>From:</em> Stephy Ann Libera</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00418.html">[ferret_users] ferret map projection help</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00419.html">[ferret_users] TMAP ERR: limit on number of data sets</a></strong>
+</li>
+ 
+</UL>
+<center>[<a href="msg00418.html">Thread Prev</a>][<a href="msg00419.html">Thread Next</a>][<A HREF="threads2017.html#00421">Index</A>]</center>
+ 
+<hr>
+</body>
+</html>
