@@ -1,0 +1,124 @@
+<!-- MHonArc v2.5.13 -->
+<!--X-Subject: Re: one title(caption) below four viewports -->
+<!--X-From-R13: Oafyrl [naxr <nafyrlNczry.abnn.tbi> -->
+<!--X-Date: Thu, 28 Feb 2002 15:06:19 &#45;0800 (PST) -->
+<!--X-Message-Id: 3C7EB83F.6C19E52D@pmel.noaa.gov -->
+<!--X-Content-Type: text/plain -->
+<!--X-Reference: F1992PTDbXojbSaoIBZ0000adce@hotmail.com -->
+<!--X-Head-End-->
+<!doctype html public "-//W3C//DTD HTML//EN">
+<html>
+<head>
+<title>Re: one title(caption) below four viewports</title>
+</head>
+<body>
+<!--X-Body-Begin-->
+<!--X-User-Header-->
+<!--X-User-Header-End-->
+<!--X-TopPNI-->
+<HR>
+<center>[<a href="msg00104.html">Thread Prev</a>][<a href="msg00107.html">Thread Next</a>][<A HREF="threads2002.html#00108">Index</A>]</center>
+
+<!--X-TopPNI-End-->
+<!--X-MsgBody-->
+<!--X-Subject-Header-Begin-->
+<h1>Re: one title(caption) below four viewports</h1>
+<hr>
+<!--X-Subject-Header-End-->
+<!--X-Head-of-Message-->
+<ul>
+<li><strong>To</strong>: <strong>Namba Takaya &lt;<a href="mailto:takayanamba@DOMAIN.HIDDEN">takayanamba@xxxxxxxxxxx</a>&gt;</strong></li>
+<li><strong>Subject</strong>: <strong>Re: one title(caption) below four viewports</strong></li>
+<li><strong>From</strong>: <strong>Ansley Manke &lt;<a href="mailto:ansley@DOMAIN.HIDDEN">ansley@xxxxxxxxxxxxx</a>&gt;</strong></li>
+<li>Date: Thu, 28 Feb 2002 15:07:43 -0800</li>
+<li>Cc: <a href="mailto:ferret_users@DOMAIN.HIDDEN">ferret_users@xxxxxxxxxxxxxxxxxxx</a></li>
+<li>References: &lt;<a href="msg00104.html">F1992PTDbXojbSaoIBZ0000adce@hotmail.com</a>&gt;</li>
+<li>Sender: <a href="mailto:owner-ferret_users@DOMAIN.HIDDEN">owner-ferret_users@xxxxxxxxxxxxxxxxxxx</a></li>
+</ul>
+<!--X-Head-of-Message-End-->
+<!--X-Head-Body-Sep-Begin-->
+<hr>
+<!--X-Head-Body-Sep-End-->
+<!--X-Body-of-Message-->
+<pre>Hello,
+Yes, there is an easy way to do this.  If you needed a lot of space
+for several lines of a caption, you would need to define your own
+viewports, with one covering the bottom of the page which could
+contain the text.  But for just one line, you can do this:
+
+!   Draw plots in four pre-defined viewports
+set view ul
+plot/nolab/i=1:10 i
+
+set view ur
+plot/nolab/i=1:10 11-i
+
+set view ll
+plot/nolab/i=1:10 1/i
+
+set view lr
+plot/nolab/i=1:10 1/(11-i)
+
+! A centered caption centered on the boundary between the left and
+! right viewports.  PPL$XORG contains the distance between the X origin
+! and the left side of the current plot area; in this case, the right
+! viewport.
+
+let xplace = -1* ($ppl$xorg)
+label/nouser `xplace` -1.1 0 0 0.18 @CRCaption that spans both viewports
+
+
+
+Namba Takaya wrote:
+
+&gt; Dear Sir
+&gt;
+&gt; I would like to plot one title (captions) just below four viewports  to
+&gt; explain the four figures?
+&gt; Could somebody tell me how to do is?
+&gt;
+&gt; Four viewports are left-top, left-bottom, right-top and right-bottom.
+&gt;
+&gt; Thank you in advance.
+&gt;
+&gt; Takaya Namba
+&gt; UPM,Malaysia
+&gt;
+&gt; _________________________________________________________________
+&gt; $B%a!&lt;%k$@$1$8$c$J$+$C$?!*%$%s%?!&lt;%M%C%HJXMx%5!&lt;%S%9$,$R$H$^$H$^$j(B
+&gt; <a  href="http://explorer.msn.co.jp/">http://explorer.msn.co.jp/</a>
+
+--
+Ansley Manke  Pacific Marine Environmental Laboratory  Seattle WA  (206)526-6246
+
+
+
+</pre>
+
+<!--X-Body-of-Message-End-->
+<!--X-MsgBody-End-->
+<!--X-Follow-Ups-->
+<hr>
+<!--X-Follow-Ups-End-->
+<!--X-References-->
+<ul><li><strong>References</strong>:
+<ul>
+<li><strong><a name="00104" href="msg00104.html">one title(caption) below four viewports</a></strong>
+<ul><li><em>From:</em> Namba Takaya</li></ul></li>
+</ul></li></ul>
+<!--X-References-End-->
+<!--X-BotPNI-->
+<UL>
+<li>Previous by thread:
+<strong><a href="msg00104.html">one title(caption) below four viewports</a></strong>
+</li>
+<li>Next by thread:
+<strong><a href="msg00107.html">Beware! Time assignment change from older versions of Ferret</a></strong>
+</li>
+
+</UL>
+<center>[<a href="msg00104.html">Thread Prev</a>][<a href="msg00107.html">Thread Next</a>][<A HREF="threads2002.html#00108">Index</A>]</center>
+
+<hr>
+</body>
+</html>
